@@ -1,6 +1,7 @@
-# Serverless mode: GitHub Actions collects on a schedule, commits the history
-# (data/store) back to the repo, rebuilds the static site and deploys it to
-# GitHub Pages. Enable Pages → "GitHub Actions" in the repo settings.
+# Serverless data engine. Every 10 minutes GitHub Actions collects from all
+# sources, commits the history (data/store) to main, and force-pushes the
+# freshly built state.json to the single-commit `live` branch. The Vercel site
+# proxies /live/state.json to that file, so no server and no GitHub Pages needed.
 name: monitor
 
 on:
@@ -14,23 +15,24 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ['src/**', 'server/**', 'data/curated/**', 'public/**', 'index.html', 'package*.json', 'vite.config.ts']
+    paths: ['src/**', 'server/**', 'package*.json']
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: monitor
   cancel-in-progress: false
 
 jobs:
-  collect-and-deploy:
+  collect:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
+      # Always work on main, whichever branch the schedule fires from.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -42,7 +44,7 @@ jobs:
         if: github.event_name != 'push'
         run: npm run collect -- ${{ inputs.force && '--force' || '' }}
 
-      - name: Commit history
+      - name: Commit history to main
         if: github.event_name != 'push'
         run: |
           git config user.name "sentinel-bot"
@@ -50,15 +52,20 @@ jobs:
           git add data/store
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "data: collection $(date -u +%Y-%m-%dT%H:%MZ)" -q
-          for i in 1 2 3 4; do git pull --rebase -q && git push -q && exit 0; sleep $((2**i)); done
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((2**i)); done
           exit 1
 
-      - name: Build
-        env:
-          BASE_PATH: ${{ vars.BASE_PATH || format('/{0}/', github.event.repository.name) }}
-        run: npm run build
+      - name: Publish live state
+        if: github.event_name != 'push'
+        run: |
+          mkdir -p "$RUNNER_TEMP/live" && cp public/data/state.json "$RUNNER_TEMP/live/state.json"
+          cd "$RUNNER_TEMP/live"
+          git init -q -b live
+          git config user.name "sentinel-bot"
+          git config user.email "sentinel-bot@users.noreply.github.com"
+          git add state.json && git commit -qm "live state $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -fq "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" live
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - uses: actions/deploy-pages@v4
+      - name: Check build
+        if: github.event_name == 'push'
+        run: npm run build

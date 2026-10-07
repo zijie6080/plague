@@ -4,13 +4,49 @@
   "installCommand": "npm ci",
   "buildCommand": "VITE_STATE_URL=/live/state.json npm run build",
   "outputDirectory": "dist",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)data/store'",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)data'",
   "rewrites": [
-    { "source": "/live/state.json", "destination": "https://zijie6080.github.io/plague/data/state.json" }
+    {
+      "source": "/live/state.json",
+      "destination": "https://raw.githubusercontent.com/zijie6080/plague/live/state.json"
+    }
   ],
   "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/live/state.json", "headers": [{ "key": "Cache-Control", "value": "public, max-age=60, s-maxage=60, stale-while-revalidate=300" }] },
-    { "source": "/(.*)", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }, { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }] }
-  ]
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/live/state.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, s-maxage=60, stale-while-revalidate=300"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "live": false
+    }
+  }
 }

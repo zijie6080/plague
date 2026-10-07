@@ -64,11 +64,11 @@ docker build -t sentinel . && docker run -d -p 8080:8080 -v $PWD/data:/app/data 
 ```
 采集在进程内运行，页面通过 SSE 在数据更新后几秒内刷新。
 
-**方式 B：GitHub Actions + Pages（零服务器）**
-`.github/workflows/monitor.yml` 每 10 分钟采集一次，将 `data/store` 提交回仓库（git 历史即快照历史），然后构建并发布到 GitHub Pages。在仓库 Settings → Pages 中选择 “GitHub Actions”。前端在没有 SSE 时自动改为 60 秒 ETag 轮询。
+**方式 B：GitHub Actions（零服务器采集）**
+`.github/workflows/monitor.yml` 每 10 分钟采集一次，将 `data/store` 提交回仓库（git 历史即快照历史），并把最新的 `state.json` 强制推送到只有一个提交的 `live` 分支。前端在没有 SSE 时自动改为 60 秒 ETag 轮询。
 
 **方式 C：Vercel（前端）+ GitHub Actions（采集）**
-`vercel.json` 已配置：Vercel 只托管前端，`/live/state.json` 反向代理到 GitHub Pages 上由 Actions 每 10 分钟生成的最新数据；代理不可用时自动回退到构建时打包的快照。只改动 `data/store` 的数据提交不会触发 Vercel 重新构建（`ignoreCommand`），避免超出每日部署次数。
+`vercel.json` 已配置：Vercel 只托管前端，`/live/state.json` 反向代理到 `live` 分支上由 Actions 每 10 分钟生成的最新数据（raw.githubusercontent.com，不需要开启 GitHub Pages）；代理不可用时自动回退到构建时打包的快照。只改动 `data/store` 的数据提交不会触发 Vercel 重新构建（`ignoreCommand`），避免超出每日部署次数。
 自定义域名：在 Vercel 项目中添加域名后，到 DNS 服务商添加 `CNAME  <子域名>  cname.vercel-dns.com`。
 
 ## 编辑流程（更新人工核对层）
