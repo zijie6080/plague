@@ -1,0 +1,64 @@
+# Serverless mode: GitHub Actions collects on a schedule, commits the history
+# (data/store) back to the repo, rebuilds the static site and deploys it to
+# GitHub Pages. Enable Pages → "GitHub Actions" in the repo settings.
+name: monitor
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # GitHub may delay scheduled runs under load
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run every source now'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ['src/**', 'server/**', 'data/curated/**', 'public/**', 'index.html', 'package*.json', 'vite.config.ts']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  collect-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+      - name: Collect
+        if: github.event_name != 'push'
+        run: npm run collect -- ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit history
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "sentinel-bot"
+          git config user.email "sentinel-bot@users.noreply.github.com"
+          git add data/store
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "data: collection $(date -u +%Y-%m-%dT%H:%MZ)" -q
+          for i in 1 2 3 4; do git pull --rebase -q && git push -q && exit 0; sleep $((2**i)); done
+          exit 1
+
+      - name: Build
+        env:
+          BASE_PATH: ${{ vars.BASE_PATH || format('/{0}/', github.event.repository.name) }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4

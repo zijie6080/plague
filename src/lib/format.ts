@@ -3,9 +3,11 @@ import { translate } from '../i18n';
 
 const IRK_TZ = 'Asia/Irkutsk';
 
-export function relTime(iso: string | null | undefined, lang: Lang, now = Date.now()) {
+export function relTime(iso: string | null | undefined, lang: Lang, now = Date.now(), future = false) {
   if (!iso) return translate(lang, 'never');
   const diff = now - Date.parse(iso);
+  // Past timestamps slightly ahead of the (coarse) clock are just "now", not "in 1 min".
+  if (diff < 0 && !future) return translate(lang, 'justNow');
   if (diff < 0) {
     const m = Math.max(1, Math.round(-diff / 60000));
     return translate(lang, 'inMinutes', { n: m });

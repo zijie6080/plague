@@ -52,7 +52,7 @@ export function SourcesPanel({ state, now }: { state: State | null; now: number 
             <table className="src-table">
               <thead>
                 <tr>
-                  <th>{t('sources')}</th><th><span className="sr-only">Type</span></th><th>Status</th><th>{t('lastSuccess')}</th><th>{t('nextRun')}</th><th>{t('latency')}</th><th>{t('itemsLabel')}</th><th>24×</th>
+                  <th>{t('sources')}</th><th><span className="sr-only">{t('typeCol')}</span></th><th>{t('statusCol')}</th><th>{t('lastSuccess')}</th><th>{t('nextRun')}</th><th>{t('latency')}</th><th>{t('itemsLabel')}</th><th>24×</th>
                 </tr>
               </thead>
               <tbody>
@@ -72,7 +72,7 @@ export function SourcesPanel({ state, now }: { state: State | null; now: number 
                         <td><SourceTypeBadge type={s.sourceType} /></td>
                         <td><Status s={s} />{s.status !== 'ok' && s.lastError && <span className="src-err" title={s.lastError}>{s.lastError}</span>}</td>
                         <td className="mono" title={s.lastOk || ''}>{s.lastOk ? relTime(s.lastOk, lang, now) : t('never')}</td>
-                        <td className="mono faint">{s.nextRun ? (Date.parse(s.nextRun) > now ? relTime(s.nextRun, lang, now) : '…') : '—'}</td>
+                        <td className="mono faint">{s.nextRun ? (Date.parse(s.nextRun) > now ? relTime(s.nextRun, lang, now, true) : '…') : '—'}</td>
                         <td className="mono faint">{s.lastMs != null ? `${s.lastMs}ms` : '—'}</td>
                         <td className="mono">{s.items ?? '—'}</td>
                         <td><Runs runs={s.runs} /></td>

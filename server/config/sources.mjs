@@ -5,6 +5,9 @@
 const gnews = (q, hl, gl, ceid) =>
   `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=${hl}&gl=${gl}&ceid=${ceid}`;
 
+// Items published before this are ignored (keeps archive pages out of feeds).
+export const EVENT_SINCE = '2026-09-20T00:00:00Z';
+
 // Words that make an item from a general-purpose feed relevant to this event.
 export const RELEVANCE = [
   /чум/i, /противочум/i, /yersinia/i, /plague/i, /鼠疫/, /шелехов/i, /shelekhov/i,
@@ -89,6 +92,10 @@ export const SOURCES = [
     name: { en: 'Google News · Russian', zh: 'Google 新闻 · 俄文' }, sourceType: 'aggregator', relevanceFilter: true, aggregator: true },
   { id: 'gnews-zh', kind: 'rss', every: 15, url: gnews('伊尔库茨克 鼠疫 OR 俄罗斯 鼠疫 when:7d', 'zh-CN', 'CN', 'CN:zh-Hans'),
     name: { en: 'Google News · Chinese', zh: 'Google 新闻 · 中文' }, sourceType: 'aggregator', relevanceFilter: true, aggregator: true },
+  // Indexes official Russian sites through Google News: keeps official statements
+  // flowing when the sites themselves are geo-blocked from the collector's network.
+  { id: 'gnews-official', kind: 'rss', every: 15, url: gnews('чума OR пневмония OR Иркутск site:rospotrebnadzor.ru', 'ru', 'RU', 'RU:ru'),
+    name: { en: 'Google News · Russian official sites', zh: 'Google 新闻 · 俄官方网站' }, sourceType: 'aggregator', relevanceFilter: true, aggregator: true },
   { id: 'meduza', kind: 'rss', every: 15, url: 'https://meduza.io/rss/all',
     name: { en: 'Meduza', zh: 'Meduza' }, sourceType: 'media', relevanceFilter: true },
   { id: 'moscowtimes', kind: 'rss', every: 15, url: 'https://www.themoscowtimes.com/rss/news',

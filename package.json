@@ -8,10 +8,10 @@
     "dev": "vite",
     "build": "npm run state && tsc --noEmit && vite build",
     "preview": "vite preview",
-    "collect": "node server/collect.mjs",
+    "collect": "node --max-http-header-size=65536 server/collect.mjs",
     "state": "node server/build-state.mjs",
-    "start": "node server/index.mjs",
-    "test": "node --test server/test/",
+    "start": "node --max-http-header-size=65536 server/index.mjs",
+    "test": "node --test server/test/*.test.mjs",
     "typecheck": "tsc --noEmit",
     "geo": "node scripts/build-geo.mjs"
   },
@@ -19,7 +19,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "cheerio": "^1.2.0",
     "fast-xml-parser": "^5.11.2",
     "unpdf": "^1.8.1"
   },

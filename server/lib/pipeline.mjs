@@ -1,6 +1,6 @@
 // Runs due collectors, records source health, ingests documents, page changes
 // and pharmacy observations into the store, then re-runs anomaly detection.
-import { SOURCES } from '../config/sources.mjs';
+import { SOURCES, EVENT_SINCE } from '../config/sources.mjs';
 import { COLLECTORS } from '../collectors/index.mjs';
 import { readJson, writeJson, storeFile, curatedFile, saveSnapshot, withLock } from './store.mjs';
 import { classifyDomain, isRelevant, topicTags } from './classify.mjs';
@@ -65,6 +65,7 @@ export async function runCollectors({ only, force = false, log = console.log } =
       let relevantCount = 0;
       if (result.ok && result.items) {
         for (const item of result.items) {
+          if (item.publishedAt && item.publishedAt < EVENT_SINCE) continue;
           const text = `${item.title} ${item.summary || ''}`;
           const relevant = isRelevant(text);
           if (source.relevanceFilter && !relevant) continue;

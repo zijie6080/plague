@@ -209,6 +209,8 @@ const dict = {
   status_down: { zh: '无法访问', en: 'Down' },
   status_pending: { zh: '等待首次运行', en: 'Pending' },
   status_idle: { zh: '未配置', en: 'Idle' },
+  statusCol: { zh: '状态', en: 'Status' },
+  typeCol: { zh: '类型', en: 'Type' },
   lastSuccess: { zh: '最近成功', en: 'Last success' },
   nextRun: { zh: '下次运行', en: 'Next run' },
   every: { zh: '每 {n} 分钟', en: 'every {n} min' },
