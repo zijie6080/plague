@@ -63,7 +63,9 @@ jobs:
           git init -q -b live
           git config user.name "sentinel-bot"
           git config user.email "sentinel-bot@users.noreply.github.com"
-          git add state.json && git commit -qm "live state $(date -u +%Y-%m-%dT%H:%MZ)"
+          # The live branch holds data only; tell Vercel never to build it.
+          echo '{ "git": { "deploymentEnabled": false }, "ignoreCommand": "exit 0" }' > vercel.json
+          git add state.json vercel.json && git commit -qm "live state $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -fq "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" live
 
       - name: Check build

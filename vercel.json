@@ -4,7 +4,7 @@
   "installCommand": "npm ci",
   "buildCommand": "VITE_STATE_URL=/live/state.json npm run build",
   "outputDirectory": "dist",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)data'",
+  "ignoreCommand": "[ \"$VERCEL_GIT_COMMIT_REF\" = \"live\" ] && exit 0; git rev-parse -q --verify HEAD^ >/dev/null || exit 1; git diff --quiet HEAD^ HEAD -- . ':(exclude)data'",
   "rewrites": [
     {
       "source": "/live/state.json",
