@@ -1,0 +1,241 @@
+{
+ "_doc": "Each metric keeps observations per credibility tier. The headline is the latest `confirmed` observation; other tiers are shown alongside, never summed into it. `approx` marks values given as 'about/nearly'. `concern`: 'up' means an increase is a worsening signal; 'none' means changes are informational (e.g. number of tests run).",
+ "metrics": [
+  {
+   "id": "lab_confirmed",
+   "label": {
+    "zh": "实验室确诊鼠疫",
+    "en": "Lab-confirmed plague"
+   },
+   "definition": {
+    "zh": "经官方实验室检测确认的鼠疫病例。俄罗斯当局称未检出鼠疫病原体。",
+    "en": "Plague cases confirmed by official laboratory testing. Russian authorities say no plague pathogen has been detected."
+   },
+   "observations": [
+    {
+     "t": "2026-10-04T14:00:00+08:00",
+     "value": 0,
+     "tier": "confirmed",
+     "sources": [
+      "lenta-1005"
+     ]
+    },
+    {
+     "t": "2026-10-06T18:00:00+08:00",
+     "value": 0,
+     "tier": "confirmed",
+     "sources": [
+      "un-news-1006"
+     ],
+     "note": {
+      "zh": "俄方向世卫组织通报：伊尔库茨克州未登记鼠疫病例",
+      "en": "Russia told WHO no plague case is registered in Irkutsk oblast"
+     }
+    }
+   ],
+   "concern": "up"
+  },
+  {
+   "id": "suspected",
+   "label": {
+    "zh": "疑似病例",
+    "en": "Suspected cases"
+   },
+   "definition": {
+    "zh": "公开提及可能为鼠疫、但未经实验室确认的病例，包括目前唯一的死者。“第二名员工患病”属未证实报道，单独列出。",
+    "en": "Cases publicly linked to possible plague but not lab-confirmed, including the one death so far. The reported second ill employee is unverified and shown separately."
+   },
+   "observations": [
+    {
+     "t": "2026-10-02T15:00:00+08:00",
+     "value": 1,
+     "tier": "suspected",
+     "sources": [
+      "aljazeera-1005",
+      "mt-1002"
+     ]
+    },
+    {
+     "t": "2026-10-07T16:00:00+08:00",
+     "value": 1,
+     "tier": "unverified",
+     "delta": true,
+     "sources": [
+      "foxnews-1007",
+      "euronews-1007"
+     ],
+     "note": {
+      "zh": "第二名员工患病因不明的肺炎（世卫组织正在核实）",
+      "en": "Second employee with pneumonia of undetermined cause (WHO seeking clarification)"
+     }
+    }
+   ],
+   "concern": "up"
+  },
+  {
+   "id": "deaths",
+   "label": {
+    "zh": "死亡",
+    "en": "Deaths"
+   },
+   "definition": {
+    "zh": "官方确认的死亡人数，死因未必是鼠疫。官方死因为“病因不明的肺炎”。",
+    "en": "Officially confirmed deaths, whatever the cause. The official cause is “pneumonia of undetermined etiology”."
+   },
+   "observations": [
+    {
+     "t": "2026-10-02T02:00:00+08:00",
+     "value": 1,
+     "tier": "confirmed",
+     "sources": [
+      "mt-1002",
+      "lenta-1005"
+     ]
+    },
+    {
+     "t": "2026-10-06T22:00:00+08:00",
+     "value": 1,
+     "tier": "unverified",
+     "delta": true,
+     "sources": [
+      "united24-1006"
+     ],
+     "note": {
+      "zh": "第二例死亡的说法未经证实",
+      "en": "Claimed second death, unverified"
+     }
+    }
+   ],
+   "concern": "up"
+  },
+  {
+   "id": "observation",
+   "label": {
+    "zh": "医学观察 / 隔离",
+    "en": "Under observation / isolation"
+   },
+   "definition": {
+    "zh": "接受医学观察或隔离的接触者人数。官方未公布具体人数，数字来自媒体报道。官方称九成以上已结束观察。",
+    "en": "Contacts under medical observation or isolation. Officials have not published a number; the figures are media reports. Officials say over 90% have completed observation."
+   },
+   "observations": [
+    {
+     "t": "2026-10-01T18:00:00+08:00",
+     "value": 90,
+     "approx": true,
+     "tier": "reported",
+     "sources": [
+      "ntd-1007"
+     ]
+    },
+    {
+     "t": "2026-10-02T18:00:00+08:00",
+     "value": 197,
+     "approx": true,
+     "tier": "reported",
+     "sources": [
+      "mt-1002",
+      "zona-1002"
+     ]
+    },
+    {
+     "t": "2026-10-07T19:00:00+08:00",
+     "value": null,
+     "tier": "confirmed",
+     "sources": [
+      "euronews-1007"
+     ],
+     "text": {
+      "zh": "九成以上已结束观察",
+      "en": ">90% completed observation"
+     }
+    }
+   ],
+   "concern": "up"
+  },
+  {
+   "id": "tests",
+   "label": {
+    "zh": "实验室检测（份）",
+    "en": "Lab tests run"
+   },
+   "definition": {
+    "zh": "官方公布的累计实验室检测数量及结果。",
+    "en": "Cumulative laboratory tests and results reported by officials."
+   },
+   "observations": [
+    {
+     "t": "2026-10-07T19:00:00+08:00",
+     "value": 5000,
+     "approx": true,
+     "tier": "confirmed",
+     "sources": [
+      "euronews-1007"
+     ],
+     "note": {
+      "zh": "全部未检出危险病原体",
+      "en": "No dangerous pathogens detected"
+     }
+    }
+   ],
+   "concern": "none"
+  },
+  {
+   "id": "facilities",
+   "label": {
+    "zh": "受限医疗机构",
+    "en": "Facilities with restrictions"
+   },
+   "definition": {
+    "zh": "据报道实施检疫或接诊限制的医疗机构数量。官方否认“大规模关闭医院”。",
+    "en": "Medical facilities reported to have quarantine or admission restrictions. Officials deny “mass hospital closures”."
+   },
+   "observations": [
+    {
+     "t": "2026-10-01T12:00:00+08:00",
+     "value": 1,
+     "tier": "reported",
+     "sources": [
+      "borus-1001"
+     ]
+    },
+    {
+     "t": "2026-10-03T12:00:00+08:00",
+     "value": 5,
+     "tier": "reported",
+     "sources": [
+      "meduza-1006"
+     ]
+    }
+   ],
+   "concern": "up"
+  }
+ ],
+ "risk": {
+  "t": "2026-10-06T18:00:00+08:00",
+  "source": "un-news-1006",
+  "levels": [
+   {
+    "scope": {
+     "zh": "伊尔库茨克",
+     "en": "Irkutsk"
+    },
+    "level": "moderate-low"
+   },
+   {
+    "scope": {
+     "zh": "俄罗斯全国",
+     "en": "Russian Federation"
+    },
+    "level": "low"
+   },
+   {
+    "scope": {
+     "zh": "世卫组织欧洲区域",
+     "en": "WHO European Region"
+    },
+    "level": "very-low"
+   }
+  ]
+ }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sentinel · Irkutsk suspected plague event monitor</title>
+    <meta name="description" content="Real-time monitor of the 2026 suspected plague event in Irkutsk, Russia: official statements, sourced timeline, map, drug prices and anomaly signals — every item labelled by credibility." />
+    <meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)" />
+    <meta property="og:title" content="Sentinel · Irkutsk Event Monitor" />
+    <meta property="og:description" content="Official / suspected / reported / unverified — clearly separated. Live timeline, map, drug prices and source status." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script>
+      // Apply theme before first paint to avoid a flash.
+      try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+      try { var l = localStorage.getItem('lang') || ((navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en'); document.documentElement.lang = l; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This monitor needs JavaScript. Raw data: <a href="/data/state.json">/data/state.json</a></noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

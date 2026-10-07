@@ -1,0 +1,214 @@
+{
+  "_doc": "Editorial timeline. tier: confirmed | suspected | reported | unverified | disputed. precision: day | time. importance: 1 (context) .. 3 (key). Times are Irkutsk time (UTC+8) unless stated.",
+  "events": [
+    {
+      "id": "e-0925-tube",
+      "t": "2026-09-25T12:00:00+08:00", "precision": "day",
+      "tier": "disputed", "category": "lab", "importance": 2, "locations": ["institute"],
+      "title": { "zh": "媒体称：实验员处理鼠疫菌时打碎试管", "en": "Media: technician reportedly broke a test tube containing Y. pestis" },
+      "summary": {
+        "zh": "多家俄罗斯独立媒体援引《贝加尔人》称，这名 28 岁实验员在 9 月 25 日采样时打碎装有鼠疫耶尔森菌的试管。俄消费者权益保护局委员会 10 月 5 日称未发现事故，因此该说法目前存在争议。",
+        "en": "Russian independent outlets, citing Lyudi Baikala, reported the 28-year-old technician broke a tube containing Yersinia pestis on 25 Sept. Rospotrebnadzor's commission said on 5 Oct it found no accident, so the claim is disputed."
+      },
+      "sources": ["theins-1002", "tvrain-1002", "lenta-1005"]
+    },
+    {
+      "id": "e-0929-hosp",
+      "t": "2026-09-29T12:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "case", "importance": 3, "locations": ["shelekhov-hospital"],
+      "title": { "zh": "患者因重症肺炎入住舍列霍夫区医院", "en": "Patient hospitalised with severe pneumonia in Shelekhov" },
+      "summary": {
+        "zh": "伊尔库茨克抗鼠疫研究所一名员工因重症肺炎被送往舍列霍夫区医院并使用呼吸机。官方确认住院及肺炎诊断；病原体未获官方确认。",
+        "en": "An employee of the Irkutsk Anti-Plague Institute was taken to Shelekhov District Hospital with severe pneumonia and put on a ventilator. Hospitalisation and pneumonia are officially acknowledged; the pathogen is not."
+      },
+      "sources": ["mt-1002", "meduza-1006"]
+    },
+    {
+      "id": "e-1001-shelekhov-q",
+      "t": "2026-10-01T12:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "quarantine", "importance": 2, "locations": ["shelekhov-hospital"],
+      "title": { "zh": "舍列霍夫医院多个科室暂停收治与出院", "en": "Shelekhov hospital halts admissions and discharges in several wards" },
+      "summary": {
+        "zh": "地方媒体 Borus 报道，自 10 月 1 日起，舍列霍夫区医院多个科室暂停接收和出院。早期报道称约 90 人接受观察。",
+        "en": "Local outlet Borus reported admissions and discharges were suspended in several departments from 1 Oct. Early reports put about 90 people under observation."
+      },
+      "sources": ["borus-1001", "ntd-1007"]
+    },
+    {
+      "id": "e-1002-death",
+      "t": "2026-10-02T02:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "case", "importance": 3, "locations": ["shelekhov-hospital"],
+      "title": { "zh": "患者死亡；官方死因为“病因不明的肺炎”", "en": "Patient dies; official cause: “pneumonia of undetermined etiology”" },
+      "summary": {
+        "zh": "10 月 1 日至 2 日夜间，这名 28 岁实验员在舍列霍夫区医院死亡。死亡本身经官方确认；俄消费者权益保护局将死因定为病因不明的肺炎，并称未在其样本中检出鼠疫病原体。",
+        "en": "The 28-year-old technician died at Shelekhov District Hospital overnight on 1–2 Oct. The death is officially confirmed; Rospotrebnadzor records the cause as pneumonia of undetermined etiology and says no plague pathogen was found in her samples."
+      },
+      "sources": ["mt-1002", "meduza-1006", "lenta-1005"]
+    },
+    {
+      "id": "e-1002-buryatia",
+      "t": "2026-10-02T15:00:00+08:00", "precision": "day",
+      "tier": "suspected", "category": "statement", "importance": 2, "locations": ["ulan-ude"],
+      "title": { "zh": "布里亚特共和国领导人称死者“可能死于鼠疫”", "en": "Buryatia's leader says the woman “died, maybe of the plague”" },
+      "summary": {
+        "zh": "邻近的布里亚特共和国领导人齐坚诺夫公开提及鼠疫。他不是卫生主管部门，联邦卫生部门随后未确认这一说法。这是“疑似”标签的主要依据之一。",
+        "en": "Alexei Tsydenov, head of neighbouring Buryatia, publicly mentioned plague. He is not a health authority and federal health officials have not confirmed it. This is one of the main bases for the “suspected” label."
+      },
+      "sources": ["aljazeera-1005", "fontanka-1005"]
+    },
+    {
+      "id": "e-1002-contacts",
+      "t": "2026-10-02T18:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "quarantine", "importance": 3, "locations": ["shelekhov-hospital", "irkutsk-city"],
+      "title": { "zh": "约 197 名接触者接受医学观察，其中 100 余人住院", "en": "About 197 contacts placed under medical observation, 100+ in hospital wards" },
+      "summary": {
+        "zh": "伊尔库茨克州州长科布泽夫表示，所有已识别的接触者均已接受医学观察，检测结果为阴性（官方说法）。“约 197 人”这一具体数字来自媒体报道。",
+        "en": "Governor Igor Kobzev said all identified contacts were under medical observation with negative tests (official). The figure of ~197 comes from media reports."
+      },
+      "sources": ["mt-1002", "zona-1002"]
+    },
+    {
+      "id": "e-1002-popova",
+      "t": "2026-10-02T20:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "response", "importance": 1, "locations": ["irkutsk-city"],
+      "title": { "zh": "俄首席卫生医师波波娃抵达伊尔库茨克", "en": "Chief sanitary doctor Anna Popova arrives in Irkutsk" },
+      "summary": { "zh": "据报道，俄联邦首席国家卫生医师当天抵达伊尔库茨克，随后实施了检疫措施。", "en": "Russia's chief state sanitary doctor reportedly arrived in Irkutsk the same day; quarantine measures followed." },
+      "sources": ["meduza-1006"]
+    },
+    {
+      "id": "e-1002-criminal",
+      "t": "2026-10-02T21:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "response", "importance": 1, "locations": ["institute"],
+      "title": { "zh": "据报道已就可能违反卫生规定立案；伊尔库茨克取消公共活动", "en": "Criminal case reportedly opened over possible sanitary violations; public events cancelled" },
+      "summary": { "zh": "《莫斯科时报》报道，已就可能违反卫生安全规定立案调查，伊尔库茨克的公共活动被取消。", "en": "The Moscow Times reported a criminal investigation into possible health-safety violations and the cancellation of public events in Irkutsk." },
+      "sources": ["mt-1002"]
+    },
+    {
+      "id": "e-1003-hospitals",
+      "t": "2026-10-03T12:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "quarantine", "importance": 2, "locations": ["irkutsk-hospitals", "irkaz"],
+      "title": { "zh": "伊尔库茨克多家医院实施限制措施", "en": "Restrictions reported at several Irkutsk hospitals" },
+      "summary": {
+        "zh": "媒体报道，第 1、3、10 市临床医院及伊万诺-马特列宁儿童医院实施检疫限制，伊尔库茨克铝厂（IrkAZ）要求佩戴口罩。官方将社交媒体上“大规模关闭医院”的说法称为虚假信息。",
+        "en": "Media reported quarantine restrictions at City Clinical Hospitals No. 1, 3 and 10 and the Ivano-Matreninskaya children's hospital, and a mask rule at the IrkAZ aluminium plant. Officials called social-media claims of mass hospital closures fake."
+      },
+      "sources": ["meduza-1006", "fontanka-1005", "lenta-1005"]
+    },
+    {
+      "id": "e-1004-pharmacies",
+      "t": "2026-10-04T12:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "pharmacy", "importance": 2, "locations": ["irkutsk-city", "shelekhov-city"],
+      "title": { "zh": "伊尔库茨克与舍列霍夫出现抗生素抢购，部分药店售罄", "en": "Antibiotic panic-buying in Irkutsk and Shelekhov; some pharmacies sold out" },
+      "summary": {
+        "zh": "据报道，周末居民在药店抢购抗生素和口罩，部分药店售罄或只接受预订。自行服用抗生素没有预防作用，还可能耽误真正的治疗。",
+        "en": "Residents reportedly stocked up on antibiotics and masks over the weekend; some pharmacies sold out or switched to pre-orders. Self-medicating with antibiotics does not protect you and can delay proper treatment."
+      },
+      "sources": ["meduza-1006", "ntd-1007"]
+    },
+    {
+      "id": "e-1004-rpn",
+      "t": "2026-10-04T14:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "statement", "importance": 3, "locations": ["irkutsk-city"],
+      "title": { "zh": "俄消费者权益保护局：病因不明的肺炎，未检出与工作相关的微生物", "en": "Rospotrebnadzor: pneumonia of undetermined etiology; no work-related microorganisms found" },
+      "summary": { "zh": "联邦卫生监管机构表示，死者生物样本中未检出与其职业活动相关的微生物，伊尔库茨克州的卫生流行病学形势稳定。", "en": "The federal health watchdog said no microorganisms related to her professional activity were found in her biological material, and that the sanitary-epidemiological situation in the region is stable." },
+      "sources": ["lenta-1005", "meduza-1006"]
+    },
+    {
+      "id": "e-1005-commission",
+      "t": "2026-10-05T12:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "statement", "importance": 2, "locations": ["institute"],
+      "title": { "zh": "官方委员会：研究所未发生病原体操作事故；克里姆林宫呼吁只相信官方信息", "en": "Commission finds no accident at the institute; Kremlin urges trust in official sources" },
+      "summary": { "zh": "俄消费者权益保护局委员会称，未发现研究所在操作病原体时发生事故。克里姆林宫发言人佩斯科夫呼吁民众只相信官方信息。", "en": "Rospotrebnadzor's commission said it found no accident involving pathogens at the institute. Kremlin spokesman Dmitry Peskov told citizens to trust only official sources." },
+      "sources": ["lenta-1005", "mt-1005"]
+    },
+    {
+      "id": "e-1005-contacts-tests",
+      "t": "2026-10-05T18:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "case", "importance": 2, "locations": ["irkutsk-city"],
+      "title": { "zh": "接触者中检出新冠和鼻病毒，未检出危险病原体", "en": "Contacts test positive for COVID-19 and rhinovirus, not dangerous pathogens" },
+      "summary": { "zh": "据报道，部分接触者检出普通呼吸道病毒（新冠、鼻病毒），未检出鼠疫等危险传染病病原体。", "en": "Some contacts reportedly tested positive for common respiratory viruses (COVID-19, rhinovirus); no dangerous pathogens such as plague were detected." },
+      "sources": ["rosbalt-1005", "meduza-1006"]
+    },
+    {
+      "id": "e-1005-us",
+      "t": "2026-10-05T20:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "diplomacy", "importance": 1, "locations": [],
+      "title": { "zh": "美国国务卿卢比奥：正密切关注；特朗普表示美方将提供帮助", "en": "US Secretary of State Rubio: “closely monitoring”; Trump says the US will help" },
+      "summary": { "zh": "美国疾控中心与国务院正在跟踪事态，美国国务院呼吁俄方“迅速、公开地分享准确信息”。", "en": "CDC and the State Department are tracking the situation; State urged Russian authorities to “share accurate information quickly and openly”." },
+      "sources": ["aljazeera-1005", "fontanka-1005"]
+    },
+    {
+      "id": "e-1006-borders",
+      "t": "2026-10-06T12:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "border", "importance": 2, "locations": ["kz", "kg", "uz"],
+      "title": { "zh": "哈萨克斯坦、吉尔吉斯斯坦、乌兹别克斯坦加强边境卫生检查", "en": "Kazakhstan, Kyrgyzstan and Uzbekistan tighten border sanitary checks" },
+      "summary": { "zh": "中亚国家宣布对入境人员加强卫生检疫，属于预防性措施。", "en": "Central Asian states announced stronger sanitary screening of arrivals as a precaution." },
+      "sources": ["fontanka-1005", "tca-1007"]
+    },
+    {
+      "id": "e-1006-who",
+      "t": "2026-10-06T18:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "who", "importance": 3, "locations": [],
+      "title": { "zh": "世卫组织：俄方通报伊尔库茨克州未登记鼠疫病例；风险评估为中低", "en": "WHO: Russia reports no plague case registered in Irkutsk; risk moderate-to-low" },
+      "summary": {
+        "zh": "世卫组织将风险评估为：伊尔库茨克中低，俄罗斯全国低，世卫组织欧洲区域极低。所有接触者均已识别并接受监测，未出现症状，均未检出危险传染病病原体。官方死因尚未确认。",
+        "en": "WHO assessed risk as moderate-to-low for Irkutsk, low for Russia and very low for the WHO European Region. All contacts were identified and monitored, none symptomatic, and no dangerous pathogens were detected in any of them. The cause of death is not yet confirmed."
+      },
+      "sources": ["un-news-1006", "un-news-zh-1006"]
+    },
+    {
+      "id": "e-1006-embassy",
+      "t": "2026-10-07T01:48:00+08:00", "precision": "time",
+      "tier": "confirmed", "category": "diplomacy", "importance": 2, "locations": [],
+      "title": { "zh": "美国驻莫斯科大使馆发布健康警报", "en": "U.S. Embassy Moscow issues a Health Alert" },
+      "summary": { "zh": "警报提及有关疑似肺鼠疫的媒体报道以及伊尔库茨克医院的检疫措施，建议遵循当地卫生部门指导、避开受影响设施，出现发热或呼吸道症状时及时就医。“请勿前往”的四级旅行警告原本就已生效。", "en": "The alert cites press reports of suspected pneumonic plague and hospital quarantines in Irkutsk, and advises following local health guidance, avoiding affected facilities and seeking care for fever or respiratory symptoms. The Level 4 “Do Not Travel” advisory was already in place." },
+      "sources": ["us-embassy-1006"]
+    },
+    {
+      "id": "e-1006-second-death",
+      "t": "2026-10-06T22:00:00+08:00", "precision": "day",
+      "tier": "unverified", "category": "case", "importance": 2, "locations": ["irkutsk-city"],
+      "title": { "zh": "部分俄媒称出现第二例死亡，未经证实", "en": "Some Russian outlets report a second death — unverified" },
+      "summary": { "zh": "该说法未获独立核实，俄罗斯当局未承认，世卫组织也未确认。在出现可靠来源之前，本站不将其计入死亡人数。", "en": "Not independently confirmed, not acknowledged by Russian authorities and not confirmed by WHO. We do not count it in the death toll until a credible source appears." },
+      "sources": ["united24-1006"]
+    },
+    {
+      "id": "e-1007-who-second",
+      "t": "2026-10-07T16:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "who", "importance": 3, "locations": ["institute"],
+      "title": { "zh": "世卫组织要求俄方说明死因、病原体，以及“第二名员工患肺炎”的报道", "en": "WHO asks Russia to clarify the cause, the pathogen and reports of a second employee with pneumonia" },
+      "summary": {
+        "zh": "世卫组织总干事呼吁及时、完整、透明地共享信息。世卫组织提出询问这一事实已确认；“第二名员工患病”本身仍属未证实的媒体报道。",
+        "en": "The WHO Director-General called for timely, complete and transparent information-sharing. That WHO asked is confirmed; the second illness itself remains an unverified media report."
+      },
+      "sources": ["foxnews-1007", "euronews-1007", "forbes-1007"]
+    },
+    {
+      "id": "e-1007-demarche",
+      "t": "2026-10-07T17:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "diplomacy", "importance": 2, "locations": [],
+      "title": { "zh": "美国国务院正式要求俄方提供更多信息", "en": "US State Department formally requests more information from Russia" },
+      "summary": { "zh": "美国国务院证实已正式向俄罗斯政府索取更多信息。特朗普表示预计将与普京通话，克里姆林宫称目前没有安排通话。", "en": "State confirmed it formally requested additional information from the Russian government. Trump said he expects to speak with Putin; the Kremlin said no call is scheduled." },
+      "sources": ["foxnews-1007", "euronews-1007"]
+    },
+    {
+      "id": "e-1007-rpn-norisk",
+      "t": "2026-10-07T19:00:00+08:00", "precision": "day",
+      "tier": "confirmed", "category": "statement", "importance": 3, "locations": ["irkutsk-city"],
+      "title": { "zh": "俄消费者权益保护局：无流行风险；约 5000 份检测均未检出危险病原体", "en": "Rospotrebnadzor: “no epidemic risk”; ~5,000 lab tests found no dangerous pathogens" },
+      "summary": {
+        "zh": "该机构称：约 5000 份实验室检测未发现危险病原体，九成以上接触者已结束医学观察，死者接种过疫苗、对其接触的病原体具有免疫力。佩斯科夫将相关媒体报道称为“虚假信息”。",
+        "en": "The agency said ~5,000 lab tests found no dangerous pathogens, more than 90% of contacts have completed medical observation, and the deceased was vaccinated against the pathogens she handled. Peskov called media reports “false information”."
+      },
+      "sources": ["euronews-1007", "forbesru-1007"]
+    },
+    {
+      "id": "e-1007-eu",
+      "t": "2026-10-07T20:00:00+08:00", "precision": "day",
+      "tier": "reported", "category": "diplomacy", "importance": 1, "locations": [],
+      "title": { "zh": "据报道欧盟将紧急讨论此事", "en": "EU reportedly to hold urgent discussion" },
+      "summary": { "zh": "《The Insider》报道欧盟计划紧急讨论此事。欧盟机构尚未发表正式声明。", "en": "The Insider reported the EU planned an urgent discussion. No formal statement from EU bodies yet." },
+      "sources": ["theins-1007"]
+    }
+  ]
+}

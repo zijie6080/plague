@@ -1,0 +1,294 @@
+import { createContext, useContext } from 'react';
+import type { L10n, Lang } from './types';
+
+const dict = {
+  brand: { zh: '哨点', en: 'Sentinel' },
+  brandSub: { zh: '伊尔库茨克事件监测', en: 'Irkutsk Event Monitor' },
+  live: { zh: '实时', en: 'Live' },
+  stale: { zh: '数据可能过期', en: 'Data may be stale' },
+  offline: { zh: '离线', en: 'Offline' },
+  updated: { zh: '更新于', en: 'Updated' },
+  generated: { zh: '生成于', en: 'Generated' },
+  language: { zh: '语言', en: 'Language' },
+  theme: { zh: '主题', en: 'Theme' },
+  themeSystem: { zh: '跟随系统', en: 'System' },
+  themeLight: { zh: '浅色', en: 'Light' },
+  themeDark: { zh: '深色', en: 'Dark' },
+  navOverview: { zh: '总览', en: 'Overview' },
+  navMap: { zh: '地图', en: 'Map' },
+  navTimeline: { zh: '时间线', en: 'Timeline' },
+  navFeed: { zh: '通报与新闻', en: 'Reports' },
+  navFeedShort: { zh: '报道', en: 'Reports' },
+  navPharma: { zh: '药品', en: 'Pharmacy' },
+  navSignals: { zh: '异常', en: 'Signals' },
+  navSystem: { zh: '数据源', en: 'Sources' },
+
+  // tiers
+  tier_confirmed: { zh: '官方确认', en: 'Official' },
+  tier_suspected: { zh: '疑似', en: 'Suspected' },
+  tier_reported: { zh: '媒体报道', en: 'Reported' },
+  tier_unverified: { zh: '未证实', en: 'Unverified' },
+  tier_disputed: { zh: '存在争议', en: 'Disputed' },
+  tierHelp_confirmed: { zh: '由政府机构或世卫组织正式发布或确认。官方确认不等于定论，但代表官方的正式立场。', en: 'Stated or confirmed by a government body or WHO. Official is not the same as final, but it is the on-record position.' },
+  tierHelp_suspected: { zh: '有关人员或机构公开提出可能性，但未经实验室确认。', en: 'Possibility raised publicly by officials or clinicians, not lab-confirmed.' },
+  tierHelp_reported: { zh: '有署名的可信媒体报道，官方尚未确认。', en: 'Reported by credible, attributed media; not officially confirmed.' },
+  tierHelp_unverified: { zh: '来源单一或匿名，或仅见于社交媒体，尚无法核实。', en: 'Single or anonymous source, or social media; cannot be verified yet.' },
+  tierHelp_disputed: { zh: '不同来源说法相互矛盾，或已被官方否认。', en: 'Contradicted by other sources or denied by officials.' },
+
+  // source types
+  st_official: { zh: '政府', en: 'Government' },
+  st_intl: { zh: '国际组织', en: 'Intl. org' },
+  st_wire: { zh: '通讯社', en: 'Wire' },
+  st_media: { zh: '媒体', en: 'Media' },
+  st_state_media: { zh: '官方媒体', en: 'State media' },
+  st_caution: { zh: '需谨慎', en: 'Caution' },
+  st_aggregator: { zh: '聚合', en: 'Aggregator' },
+  st_market: { zh: '市场数据', en: 'Market data' },
+  stHelp_caution: { zh: '该来源曾多次刊发耸动或缺乏出处的健康信息，或为匿名渠道/视频平台。', en: 'Outlet with a record of sensational or unsourced health claims, or an anonymous channel / video platform.' },
+  stHelp_state_media: { zh: '国家控制或附属的媒体。', en: 'State-controlled or state-affiliated outlet.' },
+
+  // briefing
+  situation: { zh: '态势简报', en: 'Situation' },
+  whatWeKnow: { zh: '已知', en: 'What we know' },
+  whatWeDontKnow: { zh: '未知', en: 'Still unknown' },
+  guidance: { zh: '给公众的提示', en: 'Guidance' },
+  whoRisk: { zh: '世卫组织风险评估', en: 'WHO risk assessment' },
+  risk_very_low: { zh: '极低', en: 'Very low' },
+  risk_low: { zh: '低', en: 'Low' },
+  'risk_moderate-low': { zh: '中低', en: 'Moderate–low' },
+  risk_moderate: { zh: '中', en: 'Moderate' },
+  risk_high: { zh: '高', en: 'High' },
+  'risk_very-low': { zh: '极低', en: 'Very low' },
+  editorialAsOf: { zh: '编辑核对于', en: 'Editorially reviewed' },
+  dayN: { zh: '第 {n} 天', en: 'Day {n}' },
+  sinceStart: { zh: '自 {d} 起', en: 'since {d}' },
+
+  // since yesterday
+  sinceYesterday: { zh: '过去 24 小时', en: 'Last 24 hours' },
+  sinceYesterdaySub: { zh: '与昨天相比的变化', en: 'What changed since yesterday' },
+  noChanges: { zh: '过去 24 小时内没有新的变化。', en: 'No changes in the last 24 hours.' },
+  figures: { zh: '数字变化', en: 'Figures' },
+  newEvents: { zh: '新事件', en: 'New events' },
+  newBulletins: { zh: '新官方通报', en: 'New official statements' },
+  coverage: { zh: '报道量', en: 'Coverage' },
+  coverageLine: { zh: '{a} 篇（前一日 {b} 篇）', en: '{a} reports (prev. day {b})' },
+  newSignals: { zh: '新异常信号', en: 'New signals' },
+  pharmaMoves: { zh: '药品变动', en: 'Pharmacy moves' },
+
+  // metrics
+  keyFigures: { zh: '核心数字', en: 'Key figures' },
+  keyFiguresNote: { zh: '大号数字只显示官方确认值；其他可信度的数字单独列出，不会合并计算。', en: 'Large numbers show official figures only. Other tiers are listed separately and never added together.' },
+  noOfficialFigure: { zh: '无官方数字', en: 'No official figure' },
+  approx: { zh: '约', en: '~' },
+  history: { zh: '历史记录', en: 'History' },
+  definition: { zh: '口径说明', en: 'Definition' },
+  sources: { zh: '来源', en: 'Sources' },
+  via: { zh: '转引自媒体报道', en: 'via media report' },
+  searchLink: { zh: '标题检索链接', en: 'headline search link' },
+  changed24h: { zh: '24 小时内有更新', en: 'Updated in last 24h' },
+
+  // map
+  mapTitle: { zh: '地点与范围', en: 'Places & scope' },
+  mapLocal: { zh: '伊尔库茨克', en: 'Irkutsk' },
+  mapCountry: { zh: '全国与周边', en: 'Russia & region' },
+  mapLegend: { zh: '图例', en: 'Legend' },
+  loc_lab: { zh: '研究所', en: 'Institute' },
+  loc_hospital: { zh: '收治医院', en: 'Treating hospital' },
+  loc_quarantine: { zh: '受限机构', en: 'Restricted facility' },
+  loc_site: { zh: '其他地点', en: 'Other site' },
+  loc_city: { zh: '城市', en: 'City' },
+  loc_statement: { zh: '相关表态', en: 'Statement' },
+  loc_focus: { zh: '自然疫源地', en: 'Natural focus' },
+  loc_border: { zh: '边境措施', en: 'Border measures' },
+  precision_exact: { zh: '精确位置', en: 'Exact location' },
+  precision_city: { zh: '城市级位置（近似）', en: 'City-level (approximate)' },
+  precision_region: { zh: '国家/地区级', en: 'Country / region level' },
+  precision_approx: { zh: '近似位置', en: 'Approximate' },
+  relatedEvents: { zh: '相关事件', en: 'Related events' },
+  mapUnavailable: { zh: '地图暂时无法加载。下方列表包含所有地点。', en: 'Map could not load. All places are listed below.' },
+  epicenter: { zh: '事件所在地', en: 'Event location' },
+
+  // timeline
+  timelineTitle: { zh: '事件时间线', en: 'Timeline' },
+  filterAll: { zh: '全部', en: 'All' },
+  keyOnly: { zh: '仅重要', en: 'Key only' },
+  search: { zh: '搜索', en: 'Search' },
+  searchPlaceholder: { zh: '搜索事件、地点、机构…', en: 'Search events, places, bodies…' },
+  noResults: { zh: '没有匹配的结果', en: 'No matching results' },
+  timeApprox: { zh: '日期级', en: 'date only' },
+  irkutskTime: { zh: '伊尔库茨克时间', en: 'Irkutsk time' },
+  cat_case: { zh: '病例', en: 'Case' },
+  cat_lab: { zh: '实验室', en: 'Lab' },
+  cat_quarantine: { zh: '隔离', en: 'Quarantine' },
+  cat_statement: { zh: '官方表态', en: 'Statement' },
+  cat_response: { zh: '处置', en: 'Response' },
+  cat_pharmacy: { zh: '药店', en: 'Pharmacy' },
+  cat_border: { zh: '边境', en: 'Border' },
+  cat_who: { zh: '世卫组织', en: 'WHO' },
+  cat_diplomacy: { zh: '外交', en: 'Diplomacy' },
+  showMore: { zh: '展开', en: 'More' },
+  showLess: { zh: '收起', en: 'Less' },
+  showAll: { zh: '显示全部 {n} 条', en: 'Show all {n}' },
+
+  // feed
+  feedTitle: { zh: '官方通报与新闻', en: 'Official statements & news' },
+  tabOfficial: { zh: '官方通报', en: 'Official' },
+  tabNews: { zh: '新闻聚合', en: 'News' },
+  autoCollected: { zh: '自动采集', en: 'Auto-collected' },
+  alsoCovered: { zh: '另有 {n} 家媒体报道', en: '+{n} more outlets' },
+  allLanguages: { zh: '全部语言', en: 'All languages' },
+  hideCaution: { zh: '隐藏“需谨慎”来源', en: 'Hide “caution” sources' },
+  topic_second_case: { zh: '第二例', en: 'Second case' },
+  'topic_second-case': { zh: '第二例', en: 'Second case' },
+  topic_who: { zh: '世卫组织', en: 'WHO' },
+  topic_diplomacy: { zh: '外交', en: 'Diplomacy' },
+  topic_quarantine: { zh: '隔离', en: 'Quarantine' },
+  topic_pharmacy: { zh: '药品', en: 'Pharmacy' },
+  topic_lab: { zh: '实验室', en: 'Lab' },
+  topic_border: { zh: '边境', en: 'Border' },
+  topic_denial: { zh: '辟谣/否认', en: 'Denial' },
+  originalLanguage: { zh: '原文标题', en: 'Original headline' },
+  volume7d: { zh: '7 日报道量（每小时）', en: 'Coverage, 7 days (hourly)' },
+  volumeNote: { zh: '报道量反映的是关注度，不代表事态的严重程度。', en: 'Volume measures attention, not severity.' },
+  newItems: { zh: '{n} 条新内容', en: '{n} new' },
+
+  // pharma
+  pharmaTitle: { zh: '药品价格与库存', en: 'Drug prices & availability' },
+  pharmaSub: { zh: '每 3 小时抓取一次 ASNA 连锁药房在伊尔库茨克、舍列霍夫以及莫斯科（对照组）的公开价格与库存。', en: 'Public listings from the ASNA pharmacy network in Irkutsk, Shelekhov and Moscow (control), sampled every 3 hours.' },
+  priceIndex: { zh: '价格指数', en: 'Price index' },
+  priceIndexHelp: { zh: '同一商品相对首次观测价格的中位数（基准 = 100）。只比较同款商品，因此不受上架商品组合变化的影响。', en: 'Median of each product’s price relative to its first observed price (100 = baseline). It compares like with like, so changes in which products are listed don’t distort it.' },
+  inStock: { zh: '有现货商品', en: 'In-stock products' },
+  inStockHelp: { zh: '有现货且不需预订的商品款数。', en: 'Products listed as available without pre-order.' },
+  unitPrice: { zh: '单位中位价', en: 'Median unit price' },
+  unitPriceHelp: { zh: '每片/每支的价格中位数（₽）。不同规格混合计算，仅供参考。', en: 'Median price per tablet/ampoule (₽), mixed strengths; indicative only.' },
+  roleFirstLine: { zh: '一线治疗/预防用药', en: 'First-line' },
+  rolePanic: { zh: '易被抢购', en: 'Panic-buy risk' },
+  roleControl: { zh: '对照', en: 'Control' },
+  monitoringSince: { zh: '自 {d} 起监测，共 {n} 次观测', en: 'Monitoring since {d} · {n} observations' },
+  pharmaEarly: { zh: '监测刚开始，趋势需要积累多次观测才有意义。事件早期药店售罄的情况见下方媒体报道。', en: 'Monitoring just started; trends need several observations to mean anything. Early sell-out reports are listed below.' },
+  pharmaNoData: { zh: '暂无药品数据，首次抓取完成后将显示。', en: 'No pharmacy data yet; it appears after the first collection run.' },
+  products: { zh: '在售商品', en: 'Listed products' },
+  price: { zh: '价格', en: 'Price' },
+  vsFirst: { zh: '较首次', en: 'vs first' },
+  availability: { zh: '可购量', en: 'Availability' },
+  preorder: { zh: '需预订', en: 'Pre-order' },
+  rx: { zh: '处方药', en: 'Rx' },
+  outOfStock: { zh: '无货', en: 'Out' },
+  mediaSignals: { zh: '媒体报道的药店情况', en: 'Reported pharmacy conditions' },
+  tableView: { zh: '表格', en: 'Table' },
+  chartView: { zh: '图表', en: 'Chart' },
+  openSource: { zh: '查看来源页面', en: 'Open source page' },
+  noSelfMedication: { zh: '抗生素需在医生指导下使用，囤药并不能预防鼠疫。', en: 'Antibiotics should be taken under medical supervision; stockpiling does not prevent plague.' },
+  observations: { zh: '次观测', en: 'observations' },
+  pharmaSummary: { zh: '监测药品概况', en: 'Overview' },
+
+  // signals
+  signalsTitle: { zh: '异常检测', en: 'Anomaly signals' },
+  signalsSub: { zh: '基于规则自动检测，每条信号都会说明触发的规则和依据。', en: 'Rule-based and automatic. Each signal states the rule and the numbers behind it.' },
+  sev_info: { zh: '提示', en: 'Info' },
+  sev_watch: { zh: '关注', en: 'Watch' },
+  sev_alert: { zh: '警报', en: 'Alert' },
+  noSignals: { zh: '目前没有活跃的异常信号。', en: 'No active signals.' },
+  recentSignals: { zh: '近期已结束的信号', en: 'Recently cleared' },
+  rule_price_index: { zh: '价格指数', en: 'Price index' },
+  rule_price_jump: { zh: '单品跳涨', en: 'Price jump' },
+  rule_availability_drop: { zh: '库存下降', en: 'Availability' },
+  rule_news_volume: { zh: '报道激增', en: 'Coverage spike' },
+  rule_claim_traction: { zh: '说法扩散', en: 'Claim spreading' },
+  rule_metric_change: { zh: '数字变化', en: 'Figure change' },
+  rule_page_change: { zh: '官方页面变更', en: 'Page change' },
+  rule_figure_extracted: { zh: '数字提取', en: 'Extracted figure' },
+  rule_source_down: { zh: '数据源', en: 'Source' },
+  firstDetected: { zh: '首次检测', en: 'First detected' },
+
+  // sources
+  systemTitle: { zh: '数据源运行状态', en: 'Data source status' },
+  systemSub: { zh: '自动定时采集公开网页、RSS、Telegram 和 PDF，保存历史快照，并检测内容变化。', en: 'Scheduled collection of public pages, RSS, Telegram and PDFs, with history snapshots and change detection.' },
+  status_ok: { zh: '正常', en: 'OK' },
+  status_degraded: { zh: '部分失败', en: 'Degraded' },
+  status_down: { zh: '无法访问', en: 'Down' },
+  status_pending: { zh: '等待首次运行', en: 'Pending' },
+  status_idle: { zh: '未配置', en: 'Idle' },
+  lastSuccess: { zh: '最近成功', en: 'Last success' },
+  nextRun: { zh: '下次运行', en: 'Next run' },
+  every: { zh: '每 {n} 分钟', en: 'every {n} min' },
+  latency: { zh: '响应', en: 'Latency' },
+  itemsLabel: { zh: '条目', en: 'Items' },
+  never: { zh: '从未', en: 'never' },
+  pageChanged: { zh: '页面变更', en: 'Page changed' },
+  healthy: { zh: '{a}/{b} 个数据源正常', en: '{a}/{b} sources healthy' },
+  kind_rss: { zh: 'RSS', en: 'RSS' },
+  kind_telegram: { zh: 'Telegram', en: 'Telegram' },
+  kind_page: { zh: '网页', en: 'Web page' },
+  kind_pdf: { zh: 'PDF', en: 'PDF' },
+  kind_asna: { zh: '药房', en: 'Pharmacy' },
+  group_official: { zh: '官方与国际组织', en: 'Official & international' },
+  group_news: { zh: '新闻', en: 'News' },
+  group_market: { zh: '市场', en: 'Market' },
+
+  // method / footer
+  methodTitle: { zh: '方法与说明', en: 'Method & notes' },
+  methodBody: {
+    zh: '本站把“说了什么”和“谁说的”分开记录：每条信息都标注可信度和来源，数字按可信度分层显示，不会合并成一个更大的数字。官方说法也可能被修正，本站会在时间线中保留修改记录。',
+    en: 'We separate what was said from who said it. Every item carries a credibility tier and its sources, and figures are shown per tier, never merged into a bigger number. Official statements can be revised too; the timeline keeps the record.',
+  },
+  disclaimer: {
+    zh: '本站仅供信息参考，不构成医疗建议。如有症状，请联系当地医疗机构。',
+    en: 'For information only, not medical advice. If you have symptoms, contact local health services.',
+  },
+  tierLegend: { zh: '可信度标签', en: 'Credibility tiers' },
+  sourceTypes: { zh: '来源类型', en: 'Source types' },
+  openSourceRepo: { zh: '数据与代码', en: 'Data & code' },
+
+  // toasts / misc
+  toastUpdated: { zh: '数据已更新', en: 'Data updated' },
+  toastNewSignal: { zh: '新异常信号', en: 'New signal' },
+  toastNewNews: { zh: '{n} 条新报道', en: '{n} new reports' },
+  toastNewEvent: { zh: '时间线有新事件', en: 'New timeline event' },
+  toastOffline: { zh: '连接中断，正在重试…', en: 'Connection lost, retrying…' },
+  toastOnline: { zh: '已重新连接', en: 'Reconnected' },
+  copied: { zh: '链接已复制', en: 'Link copied' },
+  copyLink: { zh: '复制链接', en: 'Copy link' },
+  close: { zh: '关闭', en: 'Close' },
+  loadError: { zh: '数据加载失败，正在重试。', en: 'Failed to load data; retrying.' },
+  retry: { zh: '重试', en: 'Retry' },
+  minutesAgo: { zh: '{n} 分钟前', en: '{n} min ago' },
+  hoursAgo: { zh: '{n} 小时前', en: '{n} h ago' },
+  daysAgo: { zh: '{n} 天前', en: '{n} d ago' },
+  justNow: { zh: '刚刚', en: 'just now' },
+  inMinutes: { zh: '{n} 分钟后', en: 'in {n} min' },
+  more: { zh: '更多', en: 'More' },
+  skipToContent: { zh: '跳到正文', en: 'Skip to content' },
+} satisfies Record<string, L10n>;
+
+export type DictKey = keyof typeof dict;
+
+export function detectLang(): Lang {
+  try {
+    const saved = localStorage.getItem('lang');
+    if (saved === 'zh' || saved === 'en') return saved;
+  } catch {}
+  const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+  for (const l of langs) {
+    const s = (l || '').toLowerCase();
+    if (s.startsWith('zh')) return 'zh';
+    if (s.startsWith('en')) return 'en';
+  }
+  return 'en';
+}
+
+export function translate(lang: Lang, key: DictKey | string, vars?: Record<string, string | number>) {
+  const entry = (dict as Record<string, L10n>)[key];
+  let s = entry ? entry[lang] : key;
+  if (vars) for (const [k, v] of Object.entries(vars)) s = s.replaceAll(`{${k}}`, String(v));
+  return s;
+}
+
+export const I18nContext = createContext<{ lang: Lang; setLang: (l: Lang) => void }>({ lang: 'en', setLang: () => {} });
+
+export function useI18n() {
+  const { lang, setLang } = useContext(I18nContext);
+  const t = (key: DictKey | string, vars?: Record<string, string | number>) => translate(lang, key, vars);
+  const l = (v: L10n | null | undefined) => (v ? v[lang] || v.en || v.zh || '' : '');
+  return { lang, setLang, t, l };
+}

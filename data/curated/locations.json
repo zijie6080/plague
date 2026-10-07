@@ -1,0 +1,328 @@
+{
+ "_doc": "Map features. precision: exact (geocoded facility) | approx | city | region. scale: local (Irkutsk/Shelekhov) | country.",
+ "locations": [
+  {
+   "id": "institute",
+   "type": "lab",
+   "tier": "confirmed",
+   "scale": "local",
+   "precision": "exact",
+   "lat": 52.2748,
+   "lon": 104.322,
+   "name": {
+    "zh": "伊尔库茨克西伯利亚及远东抗鼠疫研究所",
+    "en": "Irkutsk Anti-Plague Research Institute of Siberia & the Far East",
+    "ru": "Иркутский научно-исследовательский противочумный институт"
+   },
+   "status": {
+    "zh": "死者工作单位；据报道约 200 名员工被限制在所内 3 天，每天检测两次",
+    "en": "Workplace of the deceased; ~200 staff reportedly confined on site for 3 days with twice-daily testing"
+   },
+   "events": [
+    "e-0925-tube",
+    "e-1005-commission",
+    "e-1007-who-second"
+   ],
+   "short": {
+    "zh": "抗鼠疫研究所",
+    "en": "Anti-Plague Institute"
+   }
+  },
+  {
+   "id": "shelekhov-hospital",
+   "type": "hospital",
+   "tier": "confirmed",
+   "scale": "local",
+   "precision": "exact",
+   "lat": 52.2123,
+   "lon": 104.1019,
+   "name": {
+    "zh": "舍列霍夫区医院",
+    "en": "Shelekhov District Hospital",
+    "ru": "Шелеховская районная больница"
+   },
+   "status": {
+    "zh": "患者入院与死亡地点；自 10 月 1 日起多个科室暂停收治（媒体报道）",
+    "en": "Where the patient was treated and died; several wards closed to admissions from 1 Oct (reported)"
+   },
+   "events": [
+    "e-0929-hosp",
+    "e-1001-shelekhov-q",
+    "e-1002-death"
+   ],
+   "short": {
+    "zh": "舍列霍夫区医院",
+    "en": "Shelekhov Hospital"
+   }
+  },
+  {
+   "id": "irkutsk-hospitals",
+   "type": "quarantine",
+   "tier": "reported",
+   "scale": "local",
+   "precision": "city",
+   "lat": 52.287,
+   "lon": 104.281,
+   "name": {
+    "zh": "伊尔库茨克市内医院（第 1、3、10 临床医院及儿童医院）",
+    "en": "Irkutsk city hospitals (Clinical Hospitals 1, 3, 10 & children's)",
+    "ru": "Больницы Иркутска (ГКБ №1, №3, №10, Ивано-Матрёнинская)"
+   },
+   "status": {
+    "zh": "据报道 10 月 3 日起实施检疫限制；官方否认“大规模关闭”。各医院位置未逐一标注",
+    "en": "Quarantine restrictions reported from 3 Oct; officials deny mass closures. Exact sites not plotted individually"
+   },
+   "events": [
+    "e-1003-hospitals"
+   ],
+   "short": {
+    "zh": "市内医院（限制）",
+    "en": "City hospitals"
+   }
+  },
+  {
+   "id": "childrens-hospital",
+   "type": "quarantine",
+   "tier": "reported",
+   "scale": "local",
+   "precision": "exact",
+   "lat": 52.2805,
+   "lon": 104.3234,
+   "name": {
+    "zh": "伊万诺-马特列宁儿童临床医院",
+    "en": "Ivano-Matreninskaya Children's Clinical Hospital",
+    "ru": "Ивано-Матрёнинская детская клиническая больница"
+   },
+   "status": {
+    "zh": "据报道实施检疫限制",
+    "en": "Quarantine restrictions reported"
+   },
+   "events": [
+    "e-1003-hospitals"
+   ]
+  },
+  {
+   "id": "irkaz",
+   "type": "site",
+   "tier": "reported",
+   "scale": "local",
+   "precision": "exact",
+   "lat": 52.1873,
+   "lon": 104.082,
+   "name": {
+    "zh": "伊尔库茨克铝厂（IrkAZ）",
+    "en": "Irkutsk Aluminium Plant (IrkAZ)",
+    "ru": "Иркутский алюминиевый завод"
+   },
+   "status": {
+    "zh": "据报道实行口罩令",
+    "en": "Mask rule reported"
+   },
+   "events": [
+    "e-1003-hospitals"
+   ]
+  },
+  {
+   "id": "irkutsk-city",
+   "type": "city",
+   "tier": "confirmed",
+   "scale": "local",
+   "precision": "city",
+   "lat": 52.2891,
+   "lon": 104.2798,
+   "name": {
+    "zh": "伊尔库茨克市",
+    "en": "Irkutsk",
+    "ru": "Иркутск"
+   },
+   "status": {
+    "zh": "州首府，人口约 60 万；据报道药店出现抗生素抢购",
+    "en": "Regional capital (~600k); antibiotic panic-buying reported"
+   },
+   "events": [
+    "e-1004-pharmacies",
+    "e-1004-rpn",
+    "e-1007-rpn-norisk"
+   ],
+   "short": {
+    "zh": "伊尔库茨克",
+    "en": "Irkutsk"
+   }
+  },
+  {
+   "id": "shelekhov-city",
+   "type": "city",
+   "tier": "confirmed",
+   "scale": "local",
+   "precision": "city",
+   "lat": 52.2097,
+   "lon": 104.0977,
+   "name": {
+    "zh": "舍列霍夫市",
+    "en": "Shelekhov",
+    "ru": "Шелехов"
+   },
+   "status": {
+    "zh": "伊尔库茨克卫星城；据报道药店抗生素售罄",
+    "en": "Satellite town of Irkutsk; pharmacies reportedly sold out of antibiotics"
+   },
+   "events": [
+    "e-1004-pharmacies"
+   ]
+  },
+  {
+   "id": "ulan-ude",
+   "type": "statement",
+   "tier": "suspected",
+   "scale": "country",
+   "precision": "city",
+   "lat": 51.8358,
+   "lon": 107.5839,
+   "name": {
+    "zh": "乌兰乌德（布里亚特）",
+    "en": "Ulan-Ude (Buryatia)",
+    "ru": "Улан-Удэ"
+   },
+   "status": {
+    "zh": "布里亚特领导人公开提及“可能是鼠疫”",
+    "en": "Buryatia's leader publicly mentioned “maybe plague”"
+   },
+   "events": [
+    "e-1002-buryatia"
+   ],
+   "short": {
+    "zh": "乌兰乌德",
+    "en": "Ulan-Ude"
+   }
+  },
+  {
+   "id": "kosh-agach",
+   "type": "focus",
+   "tier": "confirmed",
+   "scale": "country",
+   "precision": "city",
+   "lat": 49.9947,
+   "lon": 88.6628,
+   "name": {
+    "zh": "戈尔诺-阿尔泰高山自然疫源地（科什阿加奇）",
+    "en": "Gorno-Altai natural plague focus (Kosh-Agach)",
+    "ru": "Горно-Алтайский природный очаг"
+   },
+   "status": {
+    "zh": "背景信息：俄罗斯 11 个自然疫源地中最活跃的一个；俄罗斯最近一例确诊病例发生在 2016 年",
+    "en": "Context: most active of Russia's 11 natural plague foci; last confirmed Russian case was in 2016"
+   },
+   "events": [],
+   "short": {
+    "zh": "阿尔泰疫源地",
+    "en": "Altai focus"
+   }
+  },
+  {
+   "id": "kz",
+   "type": "border",
+   "tier": "reported",
+   "scale": "country",
+   "precision": "region",
+   "lat": 48.0,
+   "lon": 67.0,
+   "name": {
+    "zh": "哈萨克斯坦",
+    "en": "Kazakhstan"
+   },
+   "status": {
+    "zh": "加强边境卫生检查",
+    "en": "Tightened border sanitary checks"
+   },
+   "events": [
+    "e-1006-borders"
+   ],
+   "short": {
+    "zh": "哈萨克斯坦",
+    "en": "Kazakhstan"
+   }
+  },
+  {
+   "id": "kg",
+   "type": "border",
+   "tier": "reported",
+   "scale": "country",
+   "precision": "region",
+   "lat": 41.5,
+   "lon": 74.6,
+   "name": {
+    "zh": "吉尔吉斯斯坦",
+    "en": "Kyrgyzstan"
+   },
+   "status": {
+    "zh": "加强边境卫生检查",
+    "en": "Tightened border sanitary checks"
+   },
+   "events": [
+    "e-1006-borders"
+   ],
+   "short": {
+    "zh": "吉尔吉斯斯坦",
+    "en": "Kyrgyzstan"
+   }
+  },
+  {
+   "id": "uz",
+   "type": "border",
+   "tier": "reported",
+   "scale": "country",
+   "precision": "region",
+   "lat": 41.4,
+   "lon": 64.6,
+   "name": {
+    "zh": "乌兹别克斯坦",
+    "en": "Uzbekistan"
+   },
+   "status": {
+    "zh": "加强边境卫生检查",
+    "en": "Tightened border sanitary checks"
+   },
+   "events": [
+    "e-1006-borders"
+   ],
+   "short": {
+    "zh": "乌兹别克斯坦",
+    "en": "Uzbekistan"
+   }
+  }
+ ],
+ "regions": [
+  {
+   "id": "RU-IRK",
+   "role": "epicenter",
+   "tier": "confirmed"
+  },
+  {
+   "id": "RU-BU",
+   "role": "statement",
+   "tier": "suspected"
+  },
+  {
+   "id": "RU-AL",
+   "role": "focus",
+   "tier": "confirmed"
+  }
+ ],
+ "countries": [
+  {
+   "id": "KAZ",
+   "role": "border",
+   "tier": "reported"
+  },
+  {
+   "id": "KGZ",
+   "role": "border",
+   "tier": "reported"
+  },
+  {
+   "id": "UZB",
+   "role": "border",
+   "tier": "reported"
+  }
+ ]
+}

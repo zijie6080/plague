@@ -1,0 +1,39 @@
+{
+  "name": "sentinel-irkutsk",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Real-time monitor for the 2026 suspected plague event in Irkutsk, Russia",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run state && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "collect": "node server/collect.mjs",
+    "state": "node server/build-state.mjs",
+    "start": "node server/index.mjs",
+    "test": "node --test server/test/",
+    "typecheck": "tsc --noEmit",
+    "geo": "node scripts/build-geo.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.2",
+    "unpdf": "^1.8.1"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "maplibre-gl": "^6.13.0",
+    "mapshaper": "^0.7.80",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.3"
+  }
+}
