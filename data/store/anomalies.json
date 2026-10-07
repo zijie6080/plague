@@ -1,5 +1,29 @@
 [
  {
+  "id": "jump|ciprofloxacin|shelekhov|2026-10-07T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-07T17:10:23.015Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 126,
+  "baseline": 71,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Shelekhov",
+   "zh": "舍列霍夫有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Ципромед 0,3% 5мл капли глазные ₽71 → ₽126.",
+   "zh": "涨幅最大：Ципромед 0,3% 5мл капли глазные，₽71 → ₽126。"
+  },
+  "firstSeen": "2026-10-07T17:07:17.052Z",
+  "lastSeen": "2026-10-07T17:07:17.052Z",
+  "active": true
+ },
+ {
   "id": "claim|second-case|2026-10-07",
   "rule": "claim_traction",
   "severity": "watch",
@@ -18,7 +42,7 @@
    "zh": "统计提及该说法的不同媒体数量。被多次转述不等于被证实，请以时间线中的可信度标签为准。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-07T16:44:04.710Z",
+  "lastSeen": "2026-10-07T17:07:17.052Z",
   "active": true
  },
  {
@@ -42,7 +66,7 @@
    "zh": "新增“官方确认”数字。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-07T16:44:04.710Z",
+  "lastSeen": "2026-10-07T17:07:17.052Z",
   "active": true
  },
  {
@@ -66,7 +90,7 @@
    "zh": "新增“未证实”数字。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-07T16:44:04.710Z",
+  "lastSeen": "2026-10-07T17:07:17.052Z",
   "active": true
  },
  {
@@ -78,17 +102,17 @@
    "type": "claim",
    "topic": "denial"
   },
-  "value": 9,
+  "value": 8,
   "title": {
-   "en": "Claim spreading: “official denial” — 9 outlets in 24h",
-   "zh": "说法扩散中：“官方否认”，24 小时内 9 家媒体提及"
+   "en": "Claim spreading: “official denial” — 8 outlets in 24h",
+   "zh": "说法扩散中：“官方否认”，24 小时内 8 家媒体提及"
   },
   "detail": {
    "en": "Counts distinct publishers mentioning the claim. Repetition is not confirmation; check the claim's tier in the timeline.",
    "zh": "统计提及该说法的不同媒体数量。被多次转述不等于被证实，请以时间线中的可信度标签为准。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-07T16:44:04.710Z",
+  "lastSeen": "2026-10-07T17:07:17.052Z",
   "active": true
  },
  {
@@ -112,7 +136,7 @@
    "zh": "新增“未证实”数字。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-07T16:44:04.710Z",
+  "lastSeen": "2026-10-07T17:07:17.052Z",
   "active": true
  }
 ]
