@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { State } from '../types';
 
-const STATE_URL = `${import.meta.env.BASE_URL}data/state.json`;
+// VITE_STATE_URL lets a static host (Vercel) read live data proxied from the
+// collector's host; the bundled snapshot is the fallback if that is unreachable.
+const FALLBACK_URL = `${import.meta.env.BASE_URL}data/state.json`;
+const STATE_URL = import.meta.env.VITE_STATE_URL || FALLBACK_URL;
 const STREAM_URL = `${import.meta.env.BASE_URL}api/stream`;
 const POLL_MS = 60_000;
 
@@ -23,10 +26,17 @@ export function useData(onChange?: (prev: State, next: State) => void) {
 
   const load = useCallback(async () => {
     try {
-      const res = await fetch(STATE_URL, { headers: etag.current ? { 'if-none-match': etag.current } : {}, cache: 'no-cache' });
-      if (res.status === 304) return;
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const next = (await res.json()) as State;
+      let res = await fetch(STATE_URL, { headers: etag.current ? { 'if-none-match': etag.current } : {}, cache: 'no-cache' }).catch(() => null);
+      if (res?.status === 304) return;
+      let next: State | null = null;
+      if (res?.ok) next = (await res.json().catch(() => null)) as State | null;
+      if (!next && STATE_URL !== FALLBACK_URL) {
+        res = await fetch(FALLBACK_URL, { cache: 'no-cache' });
+        if (res.ok) next = (await res.json()) as State;
+        // Never replace newer data with an older bundled snapshot.
+        if (next && prev.current && Date.parse(next.generatedAt) <= Date.parse(prev.current.generatedAt)) return;
+      }
+      if (!res || !next) throw new Error(`HTTP ${res?.status ?? 0}`);
       etag.current = res.headers.get('etag');
       if (prev.current && prev.current.generatedAt === next.generatedAt) return;
       if (prev.current) cb.current?.(prev.current, next);
