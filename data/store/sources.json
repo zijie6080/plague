@@ -2,6 +2,14 @@
  "rpn-telegram": {
   "runs": [
    {
+    "t": "2026-10-08T17:36:46.984Z",
+    "ok": true,
+    "ms": 720,
+    "n": 1,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-08T17:26:46.627Z",
     "ok": true,
     "ms": 685,
@@ -760,22 +768,14 @@
     "n": 2,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-07T16:17:55.164Z",
-    "ok": true,
-    "ms": 769,
-    "n": 2,
-    "fresh": 2,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-08T17:26:46.627Z",
+  "lastRun": "2026-10-08T17:36:46.984Z",
   "lastStatus": 200,
-  "lastMs": 685,
+  "lastMs": 720,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-08T17:26:46.627Z",
+  "lastOk": "2026-10-08T17:36:46.984Z",
   "consecutiveFailures": 0,
   "lastItems": 1
  },
@@ -2287,6 +2287,14 @@
  "gnews-en": {
   "runs": [
    {
+    "t": "2026-10-08T17:36:47.525Z",
+    "ok": true,
+    "ms": 503,
+    "n": 94,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-08T17:26:47.122Z",
     "ok": true,
     "ms": 457,
@@ -3023,17 +3031,25 @@
     "status": 200
    }
   ],
-  "lastRun": "2026-10-08T17:26:47.122Z",
+  "lastRun": "2026-10-08T17:36:47.525Z",
   "lastStatus": 200,
-  "lastMs": 457,
+  "lastMs": 503,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-08T17:26:47.122Z",
+  "lastOk": "2026-10-08T17:36:47.525Z",
   "consecutiveFailures": 0,
-  "lastItems": 95
+  "lastItems": 94
  },
  "gnews-ru": {
   "runs": [
+   {
+    "t": "2026-10-08T17:36:48.078Z",
+    "ok": true,
+    "ms": 526,
+    "n": 65,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-08T17:26:47.555Z",
     "ok": true,
@@ -3771,12 +3787,12 @@
     "status": 200
    }
   ],
-  "lastRun": "2026-10-08T17:26:47.555Z",
+  "lastRun": "2026-10-08T17:36:48.078Z",
   "lastStatus": 200,
-  "lastMs": 409,
+  "lastMs": 526,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-08T17:26:47.555Z",
+  "lastOk": "2026-10-08T17:36:48.078Z",
   "consecutiveFailures": 0,
   "lastItems": 65
  },
@@ -5463,6 +5479,14 @@
  "ria": {
   "runs": [
    {
+    "t": "2026-10-08T17:36:48.953Z",
+    "ok": true,
+    "ms": 856,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-08T17:16:48.822Z",
     "ok": true,
     "ms": 576,
@@ -5863,12 +5887,12 @@
     "status": 200
    }
   ],
-  "lastRun": "2026-10-08T17:16:48.822Z",
+  "lastRun": "2026-10-08T17:36:48.953Z",
   "lastStatus": 200,
-  "lastMs": 576,
+  "lastMs": 856,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-08T17:16:48.822Z",
+  "lastOk": "2026-10-08T17:36:48.953Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
