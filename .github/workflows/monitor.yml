@@ -1,73 +1,74 @@
-# Serverless data engine. Every 10 minutes GitHub Actions collects from all
-# sources, commits the history (data/store) to main, and force-pushes the
-# freshly built state.json to the single-commit `live` branch. The Vercel site
-# proxies /live/state.json to that file, so no server and no GitHub Pages needed.
+# Serverless data engine.
+# One job collects every 10 minutes for ~6 hours (GitHub throttles frequent
+# cron schedules, so a single long job is far more regular), commits history to
+# main and force-pushes state.json to the single-commit `live` branch that the
+# Vercel site proxies. When the loop ends the workflow re-dispatches itself; the
+# hourly schedule is only a safety net in case that chain ever breaks.
 name: monitor
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # GitHub may delay scheduled runs under load
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       force:
-        description: 'Run every source now'
+        description: 'Run every source now on the first round'
         type: boolean
         default: false
+      loops:
+        description: 'Rounds (10 min each)'
+        default: '34'
   push:
     branches: [main]
     paths: ['src/**', 'server/**', 'package*.json']
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
-  group: monitor
+  group: monitor-${{ github.event_name == 'push' && 'check' || 'collect' }}
   cancel-in-progress: false
 
 jobs:
-  collect:
+  check:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+  collect:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
     steps:
       # Always work on main, whichever branch the schedule fires from.
       - uses: actions/checkout@v4
-        with:
-          ref: main
+        with: { ref: main, fetch-depth: 0 }
       - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
+        with: { node-version: 22, cache: npm }
       - run: npm ci
       - run: npm test
-
-      - name: Collect
-        if: github.event_name != 'push'
-        run: npm run collect -- ${{ inputs.force && '--force' || '' }}
-
-      - name: Commit history to main
-        if: github.event_name != 'push'
+      - name: Collect every 10 minutes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LOOPS: ${{ inputs.loops || (github.event_name == 'schedule' && '1') || '34' }}
+          FORCE: ${{ inputs.force && '--force' || '' }}
+        run: scripts/ci-loop.sh
+      # Keep the chain going. A scheduled safety-net run only does one round
+      # and re-dispatches only if no long run is already queued or running.
+      - name: Re-dispatch
+        if: success() || failure()   # a manual cancel stops the chain
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "sentinel-bot"
-          git config user.email "sentinel-bot@users.noreply.github.com"
-          git add data/store
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "data: collection $(date -u +%Y-%m-%dT%H:%MZ)" -q
-          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((2**i)); done
-          exit 1
-
-      - name: Publish live state
-        if: github.event_name != 'push'
-        run: |
-          mkdir -p "$RUNNER_TEMP/live" && cp public/data/state.json "$RUNNER_TEMP/live/state.json"
-          cd "$RUNNER_TEMP/live"
-          git init -q -b live
-          git config user.name "sentinel-bot"
-          git config user.email "sentinel-bot@users.noreply.github.com"
-          # The live branch holds data only; tell Vercel never to build it.
-          echo '{ "git": { "deploymentEnabled": false }, "ignoreCommand": "exit 0" }' > vercel.json
-          git add state.json vercel.json && git commit -qm "live state $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push -fq "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" live
-
-      - name: Check build
-        if: github.event_name == 'push'
-        run: npm run build
+          running=$(gh run list --workflow monitor.yml --event workflow_dispatch --json status --jq '[.[] | select(.status=="in_progress" or .status=="queued")] | length')
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$running" = "0" ]; then
+            gh workflow run monitor.yml --ref main -f loops=34
+          fi

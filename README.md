@@ -65,7 +65,7 @@ docker build -t sentinel . && docker run -d -p 8080:8080 -v $PWD/data:/app/data 
 采集在进程内运行，页面通过 SSE 在数据更新后几秒内刷新。
 
 **方式 B：GitHub Actions（零服务器采集）**
-`.github/workflows/monitor.yml` 每 10 分钟采集一次，将 `data/store` 提交回仓库（git 历史即快照历史），并把最新的 `state.json` 强制推送到只有一个提交的 `live` 分支。前端在没有 SSE 时自动改为 60 秒 ETag 轮询。
+`.github/workflows/monitor.yml` 用一个长时间运行的任务每 10 分钟采集一次（GitHub 会严重限流高频定时任务，所以不依赖 cron），约 6 小时后自动接力启动下一轮，每小时的定时任务只作兜底；在 Actions 页面手动取消运行即可停止接力。将 `data/store` 提交回仓库（git 历史即快照历史），并把最新的 `state.json` 强制推送到只有一个提交的 `live` 分支。前端在没有 SSE 时自动改为 60 秒 ETag 轮询。
 
 **方式 C：Vercel（前端）+ GitHub Actions（采集）**
 `vercel.json` 已配置：Vercel 只托管前端，`/live/state.json` 反向代理到 `live` 分支上由 Actions 每 10 分钟生成的最新数据（raw.githubusercontent.com，不需要开启 GitHub Pages）；代理不可用时自动回退到构建时打包的快照。只改动 `data/store` 的数据提交不会触发 Vercel 重新构建（`ignoreCommand`），避免超出每日部署次数。
