@@ -1,5 +1,71 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-08T06:36:29.177Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (6 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 6 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-08T06:36:25.979Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (6 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 6 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-08T06:36:03.489Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (6 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 6 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
+  "active": true
+ },
+ {
   "id": "stock|amoxiclav|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +87,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 16 款）；可购量 860（峰值 3241）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -46,7 +112,7 @@
    "zh": "有现货商品 11 款（72 小时峰值 17 款）；可购量 16（峰值 40）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -71,7 +137,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 2 款）；可购量 2（峰值 2）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -96,7 +162,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 18）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -121,73 +187,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 2（峰值 5）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-08T02:26:28.770Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (5 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 5 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-08T02:26:25.475Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (5 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 5 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-08T02:26:02.983Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (5 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 5 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -209,7 +209,7 @@
    "zh": "统计提及该说法的不同媒体数量。被多次转述不等于被证实，请以时间线中的可信度标签为准。"
   },
   "firstSeen": "2026-10-08T01:16:30.194Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -221,17 +221,17 @@
    "type": "claim",
    "topic": "denial"
   },
-  "value": 6,
+  "value": 5,
   "title": {
-   "en": "Claim spreading: “official denial” — 6 outlets in 24h",
-   "zh": "说法扩散中：“官方否认”，24 小时内 6 家媒体提及"
+   "en": "Claim spreading: “official denial” — 5 outlets in 24h",
+   "zh": "说法扩散中：“官方否认”，24 小时内 5 家媒体提及"
   },
   "detail": {
    "en": "Counts distinct publishers mentioning the claim. Repetition is not confirmation; check the claim's tier in the timeline.",
    "zh": "统计提及该说法的不同媒体数量。被多次转述不等于被证实，请以时间线中的可信度标签为准。"
   },
   "firstSeen": "2026-10-08T01:16:30.194Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -347,7 +347,7 @@
    "zh": "新增“官方确认”数字。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -371,7 +371,7 @@
    "zh": "新增“未证实”数字。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  },
  {
@@ -395,7 +395,7 @@
    "zh": "新增“未证实”数字。"
   },
   "firstSeen": "2026-10-07T16:38:15.646Z",
-  "lastSeen": "2026-10-08T06:25:40.029Z",
+  "lastSeen": "2026-10-08T06:35:40.378Z",
   "active": true
  }
 ]
