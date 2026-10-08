@@ -4,8 +4,8 @@ import type { Lang, State } from './types';
 import { useData, useNow } from './lib/useData';
 import { toast } from './lib/toast';
 import { TopBar, TabBar, useActiveSection, type ThemePref } from './components/TopBar';
-import { Briefing, KnownUnknown } from './components/Briefing';
-import { Metrics, MetricSheet } from './components/Metrics';
+import { Lead, RiskBlock, KnownBlock } from './components/Briefing';
+import { MetricSheet } from './components/Metrics';
 import { SinceYesterday } from './components/SinceYesterday';
 import { MapPanel } from './components/MapPanel';
 import { Timeline, EventSheet } from './components/Timeline';
@@ -15,9 +15,7 @@ import { Signals, SignalSheet } from './components/Signals';
 import { SourcesPanel } from './components/SourcesPanel';
 import { Method } from './components/Method';
 import { Toasts } from './components/ui/Toasts';
-import { Sk } from './components/ui/Misc';
 import { UIContext, type Focus } from './components/ui-context';
-import { Icon } from './components/ui/Icon';
 
 const SEEN_KEY = 'sentinel.seen.v1';
 
@@ -119,34 +117,35 @@ export default function App() {
       <UIContext.Provider value={ui}>
         <a className="skip" href="#overview">{tr('skipToContent')}</a>
         <TopBar conn={conn} generatedAt={state?.generatedAt} now={now} theme={theme} setTheme={setTheme} active={active} />
-        <main className="shell">
+        <main className="wrap" id="overview">
           {error && !state && (
-            <div className="banner" role="alert"><Icon name="alert" size={16} />{tr('loadError')}<button className="btn" style={{ marginLeft: 'auto' }} onClick={() => reload().catch(() => {})}>{tr('retry')}</button></div>
+            <div className="banner" role="alert">{tr('loadError')}<button className="btn" onClick={() => reload().catch(() => {})}>{tr('retry')}</button></div>
           )}
-          <div className="grid" id="overview">
-            <div className="col-8 stack">
-              {state ? <Briefing state={state} now={now} /> : <div className="panel hero"><Sk w={160} /><Sk h={28} style={{ marginTop: 16 }} /><Sk h={28} w="70%" style={{ marginTop: 8 }} /><Sk h={56} style={{ marginTop: 20 }} /></div>}
-              <Metrics state={state} />
-              {state && <KnownUnknown state={state} />}
+          <Lead state={state} now={now} />
+          <div className="section" style={{ paddingTop: 36 }}>
+            <div className="cols">
+              <div>{state && <KnownBlock state={state} />}</div>
+              <aside className="rail">
+                <SinceYesterday state={state} />
+                {state && <RiskBlock state={state} />}
+              </aside>
             </div>
-            <div className="col-4 stack">
-              <SinceYesterday state={state} />
-            </div>
-
-            <div className="col-8"><MapPanel state={state} themeKey={themeKey} /></div>
-            <div className="col-4"><Signals state={state} now={now} /></div>
-
-            <div className="col-5"><Timeline state={state} seen={seen} /></div>
-            <div className="col-7"><Feed state={state} now={now} seen={seen} /></div>
-
-            <div className="col-12"><Pharma state={state} /></div>
-            <div className="col-12"><SourcesPanel state={state} now={now} /></div>
-            <div className="col-12"><Method /></div>
           </div>
+          <MapPanel state={state} themeKey={themeKey} />
+          <div className="cols">
+            <Timeline state={state} seen={seen} />
+            <aside className="rail" style={{ paddingTop: 44 }}>
+              <Signals state={state} now={now} />
+            </aside>
+          </div>
+          <Feed state={state} now={now} seen={seen} />
+          <Pharma state={state} />
+          <section className="section"><SourcesPanel state={state} now={now} /></section>
+          <Method />
           <footer className="foot">
             <span>{tr('brand')} · {tr('brandSub')}</span>
             <span>{tr('disclaimer')}</span>
-            <span style={{ marginLeft: 'auto' }}>Map © OpenStreetMap · OpenFreeMap · Natural Earth</span>
+            <span>Map © OpenStreetMap · OpenFreeMap · Natural Earth</span>
           </footer>
         </main>
         <TabBar active={active} badge={badges} />

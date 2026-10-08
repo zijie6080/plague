@@ -167,3 +167,27 @@ test('buildDaily reports metric changes within 24h', () => {
   });
   assert.deepEqual(d.metricChanges.map((c) => [c.metric, c.from, c.to]), [['tests', null, 5000]]);
 });
+
+test('tabletka parser reads price range and pharmacy count', async () => {
+  const { parseTabletka } = await import('../collectors/tabletka.mjs');
+  const row = `<tr class="tr-border"><td class="btn"><div itemid="3538"></div></td><td class="name tooltip-info"><a href="/x">Доксициклин </a></td>
+    <td class="form tooltip-info"><div class="tooltip-info-header"> <a href="/r">капсулы 100мг N10</a></div><span> Без рецепта </span></td>
+    <td class="price"><span class="price-value">3.06 ... 3.94 р.</span><a href="/r">в 3418 аптеках </a></td></tr>`;
+  const [o] = parseTabletka(`<table>${row}${row}</table>`);
+  assert.equal(o.name, 'Доксициклин капсулы 100мг N10');
+  assert.equal(o.price, 3.06);
+  assert.equal(o.priceMax, 3.94);
+  assert.equal(o.available, 3418);
+  assert.equal(o.rx, false);
+});
+
+test('price jump ignores products missing from the latest listing', () => {
+  const series = { 'ciprofloxacin|shelekhov': [{ t: 'T1', index: 100 }, { t: 'T2', index: 100 }] };
+  const skus = {
+    'shelekhov|1': { drug: 'ciprofloxacin', city: 'shelekhov', name: 'eye drops', prev: { price: 71 }, last: { t: 'T1', price: 126 } },
+    'shelekhov|2': { drug: 'ciprofloxacin', city: 'shelekhov', name: 'tabs', prev: { price: 100 }, last: { t: 'T2', price: 130 } },
+  };
+  const jumps = pharmaPriceRules({ series, skus }).filter((x) => x.rule === 'price_jump');
+  assert.equal(jumps.length, 1);
+  assert.match(jumps[0].detail.en, /tabs/);
+});

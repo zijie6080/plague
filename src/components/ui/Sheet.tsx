@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { useI18n } from '../../i18n';
 import { Icon } from './Icon';
 
-/** Side drawer on desktop, bottom sheet on mobile. Swipe down to close on touch. */
+/** Side panel on desktop, bottom sheet on mobile (swipe down to close). */
 export function Sheet({ open, onClose, eyebrow, title, children }: { open: boolean; onClose: () => void; eyebrow?: ReactNode; title: ReactNode; children: ReactNode }) {
   const { t } = useI18n();
   const ref = useRef<HTMLDivElement>(null);
@@ -17,18 +17,12 @@ export function Sheet({ open, onClose, eyebrow, title, children }: { open: boole
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     ref.current?.focus();
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = overflow;
-      prevFocus?.focus?.();
-    };
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = overflow; prevFocus?.focus?.(); };
   }, [open, onClose]);
 
   if (!open) return null;
-
   const onTouchStart = (e: React.TouchEvent) => {
-    const body = ref.current?.querySelector('.sheet-body');
-    if (body && body.scrollTop > 0) return;
+    if ((ref.current?.querySelector('.sheet-body')?.scrollTop || 0) > 0) return;
     drag.current = { y: e.touches[0].clientY, dy: 0 };
   };
   const onTouchMove = (e: React.TouchEvent) => {
@@ -38,25 +32,21 @@ export function Sheet({ open, onClose, eyebrow, title, children }: { open: boole
   };
   const onTouchEnd = () => {
     if (!drag.current || !ref.current) return;
-    const close = drag.current.dy > 90;
-    ref.current.style.transition = 'transform .2s ease';
-    ref.current.style.transform = close ? 'translateY(100%)' : '';
     const el = ref.current;
+    const close = drag.current.dy > 90;
+    el.style.transition = 'transform .2s ease';
+    el.style.transform = close ? 'translateY(100%)' : '';
     setTimeout(() => { el.style.transition = ''; if (close) onClose(); }, 200);
     drag.current = null;
   };
-
   return createPortal(
     <>
       <div className="scrim" onClick={onClose} />
       <div className="sheet" role="dialog" aria-modal="true" tabIndex={-1} ref={ref} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
         <div className="sheet-grab" />
         <div className="sheet-head">
-          <div style={{ flex: 1, minWidth: 0 }}>
-            {eyebrow && <div className="eyebrow">{eyebrow}</div>}
-            <h3>{title}</h3>
-          </div>
-          <button className="iconbtn" onClick={onClose} aria-label={t('close')}><Icon name="x" /></button>
+          <div style={{ minWidth: 0 }}>{eyebrow && <div className="eyebrow">{eyebrow}</div>}<h3>{title}</h3></div>
+          <button className="close" onClick={onClose} aria-label={t('close')}><Icon name="x" size={18} /></button>
         </div>
         <div className="sheet-body">{children}</div>
       </div>

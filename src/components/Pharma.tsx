@@ -1,169 +1,170 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useI18n } from '../i18n';
 import type { PharmaPoint, State } from '../types';
 import { fmtEventDate, fmtLocal, fmtNum, fmtPct } from '../lib/format';
-import { Panel, Segmented, Sk } from './ui/Misc';
+import { Section, Sk, Tabs } from './ui/Misc';
 import { InfoTip, TierBadge } from './ui/Badges';
-import { Icon } from './ui/Icon';
 import { LineChart, type Series } from './ui/Charts';
 import { useUI } from './ui-context';
 
-const CITY_COLOR: Record<string, string> = { irkutsk: 'var(--series-1)', shelekhov: 'var(--series-2)', moscow: 'var(--series-3)' };
+const SERIES = ['var(--series-1)', 'var(--series-2)', 'var(--series-3)'];
 const ROLE_ORDER = ['first-line', 'panic', 'control'] as const;
 const ROLE_KEY = { 'first-line': 'roleFirstLine', panic: 'rolePanic', control: 'roleControl' } as const;
-
 const last = (s?: PharmaPoint[]) => (s && s.length ? s[s.length - 1] : undefined);
 
+function useNarrow(q = '(max-width: 640px)') {
+  const [m, setM] = useState(() => matchMedia(q).matches);
+  useEffect(() => {
+    const mq = matchMedia(q);
+    const fn = () => setM(mq.matches);
+    mq.addEventListener('change', fn);
+    return () => mq.removeEventListener('change', fn);
+  }, [q]);
+  return m;
+}
+
 export function Pharma({ state }: { state: State | null }) {
+  const narrow = useNarrow();
   const { t, l, lang } = useI18n();
   const { open } = useUI();
+  const [country, setCountry] = useState('ru');
   const [drug, setDrug] = useState('doxycycline');
-  const [view, setView] = useState<'chart' | 'table'>('chart');
-  const [city, setCity] = useState('irkutsk');
+  const [city, setCity] = useState<string | null>(null);
 
-  if (!state) {
-    return (
-      <Panel id="pharma" eyebrow={<><Icon name="pill" size={13} />{t('navPharma')}</>} title={t('pharmaTitle')} sub={t('pharmaSub')}>
-        <Sk h={260} />
-      </Panel>
-    );
-  }
+  if (!state) return <Section id="pharma" title={t('pharmaTitle')} sub={t('pharmaSub')}><Sk h={280} /></Section>;
   const ph = state.pharma;
-  const hasData = ph.observations > 0;
+  const countries = ph.countries?.length ? ph.countries : [];
+  const cty = countries.find((c) => c.id === country) || countries[0];
+  const cities = ph.cities.filter((c) => !cty || c.country === cty.id);
+  const avail = cty?.availMetric || 'inStock';
   const series = (d: string, c: string) => ph.series[`${d}|${c}`] || [];
+  const drugs = ph.drugs.filter((d) => cities.some((c) => series(d.id, c.id).length));
+  const drugInfo = drugs.find((d) => d.id === drug) || drugs[0];
+  const tableCity = city && cities.some((c) => c.id === city) ? city : cities[0]?.id;
+  // On phones the table shows one market at a time (switcher above it) instead of scrolling sideways.
+  const colCities = narrow ? cities.filter((c) => c.id === tableCity) : cities;
+  const latest = drugInfo && tableCity ? ph.latest[`${drugInfo.id}|${tableCity}`] : undefined;
+  const maxObs = drugInfo ? Math.max(0, ...cities.map((c) => series(drugInfo.id, c.id).length)) : 0;
   const tFmt = (ms: number) => new Intl.DateTimeFormat(lang === 'zh' ? 'zh-CN' : 'en-GB', { month: 'numeric', day: 'numeric', hour: '2-digit', hour12: false }).format(ms);
-  const toSeries = (key: keyof PharmaPoint): Series[] => ph.cities.map((c) => ({
-    id: c.id, label: l(c.name), color: CITY_COLOR[c.id], dash: c.role === 'control',
-    points: series(drug, c.id).map((p) => ({ t: Date.parse(p.t), v: p[key] as number | null })),
+  const cityLabel = (c: (typeof cities)[number]) => `${l(c.name)}${c.role === 'control' ? ` (${t('roleControl')})` : ''}`;
+  const toSeries = (key: keyof PharmaPoint): Series[] => cities.map((c, i) => ({
+    id: c.id, label: cityLabel(c), color: SERIES[i % 3], dash: c.role === 'control',
+    points: series(drugInfo!.id, c.id).map((p) => ({ t: Date.parse(p.t), v: p[key] as number | null })),
   }));
-  const maxObs = Math.max(0, ...ph.cities.map((c) => series(drug, c.id).length));
-  const drugInfo = ph.drugs.find((d) => d.id === drug)!;
-  const latest = ph.latest[`${drug}|${city}`];
+  const availLabel = avail === 'avail' ? t('pharmacies') : t('inStock');
+  const availHelp = avail === 'avail' ? t('pharmaciesHelp') : t('inStockHelp');
+  const availCell = (p?: PharmaPoint) => (!p ? '—' : avail === 'avail' ? fmtNum(p.avail, lang) : p.skus ? `${p.inStock}/${p.skus}` : t('outOfStock'));
   const mediaEvents = state.events.filter((e) => e.category === 'pharmacy');
-  const pharmaSignals = state.anomalies.active.filter((a) => a.subject.drug);
 
   return (
-    <Panel
+    <Section
       id="pharma"
-      eyebrow={<><Icon name="pill" size={13} />{t('navPharma')}</>}
       title={t('pharmaTitle')}
       sub={t('pharmaSub')}
-      bodyClass=""
-      tools={hasData ? <span className="faint" style={{ fontSize: 12 }}>{t('monitoringSince', { d: fmtLocal(ph.since, lang), n: ph.observations })}</span> : undefined}
+      tools={countries.length > 1 && <Tabs label={t('country')} value={cty.id} onChange={(v) => { setCountry(v); setCity(null); }} options={countries.map((c) => ({ value: c.id, label: l(c.name) }))} />}
     >
-      {!hasData ? (
-        <div className="panel-body"><div className="chart-empty">{t('pharmaNoData')}</div></div>
-      ) : (
-        <div className="ph-grid">
-          <div className="ph-list" role="listbox" aria-label={t('pharmaSummary')}>
-            <div className="ph-listhead"><span>{l(ph.cities[0]?.name)}</span><span>{t('priceIndex')} · {t('inStock')}</span></div>
-            {ROLE_ORDER.map((role) => (
-              <div key={role} style={{ display: 'contents' }}>
-                <div className="ph-group">{t(ROLE_KEY[role])}</div>
-                {ph.drugs.filter((d) => d.role === role).map((d) => {
-                  const p = last(series(d.id, 'irkutsk'));
-                  const chg = p?.index != null ? p.index - 100 : null;
-                  const flagged = pharmaSignals.some((s) => s.subject.drug === d.id && s.severity !== 'info');
-                  return (
-                    <button key={d.id} className="ph-drug" role="option" aria-selected={drug === d.id} aria-pressed={drug === d.id} onClick={() => setDrug(d.id)}>
-                      <span className="nm">{flagged && <span style={{ color: 'var(--s-watch)' }}>◆ </span>}{l(d.name)}</span>
-                      <span className={`chg${chg != null && chg >= 3 ? ' up' : chg != null && chg <= -3 ? ' down' : ''}`}>{chg != null ? fmtPct(chg) : '—'}</span>
-                      <span className="role">{d.name.ru}</span>
-                      <span className="stock">{p ? (p.skus ? `${p.inStock}/${p.skus}` : t('outOfStock')) : '—'}</span>
-                    </button>
-                  );
+      {!ph.observations || !cty ? <div className="chart-empty">{t('pharmaNoData')}</div> : (
+        <>
+          <div className="ph-top">
+            <span className="note">{l(cty.sourceName)}. {l(cty.note)}</span>
+            {ph.since && <span className="faint small">{t('monitoringSince', { d: fmtLocal(ph.since, lang), n: ph.observations })}</span>}
+          </div>
+
+          {narrow && cities.length > 1 && <div style={{ marginBottom: 10 }}><Tabs value={tableCity!} onChange={setCity} options={cities.map((c) => ({ value: c.id, label: l(c.name) }))} /></div>}
+          <div className="tablewrap">
+            <table className="ph-table">
+              <thead>
+                <tr>
+                  <th>{t('products')}</th>
+                  {colCities.map((c) => <th key={c.id} className="n">{cityLabel(c)}</th>)}
+                </tr>
+                <tr>
+                  <th className="faint" style={{ fontWeight: 400, borderBottom: '1px solid var(--rule)' }}>{t('clickRow')}</th>
+                  {colCities.map((c) => <th key={c.id} className="n faint" style={{ fontWeight: 400, borderBottom: '1px solid var(--rule)' }}>{t('priceIndex')} · {availLabel}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {ROLE_ORDER.map((role) => {
+                  const rows = drugs.filter((d) => d.role === role);
+                  if (!rows.length) return null;
+                  return [
+                    <tr className="ph-group" key={role}><td colSpan={colCities.length + 1}>{t(ROLE_KEY[role])}</td></tr>,
+                    ...rows.map((d) => (
+                      <tr key={d.id} aria-selected={drugInfo?.id === d.id} onClick={() => setDrug(d.id)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && setDrug(d.id)}>
+                        <td className="drug">{l(d.name)}<small>{d.name.ru}</small></td>
+                        {colCities.map((c) => {
+                          const p = last(series(d.id, c.id));
+                          const chg = p?.index != null ? p.index - 100 : null;
+                          return (
+                            <td key={c.id} className="n">
+                              <span className={chg != null && chg >= 3 ? 'up' : chg != null && chg <= -3 ? 'down' : ''}>{chg != null ? fmtPct(chg) : '—'}</span>
+                              <span className="faint" style={{ fontSize: 13, marginLeft: 10 }}>{availCell(p)}</span>
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    )),
+                  ];
                 })}
+              </tbody>
+            </table>
+          </div>
+
+          {drugInfo && (
+            <div className="ph-detail">
+              <h3>{l(drugInfo.name)} <span className="faint" style={{ fontSize: 15, fontWeight: 400 }}>· {l(cty.name)}</span></h3>
+              <div className="legend">
+                {cities.map((c, i) => <span key={c.id}><i className={c.role === 'control' ? 'dash' : 'line'} style={{ background: SERIES[i % 3], ['--c' as string]: SERIES[i % 3] }} />{cityLabel(c)}</span>)}
               </div>
+              <div className="ph-charts">
+                <div>
+                  <div className="chart-title">{t('priceIndex')} <InfoTip body={t('priceIndexHelp')} /></div>
+                  <div className="chart-sub">100 = {t('vsFirst')}</div>
+                  <LineChart series={toSeries('index')} height={200} tFormat={tFmt} yFormat={(v) => fmtNum(v, lang)} refLine={{ v: 100, label: '100' }} ariaLabel={t('priceIndex')} empty={t('pharmaNoData')} />
+                </div>
+                <div>
+                  <div className="chart-title">{availLabel} <InfoTip body={availHelp} /></div>
+                  <div className="chart-sub">{l(cty.sourceName)}</div>
+                  <LineChart series={toSeries(avail)} height={200} tFormat={tFmt} yFormat={(v) => fmtNum(v, lang)} yMin={0} ariaLabel={availLabel} empty={t('pharmaNoData')} />
+                </div>
+              </div>
+              {maxObs < 4 && <p className="faint small" style={{ marginTop: 10 }}>{t('pharmaEarly')}</p>}
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 22, flexWrap: 'wrap' }}>
+                <span className="chart-title" style={{ margin: 0 }}>{t('products')}</span>
+                {!narrow && cities.length > 1 && <Tabs value={tableCity!} onChange={setCity} options={cities.map((c) => ({ value: c.id, label: l(c.name) }))} />}
+                {latest && <a className="link small" href={latest.url} target="_blank" rel="noopener noreferrer">{t('openSource')} ↗</a>}
+              </div>
+              <div className="tablewrap">
+                <table className="offers">
+                  <thead><tr><th>{t('products')}</th><th className="n">{t('price')} ({cty.symbol})</th><th className="n hide-sm">{t('vsFirst')}</th><th className="n">{t('availability')}</th></tr></thead>
+                  <tbody>
+                    {(latest?.offers || []).map((o, i) => (
+                      <tr key={i}>
+                        <td>{o.name}{o.rx && <span className="faint"> · {t('rx')}</span>}{o.preorder && <span className="faint"> · {t('preorder')}</span>}</td>
+                        <td className="n">{o.price != null ? fmtNum(o.price, lang, cty.currency === 'BYN' ? 2 : 0) : '—'}{o.priceMax ? `–${fmtNum(o.priceMax, lang, 2)}` : ''}</td>
+                        <td className="n hide-sm" style={{ color: o.firstPrice && o.price && o.price > o.firstPrice ? 'var(--s-alert)' : undefined }}>{o.firstPrice && o.price ? fmtPct((o.price / o.firstPrice - 1) * 100) : '—'}</td>
+                        <td className="n">{o.available > 0 ? fmtNum(o.available, lang) : <span style={{ color: 'var(--s-alert)' }}>{t('outOfStock')}</span>}</td>
+                      </tr>
+                    ))}
+                    {!latest?.offers.length && <tr><td colSpan={4} className="faint">{t('outOfStock')}</td></tr>}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          <div className="ph-foot">
+            {country === 'ru' && mediaEvents.map((e) => (
+              <button key={e.id} className="link" style={{ textAlign: 'left' }} onClick={() => open({ kind: 'event', id: e.id })}>
+                {t('mediaSignals')}: {l(e.title)} ({fmtEventDate(e.t, lang, 'day')}) <TierBadge tier={e.tier} noTip />
+              </button>
             ))}
+            <span>{t('noSelfMedication')}</span>
+            <span>{t('notCovered')}</span>
           </div>
-
-          <div className="ph-main">
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 12 }}>
-              <h3 style={{ margin: 0, fontSize: 16, fontWeight: 650 }}>{l(drugInfo.name)}</h3>
-              <span className="tl-cat">{t(ROLE_KEY[drugInfo.role])}</span>
-              <div style={{ marginLeft: 'auto' }}>
-                <Segmented value={view} onChange={setView} options={[{ value: 'chart', label: <><Icon name="chart" size={13} /> {t('chartView')}</> }, { value: 'table', label: <><Icon name="table" size={13} /> {t('tableView')}</> }]} />
-              </div>
-            </div>
-
-            <div className="ph-kpis">
-              {([['index', 'priceIndex', 'priceIndexHelp'], ['inStock', 'inStock', 'inStockHelp'], ['medianUnit', 'unitPrice', 'unitPriceHelp']] as const).map(([key, label, help]) => (
-                <div className="ph-kpi" key={key}>
-                  <div className="k">{t(label)}<InfoTip body={t(help)} /></div>
-                  <div className="row">
-                    {ph.cities.map((c) => {
-                      const p = last(series(drug, c.id));
-                      const v = p?.[key];
-                      return (
-                        <span key={c.id} style={{ display: 'inline-flex', flexDirection: 'column' }}>
-                          <span className="city"><span style={{ width: 8, height: 2, background: CITY_COLOR[c.id], display: 'inline-block', borderRadius: 2 }} />{l(c.name).replace(/（.*）|\s*\(.*\)/, '')}</span>
-                          <span className="v">{v == null ? '—' : key === 'inStock' ? `${v}/${p!.skus}` : key === 'medianUnit' ? `₽${fmtNum(v as number, lang, 1)}` : fmtNum(v as number, lang, 1)}</span>
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {view === 'chart' ? (
-              <>
-                <div className="legend">
-                  {ph.cities.map((c) => <span className="li" key={c.id} style={{ color: CITY_COLOR[c.id] }}><span className={`ln${c.role === 'control' ? ' dash' : ''}`} style={{ background: CITY_COLOR[c.id] }} /><span style={{ color: 'var(--text-2)' }}>{l(c.name)}</span></span>)}
-                </div>
-                <div className="ph-charts">
-                  <div>
-                    <div className="chart-title">{t('priceIndex')}<InfoTip body={t('priceIndexHelp')} /></div>
-                    <LineChart series={toSeries('index')} height={210} tFormat={tFmt} yFormat={(v) => fmtNum(v, lang)} refLine={{ v: 100, label: '100' }} ariaLabel={t('priceIndex')} empty={t('pharmaNoData')} />
-                  </div>
-                  <div>
-                    <div className="chart-title">{t('inStock')}<InfoTip body={t('inStockHelp')} /></div>
-                    <LineChart series={toSeries('inStock')} height={210} tFormat={tFmt} yFormat={(v) => fmtNum(v, lang)} yMin={0} ariaLabel={t('inStock')} empty={t('pharmaNoData')} />
-                  </div>
-                </div>
-                {maxObs < 4 && <div className="ph-note"><Icon name="info" size={14} style={{ flex: 'none', marginTop: 1 }} />{t('pharmaEarly')}</div>}
-              </>
-            ) : (
-              <>
-                <Segmented value={city} onChange={setCity} options={ph.cities.map((c) => ({ value: c.id, label: l(c.name) }))} />
-                <div className="tablewrap">
-                  <table className="offers">
-                    <thead>
-                      <tr><th>{t('products')}</th><th className="n">{t('price')}</th><th className="n hide-sm">{t('vsFirst')}</th><th className="n">{t('availability')}</th></tr>
-                    </thead>
-                    <tbody>
-                      {(latest?.offers || []).map((o, i) => (
-                        <tr key={i}>
-                          <td>{o.name}{o.rx && <span className="tl-cat" style={{ marginLeft: 6 }}>{t('rx')}</span>}{o.preorder && <span className="tl-cat" style={{ marginLeft: 6 }}>{t('preorder')}</span>}</td>
-                          <td className="n">{o.price != null ? `₽${fmtNum(o.price, lang)}` : '—'}</td>
-                          <td className="n hide-sm" style={{ color: o.firstPrice && o.price && o.price > o.firstPrice ? 'var(--s-alert)' : undefined }}>{o.firstPrice && o.price ? fmtPct((o.price / o.firstPrice - 1) * 100) : '—'}</td>
-                          <td className="n">{o.available > 0 ? o.available : <span style={{ color: 'var(--s-alert)' }}>{t('outOfStock')}</span>}</td>
-                        </tr>
-                      ))}
-                      {!latest?.offers.length && <tr><td colSpan={4} className="faint">{t('outOfStock')}</td></tr>}
-                    </tbody>
-                  </table>
-                </div>
-                {latest && <a className="btn-link" style={{ marginTop: 10 }} href={latest.url} target="_blank" rel="noopener noreferrer">{t('openSource')}<Icon name="arrowUpRight" size={12} /></a>}
-              </>
-            )}
-
-            {mediaEvents.length > 0 && (
-              <div className="ph-media">
-                <div className="chart-title" style={{ margin: 0 }}>{t('mediaSignals')}</div>
-                {mediaEvents.map((e) => (
-                  <button key={e.id} className="delta-item" onClick={() => open({ kind: 'event', id: e.id })}>
-                    <TierBadge tier={e.tier} small noTip />
-                    <span>{l(e.title)}</span>
-                    <span className="when">{fmtEventDate(e.t, lang, e.precision)}</span>
-                  </button>
-                ))}
-              </div>
-            )}
-            <div className="ph-note"><Icon name="heart" size={14} style={{ flex: 'none', marginTop: 1, color: 'var(--t-confirmed)' }} />{t('noSelfMedication')}</div>
-          </div>
-        </div>
+        </>
       )}
-    </Panel>
+    </Section>
   );
 }

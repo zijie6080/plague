@@ -9,15 +9,12 @@ export function Toasts() {
     <div className="toasts" role="status" aria-live="polite">
       {toasts.map((x) => (
         <div className="toast" key={x.id} data-tone={x.tone || 'info'}>
-          <span className="ti" />
           <div>
-            <div style={{ fontWeight: 600 }}>{x.title}</div>
+            <div>{x.title}</div>
             {x.body && <div className="tb">{x.body}</div>}
-            {x.action && (
-              <button className="btn-link ta" onClick={() => { x.action!.onClick(); dismiss(x.id); }}>{x.action.label}<Icon name="chevronRight" size={13} /></button>
-            )}
+            {x.action && <button className="ta" onClick={() => { x.action!.onClick(); dismiss(x.id); }}>{x.action.label}</button>}
           </div>
-          <button className="iconbtn tx" style={{ width: 24, height: 24 }} onClick={() => dismiss(x.id)} aria-label={t('close')}><Icon name="x" size={14} /></button>
+          <button className="tx" onClick={() => dismiss(x.id)} aria-label={t('close')}><Icon name="x" size={14} /></button>
         </div>
       ))}
     </div>

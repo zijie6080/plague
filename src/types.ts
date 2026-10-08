@@ -34,10 +34,11 @@ export interface NewsRef { id: string; title: string; url: string; publisher: st
 export interface NewsCluster extends NewsRef { topics: string[]; summary: string; firstSeen: string; also: NewsRef[] }
 
 export interface PharmaPoint { t: string; index: number | null; medianUnit: number | null; minPrice: number | null; medianPrice: number | null; inStock: number; skus: number; avail: number; preorder: number }
-export interface Offer { name: string; price: number | null; available: number; preorder: boolean; rx: boolean; firstPrice: number | null }
+export interface Offer { name: string; price: number | null; priceMax?: number | null; available: number; preorder: boolean; rx: boolean; firstPrice: number | null }
 export interface Pharma {
   drugs: { id: string; name: L10n; role: 'first-line' | 'panic' | 'control' }[];
-  cities: { id: string; name: L10n; role: 'epicenter' | 'control' }[];
+  countries: { id: string; name: L10n; currency: string; symbol: string; availMetric: 'inStock' | 'avail'; sourceName: L10n; note: L10n }[];
+  cities: { id: string; country: string; name: L10n; role: 'epicenter' | 'control' | 'national' }[];
   since: string | null; lastAt: string | null; observations: number;
   series: Record<string, PharmaPoint[]>;
   latest: Record<string, { t: string; url: string; offers: Offer[] }>;

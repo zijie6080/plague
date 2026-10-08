@@ -153,8 +153,14 @@ const dict = {
   newItems: { zh: '{n} 条新内容', en: '{n} new' },
 
   // pharma
+  country: { zh: '国家', en: 'Country' },
+  pharmacies: { zh: '有货药店', en: 'Pharmacies stocking' },
+  pharmaciesHelp: { zh: '该国有现货的药店数量，按全部商品合计。', en: 'Number of pharmacies with the products in stock, summed over products.' },
+  notCovered: { zh: '中国、哈萨克斯坦暂未纳入：其主要药价网站对自动采集设有反爬措施（字体加密、人机验证），本站不绕过这类限制。', en: 'China and Kazakhstan are not covered: their main pharmacy price sites block automated access (obfuscated fonts, bot challenges), and this site does not circumvent such measures.' },
+  clickRow: { zh: '点击任一药品查看趋势与明细', en: 'Select a drug to see trends and listings' },
+  market: { zh: '市场', en: 'Market' },
   pharmaTitle: { zh: '药品价格与库存', en: 'Drug prices & availability' },
-  pharmaSub: { zh: '每 3 小时抓取一次 ASNA 连锁药房在伊尔库茨克、舍列霍夫以及莫斯科（对照组）的公开价格与库存。', en: 'Public listings from the ASNA pharmacy network in Irkutsk, Shelekhov and Moscow (control), sampled every 3 hours.' },
+  pharmaSub: { zh: '每 3 小时采集一次公开药房价格与库存，按国家分别比较；价格指数只比较同款商品。', en: 'Public pharmacy prices and stock, sampled every 3 hours and compared within each country; the price index compares like with like.' },
   priceIndex: { zh: '价格指数', en: 'Price index' },
   priceIndexHelp: { zh: '同一商品相对首次观测价格的中位数（基准 = 100）。只比较同款商品，因此不受上架商品组合变化的影响。', en: 'Median of each product’s price relative to its first observed price (100 = baseline). It compares like with like, so changes in which products are listed don’t distort it.' },
   inStock: { zh: '有现货商品', en: 'In-stock products' },

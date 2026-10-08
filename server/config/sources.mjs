@@ -110,8 +110,14 @@ export const SOURCES = [
   // ---- Pharmacy prices & availability ----
   {
     id: 'asna', kind: 'asna', every: 180,
-    name: { en: 'ASNA pharmacy network', zh: 'ASNA 连锁药房网络' },
+    name: { en: 'ASNA · Russian pharmacies', zh: 'ASNA · 俄罗斯连锁药房' },
     sourceType: 'market',
     homepage: 'https://irkutsk.asna.ru/',
+  },
+  {
+    id: 'tabletka', kind: 'tabletka', every: 180,
+    name: { en: 'tabletka.by · Belarus pharmacies', zh: 'tabletka.by · 白俄罗斯药店' },
+    sourceType: 'market',
+    homepage: 'https://tabletka.by/',
   },
 ];

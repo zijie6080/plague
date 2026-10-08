@@ -1,87 +1,126 @@
+import { useEffect, useRef } from 'react';
 import { useI18n } from '../i18n';
-import type { State } from '../types';
-import { dayNumber, fmtEventDate, relTime } from '../lib/format';
+import type { Metric, State, Tier } from '../types';
+import { dayNumber, fmtEventDate, fmtNum } from '../lib/format';
 import { TierBadge } from './ui/Badges';
-import { Icon } from './ui/Icon';
+import { AnimatedNumber, Sk } from './ui/Misc';
+import { useUI } from './ui-context';
+
+const OTHER_TIERS: Tier[] = ['suspected', 'reported', 'unverified', 'disputed'];
+
+function Figure({ m }: { m: Metric }) {
+  const { t, l, lang } = useI18n();
+  const { open } = useUI();
+  const ref = useRef<HTMLButtonElement>(null);
+  const prev = useRef('');
+  const sig = JSON.stringify(m.tiers);
+  useEffect(() => {
+    if (prev.current && prev.current !== sig && ref.current) {
+      ref.current.classList.remove('flash'); void ref.current.offsetWidth; ref.current.classList.add('flash');
+    }
+    prev.current = sig;
+  }, [sig]);
+  const conf = m.tiers.confirmed;
+  return (
+    <button className="fig" ref={ref} onClick={() => open({ kind: 'metric', id: m.id })}>
+      {m.changed24h && <span className="fresh" title={t('changed24h')} />}
+      <span className="fig-label">{l(m.label)}</span>
+      {m.headline ? (
+        <span className="fig-value">{m.headline.approx && <span className="approx">~</span>}<AnimatedNumber value={m.headline.value} format={(n) => fmtNum(n, lang)} /></span>
+      ) : conf?.text ? (
+        <span className="fig-value text">{l(conf.text)}</span>
+      ) : (
+        <span className="fig-value none">{t('noOfficialFigure')}</span>
+      )}
+      {(m.headline || conf?.text) && <span className="fig-tier"><TierBadge tier="confirmed" noTip /></span>}
+      {OTHER_TIERS.some((tier) => m.tiers[tier]) && (
+        <span className="fig-more">
+          {OTHER_TIERS.filter((tier) => m.tiers[tier]).map((tier) => {
+            const o = m.tiers[tier]!;
+            return (
+              <span className="row" key={tier}>
+                {o.value != null && <b>{o.delta ? '+' : ''}{o.approx ? '~' : ''}{fmtNum(o.value, lang)}</b>}
+                <TierBadge tier={tier} noTip />
+              </span>
+            );
+          })}
+        </span>
+      )}
+    </button>
+  );
+}
+
+export function Lead({ state, now }: { state: State | null; now: number }) {
+  const { t, l, lang } = useI18n();
+  if (!state) {
+    return (
+      <div className="lead" aria-busy="true">
+        <Sk w={260} h={14} />
+        <Sk h={40} style={{ marginTop: 16, maxWidth: 760 }} /><Sk h={40} w="60%" style={{ marginTop: 8 }} />
+        <Sk h={120} style={{ marginTop: 30 }} />
+      </div>
+    );
+  }
+  const b = state.briefing;
+  return (
+    <div className="lead">
+      <div className="kicker">
+        <strong>{t('dayN', { n: dayNumber(state.event.start, now) })}</strong>
+        <span>{l(state.event.place)}</span>
+        <span>{t('editorialAsOf')} {fmtEventDate(b.updatedAt, lang)} {t('irkutskTime')}</span>
+      </div>
+      <h1>{l(b.headline)}</h1>
+      <p className="dek">{l(state.event.title)} · {t('sinceStart', { d: fmtEventDate(state.event.start + 'T12:00:00+08:00', lang, 'day') })}</p>
+      <div className="figures">{state.metrics.map((m) => <Figure key={m.id} m={m} />)}</div>
+      <p className="figures-note">{t('keyFiguresNote')}</p>
+    </div>
+  );
+}
 
 const RISK_STEPS = ['very-low', 'low', 'moderate-low', 'moderate', 'high'];
 const riskColor = (lvl: string) => (RISK_STEPS.indexOf(lvl) <= 1 ? 'var(--t-confirmed)' : RISK_STEPS.indexOf(lvl) <= 2 ? 'var(--t-suspected)' : 'var(--s-alert)');
 
-export function Briefing({ state, now }: { state: State; now: number }) {
-  const { t, l, lang } = useI18n();
-  const b = state.briefing;
-  const risk = state.risk;
-  const riskSrc = state.citations[risk.source];
+export function RiskBlock({ state }: { state: State }) {
+  const { t, l } = useI18n();
+  const src = state.citations[state.risk.source];
   return (
-    <section className="panel hero" aria-labelledby="brief-h">
-      <div className="hero-top">
-        <span className="eyebrow"><Icon name="target" size={13} />{t('situation')}</span>
-        <span className="hero-day">{t('dayN', { n: dayNumber(state.event.start, now) })} · {l(state.event.place)}</span>
-      </div>
-      <h1 id="brief-h">{l(b.headline)}</h1>
-      <div className="hero-meta">
-        <span>{t('editorialAsOf')} {fmtEventDate(b.updatedAt, lang)} ({t('irkutskTime')})</span>
-        <span>{t('sinceStart', { d: fmtEventDate(state.event.start + 'T12:00:00+08:00', lang, 'day') })}</span>
-      </div>
-
-      <div className="risk" role="list" aria-label={t('whoRisk')}>
-        {risk.levels.map((r) => {
+    <div className="rail-block">
+      <h3>{t('whoRisk')}</h3>
+      <table className="risk"><tbody>
+        {state.risk.levels.map((r) => {
           const idx = RISK_STEPS.indexOf(r.level);
           return (
-            <div className="risk-cell" role="listitem" key={r.scope.en}>
-              <span className="risk-scope">{l(r.scope)}</span>
-              <span className="risk-level">
-                {t(`risk_${r.level}`)}
-                <span className="risk-bar" style={{ ['--c' as string]: riskColor(r.level) }} aria-hidden="true">
-                  {RISK_STEPS.map((s, i) => <i key={s} className={i <= idx ? 'on' : ''} />)}
-                </span>
-              </span>
-            </div>
+            <tr key={r.scope.en}>
+              <td>{l(r.scope)}</td>
+              <td>{t(`risk_${r.level}`)}<span className="scale" style={{ ['--c' as string]: riskColor(r.level) }} aria-hidden="true">{RISK_STEPS.map((s, i) => <i key={s} className={i <= idx ? 'on' : ''} />)}</span></td>
+            </tr>
           );
         })}
-      </div>
-      <div className="risk-caption">
-        <TierBadge tier="confirmed" small />
-        <span>{t('whoRisk')} · {riskSrc ? <a href={riskSrc.url} target="_blank" rel="noopener noreferrer" className="btn-link" style={{ fontWeight: 500 }}>{riskSrc.publisher}</a> : null} · {relTime(risk.t, lang, now)}</span>
-      </div>
-
-    </section>
+      </tbody></table>
+      {src && <div className="src-note">{t('sources')}: <a className="link" href={src.url} target="_blank" rel="noopener noreferrer">{src.publisher}</a>, {src.date}</div>}
+    </div>
   );
 }
 
-/** What we know / don't know / guidance — kept separate from the headline so key figures stay above the fold. */
-export function KnownUnknown({ state }: { state: State }) {
+export function KnownBlock({ state }: { state: State }) {
   const { t, l } = useI18n();
   const b = state.briefing;
   return (
-    <section className="panel" style={{ padding: '18px 20px' }} aria-label={t('whatWeKnow')}>
-      <div className="kgrid" style={{ marginTop: 0 }}>
-        <div>
-          <div className="klabel">{t('whatWeKnow')}</div>
-          <ul className="klist">
-            {b.known.map((k, i) => (
-              <li key={i} style={{ ['--c' as string]: `var(--t-${k.tier})` }}>
-                <span className="b" />
-                <span>{l(k)} {k.tier !== 'confirmed' && <TierBadge tier={k.tier} small />}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <div className="klabel">{t('whatWeDontKnow')}</div>
-          <ul className="klist unknown">
-            {b.unknown.map((k, i) => <li key={i}><span className="b" /><span>{l(k)}</span></li>)}
-          </ul>
-        </div>
+    <div className="kgrid">
+      <div className="rail-block">
+        <h3>{t('whatWeKnow')}</h3>
+        <ul className="kn">
+          {b.known.map((k, i) => <li key={i} style={{ ['--c' as string]: `var(--t-${k.tier})` }}><span>{l(k)}{k.tier !== 'confirmed' && <> <TierBadge tier={k.tier} /></>}</span></li>)}
+        </ul>
       </div>
-
-      <div className="guidance">
-        <Icon name="heart" size={18} style={{ color: 'var(--t-confirmed)', marginTop: 1 }} />
-        <div>
-          <strong>{t('guidance')}</strong>
-          <ul>{b.guidance.map((g, i) => <li key={i}>{l(g)}</li>)}</ul>
-        </div>
+      <div className="rail-block">
+        <h3>{t('whatWeDontKnow')}</h3>
+        <ul className="kn unknown">{b.unknown.map((k, i) => <li key={i}><span>{l(k)}</span></li>)}</ul>
       </div>
-    </section>
+      <div className="advice">
+        <b>{t('guidance')}</b>
+        {b.guidance.map((g, i) => <p key={i}>{l(g)}</p>)}
+      </div>
+    </div>
   );
 }

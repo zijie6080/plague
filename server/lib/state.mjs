@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { SOURCES } from '../config/sources.mjs';
-import { DRUGS, CITIES } from '../config/drugs.mjs';
+import { DRUGS, CITIES, COUNTRIES } from '../config/drugs.mjs';
 import { readJson, writeJson, storeFile, curatedFile, ROOT } from './store.mjs';
 import { titleTokens, jaccard } from './text.mjs';
 
@@ -163,12 +163,13 @@ export function buildPharma(pharma) {
   }
   const latest = {};
   for (const [key, l] of Object.entries(pharma.latest || {})) {
-    latest[key] = { t: l.t, url: l.url, offers: l.offers.slice(0, 12).map((o) => ({ name: o.name, price: o.price, available: o.available, preorder: o.preorder, rx: o.rx, firstPrice: pharma.skus?.[`${key.split('|')[1]}|${o.sku}`]?.first?.price ?? null })) };
+    latest[key] = { t: l.t, url: l.url, offers: l.offers.slice(0, 12).map((o) => ({ name: o.name, price: o.price, priceMax: o.priceMax ?? null, available: o.available, preorder: o.preorder, rx: o.rx, firstPrice: pharma.skus?.[`${key.split('|')[1]}|${o.sku}`]?.first?.price ?? null })) };
   }
   const allTimes = Object.values(pharma.series || {}).flat().map((p) => p.t).sort();
   return {
     drugs: DRUGS.map((d) => ({ id: d.id, name: d.name, role: d.role })),
-    cities: CITIES.map((c) => ({ id: c.id, name: c.name, role: c.role })),
+    countries: COUNTRIES.map((c) => ({ id: c.id, name: c.name, currency: c.currency, symbol: c.symbol, availMetric: c.availMetric, sourceName: c.sourceName, note: c.note })),
+    cities: CITIES.map((c) => ({ id: c.id, country: c.country, name: c.name, role: c.role })),
     since: allTimes[0] || null,
     lastAt: allTimes.at(-1) || null,
     observations: allTimes.length,
@@ -210,7 +211,7 @@ export function buildDaily({ metrics, events, bulletins, newsDocs, anomalies, ph
   const pharmaMoves = [];
   for (const [key, s] of Object.entries(pharmaOut.series)) {
     const [drug, city] = key.split('|');
-    if (city === 'moscow' || s.length < 2) continue;
+    if (CITIES.find((c) => c.id === city)?.role === 'control' || s.length < 2) continue;
     const last = s.at(-1);
     const ref = [...s].reverse().find((p) => Date.parse(p.t) <= since) || s[0];
     if (last.index == null || ref.index == null) continue;

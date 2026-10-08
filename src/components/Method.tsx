@@ -1,8 +1,7 @@
 import { useI18n } from '../i18n';
 import type { SourceType, Tier } from '../types';
-import { Panel } from './ui/Misc';
+import { Section } from './ui/Misc';
 import { SourceTypeBadge, TierBadge } from './ui/Badges';
-import { Icon } from './ui/Icon';
 
 const TIERS: Tier[] = ['confirmed', 'suspected', 'reported', 'unverified', 'disputed'];
 const TYPES: SourceType[] = ['official', 'intl', 'wire', 'media', 'state_media', 'caution'];
@@ -10,25 +9,16 @@ const TYPES: SourceType[] = ['official', 'intl', 'wire', 'media', 'state_media',
 export function Method() {
   const { t } = useI18n();
   return (
-    <Panel eyebrow={<><Icon name="shield" size={13} />{t('methodTitle')}</>} title={t('methodTitle')}>
+    <Section id="method" title={t('methodTitle')}>
       <div className="method">
-        <div className="stack" style={{ gap: 10 }}>
+        <div>
           <p>{t('methodBody')}</p>
+          <p>{t('stHelp_caution')} {t('stHelp_state_media')}</p>
+          <p style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 14px' }}>{TYPES.map((ty) => <SourceTypeBadge key={ty} type={ty} />)}</p>
           <p className="faint">{t('disclaimer')}</p>
         </div>
-        <dl>
-          <div className="klabel">{t('tierLegend')}</div>
-          {TIERS.map((tier) => (
-            <div key={tier}><dt><TierBadge tier={tier} noTip /></dt><dd>{t(`tierHelp_${tier}`)}</dd></div>
-          ))}
-        </dl>
-        <dl>
-          <div className="klabel">{t('sourceTypes')}</div>
-          <div className="chips">{TYPES.map((ty) => <SourceTypeBadge key={ty} type={ty} />)}</div>
-          <dd>{t('stHelp_caution')}</dd>
-          <dd>{t('stHelp_state_media')}</dd>
-        </dl>
+        <dl>{TIERS.map((tier) => [<dt key={`${tier}t`}><TierBadge tier={tier} noTip /></dt>, <dd key={`${tier}d`}>{t(`tierHelp_${tier}`)}</dd>])}</dl>
       </div>
-    </Panel>
+    </Section>
   );
 }

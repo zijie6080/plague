@@ -3,9 +3,8 @@ import type { Map as MLMap, Marker, StyleSpecification } from 'maplibre-gl';
 import { useI18n } from '../i18n';
 import type { MapLocation, State, Tier } from '../types';
 import { fmtEventDate } from '../lib/format';
-import { Panel, Segmented } from './ui/Misc';
+import { Section, Tabs } from './ui/Misc';
 import { TierBadge } from './ui/Badges';
-import { Icon } from './ui/Icon';
 import { useUI } from './ui-context';
 
 type Mode = 'local' | 'country';
@@ -20,7 +19,7 @@ const SQUARE = new Set(['hospital', 'quarantine', 'lab', 'site']);
 const cssVar = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim() || '#888';
 const isDark = () => document.documentElement.dataset.theme === 'dark' || (document.documentElement.dataset.theme !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
 
-const blankStyle = (): StyleSpecification => ({ version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': cssVar('--surface-2') } }] });
+const blankStyle = (): StyleSpecification => ({ version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': cssVar('--paper-2') } }] });
 
 export function MapPanel({ state, themeKey }: { state: State | null; themeKey: string }) {
   const { t, l, lang } = useI18n();
@@ -32,7 +31,6 @@ export function MapPanel({ state, themeKey }: { state: State | null; themeKey: s
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const [sel, setSel] = useState<string | null>(null);
-  const [tiers, setTiers] = useState<Set<Tier>>(new Set(['confirmed', 'suspected', 'reported', 'unverified', 'disputed']));
   const lib = useRef<typeof import('maplibre-gl') | null>(null);
 
   const locations = useMemo(() => state?.locations || [], [state]);
@@ -103,7 +101,7 @@ export function MapPanel({ state, themeKey }: { state: State | null; themeKey: s
     m.addSource('neighbors', { type: 'geojson', data: `${BASE}geo/neighbors.json` });
     m.addLayer({ id: 'nb-fill', type: 'fill', source: 'neighbors', paint: { 'fill-color': countryColor as never, 'fill-opacity': 0.12 } }, firstSymbol);
     m.addLayer({ id: 'rg-fill', type: 'fill', source: 'regions', paint: { 'fill-color': regionColor as never, 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 3, 0.22, 8, 0.06] } }, firstSymbol);
-    m.addLayer({ id: 'rg-line', type: 'line', source: 'regions', paint: { 'line-color': cssVar('--text-3'), 'line-opacity': ['interpolate', ['linear'], ['zoom'], 2, 0.25, 7, 0.5], 'line-width': 0.6 } }, firstSymbol);
+    m.addLayer({ id: 'rg-line', type: 'line', source: 'regions', paint: { 'line-color': cssVar('--ink-3'), 'line-opacity': ['interpolate', ['linear'], ['zoom'], 2, 0.25, 7, 0.5], 'line-width': 0.6 } }, firstSymbol);
     m.addLayer({ id: 'rg-hl', type: 'line', source: 'regions', filter: ['in', ['get', 'id'], ['literal', involved.map((r) => r.id)]], paint: { 'line-color': regionColor as never, 'line-width': 1.6 } }, firstSymbol);
     m.addLayer({ id: 'nb-hl', type: 'line', source: 'neighbors', filter: ['in', ['get', 'id'], ['literal', countries.map((c) => c.id)]], paint: { 'line-color': countryColor as never, 'line-width': 1.2, 'line-dasharray': [2, 2] } }, firstSymbol);
     // Hover tooltip for regions.
@@ -128,7 +126,7 @@ export function MapPanel({ state, themeKey }: { state: State | null; themeKey: s
     markers.current = visible.map((loc) => {
       const node = document.createElement('div');
       const epic = mode === 'country' && loc.id === 'irkutsk-city';
-      node.className = `marker${SQUARE.has(loc.type) ? ' sq' : ''}${epic || loc.type === 'lab' || loc.id === 'shelekhov-hospital' ? ' lg ring' : ''}${!tiers.has(loc.tier) ? ' dim' : ''}${sel === loc.id ? ' sel' : ''}`;
+      node.className = `marker${SQUARE.has(loc.type) ? ' sq' : ''}${epic || loc.type === 'lab' || loc.id === 'shelekhov-hospital' ? ' lg ring' : ''}${sel === loc.id ? ' sel' : ''}`;
       node.style.setProperty('--c', `var(${TIER_VAR[loc.tier]})`);
       node.innerHTML = '<span class="core"></span>';
       const showLabel = loc.short && (mode === 'country' ? loc.scale === 'country' || epic : loc.id !== 'irkutsk-city');
@@ -148,13 +146,12 @@ export function MapPanel({ state, themeKey }: { state: State | null; themeKey: s
       const mk = new ml.Marker({ element: node }).setLngLat([loc.lon, loc.lat]).addTo(m);
       return { m: mk, loc, node };
     });
-  }, [ready, mode, visible.map((v) => v.id).join(), [...tiers].join(), sel, lang]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [ready, mode, visible.map((v) => v.id).join(), sel, lang]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const m = map.current;
     if (!m || !ready) return;
     m.fitBounds(VIEWS[mode].bounds, { padding: 40, maxZoom: VIEWS[mode].maxZoom, duration: 900 });
-    setSel(null);
   }, [mode, ready]);
 
   const focus = (loc: MapLocation) => {
@@ -163,77 +160,58 @@ export function MapPanel({ state, themeKey }: { state: State | null; themeKey: s
     setTimeout(() => map.current?.easeTo({ center: [loc.lon, loc.lat], zoom: loc.scale === 'local' ? Math.max(map.current.getZoom(), 11) : 4, duration: 700 }), loc.scale !== mode ? 950 : 0);
   };
 
-  const toggleTier = (tier: Tier) => setTiers((s) => { const n = new Set(s); if (n.has(tier)) n.delete(tier); else n.add(tier); return n.size ? n : new Set([tier]); });
-  const presentTiers = [...new Set(visible.map((v) => v.tier))];
-  const legendTypes = [...new Set(visible.map((v) => v.type))];
+  const legendTiers = [...new Set(visible.map((v) => v.tier))];
+  const typeOf = (loc: MapLocation) => `${t(`loc_${loc.type}`)} · ${t(`precision_${loc.precision}`)}`;
 
   return (
-    <Panel
+    <Section
       id="map"
-      eyebrow={<><Icon name="map" size={13} />{t('navMap')}</>}
       title={t('mapTitle')}
-      bodyClass=""
-      tools={
-        <>
-          <div className="chips scroll">
-            {presentTiers.map((tier) => (
-              <button key={tier} className="chip" aria-pressed={tiers.has(tier)} onClick={() => toggleTier(tier)}>
-                <span className="sw" style={{ background: `var(${TIER_VAR[tier]})`, opacity: tiers.has(tier) ? 1 : 0.3 }} />{t(`tier_${tier}`)}
-              </button>
-            ))}
-          </div>
-          <Segmented value={mode} onChange={setMode} options={[{ value: 'local', label: t('mapLocal') }, { value: 'country', label: t('mapCountry') }]} />
-        </>
-      }
+      tools={<Tabs value={mode} onChange={(v) => { setSel(null); setMode(v); }} options={[{ value: 'local', label: t('mapLocal') }, { value: 'country', label: t('mapCountry') }]} />}
     >
-      <div className="mapwrap">
-        <div ref={el} style={{ position: 'absolute', inset: 0 }} />
-        {(failed || !state) && <div className="map-fallback">{failed ? t('mapUnavailable') : <div className="sk" style={{ position: 'absolute', inset: 0, borderRadius: 0 }} />}</div>}
-        {ready && (
-          <div className="map-overlay map-legend" aria-label={t('mapLegend')}>
-            <div className="lt">{t('mapLegend')}</div>
-            {legendTypes.map((ty) => (
-              <div className="row" key={ty}><span className={`mk${SQUARE.has(ty) ? ' sq' : ''}`} style={{ background: 'var(--text-3)' }} />{t(`loc_${ty}`)}</div>
-            ))}
-            <div className="row faint" style={{ marginTop: 2 }}>{lang === 'zh' ? '颜色 = 可信度' : 'Colour = credibility tier'}</div>
-          </div>
-        )}
-        {selected && (
-          <div className="map-overlay map-card" role="dialog" aria-label={l(selected.name)}>
-            <button className="iconbtn close" onClick={() => setSel(null)} aria-label={t('close')}><Icon name="x" size={15} /></button>
-            <div style={{ display: 'flex', gap: 6, alignItems: 'center', flexWrap: 'wrap', paddingRight: 28 }}>
-              <TierBadge tier={selected.tier} small />
-              <span className="faint" style={{ fontSize: 11.5 }}>{t(`loc_${selected.type}`)}</span>
-            </div>
-            <h3>{l(selected.name)}</h3>
-            {selected.name.ru && <div className="faint" style={{ fontSize: 12 }}>{selected.name.ru}</div>}
-            <p style={{ margin: '8px 0 0', fontSize: 13, color: 'var(--text-2)', lineHeight: 1.55 }}>{l(selected.status)}</p>
-            <div className="faint" style={{ fontSize: 11.5, marginTop: 6, display: 'flex', alignItems: 'center', gap: 5 }}><Icon name="target" size={12} />{t(`precision_${selected.precision}`)}</div>
-            {selected.events.length > 0 && (
-              <div style={{ marginTop: 12 }}>
-                <div className="sec-label" style={{ fontSize: 10.5, fontWeight: 650, textTransform: 'uppercase', letterSpacing: '.07em', color: 'var(--text-3)', marginBottom: 4 }}>{t('relatedEvents')}</div>
-                {selected.events.map((id) => state?.events.find((e) => e.id === id)).filter(Boolean).map((e) => (
-                  <button key={e!.id} className="delta-item" onClick={() => open({ kind: 'event', id: e!.id })}>
-                    <TierBadge tier={e!.tier} small noTip />
-                    <span style={{ fontSize: 12.5 }}>{l(e!.title)}</span>
-                    <span className="when">{fmtEventDate(e!.t, lang, e!.precision)}</span>
-                  </button>
-                ))}
+      <div className="map-grid">
+        <div className="map-canvas">
+          <div ref={el} style={{ position: 'absolute', inset: 0 }} />
+          {(failed || !state) && <div className="map-fallback">{failed ? t('mapUnavailable') : <div className="sk" style={{ position: 'absolute', inset: 0 }} />}</div>}
+        </div>
+        <aside className="map-side">
+          {selected && (
+            <div className="detail" role="region" aria-label={l(selected.name)}>
+              <div style={{ display: 'flex', gap: 8, alignItems: 'baseline' }}>
+                <TierBadge tier={selected.tier} />
+                <button className="link small" style={{ marginLeft: 'auto' }} onClick={() => setSel(null)}>{t('close')}</button>
               </div>
-            )}
-          </div>
-        )}
+              <h4>{l(selected.name)}</h4>
+              {selected.name.ru && <div className="ru">{selected.name.ru}</div>}
+              <p>{l(selected.status)}</p>
+              <div className="faint small" style={{ marginTop: 6 }}>{typeOf(selected)}</div>
+              {selected.events.length > 0 && (
+                <div className="rel">
+                  {selected.events.map((id) => state?.events.find((e) => e.id === id)).filter(Boolean).map((e) => (
+                    <button key={e!.id} onClick={() => open({ kind: 'event', id: e!.id })}>{fmtEventDate(e!.t, lang, e!.precision)} · {l(e!.title)}</button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+          <div className="head">{visible.length} · {mode === 'local' ? t('mapLocal') : t('mapCountry')}</div>
+          <ul className="places">
+            {visible.map((loc) => (
+              <li key={loc.id}>
+                <button aria-pressed={sel === loc.id} onClick={() => focus(loc)}>
+                  <span className={`mk${SQUARE.has(loc.type) ? ' sq' : ''}`} style={{ ['--c' as string]: `var(${TIER_VAR[loc.tier]})` }} />
+                  <span><span className="nm">{l(loc.short || loc.name)}</span><div className="sub">{t(`loc_${loc.type}`)} · {t(`tier_${loc.tier}`)}</div></span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </div>
-      <div className="maplist">
-        {visible.map((loc) => (
-          <button key={loc.id} aria-pressed={sel === loc.id} onClick={() => focus(loc)}>
-            <span className={`mk${SQUARE.has(loc.type) ? ' sq' : ''}`} style={{ background: `var(${TIER_VAR[loc.tier]})` }} />
-            <span className="nm">{l(loc.name)}</span>
-            <TierBadge tier={loc.tier} small noTip />
-          </button>
-        ))}
+      <div className="map-legend">
+        {legendTiers.map((tier) => <span key={tier}><span className="dot" style={{ ['--c' as string]: `var(${TIER_VAR[tier]})` }} />{t(`tier_${tier}`)}</span>)}
+        <span className="faint">● {t('loc_city')} &nbsp;■ {t('loc_hospital')} / {t('loc_lab')}</span>
       </div>
-    </Panel>
+    </Section>
   );
 }
 

@@ -2,7 +2,7 @@
 // Next.js; the embedded __NEXT_DATA__ JSON carries price and an availability count
 // per product. Regional subdomains give city-specific prices and stock.
 import { fetchResource, sleep } from '../lib/http.mjs';
-import { DRUGS, CITIES } from '../config/drugs.mjs';
+import { DRUGS, citiesOf, TOPICAL } from '../config/drugs.mjs';
 
 export function extractOffers(html) {
   const m = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
@@ -58,6 +58,7 @@ export async function run(source, { delayMs = 2500 } = {}) {
   const errors = [];
   let ms = 0;
   let lastStatus = 0;
+  const CITIES = citiesOf('asna');
   for (const city of CITIES) {
     for (const drug of DRUGS) {
       const url = `https://${city.host}/search/?query=${encodeURIComponent(drug.query)}`;
@@ -70,7 +71,7 @@ export async function run(source, { delayMs = 2500 } = {}) {
         try {
           const offers = extractOffers(res.body);
           if (offers == null) throw new Error('no __NEXT_DATA__');
-          const relevant = offers.filter((o) => drug.match.test(o.name));
+          const relevant = offers.filter((o) => drug.match.test(o.name) && (drug.perUnit || !TOPICAL.test(o.name)));
           results.push({ city: city.id, drug: drug.id, url, offers: relevant, summary: summarise(relevant) });
         } catch (err) {
           errors.push(`${city.id}/${drug.id}: ${err.message}`);

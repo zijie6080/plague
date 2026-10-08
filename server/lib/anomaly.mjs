@@ -3,7 +3,7 @@
 // Severity: info < watch < alert. Signals are idempotent: the same condition on
 // the same subject updates one signal instead of creating duplicates.
 import { SOURCES } from '../config/sources.mjs';
-import { DRUGS, CITIES } from '../config/drugs.mjs';
+import { DRUGS, CITIES, controlFor } from '../config/drugs.mjs';
 import { isRelevant } from './classify.mjs';
 
 const H = 3_600_000;
@@ -12,6 +12,7 @@ const KEEP = 300;
 
 const drugName = (id) => DRUGS.find((d) => d.id === id)?.name || { en: id, zh: id };
 const cityName = (id) => CITIES.find((c) => c.id === id)?.name || { en: id, zh: id };
+const isControl = (id) => CITIES.find((c) => c.id === id)?.role === 'control';
 const sourceName = (id) => SOURCES.find((s) => s.id === id)?.name || { en: id, zh: id };
 const pct = (x) => `${x >= 0 ? '+' : ''}${x.toFixed(1)}%`;
 
@@ -51,14 +52,15 @@ export function pharmaPriceRules(pharma) {
     const last = series[series.length - 1];
     if (last.index == null) continue;
     const change = last.index - 100;
-    const control = pharma.series[`${drug}|moscow`]?.at(-1)?.index;
-    const isEpicenter = city !== 'moscow';
+    const controlId = controlFor(city);
+    const control = controlId ? pharma.series[`${drug}|${controlId}`]?.at(-1)?.index : null;
+    const isEpicenter = !isControl(city);
     let severity = change >= 25 ? 'alert' : change >= 10 ? 'watch' : null;
     if (!severity) continue;
     let note = { en: '', zh: '' };
     if (isEpicenter && control != null && control - 100 >= change - 5) {
       severity = 'info';
-      note = { en: ' Moscow (control) moved similarly, suggesting a national rather than local change.', zh: '莫斯科（对照组）同步变动，更可能是全国性变化，而非当地异常。' };
+      note = { en: ` ${cityName(controlId).en} (control) moved similarly, suggesting a national rather than local change.`, zh: `${cityName(controlId).zh}（对照组）同步变动，更可能是全国性变化，而非当地异常。` };
     }
     out.push({
       id: `price|${key}`, rule: 'price_index', severity, t: last.t, persistent: true,
@@ -74,7 +76,9 @@ export function pharmaPriceRules(pharma) {
   // Individual product jumps between consecutive observations in the epicenter.
   const jumps = {};
   for (const s of Object.values(pharma.skus || {})) {
-    if (s.city === 'moscow' || !s.prev?.price || !s.last?.price) continue;
+    if (isControl(s.city) || !s.prev?.price || !s.last?.price) continue;
+    // Only products present in the latest listing; delisted or filtered-out ones must not keep a signal alive.
+    if (s.last.t !== pharma.series?.[`${s.drug}|${s.city}`]?.at(-1)?.t) continue;
     const r = s.last.price / s.prev.price;
     if (r >= 1.15) (jumps[`${s.drug}|${s.city}`] ||= []).push({ name: s.name, from: s.prev.price, to: s.last.price, t: s.last.t });
   }
@@ -108,7 +112,7 @@ export function pharmaStockRules(pharma, nowMs) {
     if (last.inStock === 0) severity = 'alert';
     else if (drop >= 0.5 || availDrop >= 0.6) severity = 'watch';
     if (!severity) continue;
-    if (city === 'moscow' && severity === 'watch') severity = 'info';
+    if (isControl(city) && severity === 'watch') severity = 'info';
     out.push({
       id: `stock|${key}`, rule: 'availability_drop', severity, t: last.t, persistent: true,
       subject: { type: 'drug', drug, city }, value: last.inStock, baseline: peak,
