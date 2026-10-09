@@ -1,81 +1,310 @@
 {
-  "_doc": "Curated official statements. Automated official items (Telegram, embassy feed, WHO) are merged in at build time. `via` notes when we cite a report of the statement rather than the primary document.",
-  "bulletins": [
+ "_doc": "Curated official statements. Automated official items (Telegram, embassy feed, WHO) are merged in at build time. `via` notes when we cite a report of the statement rather than the primary document.",
+ "bulletins": [
+  {
+   "id": "b-rpn-1008",
+   "t": "2026-10-08T16:00:00+08:00",
+   "org": "rospotrebnadzor",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "俄罗斯消费者权益保护局",
+    "en": "Rospotrebnadzor"
+   },
+   "title": {
+    "zh": "调查结束：未发现危险病原体；“第二例”为虚假信息",
+    "en": "Checks complete: no dangerous pathogens; “second case” is fake"
+   },
+   "points": [
     {
-      "id": "b-rpn-1007", "t": "2026-10-07T19:00:00+08:00", "org": "rospotrebnadzor", "sourceType": "official",
-      "issuer": { "zh": "俄罗斯消费者权益保护局", "en": "Rospotrebnadzor" },
-      "title": { "zh": "伊尔库茨克居民不存在流行风险", "en": "No epidemic risk for Irkutsk residents" },
-      "points": [
-        { "zh": "约 5000 份实验室检测未检出危险病原体", "en": "~5,000 lab tests found no dangerous pathogens" },
-        { "zh": "九成以上接触者已结束医学观察", "en": "Over 90% of contacts have completed medical observation" },
-        { "zh": "死者已接种疫苗，对其接触的病原体具有免疫力", "en": "The deceased was vaccinated and immune to the pathogens she handled" }
-      ],
-      "sources": ["euronews-1007", "forbesru-1007"], "via": true
+     "zh": "5500 余份实验室检测（多种方法）未检出危险病原体",
+     "en": "5,500+ lab tests (several methods) found no dangerous pathogens"
     },
     {
-      "id": "b-who-1007", "t": "2026-10-07T16:00:00+08:00", "org": "who", "sourceType": "intl",
-      "issuer": { "zh": "世界卫生组织总干事", "en": "WHO Director-General" },
-      "title": { "zh": "要求俄方澄清死因、病原体及第二例肺炎报道", "en": "Request to clarify cause, pathogen and reported second pneumonia case" },
-      "points": [
-        { "zh": "呼吁及时、完整、透明地共享信息", "en": "Calls for timely, complete and transparent information-sharing" },
-        { "zh": "评估俄罗斯境外的风险“极低”", "en": "Risk beyond Russia's borders assessed as “very low”" }
-      ],
-      "sources": ["foxnews-1007", "euronews-1007"], "via": true
+     "zh": "所有接触者已结束医学观察，没有出现与感染相关的健康问题",
+     "en": "All contacts released from observation with no infection-related illness"
     },
     {
-      "id": "b-who-1006", "t": "2026-10-06T18:00:00+08:00", "org": "who", "sourceType": "intl",
-      "issuer": { "zh": "世界卫生组织", "en": "World Health Organization" },
-      "title": { "zh": "疑似鼠疫死亡病例：检测与监测正在进行", "en": "Testing and monitoring underway in suspected plague death" },
-      "points": [
-        { "zh": "俄方通报伊尔库茨克州未登记鼠疫病例", "en": "Russia reports no plague case registered in Irkutsk oblast" },
-        { "zh": "所有接触者均已识别并接受监测，未出现症状，未检出危险病原体", "en": "All contacts identified and monitored; none symptomatic; no dangerous pathogens detected" },
-        { "zh": "风险：伊尔库茨克中低 · 俄罗斯低 · 欧洲区域极低", "en": "Risk: Irkutsk moderate-to-low · Russia low · European Region very low" }
-      ],
-      "sources": ["un-news-1006", "un-news-zh-1006"]
-    },
-    {
-      "id": "b-usemb-1006", "t": "2026-10-07T01:48:00+08:00", "org": "us-embassy", "sourceType": "official",
-      "issuer": { "zh": "美国驻莫斯科大使馆", "en": "U.S. Embassy Moscow" },
-      "title": { "zh": "健康警报：伊尔库茨克", "en": "Health Alert: Irkutsk" },
-      "points": [
-        { "zh": "知悉有关疑似肺鼠疫及医院检疫的媒体报道", "en": "Aware of press reports of suspected pneumonic plague and hospital quarantines" },
-        { "zh": "建议遵循当地卫生部门指导，避开受影响设施，出现发热或呼吸道症状时及时就医", "en": "Follow local health guidance, avoid affected facilities, seek care for fever or respiratory symptoms" }
-      ],
-      "sources": ["us-embassy-1006"]
-    },
-    {
-      "id": "b-rpn-1005", "t": "2026-10-05T12:00:00+08:00", "org": "rospotrebnadzor", "sourceType": "official",
-      "issuer": { "zh": "俄罗斯消费者权益保护局", "en": "Rospotrebnadzor" },
-      "title": { "zh": "委员会未发现研究所发生事故", "en": "Commission found no accident at the institute" },
-      "points": [
-        { "zh": "未发现操作病原微生物时发生事故", "en": "No accidents found in work with pathogenic microorganisms" },
-        { "zh": "死者生物样本中未检出与职业活动相关的微生物", "en": "No profession-related microorganisms in the deceased's samples" }
-      ],
-      "sources": ["lenta-1005"], "via": true
-    },
-    {
-      "id": "b-kremlin-1005", "t": "2026-10-05T15:00:00+08:00", "org": "kremlin", "sourceType": "official",
-      "issuer": { "zh": "克里姆林宫发言人佩斯科夫", "en": "Kremlin spokesman Peskov" },
-      "title": { "zh": "呼吁只相信俄消费者权益保护局的官方信息", "en": "Urges citizens to trust only official Rospotrebnadzor information" },
-      "points": [],
-      "sources": ["lenta-1005", "fontanka-1005"], "via": true
-    },
-    {
-      "id": "b-irkgov-1002", "t": "2026-10-02T18:00:00+08:00", "org": "irkobl", "sourceType": "official",
-      "issuer": { "zh": "伊尔库茨克州州长科布泽夫", "en": "Irkutsk Governor Igor Kobzev" },
-      "title": { "zh": "所有已识别接触者均已接受医学观察", "en": "All identified contacts placed under medical observation" },
-      "points": [
-        { "zh": "接触者检测结果为阴性", "en": "Contact test results negative" },
-        { "zh": "提及“疑似危险传染病”，未点名具体疾病", "en": "Referred to a “suspected dangerous infection” without naming it" }
-      ],
-      "sources": ["mt-1002", "fontanka-1005"], "via": true
-    },
-    {
-      "id": "b-rpn-1004", "t": "2026-10-04T14:00:00+08:00", "org": "rospotrebnadzor", "sourceType": "official",
-      "issuer": { "zh": "俄罗斯消费者权益保护局", "en": "Rospotrebnadzor" },
-      "title": { "zh": "死因为病因不明的肺炎；卫生流行病学形势稳定", "en": "Pneumonia of undetermined etiology; situation stable" },
-      "points": [],
-      "sources": ["lenta-1005", "meduza-1006"], "via": true
+     "zh": "两个生物安全委员会均未发现事故",
+     "en": "Two biosafety commissions found no accident"
     }
-  ]
+   ],
+   "sources": [
+    "reuters-1008",
+    "abc-1008-denial",
+    "liga-1008"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-irkgov-1008",
+   "t": "2026-10-08T18:00:00+08:00",
+   "org": "irkobl",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "伊尔库茨克州州长科布泽夫",
+    "en": "Irkutsk Governor Igor Kobzev"
+   },
+   "title": {
+    "zh": "检疫已解除",
+    "en": "Quarantine lifted"
+   },
+   "points": [
+    {
+     "zh": "死者已接种疫苗，安全管控“得到确认”",
+     "en": "The deceased was vaccinated; safety controls “confirmed”"
+    }
+   ],
+   "sources": [
+    "kyiv-1008"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-cdc-1008",
+   "t": "2026-10-08T22:00:00+08:00",
+   "org": "cdc",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "美国疾病控制与预防中心 / 卫生与公众服务部",
+    "en": "US CDC / HHS"
+   },
+   "title": {
+    "zh": "对来自伊尔库茨克地区的旅客进行健康评估，风险“极低”",
+    "en": "Travellers from the Irkutsk area to be assessed; risk “extremely low”"
+   },
+   "points": [
+    {
+     "zh": "须经指定机场入境，接受问询和基本健康检查",
+     "en": "Designated airports, questions and a basic health check"
+    },
+    {
+     "zh": "不发布禁止登机令",
+     "en": "No do-not-board orders"
+    }
+   ],
+   "sources": [
+    "abc-1008-cdc",
+    "wt-1008-screen"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-rpn-1007",
+   "t": "2026-10-07T19:00:00+08:00",
+   "org": "rospotrebnadzor",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "俄罗斯消费者权益保护局",
+    "en": "Rospotrebnadzor"
+   },
+   "title": {
+    "zh": "伊尔库茨克居民不存在流行风险",
+    "en": "No epidemic risk for Irkutsk residents"
+   },
+   "points": [
+    {
+     "zh": "约 5000 份实验室检测未检出危险病原体",
+     "en": "~5,000 lab tests found no dangerous pathogens"
+    },
+    {
+     "zh": "九成以上接触者已结束医学观察",
+     "en": "Over 90% of contacts have completed medical observation"
+    },
+    {
+     "zh": "死者已接种疫苗，对其接触的病原体具有免疫力",
+     "en": "The deceased was vaccinated and immune to the pathogens she handled"
+    }
+   ],
+   "sources": [
+    "euronews-1007",
+    "forbesru-1007"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-who-1007",
+   "t": "2026-10-07T16:00:00+08:00",
+   "org": "who",
+   "sourceType": "intl",
+   "issuer": {
+    "zh": "世界卫生组织总干事",
+    "en": "WHO Director-General"
+   },
+   "title": {
+    "zh": "要求俄方澄清死因、病原体及第二例肺炎报道",
+    "en": "Request to clarify cause, pathogen and reported second pneumonia case"
+   },
+   "points": [
+    {
+     "zh": "呼吁及时、完整、透明地共享信息",
+     "en": "Calls for timely, complete and transparent information-sharing"
+    },
+    {
+     "zh": "评估俄罗斯境外的风险“极低”",
+     "en": "Risk beyond Russia's borders assessed as “very low”"
+    }
+   ],
+   "sources": [
+    "foxnews-1007",
+    "euronews-1007"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-who-1006",
+   "t": "2026-10-06T18:00:00+08:00",
+   "org": "who",
+   "sourceType": "intl",
+   "issuer": {
+    "zh": "世界卫生组织",
+    "en": "World Health Organization"
+   },
+   "title": {
+    "zh": "疑似鼠疫死亡病例：检测与监测正在进行",
+    "en": "Testing and monitoring underway in suspected plague death"
+   },
+   "points": [
+    {
+     "zh": "俄方通报伊尔库茨克州未登记鼠疫病例",
+     "en": "Russia reports no plague case registered in Irkutsk oblast"
+    },
+    {
+     "zh": "所有接触者均已识别并接受监测，未出现症状，未检出危险病原体",
+     "en": "All contacts identified and monitored; none symptomatic; no dangerous pathogens detected"
+    },
+    {
+     "zh": "风险：伊尔库茨克中低 · 俄罗斯低 · 欧洲区域极低",
+     "en": "Risk: Irkutsk moderate-to-low · Russia low · European Region very low"
+    }
+   ],
+   "sources": [
+    "un-news-1006",
+    "un-news-zh-1006"
+   ]
+  },
+  {
+   "id": "b-usemb-1006",
+   "t": "2026-10-07T01:48:00+08:00",
+   "org": "us-embassy",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "美国驻莫斯科大使馆",
+    "en": "U.S. Embassy Moscow"
+   },
+   "title": {
+    "zh": "健康警报：伊尔库茨克",
+    "en": "Health Alert: Irkutsk"
+   },
+   "points": [
+    {
+     "zh": "知悉有关疑似肺鼠疫及医院检疫的媒体报道",
+     "en": "Aware of press reports of suspected pneumonic plague and hospital quarantines"
+    },
+    {
+     "zh": "建议遵循当地卫生部门指导，避开受影响设施，出现发热或呼吸道症状时及时就医",
+     "en": "Follow local health guidance, avoid affected facilities, seek care for fever or respiratory symptoms"
+    }
+   ],
+   "sources": [
+    "us-embassy-1006"
+   ]
+  },
+  {
+   "id": "b-rpn-1005",
+   "t": "2026-10-05T12:00:00+08:00",
+   "org": "rospotrebnadzor",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "俄罗斯消费者权益保护局",
+    "en": "Rospotrebnadzor"
+   },
+   "title": {
+    "zh": "委员会未发现研究所发生事故",
+    "en": "Commission found no accident at the institute"
+   },
+   "points": [
+    {
+     "zh": "未发现操作病原微生物时发生事故",
+     "en": "No accidents found in work with pathogenic microorganisms"
+    },
+    {
+     "zh": "死者生物样本中未检出与职业活动相关的微生物",
+     "en": "No profession-related microorganisms in the deceased's samples"
+    }
+   ],
+   "sources": [
+    "lenta-1005"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-kremlin-1005",
+   "t": "2026-10-05T15:00:00+08:00",
+   "org": "kremlin",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "克里姆林宫发言人佩斯科夫",
+    "en": "Kremlin spokesman Peskov"
+   },
+   "title": {
+    "zh": "呼吁只相信俄消费者权益保护局的官方信息",
+    "en": "Urges citizens to trust only official Rospotrebnadzor information"
+   },
+   "points": [],
+   "sources": [
+    "lenta-1005",
+    "fontanka-1005"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-irkgov-1002",
+   "t": "2026-10-02T18:00:00+08:00",
+   "org": "irkobl",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "伊尔库茨克州州长科布泽夫",
+    "en": "Irkutsk Governor Igor Kobzev"
+   },
+   "title": {
+    "zh": "所有已识别接触者均已接受医学观察",
+    "en": "All identified contacts placed under medical observation"
+   },
+   "points": [
+    {
+     "zh": "接触者检测结果为阴性",
+     "en": "Contact test results negative"
+    },
+    {
+     "zh": "提及“疑似危险传染病”，未点名具体疾病",
+     "en": "Referred to a “suspected dangerous infection” without naming it"
+    }
+   ],
+   "sources": [
+    "mt-1002",
+    "fontanka-1005"
+   ],
+   "via": true
+  },
+  {
+   "id": "b-rpn-1004",
+   "t": "2026-10-04T14:00:00+08:00",
+   "org": "rospotrebnadzor",
+   "sourceType": "official",
+   "issuer": {
+    "zh": "俄罗斯消费者权益保护局",
+    "en": "Rospotrebnadzor"
+   },
+   "title": {
+    "zh": "死因为病因不明的肺炎；卫生流行病学形势稳定",
+    "en": "Pneumonia of undetermined etiology; situation stable"
+   },
+   "points": [],
+   "sources": [
+    "lenta-1005",
+    "meduza-1006"
+   ],
+   "via": true
+  }
+ ]
 }

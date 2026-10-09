@@ -1,0 +1,78 @@
+{
+ "_doc": "Claim check. verdict: confirmed | reported | unverified | disputed | denied | misleading. 'denied' means officials deny it; that is a statement of the official position, not proof it is false. Order = importance.",
+ "claims": [
+  {
+   "id": "c-plague",
+   "claim": { "zh": "死者死于鼠疫", "en": "The woman died of plague" },
+   "verdict": "disputed",
+   "official": { "zh": "官方诊断为肺炎（“病因不明”或“社区获得性”），称样本中未检出鼠疫及其他与工作相关的病原体。", "en": "Pneumonia (“undetermined cause”, later “community-acquired”); no plague or work-related pathogen found in her samples." },
+   "independent": { "zh": "早期多家俄罗斯独立媒体报道为肺鼠疫，布里亚特领导人也曾说“可能是鼠疫”。世卫组织称死因仍无法解释。", "en": "Early reports in several Russian independent outlets said pneumonic plague; Buryatia's leader said “maybe plague”. WHO says the death remains unexplained." },
+   "sources": ["lenta-1005", "aljazeera-1005", "cnn-1007-who"]
+  },
+  {
+   "id": "c-spread",
+   "claim": { "zh": "疫情正在扩散 / 存在流行风险", "en": "An outbreak is spreading / there is an epidemic risk" },
+   "verdict": "denied",
+   "official": { "zh": "5500 余份检测均未发现危险病原体，所有接触者已结束观察，官方称不存在流行风险。", "en": "5,500+ tests found no dangerous pathogens, all contacts released, and officials say there is no epidemic risk." },
+   "independent": { "zh": "目前没有任何来源报告出现新病例。世卫组织评估风险：伊尔库茨克中低，俄罗斯低，欧洲极低。", "en": "No source reports new cases. WHO risk: moderate-to-low in Irkutsk, low for Russia, very low for Europe." },
+   "sources": ["reuters-1008", "un-news-1006"]
+  },
+  {
+   "id": "c-second",
+   "claim": { "zh": "出现第二例（第二名员工患病或死亡）", "en": "There is a second case (another employee ill or dead)" },
+   "verdict": "denied",
+   "official": { "zh": "俄消费者权益保护局称相关报道是“虚假信息”。", "en": "Rospotrebnadzor calls the reports “fake information”." },
+   "independent": { "zh": "说法仅见于部分俄语媒体和社交媒体，无法独立核实。世卫组织已就“第二名员工患肺炎”提出询问，尚未获公开答复。", "en": "Only in some Russian-language outlets and social media; not independently verifiable. WHO asked about a second employee with pneumonia and has had no public answer." },
+   "sources": ["abc-1008-denial", "foxnews-1007", "united24-1006"]
+  },
+  {
+   "id": "c-lab",
+   "claim": { "zh": "她在实验室打碎了装有鼠疫菌的试管", "en": "She broke a test tube containing plague bacteria" },
+   "verdict": "disputed",
+   "official": { "zh": "两个生物安全委员会均称研究所未发生事故，并称她接种过疫苗、具有免疫力。", "en": "Two biosafety commissions found no accident; officials say she was vaccinated and immune." },
+   "independent": { "zh": "《贝加尔人》、雨电视台、The Insider 援引知情人士报道了 9 月 25 日的试管事故。", "en": "Lyudi Baikala, TV Rain and The Insider reported a 25 Sept test-tube accident, citing insiders." },
+   "sources": ["tvrain-1002", "theins-1002", "reuters-1008"]
+  },
+  {
+   "id": "c-quarantine",
+   "claim": { "zh": "约 200 人被隔离", "en": "About 200 people were quarantined" },
+   "verdict": "reported",
+   "official": { "zh": "官方称所有已识别的接触者均接受医学观察，未公布具体人数；10 月 8 日宣布全部结束观察。", "en": "Officials said all identified contacts were observed, without a number; on 8 Oct all were released." },
+   "independent": { "zh": "多家媒体报道约 197 人，其中 100 余人住院观察；另有报道称研究所 60 余名员工被限制在所内。", "en": "Several outlets reported ~197, over 100 in hospital wards; another report said 60+ institute staff were confined on site." },
+   "sources": ["mt-1002", "zona-1002", "svoboda-1005-60"]
+  },
+  {
+   "id": "c-hospitals",
+   "claim": { "zh": "伊尔库茨克多家医院被关闭", "en": "Hospitals across Irkutsk were shut" },
+   "verdict": "misleading",
+   "official": { "zh": "官方称“大规模关闭医院”是虚假信息；10 月 8 日宣布解除检疫。", "en": "Officials called “mass hospital closures” fake; quarantine lifted on 8 Oct." },
+   "independent": { "zh": "舍列霍夫区医院部分科室暂停收治有多方来源支持；另有媒体报道数家市内医院限制探视和收治。限制属实，但“全面关闭”的说法夸大了。", "en": "Well sourced: some wards at Shelekhov District Hospital stopped admissions. Media also reported visiting and admission limits at several city hospitals. Restrictions, yes; “shut down”, overstated." },
+   "sources": ["borus-1001", "meduza-1006", "lenta-1005"]
+  },
+  {
+   "id": "c-pharmacy",
+   "claim": { "zh": "药店抗生素被抢购一空", "en": "Pharmacies sold out of antibiotics" },
+   "verdict": "reported",
+   "official": { "zh": "没有官方说法。", "en": "No official statement." },
+   "independent": { "zh": "多家媒体报道，10 月 3 日至 6 日伊尔库茨克和舍列霍夫部分药店售罄或只接受预订。本站自 10 月 7 日起监测连锁药房库存，尚未发现异常。", "en": "Several outlets reported sell-outs or pre-order-only at some Irkutsk and Shelekhov pharmacies on 3–6 Oct. Our pharmacy monitoring since 7 Oct has not shown an anomaly." },
+   "sources": ["meduza-1006", "ntd-1007"],
+   "link": "#pharma"
+  },
+  {
+   "id": "c-us-leave",
+   "claim": { "zh": "美国因鼠疫要求公民撤离俄罗斯", "en": "The US told citizens to leave Russia because of plague" },
+   "verdict": "misleading",
+   "official": { "zh": "美国使馆 10 月 6 日发布的是健康警报。“立即离开俄罗斯”出自早已生效的四级旅行警告，原因是错误拘押风险等安全问题，与鼠疫无关。美国疾控中心称风险“极低”。", "en": "The 6 Oct embassy notice was a health alert. “Depart immediately” comes from the long-standing Level 4 advisory, issued over wrongful detention and security risks, not plague. The CDC calls the risk “extremely low”." },
+   "independent": { "zh": "多篇报道把警报标题写成“因鼠疫撤侨”。", "en": "Several reports headlined the alert as an evacuation over plague." },
+   "sources": ["us-embassy-1006", "abc-1008-cdc"]
+  },
+  {
+   "id": "c-bioweapon",
+   "claim": { "zh": "这与生物武器有关", "en": "This is linked to a bioweapon" },
+   "verdict": "unverified",
+   "official": { "zh": "俄方否认存在事故。美国总统特朗普说“我们不认为”这是生物武器。", "en": "Russia denies any accident. US President Trump said “we don't think” it is a bioweapon." },
+   "independent": { "zh": "这类说法仅见于评论文章和社交媒体，没有证据支持。", "en": "Only in commentary and on social media; no evidence offered." },
+   "sources": ["wapo-1008"]
+  }
+ ]
+}

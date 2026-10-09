@@ -6,11 +6,10 @@ import { Icon, type IconName } from './ui/Icon';
 
 export const SECTIONS: { id: string; key: string; short?: string; icon: IconName; mobile?: boolean }[] = [
   { id: 'overview', key: 'navOverview', icon: 'home', mobile: true },
-  { id: 'map', key: 'navMap', icon: 'map', mobile: true },
-  { id: 'timeline', key: 'navTimeline', icon: 'list', mobile: true },
+  { id: 'timeline', key: 'navReplay', short: 'navReplayShort', icon: 'map', mobile: true },
+  { id: 'claims', key: 'navClaims', short: 'navClaimsShort', icon: 'shield', mobile: true },
   { id: 'feed', key: 'navFeed', short: 'navFeedShort', icon: 'news', mobile: true },
   { id: 'pharma', key: 'navPharma', icon: 'pill', mobile: true },
-  { id: 'signals', key: 'navSignals', icon: 'pulse' },
   { id: 'system', key: 'navSystem', icon: 'server' },
 ];
 

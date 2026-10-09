@@ -1,24 +1,67 @@
 {
-  "_doc": "Editorial situation briefing. Update `updatedAt` whenever content changes; the UI shows it next to the briefing.",
-  "updatedAt": "2026-10-07T22:00:00+08:00",
-  "headline": {
-    "zh": "1 人死亡，官方死因为病因不明的肺炎。官方称未检出鼠疫，世卫组织仍在要求俄方提供更多信息。",
-    "en": "One death, officially from pneumonia of undetermined cause. Officials say no plague was found; WHO is still asking Russia for more information."
+ "_doc": "Editorial situation briefing. Update `updatedAt` whenever content changes; the UI shows it next to the briefing.",
+ "updatedAt": "2026-10-09T12:00:00+08:00",
+ "headline": {
+  "zh": "检疫已解除，官方称 5500 余份检测均未发现危险病原体，但死因仍未公布。",
+  "en": "Quarantine lifted and 5,500+ tests found nothing dangerous, officials say, but the cause of death is still undisclosed."
+ },
+ "known": [
+  {
+   "zh": "1 人死亡（10 月 2 日），官方诊断为肺炎，未公布具体病原体。",
+   "en": "One death (2 Oct); officially pneumonia, with no pathogen named.",
+   "tier": "confirmed"
   },
-  "known": [
-    { "zh": "伊尔库茨克抗鼠疫研究所 1 名员工（28 岁）因重症肺炎于 10 月 2 日死亡。", "en": "One employee (28) of the Irkutsk Anti-Plague Institute died of severe pneumonia on 2 Oct.", "tier": "confirmed" },
-    { "zh": "俄方向世卫组织通报：未登记鼠疫病例；约 5000 份检测均未检出危险病原体。", "en": "Russia told WHO no plague case is registered; ~5,000 tests found no dangerous pathogens.", "tier": "confirmed" },
-    { "zh": "世卫组织风险评估：伊尔库茨克中低，俄罗斯全国低，欧洲区域极低。", "en": "WHO risk: moderate-to-low in Irkutsk, low for Russia, very low for Europe.", "tier": "confirmed" },
-    { "zh": "约 200 名接触者曾接受医学观察，官方称九成以上已结束观察。", "en": "About 200 contacts were placed under observation; officials say over 90% have completed it.", "tier": "reported" }
-  ],
-  "unknown": [
-    { "zh": "确切病原体：官方称不是鼠疫，但尚未公布具体病因。", "en": "The actual pathogen: officials say it was not plague but have not named a cause." },
-    { "zh": "是否存在第二名患者：世卫组织正在核实，目前未经证实。", "en": "Whether a second employee is ill: WHO is asking; unverified." },
-    { "zh": "是否发生实验室事故：媒体报道与官方委员会结论相互矛盾。", "en": "Whether a lab accident happened: media reports and the official commission contradict each other." }
-  ],
-  "guidance": [
-    { "zh": "不要自行服用或囤积抗生素：没有预防作用，还会让真正需要的人买不到药。", "en": "Do not take or stockpile antibiotics on your own. It does not protect you and leaves less for people who need them." },
-    { "zh": "肺鼠疫及早使用常见抗生素即可有效治疗。如出现高热、咳嗽、咳血或胸痛，请尽快就医，并告知医生近期行程。", "en": "Pneumonic plague is treatable with common antibiotics if started early. With high fever, cough, bloody sputum or chest pain, seek care promptly and mention recent travel." },
-    { "zh": "以官方通报与世卫组织信息为准，警惕未注明来源的截图和转发。", "en": "Rely on official and WHO updates; be wary of unsourced screenshots and forwards." }
-  ]
+  {
+   "zh": "官方称 5500 余份检测均未检出危险病原体，所有接触者已结束观察。",
+   "en": "Officials say 5,500+ tests found no dangerous pathogens and all contacts have been released.",
+   "tier": "confirmed"
+  },
+  {
+   "zh": "10 月 8 日州长宣布解除检疫。",
+   "en": "The governor announced the quarantine was lifted on 8 Oct.",
+   "tier": "confirmed"
+  },
+  {
+   "zh": "世卫组织评估风险：伊尔库茨克中低、俄罗斯低、欧洲极低。",
+   "en": "WHO risk: moderate-to-low in Irkutsk, low for Russia, very low for Europe.",
+   "tier": "confirmed"
+  }
+ ],
+ "unknown": [
+  {
+   "zh": "致死的病原体是什么？官方称不是鼠疫，但没有说明是什么。",
+   "en": "Which pathogen caused the death? Officials say not plague but have not said what."
+  },
+  {
+   "zh": "是否有第二名员工患病？俄方否认，但世卫组织的询问尚未得到公开答复。",
+   "en": "Was a second employee ill? Russia denies it; WHO's question has not been publicly answered."
+  },
+  {
+   "zh": "是否发生过实验室事故？媒体报道与两个官方委员会的结论相反。",
+   "en": "Was there a lab accident? Media reports contradict two official commissions."
+  }
+ ],
+ "guidance": [
+  {
+   "zh": "不要自行服用或囤积抗生素：没有预防作用，还会让真正需要的人买不到药。",
+   "en": "Do not take or stockpile antibiotics on your own. It does not protect you and leaves less for people who need them."
+  },
+  {
+   "zh": "肺鼠疫及早使用常见抗生素即可有效治疗。如出现高热、咳嗽、咳血或胸痛，请尽快就医，并告知医生近期行程。",
+   "en": "Pneumonic plague is treatable with common antibiotics if started early. With high fever, cough, bloody sputum or chest pain, seek care promptly and mention recent travel."
+  },
+  {
+   "zh": "以官方通报与世卫组织信息为准，警惕未注明来源的截图和转发。",
+   "en": "Rely on official and WHO updates; be wary of unsourced screenshots and forwards."
+  }
+ ],
+ "status": {
+  "zh": "鼠疫未确认",
+  "en": "Plague not confirmed",
+  "level": "low"
+ },
+ "dek": {
+  "zh": "10 月 2 日，伊尔库茨克抗鼠疫研究所一名 28 岁员工死于重症肺炎。俄方称不是鼠疫，并否认出现第二例；世卫组织表示信息不足，仍在要求俄方说明。目前没有证据表明疫情在扩散。",
+  "en": "A 28-year-old employee of the Irkutsk Anti-Plague Institute died of severe pneumonia on 2 Oct. Russia says it was not plague and denies a second case; WHO says it lacks the information to judge and is still asking. There is no evidence of spread."
+ }
 }

@@ -191,3 +191,14 @@ test('price jump ignores products missing from the latest listing', () => {
   assert.equal(jumps.length, 1);
   assert.match(jumps[0].detail.en, /tabs/);
 });
+
+test('rankNews rewards breadth of credible coverage', async () => {
+  const { rankNews } = await import('../lib/state.mjs');
+  const now = Date.parse('2026-10-08T12:00:00Z');
+  const t = '2026-10-08T10:00:00Z';
+  const wide = { id: 'a', t, host: 'reuters.com', sourceType: 'wire', also: [{ host: 'bbc.com', sourceType: 'media' }, { host: 'cnn.com', sourceType: 'media' }] };
+  const noisy = { id: 'b', t, host: 'x.ua', sourceType: 'caution', also: [{ host: 'y.ua', sourceType: 'caution' }, { host: 'z.ua', sourceType: 'caution' }] };
+  const [a, b] = rankNews([wide, noisy], now);
+  assert.ok(a.score > b.score * 3);
+  assert.equal(a.outlets, 3);
+});

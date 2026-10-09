@@ -35,7 +35,7 @@ function Event({ e, state, isNew, defaultOpen }: { e: TimelineEvent; state: Stat
   );
 }
 
-export function Timeline({ state, seen }: { state: State | null; seen: Set<string> }) {
+export function Timeline({ state, seen, bare }: { state: State | null; seen: Set<string>; bare?: boolean }) {
   const { t, lang } = useI18n();
   const [tier, setTier] = useState<Tier | 'all'>('all');
   const [cat, setCat] = useState('all');
@@ -58,8 +58,8 @@ export function Timeline({ state, seen }: { state: State | null; seen: Set<strin
     if (d) d.items.push(e); else days.push({ key: k, t: e.t, items: [e] });
   }
 
-  return (
-    <Section id="timeline" title={t('timelineTitle')} sub={state ? `${state.events.length} · ${t('irkutskTime')} (UTC+8)` : undefined}>
+  const content = (
+    <>
       <div className="filters">
         <button className="flt" aria-pressed={tier === 'all'} onClick={() => setTier('all')}>{t('filterAll')}</button>
         {TIERS.map((x) => <button key={x} className="flt" aria-pressed={tier === x} onClick={() => setTier(tier === x ? 'all' : x)}><TierBadge tier={x} noTip /></button>)}
@@ -81,6 +81,12 @@ export function Timeline({ state, seen }: { state: State | null; seen: Set<strin
         </div>
       ))}
       {filtered.length > limit && <button className="more" onClick={() => setLimit(999)}>{t('showAll', { n: filtered.length })}</button>}
+    </>
+  );
+  if (bare) return <div className="tl-bare">{content}</div>;
+  return (
+    <Section id="timeline" title={t('timelineTitle')} sub={state ? `${state.events.length} · ${t('irkutskTime')} (UTC+8)` : undefined}>
+      {content}
     </Section>
   );
 }

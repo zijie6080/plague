@@ -58,15 +58,16 @@
     {
      "t": "2026-10-07T16:00:00+08:00",
      "value": 1,
-     "tier": "unverified",
+     "tier": "disputed",
      "delta": true,
      "sources": [
       "foxnews-1007",
-      "euronews-1007"
+      "euronews-1007",
+      "abc-1008-denial"
      ],
      "note": {
-      "zh": "第二名员工患病因不明的肺炎（世卫组织正在核实）",
-      "en": "Second employee with pneumonia of undetermined cause (WHO seeking clarification)"
+      "zh": "第二例的说法已被官方否认，世卫组织仍在询问",
+      "en": "Second case officially denied; WHO question still open"
      }
     }
    ],
@@ -95,14 +96,15 @@
     {
      "t": "2026-10-06T22:00:00+08:00",
      "value": 1,
-     "tier": "unverified",
+     "tier": "disputed",
      "delta": true,
      "sources": [
-      "united24-1006"
+      "united24-1006",
+      "abc-1008-denial"
      ],
      "note": {
-      "zh": "第二例死亡的说法未经证实",
-      "en": "Claimed second death, unverified"
+      "zh": "第二例死亡的说法已被官方否认",
+      "en": "Claimed second death officially denied"
      }
     }
    ],
@@ -111,12 +113,12 @@
   {
    "id": "observation",
    "label": {
-    "zh": "医学观察 / 隔离",
-    "en": "Under observation / isolation"
+    "zh": "仍在医学观察",
+    "en": "Still under observation"
    },
    "definition": {
-    "zh": "接受医学观察或隔离的接触者人数。官方未公布具体人数，数字来自媒体报道。官方称九成以上已结束观察。",
-    "en": "Contacts under medical observation or isolation. Officials have not published a number; the figures are media reports. Officials say over 90% have completed observation."
+    "zh": "仍在接受医学观察或隔离的接触者人数。高峰时媒体报道约 197 人；官方 10 月 8 日称所有接触者已结束观察。",
+    "en": "Contacts still under medical observation or isolation. Media reported about 197 at the peak; officials said on 8 Oct all contacts had been released."
    },
    "observations": [
     {
@@ -149,6 +151,19 @@
       "zh": "九成以上已结束观察",
       "en": ">90% completed observation"
      }
+    },
+    {
+     "t": "2026-10-08T16:00:00+08:00",
+     "value": 0,
+     "tier": "confirmed",
+     "sources": [
+      "reuters-1008",
+      "kyiv-1008"
+     ],
+     "note": {
+      "zh": "所有接触者已结束观察",
+      "en": "All contacts released"
+     }
     }
    ],
    "concern": "up"
@@ -176,6 +191,20 @@
       "zh": "全部未检出危险病原体",
       "en": "No dangerous pathogens detected"
      }
+    },
+    {
+     "t": "2026-10-08T16:00:00+08:00",
+     "value": 5500,
+     "approx": true,
+     "tier": "confirmed",
+     "sources": [
+      "reuters-1008",
+      "liga-1008"
+     ],
+     "note": {
+      "zh": "多种方法检测，均未检出危险病原体",
+      "en": "Several methods; no dangerous pathogens"
+     }
     }
    ],
    "concern": "none"
@@ -184,7 +213,7 @@
    "id": "facilities",
    "label": {
     "zh": "受限医疗机构",
-    "en": "Facilities with restrictions"
+    "en": "Facilities under restriction"
    },
    "definition": {
     "zh": "据报道实施检疫或接诊限制的医疗机构数量。官方否认“大规模关闭医院”。",
@@ -206,6 +235,18 @@
      "sources": [
       "meduza-1006"
      ]
+    },
+    {
+     "t": "2026-10-08T18:00:00+08:00",
+     "value": 0,
+     "tier": "confirmed",
+     "sources": [
+      "kyiv-1008"
+     ],
+     "note": {
+      "zh": "州长宣布解除检疫（未点名具体机构）",
+      "en": "Governor says quarantine lifted (facilities not named)"
+     }
     }
    ],
    "concern": "up"
@@ -236,6 +277,10 @@
     },
     "level": "very-low"
    }
-  ]
+  ],
+  "note": {
+   "zh": "世卫组织 10 月 7 日表示，俄方提供的信息尚不足以完成全面风险评估。",
+   "en": "On 7 Oct WHO said Russia had not yet shared enough information for a full risk assessment."
+  }
  }
 }

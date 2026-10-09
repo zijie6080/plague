@@ -53,3 +53,10 @@ export function Tip({ children, label, body, align }: { children: ReactNode; lab
 export function InfoTip({ body, label, align }: { body: ReactNode; label?: string; align?: 'right' }) {
   return <Tip body={body} label={label} align={align}><span className="info" aria-label={label || 'info'}><Icon name="info" size={13} /></span></Tip>;
 }
+
+/** Compact tier marker for dense lists: glyph only (name on hover), or glyph + name. */
+export function TierMark({ tier, withLabel }: { tier: Tier; withLabel?: boolean }) {
+  const { t } = useI18n();
+  const el = <span className="tier mark" data-tier={tier} aria-label={t(`tier_${tier}`)}><TierGlyph tier={tier} />{withLabel && t(`tier_${tier}`)}</span>;
+  return withLabel ? el : <Tip label={t(`tier_${tier}`)} body={t(`tierHelp_${tier}`)}>{el}</Tip>;
+}

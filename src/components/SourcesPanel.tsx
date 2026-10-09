@@ -18,11 +18,11 @@ function Runs({ runs }: { runs: SourceHealth['runs'] }) {
 
 export function SourcesPanel({ state, now }: { state: State | null; now: number }) {
   const { t, l, lang } = useI18n();
-  if (!state) return <div id="system"><Sk h={240} /></div>;
+  if (!state) return <div><Sk h={240} /></div>;
   const active = state.sources.filter((s) => s.status !== 'idle');
   const healthy = active.filter((s) => s.status === 'ok').length;
   return (
-    <div id="system">
+    <div>
       <h3 className="sub-head">{t('systemTitle')}<span className="count">{t('healthy', { a: healthy, b: active.length })}</span></h3>
       <p className="faint small" style={{ margin: '0 0 10px' }}>{t('systemSub')}</p>
       <div className="tablewrap">

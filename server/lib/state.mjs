@@ -9,13 +9,14 @@ import { titleTokens, jaccard } from './text.mjs';
 const H = 3_600_000;
 
 export async function buildState({ now = new Date() } = {}) {
-  const [briefing, metricsDoc, eventsDoc, locDoc, bulletinsDoc, citations] = await Promise.all([
+  const [briefing, metricsDoc, eventsDoc, locDoc, bulletinsDoc, citations, claimsDoc] = await Promise.all([
     readJson(curatedFile('briefing.json'), {}),
     readJson(curatedFile('metrics.json'), { metrics: [] }),
     readJson(curatedFile('events.json'), { events: [] }),
     readJson(curatedFile('locations.json'), { locations: [] }),
     readJson(curatedFile('bulletins.json'), { bulletins: [] }),
     readJson(curatedFile('citations.json'), {}),
+    readJson(curatedFile('claims.json'), { claims: [] }),
   ]);
   const [docsMap, health, pharma, anomalies, pages] = await Promise.all([
     readJson(storeFile('documents.json'), {}),
@@ -40,11 +41,17 @@ export async function buildState({ now = new Date() } = {}) {
     }));
   // Drop automated items that duplicate a curated statement from the same issuer within 36h.
   const curatedKeys = bulletinsDoc.bulletins.map((b) => ({ org: b.org, t: Date.parse(b.t) }));
-  const dedupedAuto = autoBulletins.filter((a) => !curatedKeys.some((c) => c.org === a.org && Math.abs(c.t - Date.parse(a.t)) < 36 * H));
+  const seenTitles = new Set();
+  const dedupedAuto = autoBulletins.filter((a) => {
+    const key = a.title.en.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+    if (seenTitles.has(key)) return false;
+    seenTitles.add(key);
+    return !curatedKeys.some((c) => c.org === a.org && Math.abs(c.t - Date.parse(a.t)) < 36 * H);
+  });
   const bulletins = [...bulletinsDoc.bulletins, ...dedupedAuto].sort((a, b) => Date.parse(b.t) - Date.parse(a.t)).slice(0, 120);
 
   const newsDocs = docs.filter((d) => d.kind === 'news').sort((a, b) => docTime(b) - docTime(a));
-  const news = clusterNews(newsDocs).slice(0, 300);
+  const news = rankNews(clusterNews(newsDocs), nowMs).slice(0, 300);
   const newsVolume = volumeSeries(newsDocs, nowMs);
 
   const pharmaOut = buildPharma(pharma);
@@ -82,6 +89,7 @@ export async function buildState({ now = new Date() } = {}) {
     },
     briefing,
     risk: metricsDoc.risk,
+    claims: claimsDoc.claims,
     metrics,
     events,
     locations: locDoc.locations,
@@ -129,6 +137,25 @@ export function clusterNews(docs) {
     else clusters.push({ ...entry, tokens, topics: d.topics || [], summary: d.summary || '', firstSeen: d.firstSeen, also: [] });
   }
   return clusters.map(({ tokens, t, ...c }) => ({ ...c, t: c.t || new Date(t).toISOString() }));
+}
+
+// How much a story matters: distinct outlets that carried it, weighted by the
+// kind of outlet, decaying with age. Repetition by low-credibility outlets adds little.
+const TYPE_WEIGHT = { official: 3, intl: 3, wire: 2.5, media: 1.5, state_media: 1.2, aggregator: 1, caution: 0.3 };
+
+export function rankNews(clusters, nowMs) {
+  return clusters
+    .map((c) => {
+      const hosts = new Map();
+      for (const r of [c, ...c.also]) {
+        const w = TYPE_WEIGHT[r.sourceType] ?? 1;
+        hosts.set(r.host || r.publisher, Math.max(hosts.get(r.host || r.publisher) || 0, w));
+      }
+      const weight = [...hosts.values()].reduce((a, b) => a + b, 0);
+      const ageH = Math.max(0, (nowMs - Date.parse(c.t)) / 3_600_000);
+      return { ...c, outlets: hosts.size, score: Math.round(weight * Math.exp(-ageH / 48) * 100) / 100 };
+    })
+    .sort((a, b) => Date.parse(b.t) - Date.parse(a.t));
 }
 
 export function volumeSeries(docs, nowMs) {

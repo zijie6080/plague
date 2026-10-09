@@ -31,7 +31,9 @@ export interface Bulletin {
 }
 
 export interface NewsRef { id: string; title: string; url: string; publisher: string; host: string; sourceType: SourceType; t: string; lang: string }
-export interface NewsCluster extends NewsRef { topics: string[]; summary: string; firstSeen: string; also: NewsRef[] }
+export interface NewsCluster extends NewsRef { topics: string[]; summary: string; firstSeen: string; also: NewsRef[]; outlets?: number; score?: number }
+export type Verdict = 'confirmed' | 'reported' | 'unverified' | 'disputed' | 'denied' | 'misleading';
+export interface Claim { id: string; claim: L10n; verdict: Verdict; official: L10n; independent: L10n; sources: string[]; link?: string }
 
 export interface PharmaPoint { t: string; index: number | null; medianUnit: number | null; minPrice: number | null; medianPrice: number | null; inStock: number; skus: number; avail: number; preorder: number }
 export interface Offer { name: string; price: number | null; priceMax?: number | null; available: number; preorder: boolean; rx: boolean; firstPrice: number | null }
@@ -67,8 +69,9 @@ export interface Daily {
 export interface State {
   schema: number; generatedAt: string; lastDataAt: string;
   event: { id: string; start: string; title: L10n; place: L10n };
-  briefing: { updatedAt: string; headline: L10n; known: (L10n & { tier: Tier })[]; unknown: L10n[]; guidance: L10n[] };
-  risk: { t: string; source: string; levels: { scope: L10n; level: string }[] };
+  briefing: { updatedAt: string; status?: L10n & { level: string }; dek?: L10n; headline: L10n; known: (L10n & { tier: Tier })[]; unknown: L10n[]; guidance: L10n[] };
+  risk: { t: string; source: string; note?: L10n; levels: { scope: L10n; level: string }[] };
+  claims: Claim[];
   metrics: Metric[];
   events: TimelineEvent[];
   locations: MapLocation[];

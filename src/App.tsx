@@ -4,12 +4,12 @@ import type { Lang, State } from './types';
 import { useData, useNow } from './lib/useData';
 import { toast } from './lib/toast';
 import { TopBar, TabBar, useActiveSection, type ThemePref } from './components/TopBar';
-import { Lead, RiskBlock, KnownBlock } from './components/Briefing';
+import { Hero } from './components/Hero';
+import { Replay } from './components/Replay';
+import { Claims } from './components/Claims';
+import { Coverage } from './components/Coverage';
 import { MetricSheet } from './components/Metrics';
-import { SinceYesterday } from './components/SinceYesterday';
-import { MapPanel } from './components/MapPanel';
-import { Timeline, EventSheet } from './components/Timeline';
-import { Feed } from './components/Feed';
+import { EventSheet } from './components/Timeline';
 import { Pharma } from './components/Pharma';
 import { Signals, SignalSheet } from './components/Signals';
 import { SourcesPanel } from './components/SourcesPanel';
@@ -121,26 +121,18 @@ export default function App() {
           {error && !state && (
             <div className="banner" role="alert">{tr('loadError')}<button className="btn" onClick={() => reload().catch(() => {})}>{tr('retry')}</button></div>
           )}
-          <Lead state={state} now={now} />
-          <div className="section" style={{ paddingTop: 36 }}>
-            <div className="cols">
-              <div>{state && <KnownBlock state={state} />}</div>
-              <aside className="rail">
-                <SinceYesterday state={state} />
-                {state && <RiskBlock state={state} />}
-              </aside>
-            </div>
-          </div>
-          <MapPanel state={state} themeKey={themeKey} />
-          <div className="cols">
-            <Timeline state={state} seen={seen} />
-            <aside className="rail" style={{ paddingTop: 44 }}>
-              <Signals state={state} now={now} />
-            </aside>
-          </div>
-          <Feed state={state} now={now} seen={seen} />
+          <Hero state={state} now={now} />
+          {state && <Replay state={state} themeKey={themeKey} seen={seen} now={now} />}
+          {state && <Claims state={state} />}
+          {state && <Coverage state={state} now={now} />}
           <Pharma state={state} />
-          <section className="section"><SourcesPanel state={state} now={now} /></section>
+          <section className="section" id="system">
+            <header className="sec-head"><div><h2>{tr('dataTitle')}</h2></div></header>
+            <div className="cols even">
+              <Signals state={state} now={now} />
+              <SourcesPanel state={state} now={now} />
+            </div>
+          </section>
           <Method />
           <footer className="foot">
             <span>{tr('brand')} · {tr('brandSub')}</span>
