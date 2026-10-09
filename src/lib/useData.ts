@@ -58,7 +58,8 @@ export function useData(onChange?: (prev: State, next: State) => void) {
       if (document.visibilityState !== 'visible') return;
       load().then(() => setConn((c) => (c === 'live' ? c : 'polling'))).catch(() => setConn('offline'));
     }, POLL_MS);
-    if ('EventSource' in window) {
+    // Static hosting (Vercel) has no stream endpoint; polling alone keeps it fresh.
+    if ('EventSource' in window && !import.meta.env.VITE_STATE_URL) {
       es = new EventSource(STREAM_URL);
       es.addEventListener('hello', () => { gotHello = true; setConn('live'); });
       es.addEventListener('state', () => load().catch(() => {}));
