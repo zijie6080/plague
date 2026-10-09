@@ -123,7 +123,7 @@ export default function App() {
           )}
           <Hero state={state} now={now} />
           {state && <Replay state={state} themeKey={themeKey} seen={seen} now={now} />}
-          {state && <Claims state={state} />}
+          {state?.claims?.length ? <Claims state={state} /> : null}
           {state && <Coverage state={state} now={now} />}
           <Pharma state={state} />
           <section className="section" id="system">
