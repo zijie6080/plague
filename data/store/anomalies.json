@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-10T07:11:31.787Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (18 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 18 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-10T07:11:28.242Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (18 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 18 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
+  "active": true
+ },
+ {
   "id": "stock|amoxiclav|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 17 款）；可购量 783（峰值 3241）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 2 款）；可购量 2（峰值 3）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -71,7 +115,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 18）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -96,7 +140,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 4（峰值 5）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -121,7 +165,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 17 款）；可购量 252（峰值 4230）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -146,7 +190,7 @@
    "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 759（峰值 16789）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -170,7 +214,7 @@
    "zh": "涨幅最大：Азитромицин авексима 500мг 3 шт. таблетки покрытые пленочной оболочкой，₽64 → ₽80。"
   },
   "firstSeen": "2026-10-10T05:11:04.641Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -192,51 +236,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-10T03:11:01.246Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (17 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 17 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-10T03:10:57.759Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (17 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 17 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -567,7 +567,7 @@
    "zh": "新增“官方确认”数字。"
   },
   "firstSeen": "2026-10-09T08:38:45.131Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -736,7 +736,7 @@
    "zh": "新增“官方确认”数字。"
   },
   "firstSeen": "2026-10-09T08:38:45.131Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
@@ -760,7 +760,7 @@
    "zh": "较上一个“官方确认”数字变化 +500。"
   },
   "firstSeen": "2026-10-09T08:38:45.131Z",
-  "lastSeen": "2026-10-10T07:01:04.591Z",
+  "lastSeen": "2026-10-10T07:11:04.899Z",
   "active": true
  },
  {
