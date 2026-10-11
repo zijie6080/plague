@@ -3,7 +3,7 @@
   "id": "stock|levofloxacin|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-11T16:06:42.358Z",
+  "t": "2026-10-11T19:16:54.230Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -21,32 +21,57 @@
    "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 250（峰值 4230）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T19:05:12.885Z",
+  "lastSeen": "2026-10-11T19:15:12.467Z",
   "active": true
  },
  {
   "id": "stock|azithromycin|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-11T16:06:42.358Z",
+  "t": "2026-10-11T19:16:54.230Z",
   "persistent": true,
   "subject": {
    "type": "drug",
    "drug": "azithromycin",
    "city": "shelekhov"
   },
-  "value": 13,
+  "value": 18,
   "baseline": 18,
   "title": {
-   "en": "Azithromycin availability down 100% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 100%"
+   "en": "Azithromycin availability down 96% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 96%"
   },
   "detail": {
-   "en": "In-stock products 13 vs 72h peak 18; availability count 23 vs peak 16789.",
-   "zh": "有现货商品 13 款（72 小时峰值 18 款）；可购量 23（峰值 16789）。"
+   "en": "In-stock products 18 vs 72h peak 18; availability count 739 vs peak 16789.",
+   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 739（峰值 16789）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T19:05:12.885Z",
+  "lastSeen": "2026-10-11T19:15:12.467Z",
+  "active": true
+ },
+ {
+  "id": "stock|amoxiclav|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-11T19:16:54.230Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "irkutsk"
+  },
+  "value": 22,
+  "baseline": 22,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 64% in Irkutsk",
+   "zh": "伊尔库茨克阿莫西林克拉维酸可购量下降 64%"
+  },
+  "detail": {
+   "en": "In-stock products 22 vs 72h peak 22; availability count 38 vs peak 107.",
+   "zh": "有现货商品 22 款（72 小时峰值 22 款）；可购量 38（峰值 107）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-11T19:15:12.467Z",
   "active": true
  },
  {
@@ -72,7 +97,7 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-10-11T19:05:12.885Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -93,7 +118,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T19:05:12.885Z",
+  "lastSeen": "2026-10-11T19:15:12.467Z",
   "active": true
  },
  {
@@ -115,7 +140,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T19:05:12.885Z",
+  "lastSeen": "2026-10-11T19:15:12.467Z",
   "active": true
  },
  {
@@ -137,7 +162,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T19:05:12.885Z",
+  "lastSeen": "2026-10-11T19:15:12.467Z",
   "active": true
  },
  {
@@ -454,31 +479,6 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 6（峰值 16）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-09T13:09:22.545Z",
-  "active": false
- },
- {
-  "id": "stock|amoxiclav|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-09T10:10:27.480Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "irkutsk"
-  },
-  "value": 22,
-  "baseline": 22,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 63% in Irkutsk",
-   "zh": "伊尔库茨克阿莫西林克拉维酸可购量下降 63%"
-  },
-  "detail": {
-   "en": "In-stock products 22 vs 72h peak 22; availability count 42 vs peak 115.",
-   "zh": "有现货商品 22 款（72 小时峰值 22 款）；可购量 42（峰值 115）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-09T13:09:22.545Z",
   "active": false
  },
