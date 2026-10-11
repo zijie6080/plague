@@ -1,5 +1,99 @@
 [
  {
+  "id": "stock|levofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-11T03:25:25.885Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 13,
+  "baseline": 14,
+  "title": {
+   "en": "Levofloxacin availability down 94% in Shelekhov",
+   "zh": "舍列霍夫左氧氟沙星可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 14; availability count 252 vs peak 4230.",
+   "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 252（峰值 4230）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-11T03:23:14.624Z",
+  "active": true
+ },
+ {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-11T03:25:25.885Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 18,
+  "baseline": 18,
+  "title": {
+   "en": "Azithromycin availability down 95% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 95%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 18; availability count 760 vs peak 16789.",
+   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 760（峰值 16789）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-11T03:23:14.624Z",
+  "active": true
+ },
+ {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-11T03:23:44.932Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (23 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 23 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-11T03:23:14.624Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-11T03:23:41.150Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (23 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 23 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-11T03:23:14.624Z",
+  "active": true
+ },
+ {
   "id": "stock|gentamicin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -75,56 +169,6 @@
   "active": false
  },
  {
-  "id": "stock|levofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-11T00:14:29.889Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 13,
-  "baseline": 14,
-  "title": {
-   "en": "Levofloxacin availability down 94% in Shelekhov",
-   "zh": "舍列霍夫左氧氟沙星可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 14; availability count 252 vs peak 4230.",
-   "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 252（峰值 4230）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T03:13:14.485Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-11T00:14:29.889Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 18,
-  "baseline": 18,
-  "title": {
-   "en": "Azithromycin availability down 95% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 95%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 18; availability count 760 vs peak 16789.",
-   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 760（峰值 16789）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T03:13:14.485Z",
-  "active": true
- },
- {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -143,51 +187,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T03:13:14.485Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-10T23:23:10.329Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (22 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 22 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T03:13:14.485Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-10T23:23:06.990Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (22 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 22 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T03:13:14.485Z",
+  "lastSeen": "2026-10-11T03:23:14.624Z",
   "active": true
  },
  {
