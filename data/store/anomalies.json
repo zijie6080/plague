@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-11T03:53:38.091Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (12 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 12 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-11T03:53:14.947Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +43,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 252（峰值 4230）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T03:43:15.422Z",
+  "lastSeen": "2026-10-11T03:53:14.947Z",
   "active": true
  },
  {
@@ -46,7 +68,7 @@
    "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 760（峰值 16789）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T03:43:15.422Z",
+  "lastSeen": "2026-10-11T03:53:14.947Z",
   "active": true
  },
  {
@@ -68,7 +90,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T03:43:15.422Z",
+  "lastSeen": "2026-10-11T03:53:14.947Z",
   "active": true
  },
  {
@@ -90,7 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T03:43:15.422Z",
+  "lastSeen": "2026-10-11T03:53:14.947Z",
   "active": true
  },
  {
@@ -167,28 +189,6 @@
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-10-11T01:12:44.391Z",
   "active": false
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-10T23:53:07.199Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (11 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 11 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T03:43:15.422Z",
-  "active": true
  },
  {
   "id": "jump|amoxiclav|belarus|2026-10-10T14",
