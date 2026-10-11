@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|levofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-11T06:35:24.641Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 13,
+  "baseline": 14,
+  "title": {
+   "en": "Levofloxacin availability down 94% in Shelekhov",
+   "zh": "舍列霍夫左氧氟沙星可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 14; availability count 252 vs peak 4230.",
+   "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 252（峰值 4230）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-11T06:33:15.406Z",
+  "active": true
+ },
+ {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-11T06:35:24.641Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 18,
+  "baseline": 18,
+  "title": {
+   "en": "Azithromycin availability down 95% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 95%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 18; availability count 760 vs peak 16789.",
+   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 760（峰值 16789）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-11T06:33:15.406Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,57 +68,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T06:23:14.864Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-11T03:25:25.885Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 13,
-  "baseline": 14,
-  "title": {
-   "en": "Levofloxacin availability down 94% in Shelekhov",
-   "zh": "舍列霍夫左氧氟沙星可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 14; availability count 252 vs peak 4230.",
-   "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 252（峰值 4230）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T06:23:14.864Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-11T03:25:25.885Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 18,
-  "baseline": 18,
-  "title": {
-   "en": "Azithromycin availability down 95% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 95%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 18; availability count 760 vs peak 16789.",
-   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 760（峰值 16789）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-11T06:23:14.864Z",
+  "lastSeen": "2026-10-11T06:33:15.406Z",
   "active": true
  },
  {
@@ -90,7 +90,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T06:23:14.864Z",
+  "lastSeen": "2026-10-11T06:33:15.406Z",
   "active": true
  },
  {
@@ -112,7 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-11T06:23:14.864Z",
+  "lastSeen": "2026-10-11T06:33:15.406Z",
   "active": true
  },
  {
