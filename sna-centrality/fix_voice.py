@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 VOICE = os.path.join(HERE, "build", "voice")
 SENT = os.path.join(VOICE, "sentences")
 CV_PYTHON = os.environ.get("CV_PYTHON", "/root/cv/bin/python")
-ROUNDS = int(os.environ.get("ROUNDS", "4"))
+ROUNDS = int(os.environ.get("ROUNDS", "6"))
 PAUSE = 0.18  # 句间停顿（秒）
 
 asr = WhisperModel("medium", device="cpu", compute_type="int8")
@@ -48,20 +48,34 @@ def main():
     os.makedirs(SENT, exist_ok=True)
     state_path = os.path.join(SENT, "state.json")
     state = json.load(open(state_path)) if os.path.exists(state_path) else {}
-    steps = sorted(f[:2] for f in os.listdir(VOICE) if f.endswith(".wav"))
+    # 已验证过的句子按文字复用
+    known = {}
+    for v in state.values():
+        for s in v.get("sents", []):
+            if s.get("best") and s["err"] < known.get(s["text"], {}).get("err", 99):
+                known[s["text"]] = s
+    texts = json.load(open(os.path.join(HERE, "build", "narration.json")))
     bad = []
-    for k in steps:
-        text = open(os.path.join(VOICE, f"{k}.txt")).read()
-        if state.get(k, {}).get("text") == text and state[k].get("done"):
+    for i, text in enumerate(texts):
+        k = f"{i:02d}"
+        prev = state.get(k, {})
+        if prev.get("text") == text and prev.get("done") and \
+                all(x["err"] == 0 for x in prev.get("sents", [])):
             continue
-        e = pinyin_err(text, transcribe(os.path.join(VOICE, f"{k}.wav")))
-        print(f"[{k}] 整段读音差异 {e}", flush=True)
-        if e:
-            bad.append(k)
-            state[k] = {"text": text, "sents": [{"text": s, "best": None, "err": 99, "tries": 0}
-                                                for s in sentences(text)]}
-        else:
-            state[k] = {"text": text, "done": True}
+        wav, txt = os.path.join(VOICE, f"{k}.wav"), os.path.join(VOICE, f"{k}.txt")
+        if not prev.get("sents") and os.path.exists(txt) and open(txt).read() == text:
+            e = pinyin_err(text, transcribe(wav))
+            print(f"[{k}] 整段读音差异 {e}", flush=True)
+            if e == 0:
+                state[k] = {"text": text, "done": True}
+                continue
+        bad.append(k)
+        sents = []
+        for t in sentences(text):
+            s = dict(known.get(t, {"text": t, "best": None, "err": 99}))
+            s["tries"] = 0
+            sents.append(s)
+        state[k] = {"text": text, "sents": sents}
     json.dump(state, open(state_path, "w"), ensure_ascii=False, indent=1)
 
     for rnd in range(ROUNDS):
@@ -69,9 +83,9 @@ def main():
         for k in bad:
             for j, s in enumerate(state[k]["sents"]):
                 if s["err"] > 0 and s["tries"] < ROUNDS:
-                    out = os.path.join(SENT, f"{k}_{j}_{s['tries']}.wav")
+                    out = os.path.join(SENT, f"{k}_{j}_r{rnd}.wav")
                     jobs.append({"out": out, "text": s["text"].replace("“", "").replace("”", ""),
-                                 "seed": 1000 * rnd + 7 * j + int(k), "k": k, "j": j})
+                                 "seed": hash((s["text"], rnd, len(os.listdir(SENT)))) % 100000, "k": k, "j": j})
         if not jobs:
             break
         print(f"第 {rnd + 1} 轮：合成 {len(jobs)} 句", flush=True)
@@ -95,6 +109,7 @@ def main():
             a, sr = sf.read(s["best"], dtype="float32")
             parts += [a, np.zeros(int(sr * PAUSE), np.float32)]
         sf.write(os.path.join(VOICE, f"{k}.wav"), np.concatenate(parts[:-1]), sr)
+        open(os.path.join(VOICE, f"{k}.txt"), "w").write(state[k]["text"])
         state[k]["done"] = True
         print(f"[{k}] 已重建，逐句残留差异 {[s['err'] for s in state[k]['sents']]}", flush=True)
     json.dump(state, open(state_path, "w"), ensure_ascii=False, indent=1)
