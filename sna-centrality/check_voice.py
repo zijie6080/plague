@@ -17,8 +17,7 @@ import numpy as np
 from pypinyin import lazy_pinyin
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AUDIO = os.path.join(HERE, "build", "audio")
-TEMPO = 1.18
+AUDIO = os.path.join(HERE, "build", "voice")
 CACHE = os.path.join(HERE, "build", "asr.json")
 
 
@@ -42,7 +41,7 @@ def errors(a, b):
 
 
 def load(mp3):
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3, "-af", f"atempo={TEMPO}",
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3,
                           "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
                          check=True, capture_output=True).stdout
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768
@@ -52,7 +51,7 @@ def main():
     cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
     model = None
     rows, tot = [], np.zeros(3, int)
-    for mp3 in sorted(glob.glob(os.path.join(AUDIO, "*.mp3"))):
+    for mp3 in sorted(glob.glob(os.path.join(AUDIO, "*.wav"))):
         k = os.path.basename(mp3)[:2]
         ref = open(mp3[:-4] + ".txt").read()
         if cache.get(k, {}).get("ref") != ref:
@@ -76,7 +75,7 @@ def main():
         print(k, f"字 {cerr / len(a):.1%}  音 {perr / len(a):.1%}", " ".join(diffs), "|", "; ".join(pdiffs), flush=True)
     with open(os.path.join(HERE, "voice_check.md"), "w") as f:
         f.write("# 语音校对报告\n\n"
-                "方法：用 Whisper（medium）把每段合成语音转写回文字，与讲稿比对。"
+                "方法：用 Whisper（medium）把每段 CosyVoice 合成语音转写回文字，与讲稿比对。"
                 "数字、运算符先统一为汉字读法；“音错误率”按无声调拼音比对，"
                 "可排除“原/圆”“他/它”这类同音字造成的假差异。\n\n"
                 f"- 字错误率（CER）：{tot[0] / tot[2]:.2%}（{tot[0]}/{tot[2]}）\n"

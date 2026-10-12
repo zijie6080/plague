@@ -30,8 +30,11 @@ OUT = os.path.join(HERE, "sna_centrality.mp4")
 FPS = 25
 W, H = 1920, 1080
 SR = 24000
+VOICE = os.environ.get("VOICE", "cosyvoice")
+VOICE_DIR = os.path.join(BUILD, "voice")
 TEMPO = 1.18          # gTTS 普通话语速偏慢，适当加速
-GAP = 0.7             # 每步旁白结束后的停顿（秒）
+TEMPO_CV = 1.0        # CosyVoice 已在合成时加速（gen_voice.py 的 SPEED），这里只做微调
+GAP = 0.5             # 每步旁白结束后的停顿（秒）
 TRANS = 0.5           # 状态过渡时长（秒）
 
 FONT = "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"
@@ -492,18 +495,33 @@ step("好，这节课就到这里。课后请大家想一想：在你的班级�
 
 # ---------------------------------------------------------------- 语音
 def tts(i, text):
-    os.makedirs(AUDIO_DIR, exist_ok=True)
-    mp3 = os.path.join(AUDIO_DIR, f"{i:02d}.mp3")
-    txt = os.path.join(AUDIO_DIR, f"{i:02d}.txt")
-    if not (os.path.exists(mp3) and os.path.exists(txt) and open(txt).read() == text):
-        from gtts import gTTS
-        spoken = text.replace("“", "").replace("”", "")
-        gTTS(spoken, lang="zh-CN").save(mp3)
-        open(txt, "w").write(text)
+    """读取第 i 步的旁白音频，返回 SR 采样率的 int16 数组。
+
+    VOICE=cosyvoice（默认）：读取 gen_voice.py 用 CosyVoice 合成的 build/voice/NN.wav；
+    VOICE=gtts：在线调用 gTTS（机器音，仅作后备）。
+    """
+    if VOICE == "cosyvoice":
+        src = os.path.join(VOICE_DIR, f"{i:02d}.wav")
+        txt = os.path.join(VOICE_DIR, f"{i:02d}.txt")
+        if not (os.path.exists(src) and os.path.exists(txt) and open(txt).read() == text):
+            sys.exit(f"第 {i} 步语音缺失或与讲稿不一致，请先运行：python3 script.py texts && "
+                     f"<cosyvoice 环境>/python gen_voice.py")
+        tempo = TEMPO_CV
+    else:
+        os.makedirs(AUDIO_DIR, exist_ok=True)
+        src = os.path.join(AUDIO_DIR, f"{i:02d}.mp3")
+        txt = os.path.join(AUDIO_DIR, f"{i:02d}.txt")
+        if not (os.path.exists(src) and os.path.exists(txt) and open(txt).read() == text):
+            from gtts import gTTS
+            gTTS(text.replace("“", "").replace("”", ""), lang="zh-CN").save(src)
+            open(txt, "w").write(text)
+        tempo = TEMPO
+    af = ("silenceremove=start_periods=1:start_threshold=-50dB,"
+          "areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse")
+    if abs(tempo - 1) > 1e-6:
+        af = f"atempo={tempo}," + af
     raw = subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", mp3, "-af",
-         f"atempo={TEMPO},silenceremove=start_periods=1:start_threshold=-50dB,"
-         "areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse",
+        ["ffmpeg", "-v", "error", "-i", src, "-af", af,
          "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
         check=True, capture_output=True).stdout
     return np.frombuffer(raw, np.int16)
@@ -759,7 +777,14 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "preview":
+    if len(sys.argv) > 1 and sys.argv[1] == "texts":
+        # 导出讲稿，供 gen_voice.py 合成语音
+        import json
+        os.makedirs(BUILD, exist_ok=True)
+        json.dump([stp.text for stp in STEPS], open(os.path.join(BUILD, "narration.json"), "w"),
+                  ensure_ascii=False, indent=1)
+        print(len(STEPS), "steps ->", os.path.join(BUILD, "narration.json"))
+    elif len(sys.argv) > 1 and sys.argv[1] == "preview":
         # 每步渲染最终画面，用于检查版式
         os.makedirs(os.path.join(BUILD, "preview"), exist_ok=True)
         for i, stp in enumerate(STEPS):
