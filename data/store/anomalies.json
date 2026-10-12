@@ -1,5 +1,225 @@
 [
  {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 18,
+  "baseline": 18,
+  "title": {
+   "en": "Azithromycin availability down 76% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 76%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 18; availability count 733 vs peak 3106.",
+   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 733（峰值 3106）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 74% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 74%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 28 vs peak 108.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 28（峰值 108）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "stock|doxycycline|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 6,
+  "baseline": 6,
+  "title": {
+   "en": "Doxycycline availability down 63% in Irkutsk",
+   "zh": "伊尔库茨克多西环素可购量下降 63%"
+  },
+  "detail": {
+   "en": "In-stock products 6 vs 72h peak 6; availability count 15 vs peak 40.",
+   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 15（峰值 40）。"
+  },
+  "firstSeen": "2026-10-09T00:38:11.599Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 15,
+  "baseline": 20,
+  "title": {
+   "en": "Levofloxacin availability down 90% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 90%"
+  },
+  "detail": {
+   "en": "In-stock products 15 vs 72h peak 20; availability count 30 vs peak 308.",
+   "zh": "有现货商品 15 款（72 小时峰值 20 款）；可购量 30（峰值 308）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-10-12T04",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 380,
+  "baseline": 315,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой ₽315 → ₽380.",
+   "zh": "涨幅最大：Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой，₽315 → ₽380。"
+  },
+  "firstSeen": "2026-10-12T04:45:40.374Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "jump|levofloxacin|irkutsk|2026-10-12T04",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 360,
+  "baseline": 230,
+  "title": {
+   "en": "1 Levofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款左氧氟沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Левофлоксацин 500мг 5 шт. таблетки ₽230 → ₽360.",
+   "zh": "涨幅最大：Левофлоксацин 500мг 5 шт. таблетки，₽230 → ₽360。"
+  },
+  "firstSeen": "2026-10-12T04:45:40.374Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "jump|azithromycin|irkutsk|2026-10-12T04",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "irkutsk"
+  },
+  "value": 124,
+  "baseline": 95,
+  "title": {
+   "en": "1 Azithromycin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин 250мг 6 шт. капсулы Озон ₽95 → ₽124.",
+   "zh": "涨幅最大：Азитромицин 250мг 6 шт. капсулы Озон，₽95 → ₽124。"
+  },
+  "firstSeen": "2026-10-12T04:45:40.374Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "jump|masks|irkutsk|2026-10-12T04",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "subject": {
+   "type": "drug",
+   "drug": "masks",
+   "city": "irkutsk"
+  },
+  "value": 61,
+  "baseline": 41,
+  "title": {
+   "en": "1 Medical masks product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款医用口罩商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Сенс маска медицинская трехслойная на резинке 5 шт. ₽41 → ₽61.",
+   "zh": "涨幅最大：Сенс маска медицинская трехслойная на резинке 5 шт.，₽41 → ₽61。"
+  },
+  "firstSeen": "2026-10-12T04:45:40.374Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
+  "id": "jump|paracetamol|irkutsk|2026-10-12T04",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-12T04:47:54.416Z",
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 94,
+  "baseline": 77,
+  "title": {
+   "en": "1 Paracetamol (control) product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款对乙酰氨基酚（对照）商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Парацетамол Детский 120мг/5мл 100г суспензия для приема внутрь Клубничная ₽77 → ₽94.",
+   "zh": "涨幅最大：Парацетамол Детский 120мг/5мл 100г суспензия для приема внутрь Клубничная，₽77 → ₽94。"
+  },
+  "firstSeen": "2026-10-12T04:45:40.374Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +238,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-12T04:35:41.043Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
   "active": true
  },
  {
@@ -40,7 +260,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-12T04:35:41.043Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
   "active": true
  },
  {
@@ -62,7 +282,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-12T04:35:41.043Z",
+  "lastSeen": "2026-10-12T04:45:40.374Z",
   "active": true
  },
  {
@@ -89,31 +309,6 @@
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-12T03:45:41.273Z",
   "active": false
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-12T01:37:26.329Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 18,
-  "baseline": 18,
-  "title": {
-   "en": "Azithromycin availability down 76% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 76%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 18; availability count 739 vs peak 3106.",
-   "zh": "有现货商品 18 款（72 小时峰值 18 款）；可购量 739（峰值 3106）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-12T04:35:41.043Z",
-  "active": true
  },
  {
   "id": "stock|amoxiclav|irkutsk",
@@ -163,7 +358,7 @@
   },
   "firstSeen": "2026-10-12T01:35:41.188Z",
   "lastSeen": "2026-10-12T04:35:41.043Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|azithromycin|irkutsk|2026-10-11T22",
@@ -457,31 +652,6 @@
   "active": false
  },
  {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-09T10:10:27.480Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 4,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 69% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 69%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 5; availability count 20 vs peak 65.",
-   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 20（峰值 65）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-09T13:09:22.545Z",
-  "active": false
- },
- {
   "id": "price|paracetamol|irkutsk",
   "rule": "price_index",
   "severity": "watch",
@@ -503,31 +673,6 @@
    "zh": "同款商品价格中位数较首次观测为 120.5（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-10-09T13:09:22.545Z",
-  "active": false
- },
- {
-  "id": "stock|doxycycline|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-09T10:10:27.480Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "irkutsk"
-  },
-  "value": 6,
-  "baseline": 6,
-  "title": {
-   "en": "Doxycycline availability down 63% in Irkutsk",
-   "zh": "伊尔库茨克多西环素可购量下降 63%"
-  },
-  "detail": {
-   "en": "In-stock products 6 vs 72h peak 6; availability count 6 vs peak 16.",
-   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 6（峰值 16）。"
-  },
-  "firstSeen": "2026-10-09T00:38:11.599Z",
   "lastSeen": "2026-10-09T13:09:22.545Z",
   "active": false
  },
@@ -830,31 +975,6 @@
   "detail": {
    "en": "Largest: Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк ₽63 → ₽83.",
    "zh": "涨幅最大：Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк，₽63 → ₽83。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-08T11:46:11.951Z",
-  "active": false
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-08T08:47:59.447Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 19,
-  "baseline": 23,
-  "title": {
-   "en": "Levofloxacin availability down 60% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 60%"
-  },
-  "detail": {
-   "en": "In-stock products 19 vs 72h peak 23; availability count 97 vs peak 245.",
-   "zh": "有现货商品 19 款（72 小时峰值 23 款）；可购量 97（峰值 245）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-08T11:46:11.951Z",
