@@ -1,6 +1,6 @@
 # SNA 教学动画：中心性（课堂讲解）
 
-成片：`sna_centrality.mp4`（1920×1080，25 fps，约 7 分 40 秒，中文配音 + 中文字幕）
+成片：`sna_centrality.mp4`（1920×1080，25 fps，约 4 分 41 秒，CosyVoice 真人风格中文配音 + 中文字幕）
 
 ## 内容结构
 
@@ -16,26 +16,28 @@
 
 讲解中提到的每个数值都由 networkx 计算，并在 `script.py` 中用 `assert` 核对（例如 deg(D)=6、Σd(F)=14、C_B(H)=14、特征向量中心性最高的是 D）。
 
+## 配音
+
+- 语音：阿里通义实验室开源模型 CosyVoice（CosyVoice-300M-SFT，内置音色“中文女”），离线 CPU 合成。
+- 语速：约每秒 6.1 字，是第一版 gTTS 配音（约每秒 4.1 字）的 1.5 倍。
+- 自动纠错：`fix_voice.py` 用 Whisper 转写每段配音，按拼音与讲稿比对；读音有误的段落拆成句子，换随机种子重新合成，直到读音与讲稿一致。
+- 为避开模型的已知问题，改写了几句讲稿：以“度”或字母开头的句子，首字容易被吞掉；句末的“一”后面容易多出一个音。
+- 最终校对：拼音级差异 0.44%（7/1609）。剩下的 7 处在逐句校验时都已通过，整段转写时才出现，判断为识别器误差。完整报告见 `voice_check.md`。
+- 男声（“中文男”）测试时误读较多，没有采用。
+
 ## 重新生成
 
 ```bash
-pip install matplotlib networkx gtts          # 另需 ffmpeg 和文泉驿正黑字体
-python3 script.py            # → sna_centrality.mp4（语音缓存在 build/audio/）
-python3 script.py preview    # 每一步导出一张静帧，用来检查版式
-pip install faster-whisper cn2an pypinyin
-python3 check_voice.py       # 语音校对 → voice_check.md
+# 1. CosyVoice 环境（Python 3.10，CPU）
+uv venv -p 3.10 /root/cv && VIRTUAL_ENV=/root/cv uv pip install --index-url https://download.pytorch.org/whl/cpu torch==2.3.1 torchaudio==2.3.1
+#    再安装 CosyVoice 仓库 requirements.txt 里的其余依赖（GPU 相关包除外），
+#    并下载 FunAudioLLM/CosyVoice-300M-SFT 到 /root/models/
+# 2. 合成与纠错
+python3 script.py texts                 # 导出讲稿
+/root/cv/bin/python gen_voice.py        # 逐段合成（约为音频时长的 9 倍耗时）
+python3 fix_voice.py                    # Whisper 校验，有误的句子自动重新合成
+# 3. 渲染与校对
+python3 script.py                       # → sna_centrality.mp4
+python3 check_voice.py                  # → voice_check.md
+VOICE=gtts python3 script.py            # 后备：使用 gTTS 机器音
 ```
-
-## 语音校对结果
-
-用 Whisper medium 把 34 段配音逐段转写回文字，再和讲稿比对。完整报告见 `voice_check.md`。
-
-- 字错误率 0.69%（11/1593）：剩下的差异几乎都是同音字，如“圆/原”“他/它”“连/联”“邻接/临阶”，读音本身没有错。
-- 拼音级错误率 0.06%（1/1593）：只有英文词 “PageRank” 被识别成 “PageRant”，原因是中文语音读英文单词时带口音。
-- 校对过程中修正了以下几处：
-  - “I是八，而度最高的D……”会被识别成“R度”，已改为“I是八；度最高的D反倒只有……”。
-  - “看度中心性”会被识别成“探度中心性”，已改为“就选度中心性”。
-  - 讲稿把连线定义为“经常交流”，后文却说“D的朋友最多”，前后不一致，已改为“D直接联系的人虽然最多”。
-- 旁白中的“处在”（chǔ）、“数一数”（shǔ）这类容易被读错的多音字，写稿时已换成其他说法。
-
-局限：自动校对只能确认说出的字对不对，判断不了声调是否自然，也判断不了停顿的节奏。配音用的是 gTTS（女声，语速已调快 1.18 倍），自然度不如真人录音。正式上课前建议人工试听一遍。

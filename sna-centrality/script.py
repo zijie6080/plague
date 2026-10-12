@@ -33,7 +33,7 @@ SR = 24000
 VOICE = os.environ.get("VOICE", "cosyvoice")
 VOICE_DIR = os.path.join(BUILD, "voice")
 TEMPO = 1.18          # gTTS 普通话语速偏慢，适当加速
-TEMPO_CV = 0.95       # CosyVoice 合成时已加速（SPEED=1.25），此处微调到约为原 gTTS 版的 1.5 倍语速
+TEMPO_CV = 1.04       # CosyVoice 合成时已加速（SPEED=1.25），此处微调到约为原 gTTS 版的 1.5 倍语速
 GAP = 0.5             # 每步旁白结束后的停顿（秒）
 TRANS = 0.5           # 状态过渡时长（秒）
 
@@ -244,7 +244,7 @@ s["tag"] = {i: str(DEG[i]) for i in range(N)}
 s["tag_color"] = C_DEG
 s["note"] = "节点大小与颜色深浅 ∝ 度"
 step("用同样的方法，可以算出每个人的度。我们让节点的大小和颜色深浅随度变化："
-     "其中D最大，度是六；而J只和I一个人相连，度只有一。", s)
+     "其中D最大，度是六；而J的度只有一，因为他只和I一个人相连。", s)
 s["panel"] = DEG_PANEL + [("gap", ""), ("h", "标准化"),
                           ("f", r"$C_D'(i)=\dfrac{\deg(i)}{n-1}$"),
                           ("f", r"$C_D'(D)=6/9\approx 0.67$")]
