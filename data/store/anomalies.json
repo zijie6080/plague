@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-13T16:15:24.929Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (38 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 38 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-13T16:14:54.755Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-13T16:15:21.275Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (38 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 38 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-13T16:14:54.755Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|moscow",
   "rule": "availability_drop",
   "severity": "info",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 13（峰值 135）。"
   },
   "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-13T16:04:54.774Z",
+  "lastSeen": "2026-10-13T16:14:54.755Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 12（峰值 40）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-13T16:04:54.774Z",
+  "lastSeen": "2026-10-13T16:14:54.755Z",
   "active": true
  },
  {
@@ -68,51 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T16:04:54.774Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-13T12:14:18.639Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (37 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 37 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T16:04:54.774Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-13T12:14:12.642Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (37 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 37 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T16:04:54.774Z",
+  "lastSeen": "2026-10-13T16:14:54.755Z",
   "active": true
  },
  {
@@ -141,7 +141,7 @@
    "Подробнее про Мифы о профилактике и лечении ОРВИ и гриппа »"
   ],
   "firstSeen": "2026-10-13T08:41:06.795Z",
-  "lastSeen": "2026-10-13T16:04:54.774Z",
+  "lastSeen": "2026-10-13T16:14:54.755Z",
   "active": true
  },
  {
