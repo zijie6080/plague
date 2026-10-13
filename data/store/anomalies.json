@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|paracetamol|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-13T02:52:15.288Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "moscow"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 61% in Moscow",
+   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 61%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 53 vs peak 135.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 53（峰值 135）。"
+  },
+  "firstSeen": "2026-10-12T01:35:41.188Z",
+  "lastSeen": "2026-10-13T02:50:34.372Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T02:40:34.398Z",
+  "lastSeen": "2026-10-13T02:50:34.372Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T02:40:34.398Z",
+  "lastSeen": "2026-10-13T02:50:34.372Z",
   "active": true
  },
  {
@@ -62,7 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T02:40:34.398Z",
+  "lastSeen": "2026-10-13T02:50:34.372Z",
   "active": true
  },
  {
@@ -88,32 +113,7 @@
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
   "lastSeen": "2026-10-13T02:40:34.398Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-12T23:42:19.185Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "moscow"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 69% in Moscow",
-   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 69%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 42 vs peak 135.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 42（峰值 135）。"
-  },
-  "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-13T02:40:34.398Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|azithromycin|shelekhov",
