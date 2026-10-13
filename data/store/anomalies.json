@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|paracetamol|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-13T09:12:56.770Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "moscow"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 61% in Moscow",
+   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 61%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 53 vs peak 135.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 53（峰值 135）。"
+  },
+  "firstSeen": "2026-10-12T01:35:41.188Z",
+  "lastSeen": "2026-10-13T09:11:07.263Z",
+  "active": true
+ },
+ {
+  "id": "stock|doxycycline|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-13T09:12:56.770Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 6,
+  "baseline": 6,
+  "title": {
+   "en": "Doxycycline availability down 70% in Irkutsk",
+   "zh": "伊尔库茨克多西环素可购量下降 70%"
+  },
+  "detail": {
+   "en": "In-stock products 6 vs 72h peak 6; availability count 12 vs peak 40.",
+   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 12（峰值 40）。"
+  },
+  "firstSeen": "2026-10-09T00:38:11.599Z",
+  "lastSeen": "2026-10-13T09:11:07.263Z",
+  "active": true
+ },
+ {
   "id": "page|rpn-38|c94ff5ba30",
   "rule": "page_change",
   "severity": "info",
@@ -25,7 +75,7 @@
    "Подробнее про Мифы о профилактике и лечении ОРВИ и гриппа »"
   ],
   "firstSeen": "2026-10-13T08:41:06.795Z",
-  "lastSeen": "2026-10-13T09:01:06.456Z",
+  "lastSeen": "2026-10-13T09:11:07.263Z",
   "active": true
  },
  {
@@ -47,7 +97,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T09:01:06.456Z",
+  "lastSeen": "2026-10-13T09:11:07.263Z",
   "active": true
  },
  {
@@ -69,32 +119,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-13T09:01:06.456Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-13T06:02:49.968Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "moscow"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 61% in Moscow",
-   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 61%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 53 vs peak 135.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 53（峰值 135）。"
-  },
-  "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-13T09:01:06.456Z",
+  "lastSeen": "2026-10-13T09:11:07.263Z",
   "active": true
  },
  {
@@ -117,31 +142,6 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-10-13T08:31:06.722Z",
-  "active": false
- },
- {
-  "id": "stock|doxycycline|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-12T23:42:19.185Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "irkutsk"
-  },
-  "value": 6,
-  "baseline": 6,
-  "title": {
-   "en": "Doxycycline availability down 63% in Irkutsk",
-   "zh": "伊尔库茨克多西环素可购量下降 63%"
-  },
-  "detail": {
-   "en": "In-stock products 6 vs 72h peak 6; availability count 15 vs peak 40.",
-   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 15（峰值 40）。"
-  },
-  "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-13T02:40:34.398Z",
   "active": false
  },
  {
