@@ -1,5 +1,151 @@
 [
  {
+  "id": "stock|paracetamol|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-14T00:57:26.759Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "moscow"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 90% in Moscow",
+   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 90%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 13 vs peak 135.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 13（峰值 135）。"
+  },
+  "firstSeen": "2026-10-12T01:35:41.188Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
+  "active": true
+ },
+ {
+  "id": "stock|doxycycline|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-14T00:57:26.759Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 6,
+  "baseline": 6,
+  "title": {
+   "en": "Doxycycline availability down 69% in Irkutsk",
+   "zh": "伊尔库茨克多西环素可购量下降 69%"
+  },
+  "detail": {
+   "en": "In-stock products 6 vs 72h peak 6; availability count 12 vs peak 39.",
+   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 12（峰值 39）。"
+  },
+  "firstSeen": "2026-10-09T00:38:11.599Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
+  "active": true
+ },
+ {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-14T00:57:26.759Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 16,
+  "baseline": 16,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 76% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 76%"
+  },
+  "detail": {
+   "en": "In-stock products 16 vs 72h peak 16; availability count 774 vs peak 3168.",
+   "zh": "有现货商品 16 款（72 小时峰值 16 款）；可购量 774（峰值 3168）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-14T00:57:26.759Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 72% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 72%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 57 vs peak 202.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 57（峰值 202）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-10-14T00",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-14T00:57:26.759Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 380,
+  "baseline": 315,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой ₽315 → ₽380.",
+   "zh": "涨幅最大：Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой，₽315 → ₽380。"
+  },
+  "firstSeen": "2026-10-14T00:55:26.104Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-14T00:55:49.381Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (6 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 6 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +164,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
   "active": true
  },
  {
@@ -40,57 +186,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-13T21:47:05.437Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "moscow"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 90% in Moscow",
-   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 90%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 13 vs peak 135.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 13（峰值 135）。"
-  },
-  "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
-  "active": true
- },
- {
-  "id": "stock|doxycycline|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-13T21:47:05.437Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "irkutsk"
-  },
-  "value": 6,
-  "baseline": 6,
-  "title": {
-   "en": "Doxycycline availability down 69% in Irkutsk",
-   "zh": "伊尔库茨克多西环素可购量下降 69%"
-  },
-  "detail": {
-   "en": "In-stock products 6 vs 72h peak 6; availability count 12 vs peak 39.",
-   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 12（峰值 39）。"
-  },
-  "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
   "active": true
  },
  {
@@ -116,54 +212,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-14T00:45:25.518Z",
-  "active": true
- },
- {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-13T21:47:05.437Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 16,
-  "baseline": 16,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 76% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 76%"
-  },
-  "detail": {
-   "en": "In-stock products 16 vs 72h peak 16; availability count 774 vs peak 3168.",
-   "zh": "有现货商品 16 款（72 小时峰值 16 款）；可购量 774（峰值 3168）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-13T20:45:48.756Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (5 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 5 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
-  "active": true
+  "active": false
  },
  {
   "id": "page|rpn-38|c94ff5ba30",
@@ -191,7 +240,7 @@
    "Подробнее про Мифы о профилактике и лечении ОРВИ и гриппа »"
   ],
   "firstSeen": "2026-10-13T08:41:06.795Z",
-  "lastSeen": "2026-10-14T00:45:25.518Z",
+  "lastSeen": "2026-10-14T00:55:26.104Z",
   "active": true
  },
  {
@@ -242,31 +291,6 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-12T13:58:38.856Z",
-  "active": false
- },
- {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-12T07:57:48.617Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 74% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 74%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 28 vs peak 108.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 28（峰值 108）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-12T10:56:07.829Z",
   "active": false
  },
  {
