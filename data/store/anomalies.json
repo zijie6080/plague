@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-14T12:39:12.770Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (43 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 43 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-14T12:39:08.751Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (43 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 43 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|moscow",
   "rule": "availability_drop",
   "severity": "info",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 13（峰值 135）。"
   },
   "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 12（峰值 35）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -71,7 +115,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 16 款）；可购量 769（峰值 3168）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -96,7 +140,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 55（峰值 202）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -121,7 +165,7 @@
    "zh": "有现货商品 8 款（72 小时峰值 8 款）；可购量 125（峰值 2093）。"
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -146,7 +190,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 9）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -171,7 +215,7 @@
    "zh": "有现货商品 7 款（72 小时峰值 7 款）；可购量 8（峰值 20）。"
   },
   "firstSeen": "2026-10-14T10:18:44.916Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -193,51 +237,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-14T08:29:09.439Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (42 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 42 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-14T08:29:05.277Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (42 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 42 次）"
-  },
-  "detail": {
-   "en": "EAI_AGAIN",
-   "zh": "EAI_AGAIN"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
@@ -390,7 +390,7 @@
    "Подробнее про Мифы о профилактике и лечении ОРВИ и гриппа »"
   ],
   "firstSeen": "2026-10-13T08:41:06.795Z",
-  "lastSeen": "2026-10-14T12:28:45.012Z",
+  "lastSeen": "2026-10-14T12:38:45.527Z",
   "active": true
  },
  {
