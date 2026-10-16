@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|masks|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-16T00:17:14.016Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "masks",
+   "city": "irkutsk"
+  },
+  "value": 8,
+  "baseline": 8,
+  "title": {
+   "en": "Medical masks availability down 94% in Irkutsk",
+   "zh": "伊尔库茨克医用口罩可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 8 vs 72h peak 8; availability count 125 vs peak 2062.",
+   "zh": "有现货商品 8 款（72 小时峰值 8 款）；可购量 125（峰值 2062）。"
+  },
+  "firstSeen": "2026-10-14T04:06:03.385Z",
+  "lastSeen": "2026-10-16T00:15:32.888Z",
+  "active": true
+ },
+ {
+  "id": "stock|doxycycline|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-16T00:17:14.016Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "moscow"
+  },
+  "value": 7,
+  "baseline": 7,
+  "title": {
+   "en": "Doxycycline availability down 60% in Moscow",
+   "zh": "莫斯科多西环素可购量下降 60%"
+  },
+  "detail": {
+   "en": "In-stock products 7 vs 72h peak 7; availability count 8 vs peak 20.",
+   "zh": "有现货商品 7 款（72 小时峰值 7 款）；可购量 8（峰值 20）。"
+  },
+  "firstSeen": "2026-10-14T10:18:44.916Z",
+  "lastSeen": "2026-10-16T00:15:32.888Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,57 +68,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-16T00:05:32.797Z",
-  "active": true
- },
- {
-  "id": "stock|masks|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-15T21:07:12.341Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "masks",
-   "city": "irkutsk"
-  },
-  "value": 8,
-  "baseline": 8,
-  "title": {
-   "en": "Medical masks availability down 94% in Irkutsk",
-   "zh": "伊尔库茨克医用口罩可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 8 vs 72h peak 8; availability count 125 vs peak 2062.",
-   "zh": "有现货商品 8 款（72 小时峰值 8 款）；可购量 125（峰值 2062）。"
-  },
-  "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-10-16T00:05:32.797Z",
-  "active": true
- },
- {
-  "id": "stock|doxycycline|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-15T21:07:12.341Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "moscow"
-  },
-  "value": 7,
-  "baseline": 7,
-  "title": {
-   "en": "Doxycycline availability down 60% in Moscow",
-   "zh": "莫斯科多西环素可购量下降 60%"
-  },
-  "detail": {
-   "en": "In-stock products 7 vs 72h peak 7; availability count 8 vs peak 20.",
-   "zh": "有现货商品 7 款（72 小时峰值 7 款）；可购量 8（峰值 20）。"
-  },
-  "firstSeen": "2026-10-14T10:18:44.916Z",
-  "lastSeen": "2026-10-16T00:05:32.797Z",
+  "lastSeen": "2026-10-16T00:15:32.888Z",
   "active": true
  },
  {
@@ -94,7 +94,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-16T00:05:32.797Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|masks|irkutsk|2026-10-15T21",
@@ -118,7 +118,7 @@
   },
   "firstSeen": "2026-10-15T21:04:56.949Z",
   "lastSeen": "2026-10-16T00:05:32.797Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|irkobl",
@@ -139,7 +139,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-16T00:05:32.797Z",
+  "lastSeen": "2026-10-16T00:15:32.888Z",
   "active": true
  },
  {
@@ -161,7 +161,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-16T00:05:32.797Z",
+  "lastSeen": "2026-10-16T00:15:32.888Z",
   "active": true
  },
  {
