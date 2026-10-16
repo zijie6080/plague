@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|doxycycline|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-16T16:12:12.198Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "shelekhov"
+  },
+  "value": 6,
+  "baseline": 6,
+  "title": {
+   "en": "Doxycycline availability down 96% in Shelekhov",
+   "zh": "舍列霍夫多西环素可购量下降 96%"
+  },
+  "detail": {
+   "en": "In-stock products 6 vs 72h peak 6; availability count 52 vs peak 1284.",
+   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 52（峰值 1284）。"
+  },
+  "firstSeen": "2026-10-14T16:39:22.601Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-16T16:12:12.198Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "irkutsk"
+  },
+  "value": 1,
+  "baseline": 1,
+  "title": {
+   "en": "Gentamicin availability down 67% in Irkutsk",
+   "zh": "伊尔库茨克庆大霉素可购量下降 67%"
+  },
+  "detail": {
+   "en": "In-stock products 1 vs 72h peak 1; availability count 3 vs peak 9.",
+   "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 3（峰值 9）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
@@ -40,7 +90,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
@@ -62,7 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
@@ -87,7 +137,7 @@
    "zh": "有现货商品 8 款（72 小时峰值 8 款）；可购量 124（峰值 2027）。"
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
@@ -112,32 +162,7 @@
    "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 128（峰值 1624）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
-  "active": true
- },
- {
-  "id": "stock|doxycycline|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-16T12:50:19.533Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "shelekhov"
-  },
-  "value": 6,
-  "baseline": 6,
-  "title": {
-   "en": "Doxycycline availability down 96% in Shelekhov",
-   "zh": "舍列霍夫多西环素可购量下降 96%"
-  },
-  "detail": {
-   "en": "In-stock products 6 vs 72h peak 6; availability count 52 vs peak 1284.",
-   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 52（峰值 1284）。"
-  },
-  "firstSeen": "2026-10-14T16:39:22.601Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
@@ -162,7 +187,7 @@
    "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 48（峰值 202）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
@@ -187,32 +212,7 @@
    "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 15（峰值 57）。"
   },
   "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
-  "active": true
- },
- {
-  "id": "stock|gentamicin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-16T12:50:19.533Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "irkutsk"
-  },
-  "value": 1,
-  "baseline": 1,
-  "title": {
-   "en": "Gentamicin availability down 89% in Irkutsk",
-   "zh": "伊尔库茨克庆大霉素可购量下降 89%"
-  },
-  "detail": {
-   "en": "In-stock products 1 vs 72h peak 1; availability count 1 vs peak 9.",
-   "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 9）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-16T15:49:12.840Z",
+  "lastSeen": "2026-10-16T15:59:12.765Z",
   "active": true
  },
  {
