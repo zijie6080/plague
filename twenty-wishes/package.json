@@ -1,0 +1,28 @@
+{
+  "name": "twenty-wishes",
+  "private": true,
+  "version": "1.0.0",
+  "description": "《二十个愿望》—— 子杰 20 岁生日视频（Remotion 立体书剪纸动画）",
+  "scripts": {
+    "studio": "remotion studio",
+    "fonts": "python3 scripts/subset_fonts.py",
+    "stills": "node scripts/stills.mjs",
+    "preview": "node scripts/render.mjs preview",
+    "render": "node scripts/render.mjs final",
+    "cues": "node scripts/cues.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.536",
+    "@remotion/cli": "^4.0.536",
+    "@remotion/renderer": "^4.0.536",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.536"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
