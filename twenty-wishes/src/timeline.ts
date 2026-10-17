@@ -58,7 +58,7 @@ const S: SceneSpec[] = [
   },
   {
     id: "w01", no: 1, dur: D1, tIn: { kind: "open", dur: 0 },
-    beats: { board: 0, clap: 12, strip: 16, frameStep: 6, check: 50 },
+    beats: { board: -26, clap: 12, strip: 16, frameStep: 6, check: 50 },
     cues: [
       { at: 12, label: "场记板“啪”合上" },
       { at: 16, label: "胶片一格格展开" },

@@ -132,7 +132,7 @@ export const ConfettiCanvas: React.FC<ConfettiProps> = (p) => (
       for (let i = 0; i < n; i++) {
         const { col, w, h, spin, flip, rot0 } = parts[i];
         const q = parts[i];
-        const tt = t - q.delay * (p.mode === "fall" ? 30 : 3);
+        const tt = t - q.delay * (p.mode === "fall" ? 14 : 3);
         if (tt < 0) continue;
         let x: number;
         let y: number;
@@ -146,9 +146,9 @@ export const ConfettiCanvas: React.FC<ConfettiProps> = (p) => (
           y = (p.y ?? 540) + (Math.sin(ang) * sp + g / k) * e - (g / k) * tt;
         } else {
           const x0 = (p.x ?? 0) + q.a * (p.width ?? 1920);
-          const vy = 2.6 + q.b * 2.2;
+          const vy = 4.2 + q.b * 3;
           x = x0 + Math.sin(tt * (0.05 + q.c * 0.04) + i) * (18 + q.d * 26);
-          y = (p.y ?? -40) - q.e * 260 + vy * tt;
+          y = (p.y ?? -40) - q.e * 140 + vy * tt;
         }
         if (y > 1120 || x < -40 || x > 1960) continue;
         const rot = rot0 + spin * tt;

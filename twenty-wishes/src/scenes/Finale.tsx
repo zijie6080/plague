@@ -239,20 +239,21 @@ export const Finale: React.FC = () => {
             ))}
           </>
         )}
-        {/* 右侧书页（第二十页），合书时绕书脊翻到左边，背面是封底 */}
+        {/* 右侧书页（第二十页），合书时绕书脊翻到左边，背面是封底（过 90° 换面并折回角度，避免镜像变换） */}
         <div style={{ position: "absolute", left: BOOK.x, top: BOOK.y, width: BOOK.w, height: BOOK.h, perspective: 4200, perspectiveOrigin: "0 50%" }}>
-          <div style={{ position: "absolute", inset: 0, transformOrigin: "0 50%", transform: `rotateY(${-theta}deg)`, transformStyle: "preserve-3d" }}>
-            <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", overflow: "hidden", borderRadius: zo > 0 ? 8 : 0 }}>
+          {theta <= 90 ? (
+            <div style={{ position: "absolute", inset: 0, transformOrigin: "0 50%", transform: `rotateY(${-theta}deg)`, overflow: "hidden", borderRadius: zo > 0 ? 8 : 0 }}>
               <div style={{ position: "absolute", left: 0, top: 0, width: W, height: H, transformOrigin: "0 0", transform: `scale(${K})` }}>
                 <Page20 f={f} frameAbs={f + fin.action} />
               </div>
               <div style={{ position: "absolute", inset: 0, background: `linear-gradient(90deg, rgba(10,8,20,${0.3 * zo + dark}) 0, rgba(10,8,20,${dark}) 140px)` }} />
             </div>
-            <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
+          ) : (
+            <div style={{ position: "absolute", left: -BOOK.w, top: 0, width: BOOK.w, height: BOOK.h, transformOrigin: "100% 50%", transform: `rotateY(${180 - theta}deg)` }}>
               <BackCover />
-              <div style={{ position: "absolute", inset: 0, borderRadius: 12, background: `rgba(42,24,14,${0.25 - dark * 0.5})` }} />
+              <div style={{ position: "absolute", inset: 0, borderRadius: 12, background: `rgba(42,24,14,${Math.max(0, 0.25 - (0.4 - dark))})` }} />
             </div>
-          </div>
+          )}
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

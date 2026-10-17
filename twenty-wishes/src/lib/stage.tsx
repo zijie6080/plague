@@ -193,3 +193,44 @@ export const ClipStage: React.FC<{ x: number; y: number; w: number; h: number; r
     </div>
   </div>
 );
+
+/** 双面纸卡：用 flip（度）表示翻转角。只画一面，过了 90° 换成背面并把角度折回 (-90°,0°]，
+ *  这样任何时候都没有镜像变换——镜像（rotateY(180°)、scaleX(-1)、SVG 负缩放）会让 Chromium
+ *  的光照滤镜失效、纸面发黑。pre 为翻转之前的其它变换（例如弹起的 rotateX）。 */
+export const FlipCard: React.FC<{
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  flip: number;
+  pre?: string;
+  axis?: "Y" | "X";
+  origin?: string;
+  front: React.ReactNode;
+  back: React.ReactNode;
+  lift?: number;
+  opacity?: number;
+}> = ({ x, y, w, h, flip, pre = "", axis = "Y", origin = "50% 50%", front, back, lift = 1, opacity = 1 }) => {
+  const t = ((flip % 360) + 360) % 360;
+  const showFront = t <= 90 || t >= 270;
+  const ang = showFront ? (t <= 90 ? t : t - 360) : t - 180;
+  const shade = Math.abs(Math.sin((ang * Math.PI) / 180)) * 0.28;
+  return (
+    <div style={{ position: "absolute", left: x, top: y, width: w, height: h, transformOrigin: origin, transform: `${pre} rotate${axis}(${ang.toFixed(3)}deg)`, opacity }}>
+      <LiftContext.Provider value={lift}>
+        <svg width={w} height={h} viewBox={`${x} ${y} ${w} ${h}`} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
+          {showFront ? front : back}
+          {shade > 0.01 && <rect x={x} y={y} width={w} height={h} fill={`rgba(40,22,12,${shade.toFixed(3)})`} style={{ mixBlendMode: "multiply" }} rx={12} />}
+        </svg>
+      </LiftContext.Provider>
+    </div>
+  );
+};
+
+/** 非弹起元素在“依次倒下”转场里的退场：返回 0..1 的不透明度 */
+export const useExit = (order = 0) => {
+  const { f, foldOut } = useScene();
+  if (foldOut === null) return 1;
+  const t0 = foldOut + order * 1.6;
+  return 1 - prog(f, t0, t0 + 8);
+};

@@ -93,13 +93,13 @@ export interface FigureProps {
   wind?: number; // 围巾尾巴摆动相位
   hairStyle?: 0 | 1 | 2;
   rotate?: number;
-  children?: React.ReactNode; // 手里拿的东西（在近侧手臂之前绘制）
+  /** 手里拿的东西：参数为两只手在场景坐标中的位置 */
   hands?: (h: { front: { x: number; y: number }; back: { x: number; y: number } }) => React.ReactNode;
 }
 
 const HAIR = [
   // 0：子杰——侧分短发，刘海扫向前方
-  "M-31 4 C-35 -26 -14 -40 6 -37 C27 -34 36 -16 31 2 C26 -9 16 -16 4 -15 C-6 -14 -14 -6 -19 -2 C-23 -6 -27 -2 -31 4 Z",
+  "M-31 -2 C-35 -28 -14 -40 6 -37 C27 -34 36 -18 31 -4 C26 -14 16 -21 4 -21 C-6 -20 -14 -13 -19 -9 C-23 -12 -27 -8 -31 -2 Z",
   // 1：圆蘑菇头（帮手）
   "M-32 6 C-36 -28 -16 -40 0 -40 C18 -40 36 -28 32 6 C24 -4 12 -10 0 -10 C-12 -10 -24 -4 -32 6 Z",
   // 2：小发髻（帮手）
@@ -121,7 +121,6 @@ export const PaperFigure: React.FC<FigureProps> = ({
   wind = 0,
   hairStyle = 0,
   rotate = 0,
-  children,
   hands,
 }) => {
   const lean = pose.lean ?? 0;
@@ -131,8 +130,14 @@ export const PaperFigure: React.FC<FigureProps> = ({
   const footY = Math.max(legF.end.y, legB.end.y) + 7;
   const oy = stand ? y - footY * s : y;
 
-  // 上身绕髋部前倾
+  // 镜像（facing=-1）放在滤镜里面做：SVG 负缩放下 Chromium 的光照滤镜会失效，投影方向也会反
+  const T = `scale(${s * facing} ${s}) rotate(${rotate})`;
   const upper = `rotate(${lean} 0 0)`;
+  const headT = `rotate(${nod} 0 ${SH_Y - 6})`;
+  const L = (node: React.ReactNode, ...inner: string[]) => (
+    <g transform={T}>{inner.reduceRight<React.ReactNode>((n, t) => <g transform={t}>{n}</g>, node)}</g>
+  );
+
   const armF = limb(10, SH_Y + 6, pose.armF[0], pose.armF[1], UPPER, FORE, 7.5);
   const armB = limb(-8, SH_Y + 6, pose.armB[0], pose.armB[1], UPPER, FORE, 7.5);
   const torso = "M-21 -84 C-23 -60 -27 -28 -26 -4 C-14 2 14 2 26 -4 C27 -28 23 -60 21 -84 C12 -90 -12 -90 -21 -84 Z";
@@ -144,49 +149,49 @@ export const PaperFigure: React.FC<FigureProps> = ({
   const scarfBand = "M-23 -88 C-12 -80 12 -80 23 -88 L22 -76 C12 -70 -12 -70 -22 -76 Z";
   const scarfTail = `M-16 -82 C-30 ${-80 + w1 * 0.3} -42 ${-74 + w1} -54 ${-68 + w2} L-52 ${-58 + w2} C-40 ${-62 + w1} -28 -68 -14 -72 Z`;
 
+  // 局部坐标 → 场景坐标（用于手里拿的东西）
+  const toScene = (pt: { x: number; y: number }) => {
+    const rl = (lean * Math.PI) / 180;
+    const px = pt.x * Math.cos(rl) - pt.y * Math.sin(rl);
+    const py = pt.x * Math.sin(rl) + pt.y * Math.cos(rl);
+    const rr = (rotate * Math.PI) / 180;
+    const qx = px * Math.cos(rr) - py * Math.sin(rr);
+    const qy = px * Math.sin(rr) + py * Math.cos(rr);
+    return { x: x + qx * s * facing, y: oy + qy * s };
+  };
+
   return (
-    <g transform={`translate(${x} ${oy}) scale(${s * facing} ${s}) rotate(${rotate})`}>
+    <g transform={`translate(${x} ${oy})`}>
       {/* 远侧肢体：颜色略深，离纸面更低 */}
       <Paper color={darken(body, 0.18)} z={z - 0.4} grad={0.06} filter="paper-fine">
-        <g transform={upper}>
-          <path d={armB.d} />
-        </g>
-        <path d={legB.d + foot(legB.end)} />
+        {L(<path d={armB.d} />, upper)}
+        {L(<path d={legB.d + foot(legB.end)} />)}
       </Paper>
       {scarf && (
-        <g transform={upper}>
-          <Paper color={darken(scarf, 0.12)} z={z - 0.2} grad={0.08} filter="paper-fine">
-            <path d={scarfTail} />
-          </Paper>
-        </g>
+        <Paper color={darken(scarf, 0.12)} z={z - 0.2} grad={0.08} filter="paper-fine">
+          {L(<path d={scarfTail} />, upper)}
+        </Paper>
       )}
       <Paper color={body} z={z} grad={0.1} filter="paper-fine">
-        <path d={legF.d + foot(legF.end)} />
-        <g transform={upper}>
-          <path d={torso} />
-        </g>
+        {L(<path d={legF.d + foot(legF.end)} />)}
+        {L(<path d={torso} />, upper)}
       </Paper>
-      <g transform={upper}>
-        {/* 头 */}
-        <g transform={`rotate(${nod} 0 ${SH_Y - 6})`}>
-          <Paper color={head} z={z + 0.3} grad={0.1} filter="paper-fine">
-            <circle cx={2} cy={HEAD_Y} r={HEAD_R} />
-          </Paper>
-          <Paper color={hair} z={z + 0.5} grad={0.1} filter="paper-fine">
-            <path d={HAIR[hairStyle]} transform={`translate(2 ${HEAD_Y})`} />
-          </Paper>
-        </g>
-        {scarf && (
-          <Paper color={scarf} z={z + 0.4} grad={0.1} filter="paper-fine">
-            <path d={scarfBand} />
-          </Paper>
-        )}
-        {children}
-        <Paper color={body} z={z + 0.6} grad={0.1} filter="paper-fine">
-          <path d={armF.d} />
+      {/* 头 */}
+      <Paper color={head} z={z + 0.3} grad={0.1} filter="paper-fine">
+        {L(<circle cx={2} cy={HEAD_Y} r={HEAD_R} />, upper, headT)}
+      </Paper>
+      <Paper color={hair} z={z + 0.5} grad={0.1} filter="paper-fine">
+        {L(<path d={HAIR[hairStyle]} transform={`translate(2 ${HEAD_Y})`} />, upper, headT)}
+      </Paper>
+      {scarf && (
+        <Paper color={scarf} z={z + 0.4} grad={0.1} filter="paper-fine">
+          {L(<path d={scarfBand} />, upper)}
         </Paper>
-        {hands?.({ front: armF.end, back: armB.end })}
-      </g>
+      )}
+      <Paper color={body} z={z + 0.6} grad={0.1} filter="paper-fine">
+        {L(<path d={armF.d} />, upper)}
+      </Paper>
+      {hands && <g transform={`translate(${-x} ${-oy})`}>{hands({ front: toScene(armF.end), back: toScene(armB.end) })}</g>}
     </g>
   );
 };

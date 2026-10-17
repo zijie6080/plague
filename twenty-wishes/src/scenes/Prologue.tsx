@@ -189,18 +189,19 @@ export const Prologue: React.FC = () => {
             <div style={{ position: "absolute", inset: 0, background: `linear-gradient(90deg, rgba(42,24,14,${0.4 * (1 - z)}) 0, rgba(42,24,14,0) 260px)` }} />
           </div>
         )}
-        {/* 封面：绕书脊翻开 */}
+        {/* 封面：绕书脊翻开。过了 90° 换成封面内侧，并放到书脊左边、角度折回（避免镜像变换） */}
         <div style={{ position: "absolute", left: BOOK.x, top: BOOK.y, width: BOOK.w, height: BOOK.h, perspective: 3800, perspectiveOrigin: "0 50%" }}>
-          <div style={{ position: "absolute", inset: 0, transformOrigin: "0 50%", transform: `rotateY(${-theta}deg)`, transformStyle: "preserve-3d" }}>
-            <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden" }}>
+          {theta <= 90 ? (
+            <div style={{ position: "absolute", inset: 0, transformOrigin: "0 50%", transform: `rotateY(${-theta}deg)` }}>
               <Cover f={f} />
               <div style={{ position: "absolute", inset: 0, borderRadius: 12, background: `rgba(30,16,8,${coverDark})` }} />
             </div>
-            <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
+          ) : (
+            <div style={{ position: "absolute", left: -BOOK.w, top: 0, width: BOOK.w, height: BOOK.h, transformOrigin: "100% 50%", transform: `rotateY(${180 - theta}deg)` }}>
               <CoverInside />
-              <div style={{ position: "absolute", inset: 0, borderRadius: 12, background: `rgba(30,16,8,${0.3 - coverDark * 0.5})` }} />
+              <div style={{ position: "absolute", inset: 0, borderRadius: 12, background: `rgba(30,16,8,${coverDark * 0.8})` }} />
             </div>
-          </div>
+          )}
         </div>
       </AbsoluteFill>
       {/* 三行字 */}
