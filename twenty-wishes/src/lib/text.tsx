@@ -72,7 +72,7 @@ export const WishText: React.FC<{ text: string; f: number; start: number; outAt:
     start={start}
     outAt={outAt}
     y={1080 * 0.12}
-    size={52}
+    size={Math.min(52, Math.floor(1380 / (Array.from(text).length * 1.12)))}
     step={1.05 * slow}
     charDur={9 + 3 * slow}
     color={night ? TEXT.onNight : TEXT.ink}

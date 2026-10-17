@@ -46,7 +46,7 @@ const Composite: React.FC<{ frame: number }> = ({ frame }) => {
   const prevNode = <SceneView id={prev.id} f={prevF} />;
   if (k === "flip") return <PageFlip p={p} front={prevNode} under={curNode} />;
   if (k === "pan") return <PanBoards p={p} from={prevNode} to={curNode} />;
-  return <CoverSheet p={p} from={prevNode} to={curNode} seed={i} />;
+  return <CoverSheet p={p} from={prevNode} to={curNode} seed={i} label={cur.no ? String(cur.no).padStart(2, "0") : undefined} />;
 };
 
 const Texts: React.FC<{ frame: number }> = ({ frame }) => {

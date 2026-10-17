@@ -234,3 +234,28 @@ export const useExit = (order = 0) => {
   const t0 = foldOut + order * 1.6;
   return 1 - prog(f, t0, t0 + 8);
 };
+
+/** 整组弹起：把一组（自己会做 3D 变换的）元素当作一张纸，以 y=pivot 为轴弹起 / 倒下。
+ *  自身也提供透视，组内元素的 3D 变换照常生效。 */
+export const RiseGroup: React.FC<{ pivot: number; at: number; order?: number; children: React.ReactNode }> = ({ pivot, at, order = 0, children }) => {
+  const { f, foldOut } = useScene();
+  const angle = popAngle(f, at, foldOut, order);
+  if (angle >= 89.6) return null;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: W,
+        height: H,
+        transformOrigin: `50% ${pivot}px`,
+        transform: angle > 0.05 || angle < -0.05 ? `rotateX(${angle.toFixed(3)}deg)` : undefined,
+        perspective: 2300,
+        perspectiveOrigin: `${W / 2}px 300px`,
+      }}
+    >
+      <LiftContext.Provider value={clamp(1 - angle / FLAT_ANGLE, 0, 1.15)}>{children}</LiftContext.Provider>
+    </div>
+  );
+};

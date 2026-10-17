@@ -17,10 +17,12 @@ import { W11 } from "./W11";
 import { W12 } from "./W12";
 import { W13, W14 } from "./W13";
 import { W15 } from "./W15";
+import { W16 } from "./W16";
+import { W17 } from "./W17";
+import { W18 } from "./W18";
+import { W19 } from "./W19";
 import { Prologue } from "./Prologue";
 import { Finale } from "./Finale";
-
-const Placeholder: React.FC = () => null;
 
 export const COMPONENTS: Record<string, React.FC> = {
   prologue: Prologue,
@@ -39,6 +41,10 @@ export const COMPONENTS: Record<string, React.FC> = {
   w13: W13,
   w14: W14,
   w15: W15,
+  w16: W16,
+  w17: W17,
+  w18: W18,
+  w19: W19,
   finale: Finale,
 };
 
@@ -52,7 +58,7 @@ export const SceneView: React.FC<{ id: string; f: number; foldOut?: number | nul
   contentOnly = false,
 }) => {
   const spec = sceneById(id);
-  const C = COMPONENTS[id] ?? Placeholder;
+  const C = COMPONENTS[id];
   const night = !!spec.night;
   const content = (
     <SceneContext.Provider value={{ f, foldOut, night }}>

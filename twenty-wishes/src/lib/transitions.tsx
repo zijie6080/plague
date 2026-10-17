@@ -3,6 +3,8 @@ import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import { clamp, ease, lerp, prog } from "./anim";
 import { fbm1 } from "./rand";
+import { FONTS, PALETTE } from "../config";
+import { lighten } from "./paper";
 import { H, W } from "./stage";
 
 const TABLE = staticFile("tex/table.png");
@@ -107,9 +109,12 @@ const deckle = (w: number, h: number, seed: number) => {
   return pts.join(" ") + " Z";
 };
 
-export const CoverSheet: React.FC<{ p: number; from: React.ReactNode; to: React.ReactNode; seed?: number }> = ({ p, from, to, seed = 3 }) => {
-  const down = ease.out(prog(p, 0, 0.46));
-  const peel = ease.in(prog(p, 0.54, 1));
+const SHEET_TINTS = [PALETTE.sakura, PALETTE.fogBlue, PALETTE.sage, PALETTE.apricot, PALETTE.lilac];
+
+export const CoverSheet: React.FC<{ p: number; from: React.ReactNode; to: React.ReactNode; seed?: number; label?: string }> = ({ p, from, to, seed = 3, label }) => {
+  const tint = SHEET_TINTS[seed % SHEET_TINTS.length];
+  const down = ease.out(prog(p, 0, 0.4));
+  const peel = ease.inOut(prog(p, 0.5, 1));
   const SH = H + 60;
   const y = lerp(-SH - 60, 0, down);
   const tilt = lerp(-2.2, 0, down);
@@ -147,12 +152,19 @@ export const CoverSheet: React.FC<{ p: number; from: React.ReactNode; to: React.
             </defs>
             <g clipPath={`url(#deckle-${seed})`}>
               <image href={SHEET} x={0} y={-20} width={W} height={SH + 40} preserveAspectRatio="none" />
+              <rect x={0} y={0} width={W} height={SH} fill={tint} opacity={0.75} style={{ mixBlendMode: "multiply" }} />
+              {label && (
+                <text x={W / 2} y={H / 2 + 60} textAnchor="middle" fontFamily={`"${FONTS.serif}"`} fontWeight={900} fontSize={170} fill={lighten(tint, 0.25)} style={{ textShadow: `-2px -2px 0 rgba(255,255,255,0.45), 3px 4px 4px rgba(40,22,12,0.25)` }}>
+                  {label}
+                </text>
+              )}
               <rect x={0} y={0} width={W} height={SH} fill={`rgba(40,22,12,${dark})`} />
               <rect x={0} y={SH - 40} width={W} height={60} fill="rgba(40,22,12,0.06)" />
             </g>
           </svg>
           <div style={{ position: "absolute", inset: 0, transform: "rotateX(180deg)", backfaceVisibility: "hidden", background: `rgba(225,205,180,1)`, clipPath: "inset(0)" }}>
             <div style={{ position: "absolute", inset: 0, background: `linear-gradient(0deg, rgba(40,22,12,0.3), rgba(40,22,12,0.05))` }} />
+            <div style={{ position: "absolute", inset: 0, background: tint, mixBlendMode: "multiply", opacity: 0.6 }} />
           </div>
         </div>
       </div>
