@@ -1,0 +1,35 @@
+{
+  "name": "yanshou-tongguo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "《验收通过》—— 子杰 20 岁生日视频（Remotion）",
+  "type": "module",
+  "scripts": {
+    "fonts": "python3 scripts/subset_fonts.py",
+    "physics": "tsx scripts/simulate.ts",
+    "timeline": "tsx scripts/export-timeline.ts",
+    "audio": "python3 audio/synth.py",
+    "grain": "python3 scripts/make_grain.py",
+    "prepare-all": "npm run fonts && npm run grain && npm run physics && npm run timeline && npm run audio",
+    "studio": "remotion studio src/index.ts",
+    "stills": "tsx scripts/render.ts stills",
+    "preview": "tsx scripts/render.ts preview",
+    "render": "tsx scripts/render.ts final",
+    "build": "npm run prepare-all && npm run render"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.536",
+    "@remotion/cli": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "matter-js": "^0.20.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "4.0.536"
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.20.2",
+    "@types/react": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
