@@ -173,11 +173,11 @@ const BackCover: React.FC = () => (
     </defs>
     <g clipPath="url(#backclip)">
       <image href={staticFile("tex/paper_warm.png")} x={0} y={0} width={BOOK.w} height={BOOK.h} preserveAspectRatio="xMidYMid slice" />
-      <rect width={BOOK.w} height={BOOK.h} fill={lighten(BASE.paper, 0.2)} opacity={0.35} />
+      <rect width={BOOK.w} height={BOOK.h} fill={lighten(BASE.paper, 0.5)} opacity={0.6} />
     </g>
     <rect x={BOOK.w - 43} y={6} width={3} height={BOOK.h - 12} fill={darken(BASE.paper, 0.2)} opacity={0.5} filter="url(#paper-fine)" />
     {/* 镂空的 20：孔里露出朱红的衬纸，孔的左上内沿有阴影 */}
-    <text x={BOOK.w / 2} y={BOOK.h / 2 + 34} textAnchor="middle" fontFamily={`"${FONTS.serif}"`} fontWeight={900} fontSize={96} fill={PALETTE.vermilion} filter="url(#cutout)">
+    <text x={BOOK.w / 2} y={BOOK.h / 2 + 44} textAnchor="middle" fontFamily={`"${FONTS.serif}"`} fontWeight={900} fontSize={124} fill={PALETTE.vermilion} filter="url(#cutout)">
       {FINALE.backCover}
     </text>
   </svg>
@@ -204,7 +204,7 @@ export const Finale: React.FC = () => {
   const tx = lerp(-BOOK.x * s1, 0, zo) + BOOK.w * pan * s;
   const ty = lerp(-BOOK.y * s1, 540 - (BOOK.y + BOOK.h / 2), zo);
   const theta = 180 * rot;
-  const dark = 0.4 * Math.sin((Math.min(90, theta) * Math.PI) / 180);
+  const dark = 0.4 * Math.sin((theta * Math.PI) / 180);
   const shadowA = zo;
 
   return (

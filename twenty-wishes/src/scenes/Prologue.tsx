@@ -144,7 +144,7 @@ export const Prologue: React.FC = () => {
 
   const open = ease.inOut(prog(f, B.coverOpen, B.coverOpen + B.coverOpenDur));
   const theta = 180 * open;
-  const coverDark = 0.35 * Math.sin((Math.min(90, theta) * Math.PI) / 180);
+  const coverDark = 0.35 * Math.sin((theta * Math.PI) / 180);
   const showPage = f >= B.coverOpen - 1;
   const bookShadowA = 1 - z;
 
