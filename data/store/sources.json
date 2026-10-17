@@ -1289,6 +1289,14 @@
  "rpn-38": {
   "runs": [
    {
+    "t": "2026-10-17T18:08:41.566Z",
+    "ok": false,
+    "ms": 10495,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
+   {
     "t": "2026-10-17T14:08:01.260Z",
     "ok": false,
     "ms": 10492,
@@ -1873,12 +1881,12 @@
     "status": 503
    }
   ],
-  "lastRun": "2026-10-17T14:08:01.260Z",
+  "lastRun": "2026-10-17T18:08:41.566Z",
   "lastStatus": 0,
-  "lastMs": 10492,
+  "lastMs": 10495,
   "lastError": "UND_ERR_CONNECT_TIMEOUT",
   "idle": false,
-  "consecutiveFailures": 27,
+  "consecutiveFailures": 28,
   "lastItems": 0,
   "lastOk": "2026-10-13T12:14:14.955Z"
  },
