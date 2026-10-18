@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-18T06:22:14.207Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (31 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 31 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
+  "active": true
+ },
+ {
   "id": "stock|doxycycline|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +43,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 52（峰值 1284）。"
   },
   "firstSeen": "2026-10-14T16:39:22.601Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -46,7 +68,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 3（峰值 9）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -71,7 +93,7 @@
    "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 136（峰值 1447）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -96,7 +118,7 @@
    "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 49（峰值 197）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -121,7 +143,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 11（峰值 32）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -146,7 +168,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 32（峰值 216）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -168,7 +190,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
@@ -190,29 +212,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-18T02:21:25.965Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (30 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 30 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-18T06:11:50.727Z",
+  "lastSeen": "2026-10-18T06:21:50.915Z",
   "active": true
  },
  {
