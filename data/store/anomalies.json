@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-19T14:19:08.265Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (73 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 73 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-19T14:18:42.207Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-19T14:19:04.730Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (73 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 73 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-19T14:18:42.207Z",
+  "active": true
+ },
+ {
   "id": "jump|paracetamol|belarus|2026-10-19T13",
   "rule": "price_jump",
   "severity": "watch",
@@ -20,7 +64,7 @@
    "zh": "涨幅最大：Парацетамол таблетки 200мг N20，₽0.6 → ₽1.31。"
   },
   "firstSeen": "2026-10-19T13:27:50.750Z",
-  "lastSeen": "2026-10-19T14:17:51.512Z",
+  "lastSeen": "2026-10-19T14:18:42.207Z",
   "active": true
  },
  {
@@ -45,7 +89,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 11（峰值 32）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-19T14:17:51.512Z",
+  "lastSeen": "2026-10-19T14:18:42.207Z",
   "active": true
  },
  {
@@ -67,51 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T14:17:51.512Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-19T10:18:18.107Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (72 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 72 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T14:17:51.512Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-19T10:18:14.585Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (72 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 72 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T14:17:51.512Z",
+  "lastSeen": "2026-10-19T14:18:42.207Z",
   "active": true
  },
  {
