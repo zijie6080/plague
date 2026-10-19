@@ -1,5 +1,54 @@
 [
  {
+  "id": "jump|paracetamol|belarus|2026-10-19T13",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-19T13:30:01.806Z",
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "belarus"
+  },
+  "value": 1.31,
+  "baseline": 0.6,
+  "title": {
+   "en": "1 Paracetamol (control) product(s) jumped ≥15% in Belarus (national)",
+   "zh": "白俄罗斯全国有 1 款对乙酰氨基酚（对照）商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Парацетамол таблетки 200мг N20 ₽0.6 → ₽1.31.",
+   "zh": "涨幅最大：Парацетамол таблетки 200мг N20，₽0.6 → ₽1.31。"
+  },
+  "firstSeen": "2026-10-19T13:27:50.750Z",
+  "lastSeen": "2026-10-19T13:27:50.750Z",
+  "active": true
+ },
+ {
+  "id": "stock|doxycycline|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-19T13:29:38.037Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 6,
+  "baseline": 6,
+  "title": {
+   "en": "Doxycycline availability down 66% in Irkutsk",
+   "zh": "伊尔库茨克多西环素可购量下降 66%"
+  },
+  "detail": {
+   "en": "In-stock products 6 vs 72h peak 6; availability count 11 vs peak 32.",
+   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 11（峰值 32）。"
+  },
+  "firstSeen": "2026-10-09T00:38:11.599Z",
+  "lastSeen": "2026-10-19T13:27:50.750Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,32 +67,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T13:17:50.807Z",
-  "active": true
- },
- {
-  "id": "stock|doxycycline|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-19T10:20:02.530Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "irkutsk"
-  },
-  "value": 6,
-  "baseline": 6,
-  "title": {
-   "en": "Doxycycline availability down 66% in Irkutsk",
-   "zh": "伊尔库茨克多西环素可购量下降 66%"
-  },
-  "detail": {
-   "en": "In-stock products 6 vs 72h peak 6; availability count 11 vs peak 32.",
-   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 11（峰值 32）。"
-  },
-  "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-19T13:17:50.807Z",
+  "lastSeen": "2026-10-19T13:27:50.750Z",
   "active": true
  },
  {
@@ -65,7 +89,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T13:17:50.807Z",
+  "lastSeen": "2026-10-19T13:27:50.750Z",
   "active": true
  },
  {
@@ -87,7 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T13:17:50.807Z",
+  "lastSeen": "2026-10-19T13:27:50.750Z",
   "active": true
  },
  {
