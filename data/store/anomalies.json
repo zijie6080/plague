@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-19T18:59:05.065Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (40 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 40 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -64,7 +86,7 @@
    "zh": "涨幅最大：Амоксиклав порошок для приг. суспензии внутр. (250мг+62.5мг)/5мл 100мл N1，₽10.58 → ₽15。"
   },
   "firstSeen": "2026-10-19T16:38:41.792Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -89,7 +111,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 11（峰值 32）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -114,7 +136,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 19 款）；可购量 17（峰值 136）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -139,7 +161,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 39（峰值 219）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -164,7 +186,7 @@
    "zh": "有现货商品 7 款（72 小时峰值 12 款）；可购量 11（峰值 491）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -189,7 +211,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 16 款）；可购量 30（峰值 4985）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -214,7 +236,7 @@
    "zh": "有现货商品 9 款（72 小时峰值 11 款）；可购量 24（峰值 1047）。"
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
@@ -239,29 +261,7 @@
    "zh": "有现货商品 3 款（72 小时峰值 3 款）；可购量 15（峰值 2958）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-19T14:49:05.217Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (39 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 39 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T18:48:41.961Z",
+  "lastSeen": "2026-10-19T18:58:41.820Z",
   "active": true
  },
  {
