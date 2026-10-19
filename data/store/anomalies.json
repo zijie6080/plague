@@ -1,5 +1,29 @@
 [
  {
+  "id": "jump|amoxiclav|irkutsk|2026-10-19T19",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-19T19:50:27.445Z",
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "irkutsk"
+  },
+  "value": 124,
+  "baseline": 86,
+  "title": {
+   "en": "1 Amoxicillin/clavulanate product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款阿莫西林克拉维酸商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Амоксициллин+Клавулановая Кислота Экспресс 125мг+31,25мг 14 шт. таблетки диспергируемые ₽86 → ₽124.",
+   "zh": "涨幅最大：Амоксициллин+Клавулановая Кислота Экспресс 125мг+31,25мг 14 шт. таблетки диспергируемые，₽86 → ₽124。"
+  },
+  "firstSeen": "2026-10-19T19:48:41.620Z",
+  "lastSeen": "2026-10-19T19:48:41.620Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +42,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T19:38:41.913Z",
+  "lastSeen": "2026-10-19T19:48:41.620Z",
   "active": true
  },
  {
@@ -40,7 +64,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T19:38:41.913Z",
+  "lastSeen": "2026-10-19T19:48:41.620Z",
   "active": true
  },
  {
@@ -62,7 +86,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T19:38:41.913Z",
+  "lastSeen": "2026-10-19T19:48:41.620Z",
   "active": true
  },
  {
@@ -87,7 +111,7 @@
   },
   "firstSeen": "2026-10-19T16:38:41.792Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|doxycycline|irkutsk",
@@ -137,7 +161,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|irkutsk",
@@ -162,7 +186,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|shelekhov",
@@ -187,7 +211,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|amoxiclav|shelekhov",
@@ -212,7 +236,7 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|ciprofloxacin|shelekhov",
@@ -237,7 +261,7 @@
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|paracetamol|shelekhov",
@@ -262,7 +286,7 @@
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|paracetamol|belarus|2026-10-19T13",
