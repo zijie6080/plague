@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-19T22:53:11.577Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 18,
+  "baseline": 20,
+  "title": {
+   "en": "Levofloxacin availability down 64% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 64%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 20; availability count 103 vs peak 289.",
+   "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-19T22:51:29.444Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T22:41:28.720Z",
+  "lastSeen": "2026-10-19T22:51:29.444Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T22:41:28.720Z",
+  "lastSeen": "2026-10-19T22:51:29.444Z",
   "active": true
  },
  {
@@ -65,7 +90,7 @@
   },
   "firstSeen": "2026-10-19T19:48:41.620Z",
   "lastSeen": "2026-10-19T22:41:28.720Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -86,7 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T22:41:28.720Z",
+  "lastSeen": "2026-10-19T22:51:29.444Z",
   "active": true
  },
  {
@@ -160,31 +185,6 @@
    "zh": "有现货商品 13 款（72 小时峰值 19 款）；可购量 17（峰值 136）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-19T19:38:41.913Z",
-  "active": false
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-19T16:40:28.209Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 17,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 82% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 82%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 19; availability count 39 vs peak 219.",
-   "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 39（峰值 219）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-19T19:38:41.913Z",
   "active": false
  },
