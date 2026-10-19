@@ -3,7 +3,7 @@
   "id": "stock|doxycycline|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-19T07:09:00.228Z",
+  "t": "2026-10-19T10:20:02.530Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -21,7 +21,51 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 11（峰值 32）。"
   },
   "firstSeen": "2026-10-09T00:38:11.599Z",
-  "lastSeen": "2026-10-19T10:07:50.789Z",
+  "lastSeen": "2026-10-19T10:17:51.454Z",
+  "active": true
+ },
+ {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-19T10:18:18.107Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (72 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 72 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-19T10:17:51.454Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-19T10:18:14.585Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (72 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 72 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-19T10:17:51.454Z",
   "active": true
  },
  {
@@ -47,7 +91,7 @@
   },
   "firstSeen": "2026-10-12T01:35:41.188Z",
   "lastSeen": "2026-10-19T10:07:50.789Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -68,51 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T10:07:50.789Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-19T06:17:35.595Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (71 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 71 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T10:07:50.789Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-19T06:17:32.424Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (71 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 71 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-19T10:07:50.789Z",
+  "lastSeen": "2026-10-19T10:17:51.454Z",
   "active": true
  },
  {
