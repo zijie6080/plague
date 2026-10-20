@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T06:42:37.736Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (77 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 77 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T06:42:10.902Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T06:42:34.030Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (77 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 77 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T06:42:10.902Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-20T06:32:10.724Z",
+  "lastSeen": "2026-10-20T06:42:10.902Z",
   "active": true
  },
  {
@@ -43,51 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T06:32:10.724Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T02:32:37.665Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (76 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 76 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T06:32:10.724Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T02:32:33.709Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (76 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 76 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T06:32:10.724Z",
+  "lastSeen": "2026-10-20T06:42:10.902Z",
   "active": true
  },
  {
