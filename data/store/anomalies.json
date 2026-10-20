@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T18:46:59.751Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (80 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 80 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T18:46:33.859Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T18:46:56.377Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (80 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 80 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T18:46:33.859Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-20T18:36:34.031Z",
+  "lastSeen": "2026-10-20T18:46:33.859Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-20T18:36:34.031Z",
+  "lastSeen": "2026-10-20T18:46:33.859Z",
   "active": true
  },
  {
@@ -68,7 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T18:36:34.031Z",
+  "lastSeen": "2026-10-20T18:46:33.859Z",
   "active": true
  },
  {
@@ -94,50 +138,6 @@
   "firstSeen": "2026-10-20T14:43:23.635Z",
   "lastSeen": "2026-10-20T17:43:24.136Z",
   "active": false
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T14:43:50.545Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (79 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 79 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T18:36:34.031Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T14:43:46.688Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (79 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 79 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T18:36:34.031Z",
-  "active": true
  },
  {
   "id": "jump|amoxiclav|irkutsk|2026-10-19T19",
