@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T15:13:46.656Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (45 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 45 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T15:13:23.549Z",
+  "active": true
+ },
+ {
   "id": "jump|amoxiclav|belarus|2026-10-20T14",
   "rule": "price_jump",
   "severity": "watch",
@@ -20,7 +42,7 @@
    "zh": "涨幅最大：Амоксиклав порошок для приг. суспензии внутр. (250мг+62.5мг)/5мл 100мл N1，₽15 → ₽18。"
   },
   "firstSeen": "2026-10-20T14:43:23.635Z",
-  "lastSeen": "2026-10-20T15:03:24.092Z",
+  "lastSeen": "2026-10-20T15:13:23.549Z",
   "active": true
  },
  {
@@ -45,7 +67,7 @@
    "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-20T15:03:24.092Z",
+  "lastSeen": "2026-10-20T15:13:23.549Z",
   "active": true
  },
  {
@@ -67,7 +89,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T15:03:24.092Z",
+  "lastSeen": "2026-10-20T15:13:23.549Z",
   "active": true
  },
  {
@@ -89,29 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T15:03:24.092Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T11:13:09.758Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (44 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 44 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T15:03:24.092Z",
+  "lastSeen": "2026-10-20T15:13:23.549Z",
   "active": true
  },
  {
