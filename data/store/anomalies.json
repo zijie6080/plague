@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-20T05:13:49.207Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 18,
+  "baseline": 20,
+  "title": {
+   "en": "Levofloxacin availability down 64% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 64%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 20; availability count 103 vs peak 289.",
+   "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-20T05:12:10.764Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T05:02:10.850Z",
+  "lastSeen": "2026-10-20T05:12:10.764Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T05:02:10.850Z",
+  "lastSeen": "2026-10-20T05:12:10.764Z",
   "active": true
  },
  {
@@ -62,32 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T05:02:10.850Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-20T02:03:51.463Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 18,
-  "baseline": 20,
-  "title": {
-   "en": "Levofloxacin availability down 64% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 64%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 20; availability count 103 vs peak 289.",
-   "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-20T05:02:10.850Z",
+  "lastSeen": "2026-10-20T05:12:10.764Z",
   "active": true
  },
  {
