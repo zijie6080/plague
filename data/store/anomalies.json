@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-20T17:55:32.303Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 18,
+  "baseline": 20,
+  "title": {
+   "en": "Levofloxacin availability down 64% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 64%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 20; availability count 103 vs peak 289.",
+   "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-20T17:53:24.030Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-20T17:55:32.303Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "irkutsk"
+  },
+  "value": 1,
+  "baseline": 1,
+  "title": {
+   "en": "Gentamicin availability down 67% in Irkutsk",
+   "zh": "伊尔库茨克庆大霉素可购量下降 67%"
+  },
+  "detail": {
+   "en": "In-stock products 1 vs 72h peak 1; availability count 1 vs peak 3.",
+   "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-20T17:53:24.030Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T17:43:24.136Z",
+  "lastSeen": "2026-10-20T17:53:24.030Z",
   "active": true
  },
  {
@@ -43,32 +93,7 @@
   },
   "firstSeen": "2026-10-20T14:43:23.635Z",
   "lastSeen": "2026-10-20T17:43:24.136Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-20T14:45:30.724Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 18,
-  "baseline": 20,
-  "title": {
-   "en": "Levofloxacin availability down 64% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 64%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 20; availability count 103 vs peak 289.",
-   "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-20T17:43:24.136Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|irkobl",
@@ -89,7 +114,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T17:43:24.136Z",
+  "lastSeen": "2026-10-20T17:53:24.030Z",
   "active": true
  },
  {
@@ -111,7 +136,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T17:43:24.136Z",
+  "lastSeen": "2026-10-20T17:53:24.030Z",
   "active": true
  },
  {
@@ -359,31 +384,6 @@
   },
   "firstSeen": "2026-10-12T01:35:41.188Z",
   "lastSeen": "2026-10-19T10:07:50.789Z",
-  "active": false
- },
- {
-  "id": "stock|gentamicin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-19T00:48:13.722Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "irkutsk"
-  },
-  "value": 1,
-  "baseline": 1,
-  "title": {
-   "en": "Gentamicin availability down 67% in Irkutsk",
-   "zh": "伊尔库茨克庆大霉素可购量下降 67%"
-  },
-  "detail": {
-   "en": "In-stock products 1 vs 72h peak 1; availability count 3 vs peak 9.",
-   "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 3（峰值 9）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-19T03:27:09.079Z",
   "active": false
  },
  {
