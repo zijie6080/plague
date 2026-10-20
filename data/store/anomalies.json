@@ -1,27 +1,95 @@
 [
  {
+  "id": "jump|amoxiclav|belarus|2026-10-20T14",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-20T14:45:54.221Z",
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "belarus"
+  },
+  "value": 18,
+  "baseline": 15,
+  "title": {
+   "en": "1 Amoxicillin/clavulanate product(s) jumped ≥15% in Belarus (national)",
+   "zh": "白俄罗斯全国有 1 款阿莫西林克拉维酸商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Амоксиклав порошок для приг. суспензии внутр. (250мг+62.5мг)/5мл 100мл N1 ₽15 → ₽18.",
+   "zh": "涨幅最大：Амоксиклав порошок для приг. суспензии внутр. (250мг+62.5мг)/5мл 100мл N1，₽15 → ₽18。"
+  },
+  "firstSeen": "2026-10-20T14:43:23.635Z",
+  "lastSeen": "2026-10-20T14:43:23.635Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-20T11:35:14.407Z",
+  "t": "2026-10-20T14:45:30.724Z",
   "persistent": true,
   "subject": {
    "type": "drug",
    "drug": "levofloxacin",
    "city": "irkutsk"
   },
-  "value": 16,
+  "value": 18,
   "baseline": 20,
   "title": {
-   "en": "Levofloxacin availability down 90% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 90%"
+   "en": "Levofloxacin availability down 64% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 64%"
   },
   "detail": {
-   "en": "In-stock products 16 vs 72h peak 20; availability count 30 vs peak 289.",
-   "zh": "有现货商品 16 款（72 小时峰值 20 款）；可购量 30（峰值 289）。"
+   "en": "In-stock products 18 vs 72h peak 20; availability count 103 vs peak 289.",
+   "zh": "有现货商品 18 款（72 小时峰值 20 款）；可购量 103（峰值 289）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-20T14:33:24.246Z",
+  "lastSeen": "2026-10-20T14:43:23.635Z",
+  "active": true
+ },
+ {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T14:43:50.545Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (79 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 79 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T14:43:23.635Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-20T14:43:46.688Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (79 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 79 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-20T14:43:23.635Z",
   "active": true
  },
  {
@@ -43,51 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T14:33:24.246Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T10:43:13.480Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (78 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 78 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T14:33:24.246Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-20T10:43:10.006Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (78 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 78 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-20T14:33:24.246Z",
+  "lastSeen": "2026-10-20T14:43:23.635Z",
   "active": true
  },
  {
