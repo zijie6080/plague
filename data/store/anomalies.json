@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-22T11:28:56.622Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (90 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 90 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-22T11:28:53.077Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (90 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 90 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 53）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -45,7 +89,7 @@
    "zh": "涨幅最大：Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые，₽288 → ₽347。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -69,7 +113,7 @@
    "zh": "涨幅最大：Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма，₽86 → ₽108。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -93,7 +137,7 @@
    "zh": "涨幅最大：Азитромицин 250мг 6 шт. капсулы Озон，₽95 → ₽124。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -117,7 +161,7 @@
    "zh": "涨幅最大：Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь，₽259 → ₽303。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -141,7 +185,7 @@
    "zh": "涨幅最大：Сенс маска медицинская трехслойная на резинке 5 шт.，₽48 → ₽61。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -165,7 +209,7 @@
    "zh": "涨幅最大：Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк，₽65 → ₽86。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -187,7 +231,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
+  "lastSeen": "2026-10-22T11:28:30.563Z",
   "active": true
  },
  {
@@ -239,50 +283,6 @@
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-10-22T10:38:30.951Z",
   "active": false
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-22T07:28:16.847Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (89 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 89 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-22T07:28:12.993Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (89 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 89 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T11:18:31.317Z",
-  "active": true
  },
  {
   "id": "stock|amoxiclav|shelekhov",
