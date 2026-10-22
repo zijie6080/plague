@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-22T11:58:53.664Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (56 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 56 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -65,7 +87,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 53）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -89,7 +111,7 @@
    "zh": "涨幅最大：Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые，₽288 → ₽347。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -113,7 +135,7 @@
    "zh": "涨幅最大：Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма，₽86 → ₽108。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -137,7 +159,7 @@
    "zh": "涨幅最大：Азитромицин 250мг 6 шт. капсулы Озон，₽95 → ₽124。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -161,7 +183,7 @@
    "zh": "涨幅最大：Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь，₽259 → ₽303。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -185,7 +207,7 @@
    "zh": "涨幅最大：Сенс маска медицинская трехслойная на резинке 5 шт.，₽48 → ₽61。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
@@ -209,29 +231,7 @@
    "zh": "涨幅最大：Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк，₽65 → ₽86。"
   },
   "firstSeen": "2026-10-22T10:48:30.392Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-22T07:58:13.526Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (55 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 55 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T11:48:30.600Z",
+  "lastSeen": "2026-10-22T11:58:31.151Z",
   "active": true
  },
  {
