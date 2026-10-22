@@ -1,5 +1,174 @@
 [
  {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 77% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 77%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 12 vs peak 53.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 53）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
+  "id": "jump|doxycycline|irkutsk|2026-10-22T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 347,
+  "baseline": 288,
+  "title": {
+   "en": "2 Doxycycline product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 2 款多西环素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые ₽288 → ₽347.",
+   "zh": "涨幅最大：Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые，₽288 → ₽347。"
+  },
+  "firstSeen": "2026-10-22T10:48:30.392Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-10-22T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 108,
+  "baseline": 86,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма ₽86 → ₽108.",
+   "zh": "涨幅最大：Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма，₽86 → ₽108。"
+  },
+  "firstSeen": "2026-10-22T10:48:30.392Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
+  "id": "jump|azithromycin|irkutsk|2026-10-22T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "irkutsk"
+  },
+  "value": 124,
+  "baseline": 95,
+  "title": {
+   "en": "3 Azithromycin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 3 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин 250мг 6 шт. капсулы Озон ₽95 → ₽124.",
+   "zh": "涨幅最大：Азитромицин 250мг 6 шт. капсулы Озон，₽95 → ₽124。"
+  },
+  "firstSeen": "2026-10-22T10:48:30.392Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
+  "id": "jump|amoxiclav|irkutsk|2026-10-22T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "irkutsk"
+  },
+  "value": 303,
+  "baseline": 259,
+  "title": {
+   "en": "1 Amoxicillin/clavulanate product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款阿莫西林克拉维酸商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь ₽259 → ₽303.",
+   "zh": "涨幅最大：Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь，₽259 → ₽303。"
+  },
+  "firstSeen": "2026-10-22T10:48:30.392Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
+  "id": "jump|masks|irkutsk|2026-10-22T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "subject": {
+   "type": "drug",
+   "drug": "masks",
+   "city": "irkutsk"
+  },
+  "value": 61,
+  "baseline": 48,
+  "title": {
+   "en": "2 Medical masks product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 2 款医用口罩商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Сенс маска медицинская трехслойная на резинке 5 шт. ₽48 → ₽61.",
+   "zh": "涨幅最大：Сенс маска медицинская трехслойная на резинке 5 шт.，₽48 → ₽61。"
+  },
+  "firstSeen": "2026-10-22T10:48:30.392Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
+  "id": "jump|paracetamol|irkutsk|2026-10-22T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T10:50:10.002Z",
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 86,
+  "baseline": 65,
+  "title": {
+   "en": "2 Paracetamol (control) product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 2 款对乙酰氨基酚（对照）商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк ₽65 → ₽86.",
+   "zh": "涨幅最大：Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк，₽65 → ₽86。"
+  },
+  "firstSeen": "2026-10-22T10:48:30.392Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +187,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T10:38:30.951Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
   "active": true
  },
  {
@@ -44,7 +213,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-22T10:38:30.951Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|gentamicin|irkutsk",
@@ -69,7 +238,7 @@
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-10-22T10:38:30.951Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|irkobl",
@@ -90,7 +259,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T10:38:30.951Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
   "active": true
  },
  {
@@ -112,7 +281,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T10:38:30.951Z",
+  "lastSeen": "2026-10-22T10:48:30.392Z",
   "active": true
  },
  {
@@ -408,31 +577,6 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 52（峰值 1266）。"
   },
   "firstSeen": "2026-10-14T16:39:22.601Z",
-  "lastSeen": "2026-10-19T00:16:28.521Z",
-  "active": false
- },
- {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-18T21:45:07.447Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 4,
-  "baseline": 4,
-  "title": {
-   "en": "Paracetamol (control) availability down 75% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 75%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 4; availability count 49 vs peak 197.",
-   "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 49（峰值 197）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-19T00:16:28.521Z",
   "active": false
  },
