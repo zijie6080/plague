@@ -1,5 +1,54 @@
 [
  {
+  "id": "jump|azithromycin|belarus|2026-10-22T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-22T17:11:10.932Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "belarus"
+  },
+  "value": 9,
+  "baseline": 0.8,
+  "title": {
+   "en": "1 Azithromycin product(s) jumped ≥15% in Belarus (national)",
+   "zh": "白俄罗斯全国有 1 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Сумамед Форте порошок для приг. суспензии внутр. 200мг/5мл 20мл N1 ₽0.8 → ₽9.",
+   "zh": "涨幅最大：Сумамед Форте порошок для приг. суспензии внутр. 200мг/5мл 20мл N1，₽0.8 → ₽9。"
+  },
+  "firstSeen": "2026-10-22T17:09:06.436Z",
+  "lastSeen": "2026-10-22T17:09:06.436Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-22T17:10:47.577Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 77% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 77%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 12 vs peak 53.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 53）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-22T17:09:06.436Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +67,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T16:59:06.953Z",
+  "lastSeen": "2026-10-22T17:09:06.436Z",
   "active": true
  },
  {
@@ -40,7 +89,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T16:59:06.953Z",
+  "lastSeen": "2026-10-22T17:09:06.436Z",
   "active": true
  },
  {
@@ -62,32 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T16:59:06.953Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-22T14:00:09.274Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 77% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 77%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 12 vs peak 53.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 53）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-22T16:59:06.953Z",
+  "lastSeen": "2026-10-22T17:09:06.436Z",
   "active": true
  },
  {
