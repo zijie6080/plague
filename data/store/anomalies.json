@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-22T23:40:40.022Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (93 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 93 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-22T23:40:12.808Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-22T23:40:36.008Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (93 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 93 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-22T23:40:12.808Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 49）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-22T23:30:12.611Z",
+  "lastSeen": "2026-10-22T23:40:12.808Z",
   "active": true
  },
  {
@@ -143,51 +187,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T23:30:12.611Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-22T19:39:33.697Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (92 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 92 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T23:30:12.611Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-22T19:39:30.042Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (92 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 92 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-22T23:30:12.611Z",
+  "lastSeen": "2026-10-22T23:40:12.808Z",
   "active": true
  },
  {
