@@ -1,5 +1,29 @@
 [
  {
+  "id": "jump|azithromycin|belarus|2026-10-23T08",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-23T08:54:19.126Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "belarus"
+  },
+  "value": 1,
+  "baseline": 0.25,
+  "title": {
+   "en": "1 Azithromycin product(s) jumped ≥15% in Belarus (national)",
+   "zh": "白俄罗斯全国有 1 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин капсулы 250мг N6 ₽0.25 → ₽1.",
+   "zh": "涨幅最大：Азитромицин капсулы 250мг N6，₽0.25 → ₽1。"
+  },
+  "firstSeen": "2026-10-23T08:52:07.472Z",
+  "lastSeen": "2026-10-23T08:52:07.472Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +42,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-23T08:42:06.669Z",
+  "lastSeen": "2026-10-23T08:52:07.472Z",
   "active": true
  },
  {
@@ -40,7 +64,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-23T08:42:06.669Z",
+  "lastSeen": "2026-10-23T08:52:07.472Z",
   "active": true
  },
  {
@@ -62,7 +86,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-23T08:42:06.669Z",
+  "lastSeen": "2026-10-23T08:52:07.472Z",
   "active": true
  },
  {
