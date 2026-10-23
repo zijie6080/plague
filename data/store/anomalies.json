@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-23T02:42:28.738Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 76% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 76%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 12 vs peak 49.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 49）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-23T02:40:51.042Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-23T02:30:50.698Z",
+  "lastSeen": "2026-10-23T02:40:51.042Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-23T02:30:50.698Z",
+  "lastSeen": "2026-10-23T02:40:51.042Z",
   "active": true
  },
  {
@@ -62,32 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-23T02:30:50.698Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-22T23:32:03.755Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 76% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 76%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 12 vs peak 49.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 49）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-23T02:30:50.698Z",
+  "lastSeen": "2026-10-23T02:40:51.042Z",
   "active": true
  },
  {
