@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-25T16:33:19.208Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (109 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 109 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-25T16:33:15.695Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (109 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 109 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
+  "active": true
+ },
+ {
   "id": "jump|azithromycin|belarus|2026-10-25T14",
   "rule": "price_jump",
   "severity": "watch",
@@ -20,7 +64,7 @@
    "zh": "涨幅最大：Азитромицин Фармлэнд таблетки покрытые оболочкой 500мг N6，₽7 → ₽9。"
   },
   "firstSeen": "2026-10-25T14:32:52.770Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
   "active": true
  },
  {
@@ -45,7 +89,7 @@
    "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 117（峰值 390）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
   "active": true
  },
  {
@@ -70,7 +114,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
   "active": true
  },
  {
@@ -95,7 +139,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 844（峰值 3341）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
   "active": true
  },
  {
@@ -117,51 +161,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-25T12:32:37.567Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (108 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 108 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-25T12:32:34.289Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (108 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 108 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T16:22:53.133Z",
+  "lastSeen": "2026-10-25T16:32:52.519Z",
   "active": true
  },
  {
