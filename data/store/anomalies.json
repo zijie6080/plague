@@ -3,7 +3,7 @@
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-25T05:11:09.485Z",
+  "t": "2026-10-25T08:21:12.815Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -21,14 +21,14 @@
    "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 117（峰值 390）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-25T08:09:32.312Z",
+  "lastSeen": "2026-10-25T08:19:32.316Z",
   "active": true
  },
  {
   "id": "stock|gentamicin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-25T05:11:09.485Z",
+  "t": "2026-10-25T08:21:12.815Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -46,7 +46,32 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-25T08:09:32.312Z",
+  "lastSeen": "2026-10-25T08:19:32.316Z",
+  "active": true
+ },
+ {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-25T08:21:12.815Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 17,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 75% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 75%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 17; availability count 844 vs peak 3341.",
+   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 844（峰值 3341）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-25T08:19:32.316Z",
   "active": true
  },
  {
@@ -75,31 +100,6 @@
   "active": false
  },
  {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-25T05:11:09.485Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 75% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 75%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 17; availability count 844 vs peak 3341.",
-   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 844（峰值 3341）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T08:09:32.312Z",
-  "active": true
- },
- {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -118,7 +118,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T08:09:32.312Z",
+  "lastSeen": "2026-10-25T08:19:32.316Z",
   "active": true
  },
  {
@@ -140,7 +140,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T08:09:32.312Z",
+  "lastSeen": "2026-10-25T08:19:32.316Z",
   "active": true
  },
  {
@@ -162,7 +162,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-25T08:09:32.312Z",
+  "lastSeen": "2026-10-25T08:19:32.316Z",
   "active": true
  },
  {
