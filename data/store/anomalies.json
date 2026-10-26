@@ -1,5 +1,228 @@
 [
  {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 16,
+  "baseline": 19,
+  "title": {
+   "en": "Azithromycin availability down 83% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 83%"
+  },
+  "detail": {
+   "en": "In-stock products 16 vs 72h peak 19; availability count 46 vs peak 275.",
+   "zh": "有现货商品 16 款（72 小时峰值 19 款）；可购量 46（峰值 275）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 3,
+  "baseline": 4,
+  "title": {
+   "en": "Paracetamol (control) availability down 99% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 99%"
+  },
+  "detail": {
+   "en": "In-stock products 3 vs 72h peak 4; availability count 13 vs peak 883.",
+   "zh": "有现货商品 3 款（72 小时峰值 4 款）；可购量 13（峰值 883）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 18,
+  "baseline": 19,
+  "title": {
+   "en": "Levofloxacin availability down 72% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 72%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 19; availability count 112 vs peak 394.",
+   "zh": "有现货商品 18 款（72 小时峰值 19 款）；可购量 112（峰值 394）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "irkutsk"
+  },
+  "value": 1,
+  "baseline": 1,
+  "title": {
+   "en": "Gentamicin availability down 67% in Irkutsk",
+   "zh": "伊尔库茨克庆大霉素可购量下降 67%"
+  },
+  "detail": {
+   "en": "In-stock products 1 vs 72h peak 1; availability count 1 vs peak 3.",
+   "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "moscow"
+  },
+  "value": 4,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 79% in Moscow",
+   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 79%"
+  },
+  "detail": {
+   "en": "In-stock products 4 vs 72h peak 5; availability count 26 vs peak 122.",
+   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 26（峰值 122）。"
+  },
+  "firstSeen": "2026-10-12T01:35:41.188Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "moscow"
+  },
+  "value": 2,
+  "baseline": 2,
+  "title": {
+   "en": "Gentamicin availability down 70% in Moscow",
+   "zh": "莫斯科庆大霉素可购量下降 70%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 2; availability count 3 vs peak 10.",
+   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 3（峰值 10）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 94% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 35 vs peak 582.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 35（峰值 582）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-10-26T15",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 315,
+  "baseline": 138,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой ₽138 → ₽315.",
+   "zh": "涨幅最大：Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой，₽138 → ₽315。"
+  },
+  "firstSeen": "2026-10-26T15:48:01.573Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|shelekhov|2026-10-26T15",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-26T15:49:42.293Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 658,
+  "baseline": 138,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Shelekhov",
+   "zh": "舍列霍夫有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой ₽138 → ₽658.",
+   "zh": "涨幅最大：Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой，₽138 → ₽658。"
+  },
+  "firstSeen": "2026-10-26T15:48:01.573Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +241,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T15:38:01.213Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
   "active": true
  },
  {
@@ -40,7 +263,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T15:38:01.213Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
   "active": true
  },
  {
@@ -62,32 +285,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T15:38:01.213Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-26T12:39:41.543Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 19,
-  "title": {
-   "en": "Azithromycin availability down 80% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 80%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 19; availability count 54 vs peak 275.",
-   "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 54（峰值 275）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-26T15:38:01.213Z",
+  "lastSeen": "2026-10-26T15:48:01.573Z",
   "active": true
  },
  {
@@ -113,31 +311,6 @@
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-10-26T15:38:01.213Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-26T12:39:41.543Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 3,
-  "baseline": 4,
-  "title": {
-   "en": "Paracetamol (control) availability down 64% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 64%"
-  },
-  "detail": {
-   "en": "In-stock products 3 vs 72h peak 4; availability count 661 vs peak 1820.",
-   "zh": "有现货商品 3 款（72 小时峰值 4 款）；可购量 661（峰值 1820）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-10-26T15:08:01.477Z",
   "active": false
  },
  {
@@ -161,31 +334,6 @@
    "zh": "涨幅最大：Ципрофлоксацин таблетки покрытые оболочкой 250мг N10，₽0.1 → ₽0.3。"
   },
   "firstSeen": "2026-10-26T09:27:16.196Z",
-  "lastSeen": "2026-10-26T12:28:01.409Z",
-  "active": false
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-26T09:29:58.313Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 19,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 71% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 71%"
-  },
-  "detail": {
-   "en": "In-stock products 19 vs 72h peak 19; availability count 116 vs peak 394.",
-   "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 116（峰值 394）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-10-26T12:28:01.409Z",
   "active": false
  },
@@ -331,31 +479,6 @@
   },
   "firstSeen": "2026-10-25T20:53:38.502Z",
   "lastSeen": "2026-10-25T23:53:39.258Z",
-  "active": false
- },
- {
-  "id": "stock|gentamicin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-25T17:44:50.578Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "irkutsk"
-  },
-  "value": 1,
-  "baseline": 1,
-  "title": {
-   "en": "Gentamicin availability down 67% in Irkutsk",
-   "zh": "伊尔库茨克庆大霉素可购量下降 67%"
-  },
-  "detail": {
-   "en": "In-stock products 1 vs 72h peak 1; availability count 1 vs peak 3.",
-   "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-25T20:43:39.145Z",
   "active": false
  },
  {
@@ -870,31 +993,6 @@
   "active": false
  },
  {
-  "id": "stock|paracetamol|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-19T07:09:00.228Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "moscow"
-  },
-  "value": 4,
-  "baseline": 4,
-  "title": {
-   "en": "Paracetamol (control) availability down 70% in Moscow",
-   "zh": "莫斯科对乙酰氨基酚（对照）可购量下降 70%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 4; availability count 16 vs peak 53.",
-   "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 16（峰值 53）。"
-  },
-  "firstSeen": "2026-10-12T01:35:41.188Z",
-  "lastSeen": "2026-10-19T10:07:50.789Z",
-  "active": false
- },
- {
   "id": "stock|doxycycline|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -1284,31 +1382,6 @@
   },
   "firstSeen": "2026-10-11T22:25:12.829Z",
   "lastSeen": "2026-10-12T01:25:40.387Z",
-  "active": false
- },
- {
-  "id": "stock|gentamicin|moscow",
-  "rule": "availability_drop",
-  "severity": "alert",
-  "t": "2026-10-11T09:47:09.853Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "moscow"
-  },
-  "value": 0,
-  "baseline": 2,
-  "title": {
-   "en": "Gentamicin: no in-stock listings in Moscow",
-   "zh": "莫斯科庆大霉素已无现货在售"
-  },
-  "detail": {
-   "en": "In-stock products 0 vs 72h peak 2; availability count 0 vs peak 4.",
-   "zh": "有现货商品 0 款（72 小时峰值 2 款）；可购量 0（峰值 4）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-11T12:44:12.013Z",
   "active": false
  },
  {
@@ -1828,31 +1901,6 @@
   },
   "firstSeen": "2026-10-09T08:38:45.131Z",
   "lastSeen": "2026-10-10T07:51:04.699Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-08T05:37:18.318Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 11,
-  "baseline": 17,
-  "title": {
-   "en": "Ciprofloxacin availability down 60% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 60%"
-  },
-  "detail": {
-   "en": "In-stock products 11 vs 72h peak 17; availability count 16 vs peak 40.",
-   "zh": "有现货商品 11 款（72 小时峰值 17 款）；可购量 16（峰值 40）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-08T08:36:10.888Z",
   "active": false
  },
  {
