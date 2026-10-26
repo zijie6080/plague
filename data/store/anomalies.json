@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-26T12:48:28.410Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (114 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 114 次）"
+  },
+  "detail": {
+   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-26T12:48:01.270Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-26T12:48:24.663Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (114 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 114 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-26T12:48:01.270Z",
+  "active": true
+ },
+ {
   "id": "stock|azithromycin|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 54（峰值 275）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-26T12:38:00.704Z",
+  "lastSeen": "2026-10-26T12:48:01.270Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "同款商品价格中位数较首次观测为 124.4（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-10-26T12:38:00.704Z",
+  "lastSeen": "2026-10-26T12:48:01.270Z",
   "active": true
  },
  {
@@ -71,7 +115,7 @@
    "zh": "有现货商品 3 款（72 小时峰值 4 款）；可购量 661（峰值 1820）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-10-26T12:38:00.704Z",
+  "lastSeen": "2026-10-26T12:48:01.270Z",
   "active": true
  },
  {
@@ -142,51 +186,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T12:38:00.704Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-26T08:47:42.757Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (113 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 113 次）"
-  },
-  "detail": {
-   "en": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
-   "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T12:38:00.704Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-26T08:47:38.930Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (113 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 113 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T12:38:00.704Z",
+  "lastSeen": "2026-10-26T12:48:01.270Z",
   "active": true
  },
  {
