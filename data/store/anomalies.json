@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-26T06:26:11.435Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 18,
+  "baseline": 19,
+  "title": {
+   "en": "Azithromycin availability down 79% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 79%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 19; availability count 57 vs peak 275.",
+   "zh": "有现货商品 18 款（72 小时峰值 19 款）；可购量 57（峰值 275）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-10-26T06:24:17.903Z",
+  "active": true
+ },
+ {
+  "id": "price|paracetamol|irkutsk",
+  "rule": "price_index",
+  "severity": "watch",
+  "t": "2026-10-26T06:26:11.435Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 124.4,
+  "baseline": 100,
+  "title": {
+   "en": "Paracetamol (control) price +24.4% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）价格 +24.4%"
+  },
+  "detail": {
+   "en": "Median same-product price relative to first observation is 124.4 (100 = baseline). Thresholds: +10% watch, +25% alert.",
+   "zh": "同款商品价格中位数较首次观测为 124.4（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-10-26T06:24:17.903Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T06:14:18.515Z",
+  "lastSeen": "2026-10-26T06:24:17.903Z",
   "active": true
  },
  {
@@ -40,7 +90,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T06:14:18.515Z",
+  "lastSeen": "2026-10-26T06:24:17.903Z",
   "active": true
  },
  {
@@ -62,57 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-26T06:14:18.515Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-26T03:16:04.463Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 18,
-  "baseline": 19,
-  "title": {
-   "en": "Azithromycin availability down 80% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 80%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 19; availability count 56 vs peak 275.",
-   "zh": "有现货商品 18 款（72 小时峰值 19 款）；可购量 56（峰值 275）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-26T06:14:18.515Z",
-  "active": true
- },
- {
-  "id": "price|paracetamol|irkutsk",
-  "rule": "price_index",
-  "severity": "watch",
-  "t": "2026-10-26T03:16:04.463Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 120.5,
-  "baseline": 100,
-  "title": {
-   "en": "Paracetamol (control) price +20.5% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）价格 +20.5%"
-  },
-  "detail": {
-   "en": "Median same-product price relative to first observation is 120.5 (100 = baseline). Thresholds: +10% watch, +25% alert.",
-   "zh": "同款商品价格中位数较首次观测为 120.5（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-10-26T06:14:18.515Z",
+  "lastSeen": "2026-10-26T06:24:17.903Z",
   "active": true
  },
  {
