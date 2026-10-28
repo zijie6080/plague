@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-28T18:09:47.094Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (93 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 93 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
@@ -64,7 +86,7 @@
    "zh": "涨幅最大：Ципронекс таблетки покрытые оболочкой 500мг N10，₽5.5 → ₽10.46。"
   },
   "firstSeen": "2026-10-28T15:09:24.039Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
@@ -89,7 +111,7 @@
    "zh": "有现货商品 19 款（72 小时峰值 20 款）；可购量 139（峰值 394）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
@@ -114,7 +136,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 3）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
@@ -139,7 +161,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
@@ -164,29 +186,7 @@
    "zh": "有现货商品 29 款（72 小时峰值 29 款）；可购量 118（峰值 420）。"
   },
   "firstSeen": "2026-10-28T08:48:04.633Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-28T13:59:47.020Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (92 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 92 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-28T17:59:24.616Z",
+  "lastSeen": "2026-10-28T18:09:23.736Z",
   "active": true
  },
  {
