@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|azithromycin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-29T16:25:47.959Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "irkutsk"
+  },
+  "value": 29,
+  "baseline": 29,
+  "title": {
+   "en": "Azithromycin availability down 72% in Irkutsk",
+   "zh": "伊尔库茨克阿奇霉素可购量下降 72%"
+  },
+  "detail": {
+   "en": "In-stock products 29 vs 72h peak 29; availability count 118 vs peak 420.",
+   "zh": "有现货商品 29 款（72 小时峰值 29 款）；可购量 118（峰值 420）。"
+  },
+  "firstSeen": "2026-10-28T08:48:04.633Z",
+  "lastSeen": "2026-10-29T16:24:05.314Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-29T16:14:05.096Z",
+  "lastSeen": "2026-10-29T16:24:05.314Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-29T16:14:05.096Z",
+  "lastSeen": "2026-10-29T16:24:05.314Z",
   "active": true
  },
  {
@@ -62,32 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-29T16:14:05.096Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-29T13:15:48.755Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "irkutsk"
-  },
-  "value": 29,
-  "baseline": 29,
-  "title": {
-   "en": "Azithromycin availability down 72% in Irkutsk",
-   "zh": "伊尔库茨克阿奇霉素可购量下降 72%"
-  },
-  "detail": {
-   "en": "In-stock products 29 vs 72h peak 29; availability count 118 vs peak 420.",
-   "zh": "有现货商品 29 款（72 小时峰值 29 款）；可购量 118（峰值 420）。"
-  },
-  "firstSeen": "2026-10-28T08:48:04.633Z",
-  "lastSeen": "2026-10-29T16:14:05.096Z",
+  "lastSeen": "2026-10-29T16:24:05.314Z",
   "active": true
  },
  {
