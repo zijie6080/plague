@@ -3,7 +3,7 @@
   "id": "stock|azithromycin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-29T22:46:39.444Z",
+  "t": "2026-10-30T01:49:24.142Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -21,7 +21,57 @@
    "zh": "有现货商品 29 款（72 小时峰值 29 款）；可购量 118（峰值 420）。"
   },
   "firstSeen": "2026-10-28T08:48:04.633Z",
-  "lastSeen": "2026-10-30T01:37:36.748Z",
+  "lastSeen": "2026-10-30T01:47:36.698Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-30T01:49:24.142Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 94% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 34 vs peak 527.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 34（峰值 527）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-30T01:47:36.698Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-30T01:49:24.142Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "moscow"
+  },
+  "value": 20,
+  "baseline": 21,
+  "title": {
+   "en": "Ciprofloxacin availability down 100% in Moscow",
+   "zh": "莫斯科环丙沙星可购量下降 100%"
+  },
+  "detail": {
+   "en": "In-stock products 20 vs 72h peak 21; availability count 189 vs peak 50443.",
+   "zh": "有现货商品 20 款（72 小时峰值 21 款）；可购量 189（峰值 50443）。"
+  },
+  "firstSeen": "2026-10-23T18:23:28.300Z",
+  "lastSeen": "2026-10-30T01:47:36.698Z",
   "active": true
  },
  {
@@ -47,7 +97,7 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|azithromycin|shelekhov",
@@ -72,7 +122,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|paracetamol|shelekhov",
@@ -97,32 +147,7 @@
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-29T22:46:39.444Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 13,
-  "title": {
-   "en": "Ciprofloxacin availability down 94% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 13; availability count 34 vs peak 527.",
-   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 34（峰值 527）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|ciprofloxacin|irkutsk|2026-10-29T22",
@@ -146,7 +171,7 @@
   },
   "firstSeen": "2026-10-29T22:44:56.362Z",
   "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|ciprofloxacin|shelekhov|2026-10-29T22",
@@ -170,7 +195,7 @@
   },
   "firstSeen": "2026-10-29T22:44:56.362Z",
   "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|masks|moscow",
@@ -195,7 +220,7 @@
   },
   "firstSeen": "2026-10-29T22:44:56.362Z",
   "lastSeen": "2026-10-30T01:37:36.748Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -216,7 +241,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-30T01:37:36.748Z",
+  "lastSeen": "2026-10-30T01:47:36.698Z",
   "active": true
  },
  {
@@ -238,7 +263,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-30T01:37:36.748Z",
+  "lastSeen": "2026-10-30T01:47:36.698Z",
   "active": true
  },
  {
@@ -260,7 +285,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-30T01:37:36.748Z",
+  "lastSeen": "2026-10-30T01:47:36.698Z",
   "active": true
  },
  {
@@ -359,31 +384,6 @@
    "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-29T03:32:48.413Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-29T00:41:52.882Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "moscow"
-  },
-  "value": 20,
-  "baseline": 21,
-  "title": {
-   "en": "Ciprofloxacin availability down 100% in Moscow",
-   "zh": "莫斯科环丙沙星可购量下降 100%"
-  },
-  "detail": {
-   "en": "In-stock products 20 vs 72h peak 21; availability count 186 vs peak 50443.",
-   "zh": "有现货商品 20 款（72 小时峰值 21 款）；可购量 186（峰值 50443）。"
-  },
-  "firstSeen": "2026-10-23T18:23:28.300Z",
   "lastSeen": "2026-10-29T03:32:48.413Z",
   "active": false
  },
