@@ -1,5 +1,105 @@
 [
  {
+  "id": "stock|azithromycin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-30T04:59:54.992Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "irkutsk"
+  },
+  "value": 29,
+  "baseline": 29,
+  "title": {
+   "en": "Azithromycin availability down 72% in Irkutsk",
+   "zh": "伊尔库茨克阿奇霉素可购量下降 72%"
+  },
+  "detail": {
+   "en": "In-stock products 29 vs 72h peak 29; availability count 118 vs peak 420.",
+   "zh": "有现货商品 29 款（72 小时峰值 29 款）；可购量 118（峰值 420）。"
+  },
+  "firstSeen": "2026-10-28T08:48:04.633Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-30T04:59:54.992Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 94% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 30 vs peak 526.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 30（峰值 526）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-30T04:59:54.992Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "moscow"
+  },
+  "value": 20,
+  "baseline": 21,
+  "title": {
+   "en": "Ciprofloxacin availability down 100% in Moscow",
+   "zh": "莫斯科环丙沙星可购量下降 100%"
+  },
+  "detail": {
+   "en": "In-stock products 20 vs 72h peak 21; availability count 189 vs peak 50443.",
+   "zh": "有现货商品 20 款（72 小时峰值 21 款）；可购量 189（峰值 50443）。"
+  },
+  "firstSeen": "2026-10-23T18:23:28.300Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-30T04:59:54.992Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "moscow"
+  },
+  "value": 2,
+  "baseline": 2,
+  "title": {
+   "en": "Gentamicin availability down 70% in Moscow",
+   "zh": "莫斯科庆大霉素可购量下降 70%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 2; availability count 3 vs peak 10.",
+   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 3（峰值 10）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +118,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-30T04:48:18.907Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
   "active": true
  },
  {
@@ -40,7 +140,7 @@
    "zh": "UNABLE_TO_VERIFY_LEAF_SIGNATURE"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-30T04:48:18.907Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
   "active": true
  },
  {
@@ -62,82 +162,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-30T04:48:18.907Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-30T01:49:24.142Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "irkutsk"
-  },
-  "value": 29,
-  "baseline": 29,
-  "title": {
-   "en": "Azithromycin availability down 72% in Irkutsk",
-   "zh": "伊尔库茨克阿奇霉素可购量下降 72%"
-  },
-  "detail": {
-   "en": "In-stock products 29 vs 72h peak 29; availability count 118 vs peak 420.",
-   "zh": "有现货商品 29 款（72 小时峰值 29 款）；可购量 118（峰值 420）。"
-  },
-  "firstSeen": "2026-10-28T08:48:04.633Z",
-  "lastSeen": "2026-10-30T04:48:18.907Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-30T01:49:24.142Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 13,
-  "title": {
-   "en": "Ciprofloxacin availability down 94% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 13; availability count 34 vs peak 526.",
-   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 34（峰值 526）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-30T04:48:18.907Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-30T01:49:24.142Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "moscow"
-  },
-  "value": 20,
-  "baseline": 21,
-  "title": {
-   "en": "Ciprofloxacin availability down 100% in Moscow",
-   "zh": "莫斯科环丙沙星可购量下降 100%"
-  },
-  "detail": {
-   "en": "In-stock products 20 vs 72h peak 21; availability count 189 vs peak 50443.",
-   "zh": "有现货商品 20 款（72 小时峰值 21 款）；可购量 189（峰值 50443）。"
-  },
-  "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-10-30T04:48:18.907Z",
+  "lastSeen": "2026-10-30T04:58:18.754Z",
   "active": true
  },
  {
@@ -360,31 +385,6 @@
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-10-29T12:34:04.830Z",
-  "active": false
- },
- {
-  "id": "stock|gentamicin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-29T00:41:52.882Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "moscow"
-  },
-  "value": 2,
-  "baseline": 2,
-  "title": {
-   "en": "Gentamicin availability down 80% in Moscow",
-   "zh": "莫斯科庆大霉素可购量下降 80%"
-  },
-  "detail": {
-   "en": "In-stock products 2 vs 72h peak 2; availability count 2 vs peak 10.",
-   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-29T03:32:48.413Z",
   "active": false
  },
  {
