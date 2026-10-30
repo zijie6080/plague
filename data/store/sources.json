@@ -2,6 +2,14 @@
  "rpn-telegram": {
   "runs": [
    {
+    "t": "2026-10-30T18:19:43.395Z",
+    "ok": true,
+    "ms": 610,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-30T18:09:43.392Z",
     "ok": true,
     "ms": 892,
@@ -760,27 +768,27 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-30T02:17:37.418Z",
-    "ok": true,
-    "ms": 772,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T18:09:43.392Z",
+  "lastRun": "2026-10-30T18:19:43.395Z",
   "lastStatus": 200,
-  "lastMs": 892,
+  "lastMs": 610,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T18:09:43.392Z",
+  "lastOk": "2026-10-30T18:19:43.395Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
  "rpn-site": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:05.880Z",
+    "ok": false,
+    "ms": 10496,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
    {
     "t": "2026-10-30T14:19:18.460Z",
     "ok": false,
@@ -1540,22 +1548,14 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
-   {
-    "t": "2026-10-14T12:39:08.751Z",
-    "ok": false,
-    "ms": 10495,
-    "n": 0,
-    "fresh": 0,
-    "status": 0
    }
   ],
-  "lastRun": "2026-10-30T14:19:18.460Z",
+  "lastRun": "2026-10-30T18:20:05.880Z",
   "lastStatus": 0,
-  "lastMs": 10493,
+  "lastMs": 10496,
   "lastError": "UND_ERR_CONNECT_TIMEOUT",
   "idle": false,
-  "consecutiveFailures": 138,
+  "consecutiveFailures": 139,
   "lastItems": 0
  },
  "rpn-38": {
@@ -2341,6 +2341,14 @@
  "irkobl": {
   "runs": [
    {
+    "t": "2026-10-30T18:20:37.535Z",
+    "ok": false,
+    "ms": 30013,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
+   {
     "t": "2026-10-30T14:19:22.216Z",
     "ok": false,
     "ms": 2189,
@@ -3099,26 +3107,26 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
-   {
-    "t": "2026-10-14T12:39:12.770Z",
-    "ok": false,
-    "ms": 1291,
-    "n": 0,
-    "fresh": 0,
-    "status": 0
    }
   ],
-  "lastRun": "2026-10-30T14:19:22.216Z",
-  "lastStatus": 403,
-  "lastMs": 2189,
-  "lastError": "HTTP 403",
+  "lastRun": "2026-10-30T18:20:37.535Z",
+  "lastStatus": 0,
+  "lastMs": 30013,
+  "lastError": "HTTP 0",
   "idle": false,
-  "consecutiveFailures": 138,
+  "consecutiveFailures": 139,
   "lastItems": 0
  },
  "us-embassy": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:37.724Z",
+    "ok": true,
+    "ms": 167,
+    "n": 1,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T17:49:43.880Z",
     "ok": true,
@@ -3878,27 +3886,27 @@
     "n": 1,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-28T17:39:50.941Z",
-    "ok": true,
-    "ms": 79,
-    "n": 1,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:49:43.880Z",
+  "lastRun": "2026-10-30T18:20:37.724Z",
   "lastStatus": 200,
-  "lastMs": 151,
+  "lastMs": 167,
   "lastError": null,
   "idle": false,
   "consecutiveFailures": 0,
   "lastItems": 1,
-  "lastOk": "2026-10-30T17:49:43.880Z"
+  "lastOk": "2026-10-30T18:20:37.724Z"
  },
  "who-news": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:38.207Z",
+    "ok": true,
+    "ms": 399,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T17:49:44.246Z",
     "ok": true,
@@ -4658,27 +4666,27 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-28T17:39:51.170Z",
-    "ok": true,
-    "ms": 134,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:49:44.246Z",
+  "lastRun": "2026-10-30T18:20:38.207Z",
   "lastStatus": 200,
-  "lastMs": 300,
+  "lastMs": 399,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:49:44.246Z",
+  "lastOk": "2026-10-30T18:20:38.207Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
  "who-don": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:38.309Z",
+    "ok": true,
+    "ms": 76,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T17:19:44.827Z",
     "ok": true,
@@ -5438,27 +5446,27 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-26T16:58:28.851Z",
-    "ok": true,
-    "ms": 40,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:19:44.827Z",
+  "lastRun": "2026-10-30T18:20:38.309Z",
   "lastStatus": 200,
-  "lastMs": 43,
+  "lastMs": 76,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:19:44.827Z",
+  "lastOk": "2026-10-30T18:20:38.309Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
  "un-news": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:38.413Z",
+    "ok": true,
+    "ms": 100,
+    "n": 2,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T17:49:44.372Z",
     "ok": true,
@@ -6218,27 +6226,27 @@
     "n": 2,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-28T17:39:51.364Z",
-    "ok": true,
-    "ms": 86,
-    "n": 2,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:49:44.372Z",
+  "lastRun": "2026-10-30T18:20:38.413Z",
   "lastStatus": 200,
-  "lastMs": 99,
+  "lastMs": 100,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:49:44.372Z",
+  "lastOk": "2026-10-30T18:20:38.413Z",
   "consecutiveFailures": 0,
   "lastItems": 2
  },
  "ecdc": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:38.862Z",
+    "ok": true,
+    "ms": 440,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T17:19:45.391Z",
     "ok": true,
@@ -6998,22 +7006,14 @@
     "n": 1,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-26T16:58:30.069Z",
-    "ok": true,
-    "ms": 583,
-    "n": 1,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:19:45.391Z",
+  "lastRun": "2026-10-30T18:20:38.862Z",
   "lastStatus": 200,
-  "lastMs": 426,
+  "lastMs": 440,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:19:45.391Z",
+  "lastOk": "2026-10-30T18:20:38.862Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
@@ -7800,6 +7800,14 @@
  "gnews-en": {
   "runs": [
    {
+    "t": "2026-10-30T18:20:39.145Z",
+    "ok": true,
+    "ms": 279,
+    "n": 10,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-30T18:09:43.723Z",
     "ok": true,
     "ms": 322,
@@ -8558,27 +8566,27 @@
     "n": 10,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-30T00:57:38.346Z",
-    "ok": true,
-    "ms": 233,
-    "n": 10,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T18:09:43.723Z",
+  "lastRun": "2026-10-30T18:20:39.145Z",
   "lastStatus": 200,
-  "lastMs": 322,
+  "lastMs": 279,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T18:09:43.723Z",
+  "lastOk": "2026-10-30T18:20:39.145Z",
   "consecutiveFailures": 0,
-  "lastItems": 9
+  "lastItems": 10
  },
  "gnews-ru": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:39.395Z",
+    "ok": true,
+    "ms": 247,
+    "n": 9,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T18:09:43.983Z",
     "ok": true,
@@ -9338,27 +9346,27 @@
     "n": 4,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-30T00:57:38.573Z",
-    "ok": true,
-    "ms": 224,
-    "n": 4,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T18:09:43.983Z",
+  "lastRun": "2026-10-30T18:20:39.395Z",
   "lastStatus": 200,
-  "lastMs": 256,
+  "lastMs": 247,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T18:09:43.983Z",
+  "lastOk": "2026-10-30T18:20:39.395Z",
   "consecutiveFailures": 0,
   "lastItems": 9
  },
  "gnews-zh": {
   "runs": [
+   {
+    "t": "2026-10-30T18:20:39.626Z",
+    "ok": true,
+    "ms": 229,
+    "n": 5,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-10-30T17:59:43.919Z",
     "ok": true,
@@ -10118,22 +10126,14 @@
     "n": 5,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-29T10:13:28.007Z",
-    "ok": true,
-    "ms": 216,
-    "n": 6,
-    "fresh": 1,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:59:43.919Z",
+  "lastRun": "2026-10-30T18:20:39.626Z",
   "lastStatus": 200,
-  "lastMs": 206,
+  "lastMs": 229,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:59:43.919Z",
+  "lastOk": "2026-10-30T18:20:39.626Z",
   "consecutiveFailures": 0,
   "lastItems": 5
  },
@@ -12480,6 +12480,14 @@
  "ria": {
   "runs": [
    {
+    "t": "2026-10-30T18:20:40.963Z",
+    "ok": true,
+    "ms": 979,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-30T17:59:45.423Z",
     "ok": true,
     "ms": 988,
@@ -13238,22 +13246,14 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-29T10:13:34.280Z",
-    "ok": true,
-    "ms": 5907,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:59:45.423Z",
+  "lastRun": "2026-10-30T18:20:40.963Z",
   "lastStatus": 200,
-  "lastMs": 988,
+  "lastMs": 979,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:59:45.423Z",
+  "lastOk": "2026-10-30T18:20:40.963Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
@@ -14820,6 +14820,14 @@
  "gnews-official": {
   "runs": [
    {
+    "t": "2026-10-30T18:20:39.972Z",
+    "ok": true,
+    "ms": 340,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-10-30T17:59:44.422Z",
     "ok": true,
     "ms": 483,
@@ -15578,22 +15586,14 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-10-29T10:13:28.361Z",
-    "ok": true,
-    "ms": 336,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-10-30T17:59:44.422Z",
+  "lastRun": "2026-10-30T18:20:39.972Z",
   "lastStatus": 200,
-  "lastMs": 483,
+  "lastMs": 340,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-10-30T17:59:44.422Z",
+  "lastOk": "2026-10-30T18:20:39.972Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
