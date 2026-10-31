@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-31T18:44:47.445Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (145 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 145 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-31T18:44:44.316Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (145 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 145 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
+  "active": true
+ },
+ {
   "id": "jump|paracetamol|belarus|2026-10-31T15",
   "rule": "price_jump",
   "severity": "watch",
@@ -20,7 +64,7 @@
    "zh": "涨幅最大：Парацетамол таблетки 200мг N20，₽0.6 → ₽1.31。"
   },
   "firstSeen": "2026-10-31T15:44:20.861Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
   "active": true
  },
  {
@@ -45,7 +89,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 29（峰值 470）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
   "active": true
  },
  {
@@ -70,7 +114,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 191（峰值 46654）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
   "active": true
  },
  {
@@ -95,7 +139,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
   "active": true
  },
  {
@@ -120,7 +164,7 @@
    "zh": "有现货商品 24 款（72 小时峰值 24 款）；可购量 86（峰值 217）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
   "active": true
  },
  {
@@ -142,51 +186,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-31T14:34:47.351Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (144 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 144 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-31T14:34:44.337Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (144 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 144 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T18:34:20.648Z",
+  "lastSeen": "2026-10-31T18:44:20.803Z",
   "active": true
  },
  {
