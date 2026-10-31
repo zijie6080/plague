@@ -1,9 +1,33 @@
 [
  {
+  "id": "jump|azithromycin|belarus|2026-10-31T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-10-31T06:15:13.520Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "belarus"
+  },
+  "value": 5.06,
+  "baseline": 4.4,
+  "title": {
+   "en": "1 Azithromycin product(s) jumped ≥15% in Belarus (national)",
+   "zh": "白俄罗斯全国有 1 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин-Белмед капсулы 250мг N6 ₽4.4 → ₽5.06.",
+   "zh": "涨幅最大：Азитромицин-Белмед капсулы 250мг N6，₽4.4 → ₽5.06。"
+  },
+  "firstSeen": "2026-10-31T06:13:02.946Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
+  "active": true
+ },
+ {
   "id": "stock|ciprofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-10-31T03:04:47.048Z",
+  "t": "2026-10-31T06:14:50.026Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -21,14 +45,14 @@
    "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 29（峰值 470）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T06:03:02.965Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
   "active": true
  },
  {
   "id": "stock|ciprofloxacin|moscow",
   "rule": "availability_drop",
   "severity": "info",
-  "t": "2026-10-31T03:04:47.048Z",
+  "t": "2026-10-31T06:14:50.026Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -42,18 +66,18 @@
    "zh": "莫斯科环丙沙星可购量下降 100%"
   },
   "detail": {
-   "en": "In-stock products 20 vs 72h peak 20; availability count 192 vs peak 46689.",
-   "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 192（峰值 46689）。"
+   "en": "In-stock products 20 vs 72h peak 20; availability count 193 vs peak 46689.",
+   "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 193（峰值 46689）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-10-31T06:03:02.965Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
   "active": true
  },
  {
   "id": "stock|gentamicin|moscow",
   "rule": "availability_drop",
   "severity": "info",
-  "t": "2026-10-31T03:04:47.048Z",
+  "t": "2026-10-31T06:14:50.026Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -71,7 +95,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T06:03:02.965Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
   "active": true
  },
  {
@@ -93,7 +117,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T06:03:02.965Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
   "active": true
  },
  {
@@ -115,7 +139,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T06:03:02.965Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
   "active": true
  },
  {
@@ -137,7 +161,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T06:03:02.965Z",
+  "lastSeen": "2026-10-31T06:13:02.946Z",
   "active": true
  },
  {
