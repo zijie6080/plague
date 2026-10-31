@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-10-31T07:03:26.152Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (108 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 108 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
   "active": true
  },
  {
@@ -64,7 +86,7 @@
    "zh": "涨幅最大：Азитромицин-Белмед капсулы 250мг N6，₽4.4 → ₽5.06。"
   },
   "firstSeen": "2026-10-31T06:13:02.946Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
   "active": true
  },
  {
@@ -89,7 +111,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 29（峰值 470）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
   "active": true
  },
  {
@@ -114,7 +136,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 193（峰值 46689）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
   "active": true
  },
  {
@@ -139,29 +161,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-10-31T02:53:26.492Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (107 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 107 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T06:53:02.958Z",
+  "lastSeen": "2026-10-31T07:03:03.048Z",
   "active": true
  },
  {
