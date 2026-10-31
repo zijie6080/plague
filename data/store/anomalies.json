@@ -1,5 +1,80 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-10-31T03:04:47.048Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 94% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 29 vs peak 509.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 29（峰值 509）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-31T03:03:03.087Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-31T03:04:47.048Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "moscow"
+  },
+  "value": 20,
+  "baseline": 20,
+  "title": {
+   "en": "Ciprofloxacin availability down 100% in Moscow",
+   "zh": "莫斯科环丙沙星可购量下降 100%"
+  },
+  "detail": {
+   "en": "In-stock products 20 vs 72h peak 20; availability count 192 vs peak 50118.",
+   "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 192（峰值 50118）。"
+  },
+  "firstSeen": "2026-10-23T18:23:28.300Z",
+  "lastSeen": "2026-10-31T03:03:03.087Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-10-31T03:04:47.048Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "moscow"
+  },
+  "value": 2,
+  "baseline": 2,
+  "title": {
+   "en": "Gentamicin availability down 80% in Moscow",
+   "zh": "莫斯科庆大霉素可购量下降 80%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 2; availability count 2 vs peak 10.",
+   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-10-31T03:03:03.087Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +93,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T02:53:03.266Z",
+  "lastSeen": "2026-10-31T03:03:03.087Z",
   "active": true
  },
  {
@@ -40,7 +115,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T02:53:03.266Z",
+  "lastSeen": "2026-10-31T03:03:03.087Z",
   "active": true
  },
  {
@@ -62,7 +137,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-10-31T02:53:03.266Z",
+  "lastSeen": "2026-10-31T03:03:03.087Z",
   "active": true
  },
  {
@@ -89,81 +164,6 @@
   "firstSeen": "2026-10-28T08:48:04.633Z",
   "lastSeen": "2026-10-31T02:33:02.903Z",
   "active": false
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-30T23:54:01.607Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 13,
-  "title": {
-   "en": "Ciprofloxacin availability down 94% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 13; availability count 29 vs peak 509.",
-   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 29（峰值 509）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T02:53:03.266Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-30T23:54:01.607Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "moscow"
-  },
-  "value": 20,
-  "baseline": 20,
-  "title": {
-   "en": "Ciprofloxacin availability down 100% in Moscow",
-   "zh": "莫斯科环丙沙星可购量下降 100%"
-  },
-  "detail": {
-   "en": "In-stock products 20 vs 72h peak 20; availability count 187 vs peak 50118.",
-   "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 187（峰值 50118）。"
-  },
-  "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-10-31T02:53:03.266Z",
-  "active": true
- },
- {
-  "id": "stock|gentamicin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-10-30T23:54:01.607Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "moscow"
-  },
-  "value": 2,
-  "baseline": 2,
-  "title": {
-   "en": "Gentamicin availability down 80% in Moscow",
-   "zh": "莫斯科庆大霉素可购量下降 80%"
-  },
-  "detail": {
-   "en": "In-stock products 2 vs 72h peak 2; availability count 2 vs peak 10.",
-   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-10-31T02:53:03.266Z",
-  "active": true
  },
  {
   "id": "stock|amoxiclav|shelekhov",
