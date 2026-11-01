@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-01T07:18:43.845Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (114 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 114 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
   "active": true
  },
  {
@@ -64,7 +86,7 @@
    "zh": "涨幅最大：Азитромицин капсулы 250мг N6，₽2 → ₽4.8。"
   },
   "firstSeen": "2026-11-01T04:17:44.872Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
   "active": true
  },
  {
@@ -89,7 +111,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 29（峰值 464）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
   "active": true
  },
  {
@@ -114,7 +136,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 190（峰值 43025）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
   "active": true
  },
  {
@@ -139,29 +161,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-01T03:18:08.703Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (113 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 113 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-01T07:08:20.634Z",
+  "lastSeen": "2026-11-01T07:18:20.627Z",
   "active": true
  },
  {
