@@ -1,5 +1,74 @@
 [
  {
+  "id": "stock|gentamicin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-11-01T23:05:18.099Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "moscow"
+  },
+  "value": 2,
+  "baseline": 2,
+  "title": {
+   "en": "Gentamicin availability down 80% in Moscow",
+   "zh": "莫斯科庆大霉素可购量下降 80%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 2; availability count 2 vs peak 10.",
+   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-01T23:02:39.538Z",
+  "active": true
+ },
+ {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-01T23:03:34.376Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (152 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 152 次）"
+  },
+  "detail": {
+   "en": "HTTP 0",
+   "zh": "HTTP 0"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-01T23:02:39.538Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-01T23:03:02.799Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (152 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 152 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-01T23:02:39.538Z",
+  "active": true
+ },
+ {
   "id": "stock|ciprofloxacin|moscow",
   "rule": "availability_drop",
   "severity": "info",
@@ -25,31 +94,6 @@
   "active": false
  },
  {
-  "id": "stock|gentamicin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-11-01T20:03:43.601Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "moscow"
-  },
-  "value": 2,
-  "baseline": 2,
-  "title": {
-   "en": "Gentamicin availability down 80% in Moscow",
-   "zh": "莫斯科庆大霉素可购量下降 80%"
-  },
-  "detail": {
-   "en": "In-stock products 2 vs 72h peak 2; availability count 2 vs peak 10.",
-   "zh": "有现货商品 2 款（72 小时峰值 2 款）；可购量 2（峰值 10）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-01T22:52:39.641Z",
-  "active": true
- },
- {
   "id": "stock|amoxiclav|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -72,7 +116,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-01T22:52:39.641Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|irkutsk",
@@ -97,7 +141,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-11-01T22:52:39.641Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|shelekhov",
@@ -122,7 +166,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-01T22:52:39.641Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -143,51 +187,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-01T22:52:39.641Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-01T19:02:30.249Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (151 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 151 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-01T22:52:39.641Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-01T19:02:27.060Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (151 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 151 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-01T22:52:39.641Z",
+  "lastSeen": "2026-11-01T23:02:39.538Z",
   "active": true
  },
  {
