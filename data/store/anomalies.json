@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-03T12:58:58.250Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 17,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 85% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 85%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 17; availability count 743 vs peak 4951.",
+   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 743（峰值 4951）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-03T12:57:19.638Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-03T12:58:58.250Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 2,
+  "baseline": 4,
+  "title": {
+   "en": "Paracetamol (control) availability down 50% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 50%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 4; availability count 6818 vs peak 8286.",
+   "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 6818（峰值 8286）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-03T12:57:19.638Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-03T12:47:20.182Z",
+  "lastSeen": "2026-11-03T12:57:19.638Z",
   "active": true
  },
  {
@@ -40,7 +90,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-03T12:47:20.182Z",
+  "lastSeen": "2026-11-03T12:57:19.638Z",
   "active": true
  },
  {
@@ -62,57 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-03T12:47:20.182Z",
-  "active": true
- },
- {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-03T09:49:13.158Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 85% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 85%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 17; availability count 743 vs peak 4951.",
-   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 743（峰值 4951）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-03T12:47:20.182Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-03T09:49:13.158Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 2,
-  "baseline": 4,
-  "title": {
-   "en": "Paracetamol (control) availability down 50% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 50%"
-  },
-  "detail": {
-   "en": "In-stock products 2 vs 72h peak 4; availability count 6818 vs peak 8286.",
-   "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 6818（峰值 8286）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-03T12:47:20.182Z",
+  "lastSeen": "2026-11-03T12:57:19.638Z",
   "active": true
  },
  {
