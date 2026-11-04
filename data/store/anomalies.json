@@ -1,5 +1,102 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-04T20:38:40.219Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 4,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 87% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
+  },
+  "detail": {
+   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8281.",
+   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8281）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-04T20:36:29.853Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-04T20:38:40.219Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 4,
+  "baseline": 4,
+  "title": {
+   "en": "Paracetamol (control) availability down 82% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 82%"
+  },
+  "detail": {
+   "en": "In-stock products 4 vs 72h peak 4; availability count 34 vs peak 189.",
+   "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 34（峰值 189）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-04T20:36:29.853Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-04T20:38:40.219Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 11,
+  "baseline": 11,
+  "title": {
+   "en": "Ciprofloxacin availability down 67% in Shelekhov",
+   "zh": "舍列霍夫环丙沙星可购量下降 67%"
+  },
+  "detail": {
+   "en": "In-stock products 11 vs 72h peak 11; availability count 1443 vs peak 4351.",
+   "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1443（峰值 4351）。"
+  },
+  "firstSeen": "2026-10-14T04:06:03.385Z",
+  "lastSeen": "2026-11-04T20:36:29.853Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-04T20:36:53.097Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (135 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 135 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-04T20:36:29.853Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +115,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T20:26:29.915Z",
+  "lastSeen": "2026-11-04T20:36:29.853Z",
   "active": true
  },
  {
@@ -40,57 +137,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-04T17:28:23.241Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 4,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 87% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8281.",
-   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8281）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-04T17:28:23.241Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 4,
-  "baseline": 4,
-  "title": {
-   "en": "Paracetamol (control) availability down 82% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 82%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 4; availability count 34 vs peak 189.",
-   "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 34（峰值 189）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-04T20:26:29.915Z",
+  "lastSeen": "2026-11-04T20:36:29.853Z",
   "active": true
  },
  {
@@ -115,7 +162,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|ciprofloxacin|irkutsk|2026-11-04T17",
@@ -139,7 +186,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|levofloxacin|irkutsk|2026-11-04T17",
@@ -163,7 +210,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|azithromycin|irkutsk|2026-11-04T17",
@@ -187,7 +234,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|amoxiclav|irkutsk|2026-11-04T17",
@@ -211,7 +258,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|masks|irkutsk|2026-11-04T17",
@@ -235,7 +282,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|paracetamol|irkutsk|2026-11-04T17",
@@ -259,29 +306,7 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-04T16:36:01.165Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (134 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 134 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|amoxiclav|shelekhov",
@@ -1206,31 +1231,6 @@
   },
   "firstSeen": "2026-10-25T14:32:52.770Z",
   "lastSeen": "2026-10-25T17:32:52.741Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-23T18:25:10.038Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 9,
-  "baseline": 11,
-  "title": {
-   "en": "Ciprofloxacin availability down 100% in Shelekhov",
-   "zh": "舍列霍夫环丙沙星可购量下降 100%"
-  },
-  "detail": {
-   "en": "In-stock products 9 vs 72h peak 11; availability count 25 vs peak 5041.",
-   "zh": "有现货商品 9 款（72 小时峰值 11 款）；可购量 25（峰值 5041）。"
-  },
-  "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-10-23T21:23:28.401Z",
   "active": false
  },
  {
