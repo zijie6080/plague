@@ -1,5 +1,223 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 4,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 87% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
+  },
+  "detail": {
+   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8284.",
+   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8284）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "stock|paracetamol|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 4,
+  "baseline": 4,
+  "title": {
+   "en": "Paracetamol (control) availability down 82% in Irkutsk",
+   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 82%"
+  },
+  "detail": {
+   "en": "In-stock products 4 vs 72h peak 4; availability count 34 vs peak 189.",
+   "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 34（峰值 189）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|doxycycline|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 348,
+  "baseline": 287,
+  "title": {
+   "en": "2 Doxycycline product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 2 款多西环素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые ₽287 → ₽348.",
+   "zh": "涨幅最大：Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые，₽287 → ₽348。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 108,
+  "baseline": 86,
+  "title": {
+   "en": "2 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 2 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма ₽86 → ₽108.",
+   "zh": "涨幅最大：Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма，₽86 → ₽108。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|levofloxacin|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 329,
+  "baseline": 285,
+  "title": {
+   "en": "1 Levofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款左氧氟沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Левофлоксацин 250мг 10 шт. таблетки покрытые пленочной оболочкой Озон ₽285 → ₽329.",
+   "zh": "涨幅最大：Левофлоксацин 250мг 10 шт. таблетки покрытые пленочной оболочкой Озон，₽285 → ₽329。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|azithromycin|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "irkutsk"
+  },
+  "value": 124,
+  "baseline": 95,
+  "title": {
+   "en": "3 Azithromycin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 3 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин 250мг 6 шт. капсулы Озон ₽95 → ₽124.",
+   "zh": "涨幅最大：Азитромицин 250мг 6 шт. капсулы Озон，₽95 → ₽124。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|amoxiclav|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "irkutsk"
+  },
+  "value": 303,
+  "baseline": 259,
+  "title": {
+   "en": "1 Amoxicillin/clavulanate product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款阿莫西林克拉维酸商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь ₽259 → ₽303.",
+   "zh": "涨幅最大：Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь，₽259 → ₽303。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|masks|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "masks",
+   "city": "irkutsk"
+  },
+  "value": 61,
+  "baseline": 47,
+  "title": {
+   "en": "2 Medical masks product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 2 款医用口罩商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Сенс маска медицинская трехслойная на резинке 5 шт. ₽47 → ₽61.",
+   "zh": "涨幅最大：Сенс маска медицинская трехслойная на резинке 5 шт.，₽47 → ₽61。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
+  "id": "jump|paracetamol|irkutsk|2026-11-04T17",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-04T17:28:23.241Z",
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "irkutsk"
+  },
+  "value": 86,
+  "baseline": 65,
+  "title": {
+   "en": "1 Paracetamol (control) product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款对乙酰氨基酚（对照）商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк ₽65 → ₽86.",
+   "zh": "涨幅最大：Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк，₽65 → ₽86。"
+  },
+  "firstSeen": "2026-11-04T17:26:29.771Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +236,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T17:16:30.355Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
   "active": true
  },
  {
@@ -40,7 +258,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T17:16:30.355Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
   "active": true
  },
  {
@@ -62,32 +280,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T17:16:30.355Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-04T14:17:23.203Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 4,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 87% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8284.",
-   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8284）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-04T17:16:30.355Z",
+  "lastSeen": "2026-11-04T17:26:29.771Z",
   "active": true
  },
  {
@@ -1086,31 +1279,6 @@
   },
   "firstSeen": "2026-10-23T08:52:07.472Z",
   "lastSeen": "2026-10-23T11:52:06.574Z",
-  "active": false
- },
- {
-  "id": "stock|paracetamol|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-10-23T02:42:28.738Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "irkutsk"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 76% in Irkutsk",
-   "zh": "伊尔库茨克对乙酰氨基酚（对照）可购量下降 76%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 12 vs peak 49.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 12（峰值 49）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-10-23T05:40:50.500Z",
   "active": false
  },
  {
