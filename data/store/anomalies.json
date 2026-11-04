@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-04T20:06:56.392Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (169 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 169 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-04T20:06:53.340Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (169 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 169 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -17,11 +61,11 @@
    "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
   },
   "detail": {
-   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8284.",
-   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8284）。"
+   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8281.",
+   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8281）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 34（峰值 189）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -70,7 +114,7 @@
    "zh": "涨幅最大：Доксициклин Экспресс 100мг 10 шт. таблетки диспергируемые，₽287 → ₽348。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -94,7 +138,7 @@
    "zh": "涨幅最大：Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Рафарма，₽86 → ₽108。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -118,7 +162,7 @@
    "zh": "涨幅最大：Левофлоксацин 250мг 10 шт. таблетки покрытые пленочной оболочкой Озон，₽285 → ₽329。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -142,7 +186,7 @@
    "zh": "涨幅最大：Азитромицин 250мг 6 шт. капсулы Озон，₽95 → ₽124。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -166,7 +210,7 @@
    "zh": "涨幅最大：Амоксиклав 125мг+31,25мг 7,88г порошок для приготовления суспензии для приема внутрь，₽259 → ₽303。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -190,7 +234,7 @@
    "zh": "涨幅最大：Сенс маска медицинская трехслойная на резинке 5 шт.，₽47 → ₽61。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -214,7 +258,7 @@
    "zh": "涨幅最大：Парацетамол Реневал 500мг 20 шт. таблетки Обновление Реневал Пфк，₽65 → ₽86。"
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
@@ -236,51 +280,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-04T16:06:03.654Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (168 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 168 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-04T16:06:00.873Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (168 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 168 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T19:56:29.943Z",
+  "lastSeen": "2026-11-04T20:06:30.116Z",
   "active": true
  },
  {
