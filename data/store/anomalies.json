@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-04T14:17:23.203Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 4,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 87% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
+  },
+  "detail": {
+   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8284.",
+   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8284）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-04T14:15:37.753Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T14:05:37.667Z",
+  "lastSeen": "2026-11-04T14:15:37.753Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T14:05:37.667Z",
+  "lastSeen": "2026-11-04T14:15:37.753Z",
   "active": true
  },
  {
@@ -62,32 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T14:05:37.667Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-04T11:13:59.524Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 4,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 87% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 87%"
-  },
-  "detail": {
-   "en": "In-stock products 4 vs 72h peak 5; availability count 1114 vs peak 8284.",
-   "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8284）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-04T14:05:37.667Z",
+  "lastSeen": "2026-11-04T14:15:37.753Z",
   "active": true
  },
  {
