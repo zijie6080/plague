@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-05T00:37:47.606Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (136 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 136 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-05T00:37:24.368Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-05T00:27:24.019Z",
+  "lastSeen": "2026-11-05T00:37:24.368Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-05T00:27:24.019Z",
+  "lastSeen": "2026-11-05T00:37:24.368Z",
   "active": true
  },
  {
@@ -65,7 +87,7 @@
    "zh": "有现货商品 4 款（72 小时峰值 5 款）；可购量 1114（峰值 8281）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-05T00:27:24.019Z",
+  "lastSeen": "2026-11-05T00:37:24.368Z",
   "active": true
  },
  {
@@ -90,7 +112,7 @@
    "zh": "有现货商品 4 款（72 小时峰值 4 款）；可购量 34（峰值 188）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-05T00:27:24.019Z",
+  "lastSeen": "2026-11-05T00:37:24.368Z",
   "active": true
  },
  {
@@ -115,29 +137,7 @@
    "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1443（峰值 4351）。"
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-11-05T00:27:24.019Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-04T20:36:53.097Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (135 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 135 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-05T00:27:24.019Z",
+  "lastSeen": "2026-11-05T00:37:24.368Z",
   "active": true
  },
  {
