@@ -3900,6 +3900,14 @@
  "who-news": {
   "runs": [
    {
+    "t": "2026-11-05T14:52:30.843Z",
+    "ok": true,
+    "ms": 539,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-11-05T12:52:05.256Z",
     "ok": false,
     "ms": 18,
@@ -4658,23 +4666,15 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-03T12:07:44.174Z",
-    "ok": true,
-    "ms": 512,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-05T12:52:05.256Z",
-  "lastStatus": 503,
-  "lastMs": 18,
-  "lastError": "HTTP 503",
+  "lastRun": "2026-11-05T14:52:30.843Z",
+  "lastStatus": 200,
+  "lastMs": 539,
+  "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-05T10:51:40.654Z",
-  "consecutiveFailures": 3,
+  "lastOk": "2026-11-05T14:52:30.843Z",
+  "consecutiveFailures": 0,
   "lastItems": 0
  },
  "who-don": {
