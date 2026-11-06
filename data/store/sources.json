@@ -2,6 +2,14 @@
  "rpn-telegram": {
   "runs": [
    {
+    "t": "2026-11-06T16:37:59.888Z",
+    "ok": true,
+    "ms": 672,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-11-06T16:27:59.452Z",
     "ok": true,
     "ms": 701,
@@ -760,22 +768,14 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-05T21:13:19.155Z",
-    "ok": true,
-    "ms": 490,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-06T16:27:59.452Z",
+  "lastRun": "2026-11-06T16:37:59.888Z",
   "lastStatus": 200,
-  "lastMs": 701,
+  "lastMs": 672,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-06T16:27:59.452Z",
+  "lastOk": "2026-11-06T16:37:59.888Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
@@ -7800,6 +7800,14 @@
  "gnews-en": {
   "runs": [
    {
+    "t": "2026-11-06T16:38:00.309Z",
+    "ok": true,
+    "ms": 410,
+    "n": 2,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-11-06T16:28:00.617Z",
     "ok": true,
     "ms": 299,
@@ -8558,27 +8566,27 @@
     "n": 5,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-05T20:22:31.623Z",
-    "ok": true,
-    "ms": 362,
-    "n": 5,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-06T16:28:00.617Z",
+  "lastRun": "2026-11-06T16:38:00.309Z",
   "lastStatus": 200,
-  "lastMs": 299,
+  "lastMs": 410,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-06T16:28:00.617Z",
+  "lastOk": "2026-11-06T16:38:00.309Z",
   "consecutiveFailures": 0,
   "lastItems": 2
  },
  "gnews-ru": {
   "runs": [
+   {
+    "t": "2026-11-06T16:38:00.509Z",
+    "ok": true,
+    "ms": 197,
+    "n": 2,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-11-06T16:28:00.847Z",
     "ok": true,
@@ -9338,22 +9346,14 @@
     "n": 7,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-05T20:22:31.913Z",
-    "ok": true,
-    "ms": 285,
-    "n": 7,
-    "fresh": 1,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-06T16:28:00.847Z",
+  "lastRun": "2026-11-06T16:38:00.509Z",
   "lastStatus": 200,
-  "lastMs": 228,
+  "lastMs": 197,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-06T16:28:00.847Z",
+  "lastOk": "2026-11-06T16:38:00.509Z",
   "consecutiveFailures": 0,
   "lastItems": 2
  },
