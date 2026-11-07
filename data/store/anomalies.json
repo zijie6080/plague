@@ -3,7 +3,7 @@
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-11-07T07:53:47.336Z",
+  "t": "2026-11-07T11:05:09.833Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -21,14 +21,14 @@
    "zh": "有现货商品 19 款（72 小时峰值 20 款）；可购量 136（峰值 400）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-07T10:52:40.738Z",
+  "lastSeen": "2026-11-07T11:02:40.903Z",
   "active": true
  },
  {
   "id": "stock|gentamicin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-11-07T07:53:47.336Z",
+  "t": "2026-11-07T11:05:09.833Z",
   "persistent": true,
   "subject": {
    "type": "drug",
@@ -46,73 +46,98 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 9）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-07T10:52:40.738Z",
+  "lastSeen": "2026-11-07T11:02:40.903Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-07T11:05:09.833Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 11,
+  "baseline": 11,
+  "title": {
+   "en": "Ciprofloxacin availability down 67% in Shelekhov",
+   "zh": "舍列霍夫环丙沙星可购量下降 67%"
+  },
+  "detail": {
+   "en": "In-stock products 11 vs 72h peak 11; availability count 1396 vs peak 4278.",
+   "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1396（峰值 4278）。"
+  },
+  "firstSeen": "2026-10-14T04:06:03.385Z",
+  "lastSeen": "2026-11-07T11:02:40.903Z",
   "active": true
  },
  {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-07T07:02:52.908Z",
+  "t": "2026-11-07T11:03:29.067Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "irkobl"
   },
   "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (183 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 183 次）"
+   "en": "Irkutsk Oblast Ministry of Health unreachable (184 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 184 次）"
   },
   "detail": {
    "en": "HTTP 403",
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-07T10:52:40.738Z",
+  "lastSeen": "2026-11-07T11:02:40.903Z",
   "active": true
  },
  {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-07T07:02:49.644Z",
+  "t": "2026-11-07T11:03:26.416Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "rpn-38"
   },
   "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (149 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 149 次）"
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (150 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 150 次）"
   },
   "detail": {
    "en": "UND_ERR_CONNECT_TIMEOUT",
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-07T10:52:40.738Z",
+  "lastSeen": "2026-11-07T11:02:40.903Z",
   "active": true
  },
  {
   "id": "source_down|rpn-site",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-07T07:02:27.157Z",
+  "t": "2026-11-07T11:03:03.928Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "rpn-site"
   },
   "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (183 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 183 次）"
+   "en": "Rospotrebnadzor · press releases unreachable (184 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 184 次）"
   },
   "detail": {
    "en": "UND_ERR_CONNECT_TIMEOUT",
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-07T10:52:40.738Z",
+  "lastSeen": "2026-11-07T11:02:40.903Z",
   "active": true
  },
  {
@@ -138,31 +163,6 @@
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-11-06T12:57:57.972Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-06T01:05:17.953Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 11,
-  "baseline": 11,
-  "title": {
-   "en": "Ciprofloxacin availability down 67% in Shelekhov",
-   "zh": "舍列霍夫环丙沙星可购量下降 67%"
-  },
-  "detail": {
-   "en": "In-stock products 11 vs 72h peak 11; availability count 1415 vs peak 4351.",
-   "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1415（峰值 4351）。"
-  },
-  "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-11-06T03:13:59.438Z",
   "active": false
  },
  {
