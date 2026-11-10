@@ -3,66 +3,66 @@
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-10T16:10:50.043Z",
+  "t": "2026-11-10T20:20:21.326Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "irkobl"
   },
   "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (203 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 203 次）"
+   "en": "Irkutsk Oblast Ministry of Health unreachable (204 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 204 次）"
   },
   "detail": {
-   "en": "HTTP 0",
-   "zh": "HTTP 0"
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-10T20:09:34.208Z",
+  "lastSeen": "2026-11-10T20:19:33.653Z",
   "active": true
  },
  {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-10T16:10:18.655Z",
+  "t": "2026-11-10T20:20:18.652Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "rpn-38"
   },
   "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (169 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 169 次）"
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (170 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 170 次）"
   },
   "detail": {
    "en": "UND_ERR_CONNECT_TIMEOUT",
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-10T20:09:34.208Z",
+  "lastSeen": "2026-11-10T20:19:33.653Z",
   "active": true
  },
  {
   "id": "source_down|rpn-site",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-10T16:09:56.165Z",
+  "t": "2026-11-10T20:19:56.162Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "rpn-site"
   },
   "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (203 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 203 次）"
+   "en": "Rospotrebnadzor · press releases unreachable (204 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 204 次）"
   },
   "detail": {
    "en": "UND_ERR_CONNECT_TIMEOUT",
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-10T20:09:34.208Z",
+  "lastSeen": "2026-11-10T20:19:33.653Z",
   "active": true
  },
  {
