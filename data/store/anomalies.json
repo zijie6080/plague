@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|ciprofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-10T05:19:22.819Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 11,
+  "baseline": 11,
+  "title": {
+   "en": "Ciprofloxacin availability down 66% in Shelekhov",
+   "zh": "舍列霍夫环丙沙星可购量下降 66%"
+  },
+  "detail": {
+   "en": "In-stock products 11 vs 72h peak 11; availability count 1368 vs peak 4076.",
+   "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1368（峰值 4076）。"
+  },
+  "firstSeen": "2026-10-14T04:06:03.385Z",
+  "lastSeen": "2026-11-10T05:17:41.755Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-10T05:07:41.864Z",
+  "lastSeen": "2026-11-10T05:17:41.755Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-10T05:07:41.864Z",
+  "lastSeen": "2026-11-10T05:17:41.755Z",
   "active": true
  },
  {
@@ -62,7 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-10T05:07:41.864Z",
+  "lastSeen": "2026-11-10T05:17:41.755Z",
   "active": true
  },
  {
@@ -89,31 +114,6 @@
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-11-10T04:47:42.153Z",
   "active": false
- },
- {
-  "id": "stock|ciprofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-10T02:08:41.833Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 11,
-  "baseline": 11,
-  "title": {
-   "en": "Ciprofloxacin availability down 66% in Shelekhov",
-   "zh": "舍列霍夫环丙沙星可购量下降 66%"
-  },
-  "detail": {
-   "en": "In-stock products 11 vs 72h peak 11; availability count 1369 vs peak 4076.",
-   "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1369（峰值 4076）。"
-  },
-  "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-11-10T05:07:41.864Z",
-  "active": true
  },
  {
   "id": "stock|levofloxacin|shelekhov",
