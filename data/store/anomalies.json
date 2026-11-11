@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-11T19:16:36.887Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 17,
+  "baseline": 19,
+  "title": {
+   "en": "Levofloxacin availability down 62% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 62%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 19; availability count 144 vs peak 382.",
+   "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 144（峰值 382）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-11T19:14:35.087Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T19:04:35.191Z",
+  "lastSeen": "2026-11-11T19:14:35.087Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T19:04:35.191Z",
+  "lastSeen": "2026-11-11T19:14:35.087Z",
   "active": true
  },
  {
@@ -62,32 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T19:04:35.191Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-11T16:06:37.687Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 17,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 62% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 62%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 19; availability count 144 vs peak 382.",
-   "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 144（峰值 382）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-11T19:04:35.191Z",
+  "lastSeen": "2026-11-11T19:14:35.087Z",
   "active": true
  },
  {
