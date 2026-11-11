@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-11T22:19:18.920Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 14,
+  "baseline": 14,
+  "title": {
+   "en": "Ciprofloxacin availability down 89% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 14; availability count 446 vs peak 3979.",
+   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 446（峰值 3979）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-11T22:17:39.334Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T22:07:38.867Z",
+  "lastSeen": "2026-11-11T22:17:39.334Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T22:07:38.867Z",
+  "lastSeen": "2026-11-11T22:17:39.334Z",
   "active": true
  },
  {
@@ -62,7 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T22:07:38.867Z",
+  "lastSeen": "2026-11-11T22:17:39.334Z",
   "active": true
  },
  {
@@ -88,7 +113,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-11-11T22:07:38.867Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|azithromycin|belarus|2026-11-11T09",
@@ -624,31 +649,6 @@
   },
   "firstSeen": "2026-11-01T16:59:17.760Z",
   "lastSeen": "2026-11-01T19:52:04.083Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-01T17:01:11.393Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 13,
-  "title": {
-   "en": "Ciprofloxacin availability down 93% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 93%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 13; availability count 34 vs peak 464.",
-   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 34（峰值 464）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-01T19:32:03.812Z",
   "active": false
  },
  {
