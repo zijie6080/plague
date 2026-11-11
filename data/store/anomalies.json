@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-11T00:14:21.209Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 17,
+  "baseline": 19,
+  "title": {
+   "en": "Levofloxacin availability down 62% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 62%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 19; availability count 146 vs peak 382.",
+   "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 146（峰值 382）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-11T00:12:31.597Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T00:02:32.035Z",
+  "lastSeen": "2026-11-11T00:12:31.597Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T00:02:32.035Z",
+  "lastSeen": "2026-11-11T00:12:31.597Z",
   "active": true
  },
  {
@@ -62,7 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-11T00:02:32.035Z",
+  "lastSeen": "2026-11-11T00:12:31.597Z",
   "active": true
  },
  {
@@ -163,31 +188,6 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-08T15:18:19.180Z",
-  "active": false
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-08T05:58:31.470Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 18,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 67% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 67%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 19; availability count 134 vs peak 400.",
-   "zh": "有现货商品 18 款（72 小时峰值 19 款）；可购量 134（峰值 400）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-08T06:06:42.376Z",
   "active": false
  },
  {
