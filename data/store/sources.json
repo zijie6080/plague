@@ -2,6 +2,14 @@
  "rpn-telegram": {
   "runs": [
    {
+    "t": "2026-11-11T04:23:09.907Z",
+    "ok": true,
+    "ms": 490,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-11-11T04:13:10.742Z",
     "ok": true,
     "ms": 492,
@@ -760,27 +768,27 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-10T12:18:27.904Z",
-    "ok": true,
-    "ms": 627,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-11T04:13:10.742Z",
+  "lastRun": "2026-11-11T04:23:09.907Z",
   "lastStatus": 200,
-  "lastMs": 492,
+  "lastMs": 490,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-11T04:13:10.742Z",
+  "lastOk": "2026-11-11T04:23:09.907Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
  "rpn-site": {
   "runs": [
+   {
+    "t": "2026-11-11T04:23:31.927Z",
+    "ok": false,
+    "ms": 10493,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
    {
     "t": "2026-11-11T00:22:55.023Z",
     "ok": false,
@@ -1540,26 +1548,26 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
+   }
+  ],
+  "lastRun": "2026-11-11T04:23:31.927Z",
+  "lastStatus": 0,
+  "lastMs": 10493,
+  "lastError": "UND_ERR_CONNECT_TIMEOUT",
+  "idle": false,
+  "consecutiveFailures": 206,
+  "lastItems": 0
+ },
+ "rpn-38": {
+  "runs": [
    {
-    "t": "2026-10-25T20:34:02.142Z",
+    "t": "2026-11-11T04:23:54.416Z",
     "ok": false,
     "ms": 10493,
     "n": 0,
     "fresh": 0,
     "status": 0
-   }
-  ],
-  "lastRun": "2026-11-11T00:22:55.023Z",
-  "lastStatus": 0,
-  "lastMs": 10495,
-  "lastError": "UND_ERR_CONNECT_TIMEOUT",
-  "idle": false,
-  "consecutiveFailures": 205,
-  "lastItems": 0
- },
- "rpn-38": {
-  "runs": [
+   },
    {
     "t": "2026-11-11T00:23:17.514Z",
     "ok": false,
@@ -2319,27 +2327,27 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
-   {
-    "t": "2026-10-25T21:04:01.827Z",
-    "ok": false,
-    "ms": 10491,
-    "n": 0,
-    "fresh": 0,
-    "status": 0
    }
   ],
-  "lastRun": "2026-11-11T00:23:17.514Z",
+  "lastRun": "2026-11-11T04:23:54.416Z",
   "lastStatus": 0,
-  "lastMs": 10495,
+  "lastMs": 10493,
   "lastError": "UND_ERR_CONNECT_TIMEOUT",
   "idle": false,
-  "consecutiveFailures": 171,
+  "consecutiveFailures": 172,
   "lastItems": 0,
   "lastOk": "2026-10-13T12:14:14.955Z"
  },
  "irkobl": {
   "runs": [
+   {
+    "t": "2026-11-11T04:23:57.060Z",
+    "ok": false,
+    "ms": 1223,
+    "n": 0,
+    "fresh": 0,
+    "status": 403
+   },
    {
     "t": "2026-11-11T00:23:21.033Z",
     "ok": false,
@@ -3099,22 +3107,14 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
-   {
-    "t": "2026-10-25T20:34:05.841Z",
-    "ok": false,
-    "ms": 1045,
-    "n": 0,
-    "fresh": 0,
-    "status": 0
    }
   ],
-  "lastRun": "2026-11-11T00:23:21.033Z",
+  "lastRun": "2026-11-11T04:23:57.060Z",
   "lastStatus": 403,
-  "lastMs": 1682,
+  "lastMs": 1223,
   "lastError": "HTTP 403",
   "idle": false,
-  "consecutiveFailures": 205,
+  "consecutiveFailures": 206,
   "lastItems": 0
  },
  "us-embassy": {
@@ -7800,6 +7800,14 @@
  "gnews-en": {
   "runs": [
    {
+    "t": "2026-11-11T04:23:57.318Z",
+    "ok": true,
+    "ms": 252,
+    "n": 3,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-11-11T04:13:11.004Z",
     "ok": true,
     "ms": 255,
@@ -8558,27 +8566,27 @@
     "n": 4,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-10T11:38:27.388Z",
-    "ok": true,
-    "ms": 300,
-    "n": 4,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-11T04:13:11.004Z",
+  "lastRun": "2026-11-11T04:23:57.318Z",
   "lastStatus": 200,
-  "lastMs": 255,
+  "lastMs": 252,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-11T04:13:11.004Z",
+  "lastOk": "2026-11-11T04:23:57.318Z",
   "consecutiveFailures": 0,
   "lastItems": 3
  },
  "gnews-ru": {
   "runs": [
+   {
+    "t": "2026-11-11T04:23:57.532Z",
+    "ok": true,
+    "ms": 213,
+    "n": 2,
+    "fresh": 0,
+    "status": 200
+   },
    {
     "t": "2026-11-11T04:13:11.218Z",
     "ok": true,
@@ -9338,22 +9346,14 @@
     "n": 2,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-10T11:28:27.956Z",
-    "ok": true,
-    "ms": 204,
-    "n": 2,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-11T04:13:11.218Z",
+  "lastRun": "2026-11-11T04:23:57.532Z",
   "lastStatus": 200,
-  "lastMs": 212,
+  "lastMs": 213,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-11T04:13:11.218Z",
+  "lastOk": "2026-11-11T04:23:57.532Z",
   "consecutiveFailures": 0,
   "lastItems": 2
  },
