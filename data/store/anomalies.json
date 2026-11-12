@@ -1,5 +1,54 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-12T10:51:29.837Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 14,
+  "baseline": 14,
+  "title": {
+   "en": "Ciprofloxacin availability down 89% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 14; availability count 423 vs peak 3979.",
+   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 423（峰值 3979）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-12T10:49:40.579Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-11-12T10",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-12T10:51:29.837Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 380,
+  "baseline": 278,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой ₽278 → ₽380.",
+   "zh": "涨幅最大：Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой，₽278 → ₽380。"
+  },
+  "firstSeen": "2026-11-12T10:49:40.579Z",
+  "lastSeen": "2026-11-12T10:49:40.579Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +67,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T10:39:41.079Z",
+  "lastSeen": "2026-11-12T10:49:40.579Z",
   "active": true
  },
  {
@@ -40,7 +89,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T10:39:41.079Z",
+  "lastSeen": "2026-11-12T10:49:40.579Z",
   "active": true
  },
  {
@@ -62,32 +111,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T10:39:41.079Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-12T07:41:22.638Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 14,
-  "baseline": 14,
-  "title": {
-   "en": "Ciprofloxacin availability down 89% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
-  },
-  "detail": {
-   "en": "In-stock products 14 vs 72h peak 14; availability count 428 vs peak 3979.",
-   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 428（峰值 3979）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-12T10:39:41.079Z",
+  "lastSeen": "2026-11-12T10:49:40.579Z",
   "active": true
  },
  {
