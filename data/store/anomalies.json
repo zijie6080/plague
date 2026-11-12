@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-12T01:20:48.999Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 14,
+  "baseline": 14,
+  "title": {
+   "en": "Ciprofloxacin availability down 89% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 14; availability count 439 vs peak 3979.",
+   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 439（峰值 3979）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-12T01:19:05.133Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T01:09:04.656Z",
+  "lastSeen": "2026-11-12T01:19:05.133Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T01:09:04.656Z",
+  "lastSeen": "2026-11-12T01:19:05.133Z",
   "active": true
  },
  {
@@ -62,32 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T01:09:04.656Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-11T22:19:18.920Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 14,
-  "baseline": 14,
-  "title": {
-   "en": "Ciprofloxacin availability down 89% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
-  },
-  "detail": {
-   "en": "In-stock products 14 vs 72h peak 14; availability count 446 vs peak 3979.",
-   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 446（峰值 3979）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-12T01:09:04.656Z",
+  "lastSeen": "2026-11-12T01:19:05.133Z",
   "active": true
  },
  {
