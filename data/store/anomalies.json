@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-12T14:02:47.255Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 14,
+  "baseline": 14,
+  "title": {
+   "en": "Ciprofloxacin availability down 89% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 14; availability count 421 vs peak 3979.",
+   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 421（峰值 3979）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-12T14:00:23.062Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T13:50:23.278Z",
+  "lastSeen": "2026-11-12T14:00:23.062Z",
   "active": true
  },
  {
@@ -47,7 +72,7 @@
    "Подробнее про В новом выпуске «Школы семейного здоровья» расскажут все об угрозах и профилактике герпесвирусных инфекций »"
   ],
   "firstSeen": "2026-11-12T12:50:22.670Z",
-  "lastSeen": "2026-11-12T13:50:23.278Z",
+  "lastSeen": "2026-11-12T14:00:23.062Z",
   "active": true
  },
  {
@@ -69,32 +94,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T13:50:23.278Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-12T10:51:29.837Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 14,
-  "baseline": 14,
-  "title": {
-   "en": "Ciprofloxacin availability down 89% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
-  },
-  "detail": {
-   "en": "In-stock products 14 vs 72h peak 14; availability count 423 vs peak 3979.",
-   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 423（峰值 3979）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-12T13:50:23.278Z",
+  "lastSeen": "2026-11-12T14:00:23.062Z",
   "active": true
  },
  {
@@ -119,7 +119,7 @@
   },
   "firstSeen": "2026-11-12T10:49:40.579Z",
   "lastSeen": "2026-11-12T13:50:23.278Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
