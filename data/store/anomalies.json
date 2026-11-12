@@ -1,5 +1,78 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-12T12:50:55.174Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (214 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 214 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-12T12:50:22.670Z",
+  "active": true
+ },
+ {
+  "id": "page|rpn-38|c67923e993",
+  "rule": "page_change",
+  "severity": "info",
+  "t": "2026-11-12T12:50:51.724Z",
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office updated",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局页面已更新"
+  },
+  "detail": {
+   "en": "Качество продуктов - ключевой фактор здорового питания · Подробнее про Качество продуктов - ключевой фактор здорового питания » · 12 ноября – Всемирный день борьбы с пневмонией",
+   "zh": "Качество продуктов - ключевой фактор здорового питания · Подробнее про Качество продуктов - ключевой фактор здорового питания » · 12 ноября – Всемирный день борьбы с пневмонией"
+  },
+  "excerpt": [
+   "Качество продуктов - ключевой фактор здорового питания",
+   "Подробнее про Качество продуктов - ключевой фактор здорового питания »",
+   "12 ноября – Всемирный день борьбы с пневмонией",
+   "Подробнее про 12 ноября – Всемирный день борьбы с пневмонией »",
+   "В новом выпуске «Школы семейного здоровья» расскажут все об угрозах и профилактике герпесвирусных инфекций",
+   "Подробнее про В новом выпуске «Школы семейного здоровья» расскажут все об угрозах и профилактике герпесвирусных инфекций »"
+  ],
+  "firstSeen": "2026-11-12T12:50:22.670Z",
+  "lastSeen": "2026-11-12T12:50:22.670Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-12T12:50:45.865Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (214 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 214 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-12T12:50:22.670Z",
+  "active": true
+ },
+ {
   "id": "stock|ciprofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +94,7 @@
    "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 423（峰值 3979）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-12T12:40:23.068Z",
+  "lastSeen": "2026-11-12T12:50:22.670Z",
   "active": true
  },
  {
@@ -45,29 +118,7 @@
    "zh": "涨幅最大：Цифран ст 500мг + 600мг 10 шт. таблетки покрытые оболочкой，₽278 → ₽380。"
   },
   "firstSeen": "2026-11-12T10:49:40.579Z",
-  "lastSeen": "2026-11-12T12:40:23.068Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-12T08:50:29.801Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (213 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 213 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T12:40:23.068Z",
+  "lastSeen": "2026-11-12T12:50:22.670Z",
   "active": true
  },
  {
@@ -90,29 +141,7 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-11-12T12:40:23.068Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-12T08:50:04.227Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (213 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 213 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T12:40:23.068Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|irkutsk",
