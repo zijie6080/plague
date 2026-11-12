@@ -1,5 +1,79 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-12T20:23:59.180Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 14,
+  "baseline": 14,
+  "title": {
+   "en": "Ciprofloxacin availability down 89% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 14; availability count 421 vs peak 3979.",
+   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 421（峰值 3979）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-12T20:21:16.962Z",
+  "active": true
+ },
+ {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-12T20:23:59.180Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 17,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 88% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 88%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 17; availability count 547 vs peak 4524.",
+   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 547（峰值 4524）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-12T20:21:16.962Z",
+  "active": true
+ },
+ {
+  "id": "jump|doxycycline|irkutsk|2026-11-12T20",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-12T20:23:59.180Z",
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "irkutsk"
+  },
+  "value": 302,
+  "baseline": 254,
+  "title": {
+   "en": "1 Doxycycline product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款多西环素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Доксициклин Солюшн Таблетс 100мг 10 шт. таблетки диспергируемые Озон ₽254 → ₽302.",
+   "zh": "涨幅最大：Доксициклин Солюшн Таблетс 100мг 10 шт. таблетки диспергируемые Озон，₽254 → ₽302。"
+  },
+  "firstSeen": "2026-11-12T20:21:16.962Z",
+  "lastSeen": "2026-11-12T20:21:16.962Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +92,7 @@
    "zh": "HTTP 0"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T20:11:17.333Z",
+  "lastSeen": "2026-11-12T20:21:16.962Z",
   "active": true
  },
  {
@@ -40,33 +114,8 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-12T20:11:17.333Z",
+  "lastSeen": "2026-11-12T20:21:16.962Z",
   "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-12T14:02:47.255Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 14,
-  "baseline": 14,
-  "title": {
-   "en": "Ciprofloxacin availability down 89% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 89%"
-  },
-  "detail": {
-   "en": "In-stock products 14 vs 72h peak 14; availability count 421 vs peak 3979.",
-   "zh": "有现货商品 14 款（72 小时峰值 14 款）；可购量 421（峰值 3979）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-12T17:00:23.707Z",
-  "active": false
  },
  {
   "id": "page|rpn-38|c67923e993",
@@ -94,7 +143,7 @@
    "Подробнее про В новом выпуске «Школы семейного здоровья» расскажут все об угрозах и профилактике герпесвирусных инфекций »"
   ],
   "firstSeen": "2026-11-12T12:50:22.670Z",
-  "lastSeen": "2026-11-12T20:11:17.333Z",
+  "lastSeen": "2026-11-12T20:21:16.962Z",
   "active": true
  },
  {
@@ -554,31 +603,6 @@
   },
   "firstSeen": "2026-11-04T17:26:29.771Z",
   "lastSeen": "2026-11-04T20:26:29.915Z",
-  "active": false
- },
- {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-04T01:42:10.547Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 16,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 85% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 85%"
-  },
-  "detail": {
-   "en": "In-stock products 16 vs 72h peak 17; availability count 742 vs peak 4951.",
-   "zh": "有现货商品 16 款（72 小时峰值 17 款）；可购量 742（峰值 4951）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-04T04:40:34.810Z",
   "active": false
  },
  {
