@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-15T17:59:31.991Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (233 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 233 次）"
+  },
+  "detail": {
+   "en": "HTTP 0",
+   "zh": "HTTP 0"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-15T17:59:00.519Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (233 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 233 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
+  "active": true
+ },
+ {
   "id": "stock|ciprofloxacin|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1257（峰值 3838）。"
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 28 款（72 小时峰值 28 款）；可购量 53（峰值 213）。"
   },
   "firstSeen": "2026-11-13T09:02:44.899Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
   "active": true
  },
  {
@@ -71,7 +115,7 @@
    "zh": "有现货商品 24 款（72 小时峰值 25 款）；可购量 76（峰值 231）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
   "active": true
  },
  {
@@ -96,7 +140,7 @@
    "zh": "有现货商品 27 款（72 小时峰值 29 款）；可购量 79（峰值 450）。"
   },
   "firstSeen": "2026-10-28T08:48:04.633Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
   "active": true
  },
  {
@@ -121,7 +165,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 172（峰值 57186）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
+  "lastSeen": "2026-11-15T17:58:37.318Z",
   "active": true
  },
  {
@@ -148,50 +192,6 @@
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-11-15T17:08:37.347Z",
   "active": false
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-15T13:58:25.147Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (232 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 232 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-15T13:58:22.457Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (232 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 232 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-15T17:48:37.309Z",
-  "active": true
  },
  {
   "id": "stock|levofloxacin|irkutsk",
