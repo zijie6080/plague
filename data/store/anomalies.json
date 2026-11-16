@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|ciprofloxacin|moscow",
+  "rule": "availability_drop",
+  "severity": "info",
+  "t": "2026-11-16T19:06:01.179Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "moscow"
+  },
+  "value": 20,
+  "baseline": 20,
+  "title": {
+   "en": "Ciprofloxacin availability down 100% in Moscow",
+   "zh": "莫斯科环丙沙星可购量下降 100%"
+  },
+  "detail": {
+   "en": "In-stock products 20 vs 72h peak 20; availability count 172 vs peak 56960.",
+   "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 172（峰值 56960）。"
+  },
+  "firstSeen": "2026-10-23T18:23:28.300Z",
+  "lastSeen": "2026-11-16T19:03:34.445Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-16T18:53:35.066Z",
+  "lastSeen": "2026-11-16T19:03:34.445Z",
   "active": true
  },
  {
@@ -40,32 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-16T18:53:35.066Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|moscow",
-  "rule": "availability_drop",
-  "severity": "info",
-  "t": "2026-11-16T15:55:09.442Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "moscow"
-  },
-  "value": 20,
-  "baseline": 20,
-  "title": {
-   "en": "Ciprofloxacin availability down 100% in Moscow",
-   "zh": "莫斯科环丙沙星可购量下降 100%"
-  },
-  "detail": {
-   "en": "In-stock products 20 vs 72h peak 20; availability count 172 vs peak 56960.",
-   "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 172（峰值 56960）。"
-  },
-  "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-11-16T18:53:35.066Z",
+  "lastSeen": "2026-11-16T19:03:34.445Z",
   "active": true
  },
  {
@@ -191,7 +191,7 @@
    "В Иркутской области отмечается рост заболеваемости острыми респираторными вирусными инфекциями 16.11.26"
   ],
   "firstSeen": "2026-11-16T08:30:09.774Z",
-  "lastSeen": "2026-11-16T18:53:35.066Z",
+  "lastSeen": "2026-11-16T19:03:34.445Z",
   "active": true
  },
  {
@@ -220,7 +220,7 @@
    "Роспотребнадзор проводит «горячую линию» по транспортным услугам 16.11.26"
   ],
   "firstSeen": "2026-11-16T06:30:09.775Z",
-  "lastSeen": "2026-11-16T18:53:35.066Z",
+  "lastSeen": "2026-11-16T19:03:34.445Z",
   "active": true
  },
  {
