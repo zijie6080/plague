@@ -2,6 +2,14 @@
  "rpn-telegram": {
   "runs": [
    {
+    "t": "2026-11-17T00:54:19.703Z",
+    "ok": true,
+    "ms": 681,
+    "n": 0,
+    "fresh": 0,
+    "status": 200
+   },
+   {
     "t": "2026-11-17T00:44:19.605Z",
     "ok": true,
     "ms": 633,
@@ -760,22 +768,14 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-16T08:50:11.053Z",
-    "ok": true,
-    "ms": 765,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-17T00:44:19.605Z",
+  "lastRun": "2026-11-17T00:54:19.703Z",
   "lastStatus": 200,
-  "lastMs": 633,
+  "lastMs": 681,
   "lastError": null,
   "idle": false,
-  "lastOk": "2026-11-17T00:44:19.605Z",
+  "lastOk": "2026-11-17T00:54:19.703Z",
   "consecutiveFailures": 0,
   "lastItems": 0
  },
@@ -7800,6 +7800,14 @@
  "gnews-en": {
   "runs": [
    {
+    "t": "2026-11-17T00:54:21.931Z",
+    "ok": false,
+    "ms": 329,
+    "n": 0,
+    "fresh": 0,
+    "status": 429
+   },
+   {
     "t": "2026-11-17T00:44:20.785Z",
     "ok": true,
     "ms": 352,
@@ -8558,27 +8566,27 @@
     "n": 3,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-16T07:00:18.359Z",
-    "ok": true,
-    "ms": 278,
-    "n": 3,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-17T00:44:20.785Z",
-  "lastStatus": 200,
-  "lastMs": 352,
-  "lastError": null,
+  "lastRun": "2026-11-17T00:54:21.931Z",
+  "lastStatus": 429,
+  "lastMs": 329,
+  "lastError": "HTTP 429",
   "idle": false,
   "lastOk": "2026-11-17T00:44:20.785Z",
-  "consecutiveFailures": 0,
-  "lastItems": 2
+  "consecutiveFailures": 1,
+  "lastItems": 0
  },
  "gnews-ru": {
   "runs": [
+   {
+    "t": "2026-11-17T00:54:24.263Z",
+    "ok": false,
+    "ms": 414,
+    "n": 0,
+    "fresh": 0,
+    "status": 429
+   },
    {
     "t": "2026-11-17T00:44:22.863Z",
     "ok": true,
@@ -9338,23 +9346,15 @@
     "n": 2,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-16T07:00:18.608Z",
-    "ok": true,
-    "ms": 248,
-    "n": 2,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-17T00:44:22.863Z",
-  "lastStatus": 200,
-  "lastMs": 293,
-  "lastError": null,
+  "lastRun": "2026-11-17T00:54:24.263Z",
+  "lastStatus": 429,
+  "lastMs": 414,
+  "lastError": "HTTP 429",
   "idle": false,
   "lastOk": "2026-11-17T00:44:22.863Z",
-  "consecutiveFailures": 0,
+  "consecutiveFailures": 1,
   "lastItems": 0
  },
  "gnews-zh": {
