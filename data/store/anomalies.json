@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-17T14:49:45.928Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (244 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 244 次）"
+  },
+  "detail": {
+   "en": "HTTP 0",
+   "zh": "HTTP 0"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-site",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "AbortError"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
@@ -65,29 +87,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 171（峰值 56707）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-17T10:40:07.882Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (243 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 243 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
@@ -113,7 +113,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
@@ -239,7 +239,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
@@ -315,7 +315,7 @@
    "В Иркутской области отмечается рост заболеваемости острыми респираторными вирусными инфекциями 16.11.26"
   ],
   "firstSeen": "2026-11-16T08:30:09.774Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
@@ -344,7 +344,7 @@
    "Роспотребнадзор проводит «горячую линию» по транспортным услугам 16.11.26"
   ],
   "firstSeen": "2026-11-16T06:30:09.775Z",
-  "lastSeen": "2026-11-17T14:39:14.183Z",
+  "lastSeen": "2026-11-17T14:49:13.675Z",
   "active": true
  },
  {
