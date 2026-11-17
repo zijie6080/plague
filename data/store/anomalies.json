@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-17T18:49:44.582Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (245 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 245 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-17T18:49:37.141Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (245 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 245 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
+  "active": true
+ },
+ {
   "id": "stock|ciprofloxacin|moscow",
   "rule": "availability_drop",
   "severity": "info",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 171（峰值 56705）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
   "active": true
  },
  {
@@ -43,51 +87,7 @@
    "zh": "HTTP 502"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-17T14:49:45.928Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (244 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 244 次）"
-  },
-  "detail": {
-   "en": "HTTP 0",
-   "zh": "HTTP 0"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-17T14:39:37.244Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (244 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 244 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
   "active": true
  },
  {
@@ -113,7 +113,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
   "active": true
  },
  {
@@ -239,7 +239,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
   "active": true
  },
  {
@@ -315,7 +315,7 @@
    "В Иркутской области отмечается рост заболеваемости острыми респираторными вирусными инфекциями 16.11.26"
   ],
   "firstSeen": "2026-11-16T08:30:09.774Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
   "active": true
  },
  {
@@ -344,7 +344,7 @@
    "Роспотребнадзор проводит «горячую линию» по транспортным услугам 16.11.26"
   ],
   "firstSeen": "2026-11-16T06:30:09.775Z",
-  "lastSeen": "2026-11-17T18:39:14.063Z",
+  "lastSeen": "2026-11-17T18:49:14.026Z",
   "active": true
  },
  {
