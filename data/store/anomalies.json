@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-17T10:40:07.882Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (243 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 243 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-17T10:39:03.292Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (243 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 243 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
+  "active": true
+ },
+ {
   "id": "page|rpn-38|23edf4798d",
   "rule": "page_change",
   "severity": "info",
@@ -22,7 +66,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -47,7 +91,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 172（峰值 56707）。"
   },
   "firstSeen": "2026-10-23T18:23:28.300Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -72,7 +116,7 @@
    "zh": "有现货商品 9 款（72 小时峰值 13 款）；可购量 365（峰值 2870）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -97,7 +141,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 19（峰值 2234）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -122,7 +166,7 @@
    "zh": "有现货商品 18 款（72 小时峰值 22 款）；可购量 74（峰值 1191）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -147,51 +191,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 138（峰值 174）。"
   },
   "firstSeen": "2026-11-17T07:45:11.612Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-17T06:35:37.592Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (242 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 242 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-17T06:35:34.237Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (242 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 242 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -217,7 +217,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -293,7 +293,7 @@
    "В Иркутской области отмечается рост заболеваемости острыми респираторными вирусными инфекциями 16.11.26"
   ],
   "firstSeen": "2026-11-16T08:30:09.774Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
@@ -322,7 +322,7 @@
    "Роспотребнадзор проводит «горячую линию» по транспортным услугам 16.11.26"
   ],
   "firstSeen": "2026-11-16T06:30:09.775Z",
-  "lastSeen": "2026-11-17T10:28:39.648Z",
+  "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": true
  },
  {
