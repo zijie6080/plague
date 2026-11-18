@@ -1,5 +1,80 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T12:06:57.943Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 5,
+  "baseline": 6,
+  "title": {
+   "en": "Paracetamol (control) availability down 99% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 99%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 6; availability count 18 vs peak 2229.",
+   "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 18（峰值 2229）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
+  "active": true
+ },
+ {
+  "id": "stock|masks|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T12:06:57.943Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "masks",
+   "city": "shelekhov"
+  },
+  "value": 2,
+  "baseline": 4,
+  "title": {
+   "en": "Medical masks availability down 50% in Shelekhov",
+   "zh": "舍列霍夫医用口罩可购量下降 50%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 4; availability count 138 vs peak 174.",
+   "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 138（峰值 174）。"
+  },
+  "firstSeen": "2026-11-17T07:45:11.612Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
+  "active": true
+ },
+ {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T12:06:57.943Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 13,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 99% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 99%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 17; availability count 22 vs peak 4169.",
+   "zh": "有现货商品 13 款（72 小时峰值 17 款）；可购量 22（峰值 4169）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +93,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T11:54:41.924Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
   "active": true
  },
  {
@@ -40,7 +115,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T11:54:41.924Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
   "active": true
  },
  {
@@ -66,7 +141,7 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-18T11:54:41.924Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
   "active": true
  },
  {
@@ -112,7 +187,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-18T11:54:41.924Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
   "active": true
  },
  {
@@ -163,7 +238,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-18T11:54:41.924Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
   "active": true
  },
  {
@@ -188,31 +263,6 @@
    "zh": "有现货商品 9 款（72 小时峰值 13 款）；可购量 365（峰值 2870）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-17T10:38:40.047Z",
-  "active": false
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-17T07:47:32.036Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 6,
-  "baseline": 6,
-  "title": {
-   "en": "Paracetamol (control) availability down 99% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 99%"
-  },
-  "detail": {
-   "en": "In-stock products 6 vs 72h peak 6; availability count 19 vs peak 2234.",
-   "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 19（峰值 2234）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-11-17T10:38:40.047Z",
   "active": false
  },
@@ -242,31 +292,6 @@
   "active": false
  },
  {
-  "id": "stock|masks|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-17T07:47:32.036Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "masks",
-   "city": "shelekhov"
-  },
-  "value": 2,
-  "baseline": 4,
-  "title": {
-   "en": "Medical masks availability down 50% in Shelekhov",
-   "zh": "舍列霍夫医用口罩可购量下降 50%"
-  },
-  "detail": {
-   "en": "In-stock products 2 vs 72h peak 4; availability count 138 vs peak 174.",
-   "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 138（峰值 174）。"
-  },
-  "firstSeen": "2026-11-17T07:45:11.612Z",
-  "lastSeen": "2026-11-17T10:38:40.047Z",
-  "active": false
- },
- {
   "id": "page|rpn-38|27deb31776",
   "rule": "page_change",
   "severity": "info",
@@ -289,7 +314,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-18T11:54:41.924Z",
+  "lastSeen": "2026-11-18T12:04:41.972Z",
   "active": true
  },
  {
@@ -519,31 +544,6 @@
   },
   "firstSeen": "2026-11-14T13:30:10.759Z",
   "lastSeen": "2026-11-14T16:22:51.403Z",
-  "active": false
- },
- {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-14T00:50:18.567Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 87% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 87%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 17; availability count 542 vs peak 4333.",
-   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 542（峰值 4333）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-14T03:49:35.029Z",
   "active": false
  },
  {
