@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-18T15:06:09.964Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (250 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 250 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-18T15:05:05.324Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (250 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 250 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 18（峰值 2229）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 138（峰值 174）。"
   },
   "firstSeen": "2026-11-17T07:45:11.612Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
@@ -71,51 +115,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 17 款）；可购量 22（峰值 4165）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-18T11:04:29.761Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (249 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 249 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-18T11:04:22.454Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (249 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 249 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
@@ -141,7 +141,7 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
@@ -187,7 +187,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
@@ -238,7 +238,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
@@ -314,7 +314,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-18T14:54:42.312Z",
+  "lastSeen": "2026-11-18T15:04:42.251Z",
   "active": true
  },
  {
