@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T18:28:03.726Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 85% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 85%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 36 vs peak 247.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 36（峰值 247）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T18:28:03.726Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 18,
+  "baseline": 19,
+  "title": {
+   "en": "Levofloxacin availability down 77% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 77%"
+  },
+  "detail": {
+   "en": "In-stock products 18 vs 72h peak 19; availability count 33 vs peak 143.",
+   "zh": "有现货商品 18 款（72 小时峰值 19 款）；可购量 33（峰值 143）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
+  "active": true
+ },
+ {
   "id": "stock|masks|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -22,7 +72,7 @@
   },
   "firstSeen": "2026-11-17T07:45:11.612Z",
   "lastSeen": "2026-11-18T18:15:21.170Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|shelekhov",
@@ -47,7 +97,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-18T18:15:21.170Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|azithromycin|shelekhov",
@@ -72,7 +122,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-18T18:15:21.170Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|irkobl",
@@ -93,7 +143,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T18:15:21.170Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
   "active": true
  },
  {
@@ -115,7 +165,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T18:15:21.170Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
   "active": true
  },
  {
@@ -191,7 +241,7 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-18T18:15:21.170Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
   "active": true
  },
  {
@@ -237,7 +287,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-18T18:15:21.170Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
   "active": true
  },
  {
@@ -288,7 +338,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-18T18:15:21.170Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
   "active": true
  },
  {
@@ -314,7 +364,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-18T18:15:21.170Z",
+  "lastSeen": "2026-11-18T18:25:20.960Z",
   "active": true
  },
  {
@@ -470,56 +520,6 @@
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
   "lastSeen": "2026-11-16T02:39:18.889Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-15T14:39:45.083Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 14,
-  "title": {
-   "en": "Ciprofloxacin availability down 93% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 93%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 14; availability count 247 vs peak 3746.",
-   "zh": "有现货商品 13 款（72 小时峰值 14 款）；可购量 247（峰值 3746）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-15T17:08:37.347Z",
-  "active": false
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-15T08:27:43.524Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 18,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 79% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 79%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 19; availability count 32 vs peak 153.",
-   "zh": "有现货商品 18 款（72 小时峰值 19 款）；可购量 32（峰值 153）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-15T11:25:10.157Z",
   "active": false
  },
  {
