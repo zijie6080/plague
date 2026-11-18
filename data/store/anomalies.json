@@ -1,5 +1,80 @@
 [
  {
+  "id": "stock|masks|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T15:16:35.208Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "masks",
+   "city": "shelekhov"
+  },
+  "value": 2,
+  "baseline": 4,
+  "title": {
+   "en": "Medical masks availability down 50% in Shelekhov",
+   "zh": "舍列霍夫医用口罩可购量下降 50%"
+  },
+  "detail": {
+   "en": "In-stock products 2 vs 72h peak 4; availability count 138 vs peak 174.",
+   "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 138（峰值 174）。"
+  },
+  "firstSeen": "2026-11-17T07:45:11.612Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T15:16:35.208Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 10,
+  "baseline": 13,
+  "title": {
+   "en": "Levofloxacin availability down 88% in Shelekhov",
+   "zh": "舍列霍夫左氧氟沙星可购量下降 88%"
+  },
+  "detail": {
+   "en": "In-stock products 10 vs 72h peak 13; availability count 355 vs peak 2853.",
+   "zh": "有现货商品 10 款（72 小时峰值 13 款）；可购量 355（峰值 2853）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
+  "active": true
+ },
+ {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-18T15:16:35.208Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 20,
+  "baseline": 22,
+  "title": {
+   "en": "Azithromycin availability down 66% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 66%"
+  },
+  "detail": {
+   "en": "In-stock products 20 vs 72h peak 22; availability count 399 vs peak 1175.",
+   "zh": "有现货商品 20 款（72 小时峰值 22 款）；可购量 399（峰值 1175）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +93,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
   "active": true
  },
  {
@@ -40,7 +115,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
   "active": true
  },
  {
@@ -66,32 +141,7 @@
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-11-18T15:04:42.251Z",
-  "active": true
- },
- {
-  "id": "stock|masks|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-18T12:06:57.943Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "masks",
-   "city": "shelekhov"
-  },
-  "value": 2,
-  "baseline": 4,
-  "title": {
-   "en": "Medical masks availability down 50% in Shelekhov",
-   "zh": "舍列霍夫医用口罩可购量下降 50%"
-  },
-  "detail": {
-   "en": "In-stock products 2 vs 72h peak 4; availability count 138 vs peak 174.",
-   "zh": "有现货商品 2 款（72 小时峰值 4 款）；可购量 138（峰值 174）。"
-  },
-  "firstSeen": "2026-11-17T07:45:11.612Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|amoxiclav|shelekhov",
@@ -116,7 +166,7 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-11-18T15:04:42.251Z",
-  "active": true
+  "active": false
  },
  {
   "id": "page|rpn-38|f3bae9aba6",
@@ -141,7 +191,7 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
   "active": true
  },
  {
@@ -187,7 +237,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
   "active": true
  },
  {
@@ -238,58 +288,8 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
   "active": true
- },
- {
-  "id": "stock|levofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-17T07:47:32.036Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 9,
-  "baseline": 13,
-  "title": {
-   "en": "Levofloxacin availability down 87% in Shelekhov",
-   "zh": "舍列霍夫左氧氟沙星可购量下降 87%"
-  },
-  "detail": {
-   "en": "In-stock products 9 vs 72h peak 13; availability count 365 vs peak 2870.",
-   "zh": "有现货商品 9 款（72 小时峰值 13 款）；可购量 365（峰值 2870）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-17T10:38:40.047Z",
-  "active": false
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-17T07:47:32.036Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 18,
-  "baseline": 22,
-  "title": {
-   "en": "Azithromycin availability down 94% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 94%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 22; availability count 74 vs peak 1191.",
-   "zh": "有现货商品 18 款（72 小时峰值 22 款）；可购量 74（峰值 1191）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-17T10:38:40.047Z",
-  "active": false
  },
  {
   "id": "page|rpn-38|27deb31776",
@@ -314,7 +314,7 @@
    "Права потребителей услуг общественного наземного транспорта 17.11.26"
   ],
   "firstSeen": "2026-11-17T02:04:19.047Z",
-  "lastSeen": "2026-11-18T15:04:42.251Z",
+  "lastSeen": "2026-11-18T15:14:41.884Z",
   "active": true
  },
  {
