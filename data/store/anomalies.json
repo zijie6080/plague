@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-19T03:58:03.034Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 5,
+  "baseline": 6,
+  "title": {
+   "en": "Paracetamol (control) availability down 99% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 99%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 6; availability count 12 vs peak 2226.",
+   "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 12（峰值 2226）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
+  "active": true
+ },
+ {
   "id": "page|rpn-38|af53d03dcb",
   "rule": "page_change",
   "severity": "info",
@@ -22,7 +47,7 @@
    "О результатах мониторинга качества атмосферного воздуха в городах-участниках федерального проекта «Чистый воздух» за 10 месяцев 2026 года 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:36:15.936Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
@@ -44,7 +69,7 @@
    "zh": "HTTP 0"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
@@ -66,7 +91,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
@@ -92,32 +117,7 @@
    "Международный день отказа от курения: табачный дым – опасен 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:06:16.030Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-19T00:47:58.096Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 5,
-  "baseline": 6,
-  "title": {
-   "en": "Paracetamol (control) availability down 99% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 99%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 6; availability count 12 vs peak 2226.",
-   "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 12（峰值 2226）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
@@ -143,7 +143,7 @@
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-11-19T03:46:16.127Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|irkutsk",
@@ -168,7 +168,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-11-19T03:46:16.127Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|masks|shelekhov",
@@ -293,7 +293,7 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
@@ -339,7 +339,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
@@ -390,7 +390,7 @@
    "Пассажирский транспорт в городе 17.11.26"
   ],
   "firstSeen": "2026-11-17T08:28:39.843Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
+  "lastSeen": "2026-11-19T03:56:15.877Z",
   "active": true
  },
  {
