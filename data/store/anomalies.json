@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-19T16:24:11.787Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 5,
+  "baseline": 6,
+  "title": {
+   "en": "Paracetamol (control) availability down 100% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 100%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 6; availability count 11 vs peak 2225.",
+   "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 11（峰值 2225）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
   "active": true
  },
  {
@@ -65,32 +90,7 @@
   },
   "firstSeen": "2026-11-19T13:19:45.839Z",
   "lastSeen": "2026-11-19T16:11:22.453Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-19T13:21:23.483Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 5,
-  "baseline": 6,
-  "title": {
-   "en": "Paracetamol (control) availability down 100% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 100%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 6; availability count 11 vs peak 2225.",
-   "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 11（峰值 2225）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -137,7 +137,7 @@
    "О результатах мониторинга качества атмосферного воздуха в городах-участниках федерального проекта «Чистый воздух» за 10 месяцев 2026 года 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:36:15.936Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
   "active": true
  },
  {
@@ -163,7 +163,7 @@
    "Международный день отказа от курения: табачный дым – опасен 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:06:16.030Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
   "active": true
  },
  {
@@ -339,7 +339,7 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
   "active": true
  },
  {
@@ -363,7 +363,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-19T16:11:22.453Z",
+  "lastSeen": "2026-11-19T16:21:22.531Z",
   "active": true
  },
  {
