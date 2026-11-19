@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-19T08:40:13.480Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
+  },
+  "detail": {
+   "en": "AbortError",
+   "zh": "AbortError"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
  },
  {
@@ -40,7 +62,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
  },
  {
@@ -65,7 +87,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 13（峰值 2226）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
  },
  {
@@ -91,7 +113,7 @@
    "О результатах мониторинга качества атмосферного воздуха в городах-участниках федерального проекта «Чистый воздух» за 10 месяцев 2026 года 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:36:15.936Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
  },
  {
@@ -117,7 +139,7 @@
    "Международный день отказа от курения: табачный дым – опасен 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:06:16.030Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
  },
  {
@@ -293,30 +315,8 @@
    "Всемирная неделя повышения осведомленности о проблеме устойчивости к противомикробным препаратам 18.11.26"
   ],
   "firstSeen": "2026-11-18T08:43:59.220Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-18T04:42:14.261Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (7 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 7 次）"
-  },
-  "detail": {
-   "en": "AbortError",
-   "zh": "AbortError"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-18T08:33:58.577Z",
-  "active": false
  },
  {
   "id": "page|who-don|6287a65f57",
@@ -339,7 +339,7 @@
    "Region/Countries Label"
   ],
   "firstSeen": "2026-11-17T19:00:32.289Z",
-  "lastSeen": "2026-11-19T08:29:10.849Z",
+  "lastSeen": "2026-11-19T08:39:11.282Z",
   "active": true
  },
  {
