@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-20T15:44:51.804Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (262 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 262 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-20T15:44:48.595Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (262 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 262 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
+  "active": true
+ },
+ {
   "id": "stock|paracetamol|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 5 款（72 小时峰值 6 款）；可购量 33（峰值 2222）。"
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 32（峰值 144）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
@@ -71,51 +115,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 438（峰值 3934）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-20T11:44:01.163Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (261 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 261 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-20T11:34:45.621Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (261 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 261 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
@@ -141,7 +141,7 @@
    "Роспотребнадзор представляет комикс «Петя Лентяев сохраняет безопасную среду в доме» 20.11.26"
   ],
   "firstSeen": "2026-11-20T11:03:37.719Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
@@ -190,7 +190,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 20.11.26"
   ],
   "firstSeen": "2026-11-20T06:12:59.738Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
@@ -240,7 +240,7 @@
    "О результатах мониторинга качества атмосферного воздуха в городах-участниках федерального проекта «Чистый воздух» за 10 месяцев 2026 года 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:36:15.936Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
@@ -266,7 +266,7 @@
    "Международный день отказа от курения: табачный дым – опасен 19.11.26"
   ],
   "firstSeen": "2026-11-19T03:06:16.030Z",
-  "lastSeen": "2026-11-20T15:34:24.571Z",
+  "lastSeen": "2026-11-20T15:44:25.453Z",
   "active": true
  },
  {
