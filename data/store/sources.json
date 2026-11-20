@@ -782,6 +782,14 @@
  "rpn-site": {
   "runs": [
    {
+    "t": "2026-11-20T07:34:00.862Z",
+    "ok": false,
+    "ms": 10494,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
+   {
     "t": "2026-11-20T03:33:22.853Z",
     "ok": false,
     "ms": 10495,
@@ -1540,22 +1548,14 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
-   {
-    "t": "2026-11-03T23:50:18.363Z",
-    "ok": false,
-    "ms": 10495,
-    "n": 0,
-    "fresh": 0,
-    "status": 0
    }
   ],
-  "lastRun": "2026-11-20T03:33:22.853Z",
+  "lastRun": "2026-11-20T07:34:00.862Z",
   "lastStatus": 0,
-  "lastMs": 10495,
+  "lastMs": 10494,
   "lastError": "UND_ERR_CONNECT_TIMEOUT",
   "idle": false,
-  "consecutiveFailures": 259,
+  "consecutiveFailures": 260,
   "lastItems": 0
  },
  "rpn-38": {
@@ -2341,6 +2341,14 @@
  "irkobl": {
   "runs": [
    {
+    "t": "2026-11-20T07:34:32.517Z",
+    "ok": false,
+    "ms": 30016,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
+   {
     "t": "2026-11-20T03:33:25.868Z",
     "ok": false,
     "ms": 1495,
@@ -3099,22 +3107,14 @@
     "n": 0,
     "fresh": 0,
     "status": 0
-   },
-   {
-    "t": "2026-11-03T23:50:21.209Z",
-    "ok": false,
-    "ms": 1233,
-    "n": 0,
-    "fresh": 0,
-    "status": 403
    }
   ],
-  "lastRun": "2026-11-20T03:33:25.868Z",
-  "lastStatus": 403,
-  "lastMs": 1495,
-  "lastError": "HTTP 403",
+  "lastRun": "2026-11-20T07:34:32.517Z",
+  "lastStatus": 0,
+  "lastMs": 30016,
+  "lastError": "HTTP 0",
   "idle": false,
-  "consecutiveFailures": 259,
+  "consecutiveFailures": 260,
   "lastItems": 0
  },
  "us-embassy": {
