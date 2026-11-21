@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|paracetamol|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-21T09:31:17.788Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "paracetamol",
+   "city": "shelekhov"
+  },
+  "value": 5,
+  "baseline": 5,
+  "title": {
+   "en": "Paracetamol (control) availability down 98% in Shelekhov",
+   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 98%"
+  },
+  "detail": {
+   "en": "In-stock products 5 vs 72h peak 5; availability count 42 vs peak 2222.",
+   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 42（峰值 2222）。"
+  },
+  "firstSeen": "2026-10-08T21:27:39.700Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-21T09:31:17.788Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 16,
+  "baseline": 19,
+  "title": {
+   "en": "Levofloxacin availability down 78% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 78%"
+  },
+  "detail": {
+   "en": "In-stock products 16 vs 72h peak 19; availability count 31 vs peak 144.",
+   "zh": "有现货商品 16 款（72 小时峰值 19 款）；可购量 31（峰值 144）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "HTTP 0"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
   "active": true
  },
  {
@@ -40,7 +90,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
   "active": true
  },
  {
@@ -62,57 +112,7 @@
    "zh": "AbortError"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
-  "active": true
- },
- {
-  "id": "stock|paracetamol|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-21T06:20:15.391Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "paracetamol",
-   "city": "shelekhov"
-  },
-  "value": 5,
-  "baseline": 5,
-  "title": {
-   "en": "Paracetamol (control) availability down 98% in Shelekhov",
-   "zh": "舍列霍夫对乙酰氨基酚（对照）可购量下降 98%"
-  },
-  "detail": {
-   "en": "In-stock products 5 vs 72h peak 5; availability count 42 vs peak 2222.",
-   "zh": "有现货商品 5 款（72 小时峰值 5 款）；可购量 42（峰值 2222）。"
-  },
-  "firstSeen": "2026-10-08T21:27:39.700Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-21T06:20:15.391Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 16,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 78% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 78%"
-  },
-  "detail": {
-   "en": "In-stock products 16 vs 72h peak 19; availability count 31 vs peak 144.",
-   "zh": "有现货商品 16 款（72 小时峰值 19 款）；可购量 31（峰值 144）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
   "active": true
  },
  {
@@ -137,7 +137,7 @@
   },
   "firstSeen": "2026-11-21T06:18:34.917Z",
   "lastSeen": "2026-11-21T09:18:35.257Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|azithromycin|shelekhov|2026-11-21T06",
@@ -161,7 +161,7 @@
   },
   "firstSeen": "2026-11-21T06:18:34.917Z",
   "lastSeen": "2026-11-21T09:18:35.257Z",
-  "active": true
+  "active": false
  },
  {
   "id": "jump|azithromycin|irkutsk|2026-11-21T00",
@@ -285,7 +285,7 @@
    "Роспотребнадзор представляет комикс «Петя Лентяев сохраняет безопасную среду в доме» 20.11.26"
   ],
   "firstSeen": "2026-11-20T11:03:37.719Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
   "active": true
  },
  {
@@ -312,7 +312,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 20.11.26"
   ],
   "firstSeen": "2026-11-20T06:12:59.738Z",
-  "lastSeen": "2026-11-21T09:18:35.257Z",
+  "lastSeen": "2026-11-21T09:28:34.608Z",
   "active": true
  },
  {
