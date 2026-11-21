@@ -1,68 +1,68 @@
 [
  {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-21T18:01:27.544Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
-  },
-  "detail": {
-   "en": "AbortError",
-   "zh": "AbortError"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T20:00:25.047Z",
-  "active": true
- },
- {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-21T16:11:25.757Z",
+  "t": "2026-11-21T20:11:53.422Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "irkobl"
   },
   "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (268 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 268 次）"
+   "en": "Irkutsk Oblast Ministry of Health unreachable (269 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 269 次）"
   },
   "detail": {
-   "en": "HTTP 0",
-   "zh": "HTTP 0"
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T20:00:25.047Z",
+  "lastSeen": "2026-11-21T20:10:25.128Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-21T20:11:49.837Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (4 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 4 次）"
+  },
+  "detail": {
+   "en": "AbortError",
+   "zh": "AbortError"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-21T20:10:25.128Z",
   "active": true
  },
  {
   "id": "source_down|rpn-site",
   "rule": "source_down",
   "severity": "info",
-  "t": "2026-11-21T16:09:52.501Z",
+  "t": "2026-11-21T20:10:48.336Z",
   "persistent": true,
   "subject": {
    "type": "source",
    "source": "rpn-site"
   },
   "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (268 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 268 次）"
+   "en": "Rospotrebnadzor · press releases unreachable (269 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 269 次）"
   },
   "detail": {
    "en": "UND_ERR_CONNECT_TIMEOUT",
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T20:00:25.047Z",
+  "lastSeen": "2026-11-21T20:10:25.128Z",
   "active": true
  },
  {
@@ -285,7 +285,7 @@
    "Роспотребнадзор представляет комикс «Петя Лентяев сохраняет безопасную среду в доме» 20.11.26"
   ],
   "firstSeen": "2026-11-20T11:03:37.719Z",
-  "lastSeen": "2026-11-21T20:00:25.047Z",
+  "lastSeen": "2026-11-21T20:10:25.128Z",
   "active": true
  },
  {
@@ -312,7 +312,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 20.11.26"
   ],
   "firstSeen": "2026-11-20T06:12:59.738Z",
-  "lastSeen": "2026-11-21T20:00:25.047Z",
+  "lastSeen": "2026-11-21T20:10:25.128Z",
   "active": true
  },
  {
