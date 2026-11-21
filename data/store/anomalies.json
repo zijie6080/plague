@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-21T22:12:12.373Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 17,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 95% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 95%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 17; availability count 106 vs peak 2008.",
+   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 106（峰值 2008）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-21T22:10:25.172Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T22:00:24.953Z",
+  "lastSeen": "2026-11-21T22:10:25.172Z",
   "active": true
  },
  {
@@ -40,7 +65,7 @@
    "zh": "AbortError"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T22:00:24.953Z",
+  "lastSeen": "2026-11-21T22:10:25.172Z",
   "active": true
  },
  {
@@ -62,7 +87,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-21T22:00:24.953Z",
+  "lastSeen": "2026-11-21T22:10:25.172Z",
   "active": true
  },
  {
@@ -188,31 +213,6 @@
   "active": false
  },
  {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-20T17:47:14.375Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 95% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 95%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 17; availability count 109 vs peak 2042.",
-   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 109（峰值 2042）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-20T20:45:07.388Z",
-  "active": false
- },
- {
   "id": "stock|levofloxacin|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -285,7 +285,7 @@
    "Роспотребнадзор представляет комикс «Петя Лентяев сохраняет безопасную среду в доме» 20.11.26"
   ],
   "firstSeen": "2026-11-20T11:03:37.719Z",
-  "lastSeen": "2026-11-21T22:00:24.953Z",
+  "lastSeen": "2026-11-21T22:10:25.172Z",
   "active": true
  },
  {
@@ -312,7 +312,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 20.11.26"
   ],
   "firstSeen": "2026-11-20T06:12:59.738Z",
-  "lastSeen": "2026-11-21T22:00:24.953Z",
+  "lastSeen": "2026-11-21T22:10:25.172Z",
   "active": true
  },
  {
