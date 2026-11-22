@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-22T23:21:11.117Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 17,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 93% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 93%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 17; availability count 105 vs peak 1609.",
+   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 105（峰值 1609）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-22T23:19:34.724Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +43,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T23:09:34.921Z",
+  "lastSeen": "2026-11-22T23:19:34.724Z",
   "active": true
  },
  {
@@ -40,32 +65,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T23:09:34.921Z",
-  "active": true
- },
- {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-22T20:18:25.839Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 93% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 93%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 17; availability count 105 vs peak 1609.",
-   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 105（峰值 1609）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T23:09:34.921Z",
+  "lastSeen": "2026-11-22T23:19:34.724Z",
   "active": true
  },
  {
