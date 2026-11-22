@@ -1,5 +1,149 @@
 [
  {
+  "id": "stock|amoxiclav|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-22T04:26:54.897Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 14,
+  "baseline": 17,
+  "title": {
+   "en": "Amoxicillin/clavulanate availability down 99% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 99%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 17; availability count 21 vs peak 1993.",
+   "zh": "有现货商品 14 款（72 小时峰值 17 款）；可购量 21（峰值 1993）。"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-22T04:26:54.897Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 17,
+  "baseline": 19,
+  "title": {
+   "en": "Levofloxacin availability down 91% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 91%"
+  },
+  "detail": {
+   "en": "In-stock products 17 vs 72h peak 19; availability count 125 vs peak 1340.",
+   "zh": "有现货商品 17 款（72 小时峰值 19 款）；可购量 125（峰值 1340）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-22T04:26:54.897Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 9,
+  "baseline": 13,
+  "title": {
+   "en": "Levofloxacin availability down 81% in Shelekhov",
+   "zh": "舍列霍夫左氧氟沙星可购量下降 81%"
+  },
+  "detail": {
+   "en": "In-stock products 9 vs 72h peak 13; availability count 352 vs peak 1852.",
+   "zh": "有现货商品 9 款（72 小时峰值 13 款）；可购量 352（峰值 1852）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
+  "active": true
+ },
+ {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-22T04:26:54.897Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 14,
+  "baseline": 22,
+  "title": {
+   "en": "Azithromycin availability down 98% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 98%"
+  },
+  "detail": {
+   "en": "In-stock products 14 vs 72h peak 22; availability count 40 vs peak 1701.",
+   "zh": "有现货商品 14 款（72 小时峰值 22 款）；可购量 40（峰值 1701）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
+  "active": true
+ },
+ {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-22T04:25:20.286Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (271 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 271 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-22T04:25:17.361Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (6 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 6 次）"
+  },
+  "detail": {
+   "en": "AbortError",
+   "zh": "AbortError"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-site",
   "rule": "source_down",
   "severity": "info",
@@ -18,76 +162,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T04:14:15.251Z",
-  "active": true
- },
- {
-  "id": "stock|amoxiclav|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-22T01:15:14.645Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "amoxiclav",
-   "city": "shelekhov"
-  },
-  "value": 17,
-  "baseline": 17,
-  "title": {
-   "en": "Amoxicillin/clavulanate availability down 95% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 95%"
-  },
-  "detail": {
-   "en": "In-stock products 17 vs 72h peak 17; availability count 106 vs peak 1993.",
-   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 106（峰值 1993）。"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T04:14:15.251Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-22T00:14:57.726Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (270 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 270 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T04:14:15.251Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-22T00:14:54.308Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (5 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 5 次）"
-  },
-  "detail": {
-   "en": "AbortError",
-   "zh": "AbortError"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T04:14:15.251Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
   "active": true
  },
  {
@@ -113,31 +188,6 @@
   },
   "firstSeen": "2026-10-08T21:27:39.700Z",
   "lastSeen": "2026-11-21T18:20:24.741Z",
-  "active": false
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-21T15:51:37.144Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 16,
-  "baseline": 19,
-  "title": {
-   "en": "Levofloxacin availability down 79% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 79%"
-  },
-  "detail": {
-   "en": "In-stock products 16 vs 72h peak 19; availability count 30 vs peak 144.",
-   "zh": "有现货商品 16 款（72 小时峰值 19 款）；可购量 30（峰值 144）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-21T18:50:24.968Z",
   "active": false
  },
  {
@@ -213,56 +263,6 @@
   "active": false
  },
  {
-  "id": "stock|levofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-20T17:47:14.375Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 7,
-  "baseline": 13,
-  "title": {
-   "en": "Levofloxacin availability down 88% in Shelekhov",
-   "zh": "舍列霍夫左氧氟沙星可购量下降 88%"
-  },
-  "detail": {
-   "en": "In-stock products 7 vs 72h peak 13; availability count 240 vs peak 1946.",
-   "zh": "有现货商品 7 款（72 小时峰值 13 款）；可购量 240（峰值 1946）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-20T20:45:07.388Z",
-  "active": false
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-20T17:47:14.375Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 18,
-  "baseline": 22,
-  "title": {
-   "en": "Azithromycin availability down 88% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 88%"
-  },
-  "detail": {
-   "en": "In-stock products 18 vs 72h peak 22; availability count 68 vs peak 561.",
-   "zh": "有现货商品 18 款（72 小时峰值 22 款）；可购量 68（峰值 561）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-20T20:45:07.388Z",
-  "active": false
- },
- {
   "id": "page|rpn-38|1da01b1ef3",
   "rule": "page_change",
   "severity": "info",
@@ -285,7 +285,7 @@
    "Роспотребнадзор представляет комикс «Петя Лентяев сохраняет безопасную среду в доме» 20.11.26"
   ],
   "firstSeen": "2026-11-20T11:03:37.719Z",
-  "lastSeen": "2026-11-22T04:14:15.251Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
   "active": true
  },
  {
@@ -312,7 +312,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 20.11.26"
   ],
   "firstSeen": "2026-11-20T06:12:59.738Z",
-  "lastSeen": "2026-11-22T04:14:15.251Z",
+  "lastSeen": "2026-11-22T04:24:15.333Z",
   "active": true
  },
  {
