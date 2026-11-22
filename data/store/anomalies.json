@@ -3,25 +3,25 @@
   "id": "stock|amoxiclav|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
-  "t": "2026-11-22T04:26:54.897Z",
+  "t": "2026-11-22T07:35:52.971Z",
   "persistent": true,
   "subject": {
    "type": "drug",
    "drug": "amoxiclav",
    "city": "shelekhov"
   },
-  "value": 14,
+  "value": 17,
   "baseline": 17,
   "title": {
-   "en": "Amoxicillin/clavulanate availability down 99% in Shelekhov",
-   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 99%"
+   "en": "Amoxicillin/clavulanate availability down 95% in Shelekhov",
+   "zh": "舍列霍夫阿莫西林克拉维酸可购量下降 95%"
   },
   "detail": {
-   "en": "In-stock products 14 vs 72h peak 17; availability count 21 vs peak 1978.",
-   "zh": "有现货商品 14 款（72 小时峰值 17 款）；可购量 21（峰值 1978）。"
+   "en": "In-stock products 17 vs 72h peak 17; availability count 106 vs peak 1978.",
+   "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 106（峰值 1978）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T07:24:14.566Z",
+  "lastSeen": "2026-11-22T07:34:14.932Z",
   "active": true
  },
  {
@@ -47,7 +47,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-11-22T07:24:14.566Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|shelekhov",
@@ -72,7 +72,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-22T07:24:14.566Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|azithromycin|shelekhov",
@@ -97,7 +97,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-22T07:24:14.566Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|irkobl",
@@ -118,7 +118,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T07:24:14.566Z",
+  "lastSeen": "2026-11-22T07:34:14.932Z",
   "active": true
  },
  {
@@ -140,7 +140,7 @@
    "zh": "AbortError"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T07:24:14.566Z",
+  "lastSeen": "2026-11-22T07:34:14.932Z",
   "active": true
  },
  {
@@ -162,7 +162,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-22T07:24:14.566Z",
+  "lastSeen": "2026-11-22T07:34:14.932Z",
   "active": true
  },
  {
@@ -285,7 +285,7 @@
    "Роспотребнадзор представляет комикс «Петя Лентяев сохраняет безопасную среду в доме» 20.11.26"
   ],
   "firstSeen": "2026-11-20T11:03:37.719Z",
-  "lastSeen": "2026-11-22T07:24:14.566Z",
+  "lastSeen": "2026-11-22T07:34:14.932Z",
   "active": true
  },
  {
