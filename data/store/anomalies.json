@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-23T16:54:51.989Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (280 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 280 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-23T16:54:26.049Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-23T16:54:49.100Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (280 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 280 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-23T16:54:26.049Z",
+  "active": true
+ },
+ {
   "id": "stock|amoxiclav|shelekhov",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 17 款）；可购量 95（峰值 1609）。"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-23T16:44:25.748Z",
+  "lastSeen": "2026-11-23T16:54:26.049Z",
   "active": true
  },
  {
@@ -46,29 +90,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-23T16:44:25.748Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-23T12:53:40.695Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (279 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 279 次）"
-  },
-  "detail": {
-   "en": "HTTP 0",
-   "zh": "HTTP 0"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-23T16:44:25.748Z",
+  "lastSeen": "2026-11-23T16:54:26.049Z",
   "active": true
  },
  {
@@ -94,28 +116,6 @@
   "active": false
  },
  {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-23T12:52:07.303Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (279 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 279 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-23T16:44:25.748Z",
-  "active": true
- },
- {
   "id": "page|rpn-38|d67779db90",
   "rule": "page_change",
   "severity": "info",
@@ -138,7 +138,7 @@
    "Стартует пятый этап всероссийского просветительского проекта «Лекторий «Санпросвет» 23.11.26"
   ],
   "firstSeen": "2026-11-23T09:01:44.112Z",
-  "lastSeen": "2026-11-23T16:44:25.748Z",
+  "lastSeen": "2026-11-23T16:54:26.049Z",
   "active": true
  },
  {
@@ -167,7 +167,7 @@
    "«Горячая линия» по профилактике ВИЧ-инфекции 23.11.26"
   ],
   "firstSeen": "2026-11-23T06:50:26.466Z",
-  "lastSeen": "2026-11-23T16:44:25.748Z",
+  "lastSeen": "2026-11-23T16:54:26.049Z",
   "active": true
  },
  {
