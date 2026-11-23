@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-23T21:16:57.786Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 16,
+  "baseline": 18,
+  "title": {
+   "en": "Levofloxacin availability down 98% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 98%"
+  },
+  "detail": {
+   "en": "In-stock products 16 vs 72h peak 18; availability count 30 vs peak 1340.",
+   "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-23T21:15:15.967Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-23T21:16:57.786Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 12,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 83% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 83%"
+  },
+  "detail": {
+   "en": "In-stock products 12 vs 72h peak 13; availability count 32 vs peak 188.",
+   "zh": "有现货商品 12 款（72 小时峰值 13 款）；可购量 32（峰值 188）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-23T21:15:15.967Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-23T21:05:16.354Z",
+  "lastSeen": "2026-11-23T21:15:15.967Z",
   "active": true
  },
  {
@@ -40,7 +90,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-23T21:05:16.354Z",
+  "lastSeen": "2026-11-23T21:15:15.967Z",
   "active": true
  },
  {
@@ -65,7 +115,7 @@
   },
   "firstSeen": "2026-11-23T18:04:25.515Z",
   "lastSeen": "2026-11-23T21:05:16.354Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|amoxiclav|shelekhov",
@@ -90,32 +140,7 @@
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-11-23T21:05:16.354Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-23T18:06:29.841Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 16,
-  "baseline": 18,
-  "title": {
-   "en": "Levofloxacin availability down 98% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 98%"
-  },
-  "detail": {
-   "en": "In-stock products 16 vs 72h peak 18; availability count 30 vs peak 1340.",
-   "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-23T21:05:16.354Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -162,7 +187,7 @@
    "Стартует пятый этап всероссийского просветительского проекта «Лекторий «Санпросвет» 23.11.26"
   ],
   "firstSeen": "2026-11-23T09:01:44.112Z",
-  "lastSeen": "2026-11-23T21:05:16.354Z",
+  "lastSeen": "2026-11-23T21:15:15.967Z",
   "active": true
  },
  {
@@ -191,7 +216,7 @@
    "«Горячая линия» по профилактике ВИЧ-инфекции 23.11.26"
   ],
   "firstSeen": "2026-11-23T06:50:26.466Z",
-  "lastSeen": "2026-11-23T21:05:16.354Z",
+  "lastSeen": "2026-11-23T21:15:15.967Z",
   "active": true
  },
  {
@@ -468,31 +493,6 @@
   ],
   "firstSeen": "2026-11-19T03:06:16.030Z",
   "lastSeen": "2026-11-21T02:57:53.205Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-19T00:47:58.096Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 13,
-  "title": {
-   "en": "Ciprofloxacin availability down 85% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 85%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 13; availability count 36 vs peak 246.",
-   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 36（峰值 246）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-19T03:46:16.127Z",
   "active": false
  },
  {
