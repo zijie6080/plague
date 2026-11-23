@@ -13260,6 +13260,14 @@
  "rbc": {
   "runs": [
    {
+    "t": "2026-11-23T01:51:18.752Z",
+    "ok": false,
+    "ms": 25001,
+    "n": 0,
+    "fresh": 0,
+    "status": 0
+   },
+   {
     "t": "2026-11-23T00:50:26.888Z",
     "ok": false,
     "ms": 25000,
@@ -14018,23 +14026,15 @@
     "n": 0,
     "fresh": 0,
     "status": 200
-   },
-   {
-    "t": "2026-11-21T15:29:35.304Z",
-    "ok": true,
-    "ms": 1292,
-    "n": 0,
-    "fresh": 0,
-    "status": 200
    }
   ],
-  "lastRun": "2026-11-23T00:50:26.888Z",
+  "lastRun": "2026-11-23T01:51:18.752Z",
   "lastStatus": 0,
-  "lastMs": 25000,
+  "lastMs": 25001,
   "lastError": "AbortError",
   "idle": false,
   "lastOk": "2026-11-22T23:30:38.411Z",
-  "consecutiveFailures": 3,
+  "consecutiveFailures": 4,
   "lastItems": 0
  },
  "asna": {
