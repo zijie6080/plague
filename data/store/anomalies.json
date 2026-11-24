@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-24T21:09:14.502Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (287 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 287 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-24T21:09:11.672Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
+  },
+  "detail": {
+   "en": "AbortError",
+   "zh": "AbortError"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
+  "active": true
+ },
+ {
   "id": "jump|azithromycin|belarus|2026-11-24T19",
   "rule": "price_jump",
   "severity": "watch",
@@ -20,7 +64,7 @@
    "zh": "涨幅最大：Азитромицин ФТ таблетки покрытые оболочкой 500мг N3，₽2.5 → ₽5。"
   },
   "firstSeen": "2026-11-24T19:18:09.904Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -45,7 +89,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -70,7 +114,7 @@
    "zh": "有现货商品 12 款（72 小时峰值 12 款）；可购量 29（峰值 188）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -95,29 +139,7 @@
    "zh": "有现货商品 20 款（72 小时峰值 20 款）；可购量 390（峰值 1700）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-24T17:08:36.388Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (286 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 286 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -139,7 +161,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -163,30 +185,8 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
- },
- {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-24T14:38:30.538Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (4 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 4 次）"
-  },
-  "detail": {
-   "en": "AbortError",
-   "zh": "AbortError"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T18:38:09.881Z",
-  "active": false
  },
  {
   "id": "jump|azithromycin|belarus|2026-11-24T13",
@@ -284,7 +284,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -310,7 +310,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -385,7 +385,7 @@
    "Стартует пятый этап всероссийского просветительского проекта «Лекторий «Санпросвет» 23.11.26"
   ],
   "firstSeen": "2026-11-23T09:01:44.112Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
@@ -414,7 +414,7 @@
    "«Горячая линия» по профилактике ВИЧ-инфекции 23.11.26"
   ],
   "firstSeen": "2026-11-23T06:50:26.466Z",
-  "lastSeen": "2026-11-24T20:58:10.324Z",
+  "lastSeen": "2026-11-24T21:08:09.534Z",
   "active": true
  },
  {
