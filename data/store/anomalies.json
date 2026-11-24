@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-24T12:37:33.815Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
+  },
+  "detail": {
+   "en": "HTTP 502",
+   "zh": "HTTP 502"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +43,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -46,7 +68,7 @@
    "zh": "有现货商品 12 款（72 小时峰值 12 款）；可购量 30（峰值 188）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -71,7 +93,7 @@
    "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 389（峰值 1700）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -93,7 +115,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -115,7 +137,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -141,7 +163,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -167,7 +189,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -220,28 +242,6 @@
   "active": false
  },
  {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-23T12:53:08.804Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
-  },
-  "detail": {
-   "en": "AbortError",
-   "zh": "AbortError"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-23T14:44:25.575Z",
-  "active": false
- },
- {
   "id": "page|rpn-38|d67779db90",
   "rule": "page_change",
   "severity": "info",
@@ -264,7 +264,7 @@
    "Стартует пятый этап всероссийского просветительского проекта «Лекторий «Санпросвет» 23.11.26"
   ],
   "firstSeen": "2026-11-23T09:01:44.112Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
@@ -293,7 +293,7 @@
    "«Горячая линия» по профилактике ВИЧ-инфекции 23.11.26"
   ],
   "firstSeen": "2026-11-23T06:50:26.466Z",
-  "lastSeen": "2026-11-24T12:27:28.895Z",
+  "lastSeen": "2026-11-24T12:37:29.356Z",
   "active": true
  },
  {
