@@ -1,5 +1,80 @@
 [
  {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-24T09:58:32.911Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 16,
+  "baseline": 18,
+  "title": {
+   "en": "Levofloxacin availability down 98% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 98%"
+  },
+  "detail": {
+   "en": "In-stock products 16 vs 72h peak 18; availability count 30 vs peak 1340.",
+   "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-24T09:58:32.911Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 12,
+  "baseline": 12,
+  "title": {
+   "en": "Ciprofloxacin availability down 84% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 84%"
+  },
+  "detail": {
+   "en": "In-stock products 12 vs 72h peak 12; availability count 30 vs peak 188.",
+   "zh": "有现货商品 12 款（72 小时峰值 12 款）；可购量 30（峰值 188）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
+  "active": true
+ },
+ {
+  "id": "stock|azithromycin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-24T09:58:32.911Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 19,
+  "baseline": 19,
+  "title": {
+   "en": "Azithromycin availability down 77% in Shelekhov",
+   "zh": "舍列霍夫阿奇霉素可购量下降 77%"
+  },
+  "detail": {
+   "en": "In-stock products 19 vs 72h peak 19; availability count 389 vs peak 1700.",
+   "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 389（峰值 1700）。"
+  },
+  "firstSeen": "2026-10-09T06:58:44.680Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +93,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
   "active": true
  },
  {
@@ -40,82 +115,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
-  "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-24T06:49:37.339Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 16,
-  "baseline": 18,
-  "title": {
-   "en": "Levofloxacin availability down 98% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 98%"
-  },
-  "detail": {
-   "en": "In-stock products 16 vs 72h peak 18; availability count 30 vs peak 1340.",
-   "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 30（峰值 1340）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-24T06:49:37.339Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 12,
-  "baseline": 12,
-  "title": {
-   "en": "Ciprofloxacin availability down 84% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 84%"
-  },
-  "detail": {
-   "en": "In-stock products 12 vs 72h peak 12; availability count 30 vs peak 188.",
-   "zh": "有现货商品 12 款（72 小时峰值 12 款）；可购量 30（峰值 188）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
-  "active": true
- },
- {
-  "id": "stock|azithromycin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-24T06:49:37.339Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "azithromycin",
-   "city": "shelekhov"
-  },
-  "value": 19,
-  "baseline": 19,
-  "title": {
-   "en": "Azithromycin availability down 77% in Shelekhov",
-   "zh": "舍列霍夫阿奇霉素可购量下降 77%"
-  },
-  "detail": {
-   "en": "In-stock products 19 vs 72h peak 19; availability count 395 vs peak 1700.",
-   "zh": "有现货商品 19 款（72 小时峰值 19 款）；可购量 395（峰值 1700）。"
-  },
-  "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
   "active": true
  },
  {
@@ -141,7 +141,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
   "active": true
  },
  {
@@ -167,7 +167,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
   "active": true
  },
  {
@@ -264,7 +264,7 @@
    "Стартует пятый этап всероссийского просветительского проекта «Лекторий «Санпросвет» 23.11.26"
   ],
   "firstSeen": "2026-11-23T09:01:44.112Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
   "active": true
  },
  {
@@ -293,7 +293,7 @@
    "«Горячая линия» по профилактике ВИЧ-инфекции 23.11.26"
   ],
   "firstSeen": "2026-11-23T06:50:26.466Z",
-  "lastSeen": "2026-11-24T09:46:46.019Z",
+  "lastSeen": "2026-11-24T09:56:46.199Z",
   "active": true
  },
  {
