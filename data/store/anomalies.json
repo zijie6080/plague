@@ -1,5 +1,49 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-25T05:20:26.852Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (289 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 289 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-25T05:20:23.995Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (289 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 289 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +65,7 @@
    "zh": "有现货商品 15 款（72 小时峰值 17 款）；可购量 21（峰值 1339）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -46,7 +90,7 @@
    "zh": "有现货商品 12 款（72 小时峰值 12 款）；可购量 29（峰值 186）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -71,51 +115,7 @@
    "zh": "有现货商品 17 款（72 小时峰值 20 款）；可购量 278（峰值 1688）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-25T01:19:26.913Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (288 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 288 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-25T01:19:22.528Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (288 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 288 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -185,7 +185,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -284,7 +284,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -310,7 +310,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -385,7 +385,7 @@
    "Стартует пятый этап всероссийского просветительского проекта «Лекторий «Санпросвет» 23.11.26"
   ],
   "firstSeen": "2026-11-23T09:01:44.112Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
@@ -414,7 +414,7 @@
    "«Горячая линия» по профилактике ВИЧ-инфекции 23.11.26"
   ],
   "firstSeen": "2026-11-23T06:50:26.466Z",
-  "lastSeen": "2026-11-25T05:10:00.950Z",
+  "lastSeen": "2026-11-25T05:20:00.735Z",
   "active": true
  },
  {
