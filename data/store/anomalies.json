@@ -1,5 +1,30 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-25T17:23:38.292Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 81% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 81%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 35 vs peak 184.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 35（峰值 184）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -20,31 +45,6 @@
   "firstSeen": "2026-10-07T21:36:44.769Z",
   "lastSeen": "2026-11-25T16:41:45.354Z",
   "active": false
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-25T14:12:57.541Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 12,
-  "title": {
-   "en": "Ciprofloxacin availability down 80% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 80%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 12; availability count 36 vs peak 184.",
-   "zh": "有现货商品 13 款（72 小时峰值 12 款）；可购量 36（峰值 184）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
-  "active": true
  },
  {
   "id": "stock|azithromycin|shelekhov",
@@ -69,7 +69,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-25T17:11:45.039Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|irkobl",
@@ -90,7 +90,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
   "active": true
  },
  {
@@ -112,7 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
   "active": true
  },
  {
@@ -162,7 +162,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
   "active": true
  },
  {
@@ -235,7 +235,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
   "active": true
  },
  {
@@ -334,7 +334,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
   "active": true
  },
  {
@@ -360,7 +360,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-25T17:11:45.039Z",
+  "lastSeen": "2026-11-25T17:21:44.582Z",
   "active": true
  },
  {
