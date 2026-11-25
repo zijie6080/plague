@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-25T17:41:48.559Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (292 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 292 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-site",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +40,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
   "active": true
  },
  {
@@ -43,7 +65,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 35（峰值 184）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
   "active": true
  },
  {
@@ -94,28 +116,6 @@
   "active": false
  },
  {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-25T13:32:23.584Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (291 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 291 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
-  "active": true
- },
- {
   "id": "jump|amoxiclav|belarus|2026-11-25T11",
   "rule": "price_jump",
   "severity": "watch",
@@ -162,7 +162,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
   "active": true
  },
  {
@@ -235,7 +235,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
   "active": true
  },
  {
@@ -334,7 +334,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
   "active": true
  },
  {
@@ -360,7 +360,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-25T17:31:44.961Z",
+  "lastSeen": "2026-11-25T17:41:45.289Z",
   "active": true
  },
  {
