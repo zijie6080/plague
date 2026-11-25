@@ -1,5 +1,55 @@
 [
  {
+  "id": "stock|ciprofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-25T23:44:09.933Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 13,
+  "baseline": 13,
+  "title": {
+   "en": "Ciprofloxacin availability down 81% in Irkutsk",
+   "zh": "伊尔库茨克环丙沙星可购量下降 81%"
+  },
+  "detail": {
+   "en": "In-stock products 13 vs 72h peak 13; availability count 35 vs peak 184.",
+   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 35（峰值 184）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
+  "active": true
+ },
+ {
+  "id": "stock|levofloxacin|irkutsk",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-25T23:44:09.933Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 16,
+  "baseline": 17,
+  "title": {
+   "en": "Levofloxacin availability down 98% in Irkutsk",
+   "zh": "伊尔库茨克左氧氟沙星可购量下降 98%"
+  },
+  "detail": {
+   "en": "In-stock products 16 vs 72h peak 17; availability count 23 vs peak 1136.",
+   "zh": "有现货商品 16 款（72 小时峰值 17 款）；可购量 23（峰值 1136）。"
+  },
+  "firstSeen": "2026-10-08T08:46:10.687Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
+  "active": true
+ },
+ {
   "id": "source_down|rpn-38",
   "rule": "source_down",
   "severity": "info",
@@ -18,7 +68,7 @@
    "zh": "AbortError"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
  },
  {
@@ -40,7 +90,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
  },
  {
@@ -62,32 +112,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
-  "active": true
- },
- {
-  "id": "stock|ciprofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-25T20:34:20.026Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 13,
-  "baseline": 13,
-  "title": {
-   "en": "Ciprofloxacin availability down 81% in Irkutsk",
-   "zh": "伊尔库茨克环丙沙星可购量下降 81%"
-  },
-  "detail": {
-   "en": "In-stock products 13 vs 72h peak 13; availability count 35 vs peak 184.",
-   "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 35（峰值 184）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
  },
  {
@@ -162,33 +187,8 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
- },
- {
-  "id": "stock|levofloxacin|irkutsk",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-25T04:42:09.926Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "levofloxacin",
-   "city": "irkutsk"
-  },
-  "value": 15,
-  "baseline": 17,
-  "title": {
-   "en": "Levofloxacin availability down 98% in Irkutsk",
-   "zh": "伊尔库茨克左氧氟沙星可购量下降 98%"
-  },
-  "detail": {
-   "en": "In-stock products 15 vs 72h peak 17; availability count 21 vs peak 1339.",
-   "zh": "有现货商品 15 款（72 小时峰值 17 款）；可购量 21（峰值 1339）。"
-  },
-  "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-25T07:40:02.266Z",
-  "active": false
  },
  {
   "id": "jump|azithromycin|belarus|2026-11-24T19",
@@ -235,7 +235,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
  },
  {
@@ -334,7 +334,7 @@
    "Гепатит С: что нужно знать? 24.11.26"
   ],
   "firstSeen": "2026-11-24T05:46:45.827Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
  },
  {
@@ -360,7 +360,7 @@
    "О приостановлении действия лицензий 24.11.26"
   ],
   "firstSeen": "2026-11-24T02:45:58.907Z",
-  "lastSeen": "2026-11-25T23:32:34.829Z",
+  "lastSeen": "2026-11-25T23:42:34.681Z",
   "active": true
  },
  {
