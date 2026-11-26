@@ -1,5 +1,71 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-26T09:45:36.593Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (296 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 296 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-26T09:45:33.984Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
+  },
+  "detail": {
+   "en": "HTTP 502",
+   "zh": "HTTP 502"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-26T09:44:35.320Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (296 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 296 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
+  "active": true
+ },
+ {
   "id": "price|doxycycline|shelekhov",
   "rule": "price_index",
   "severity": "watch",
@@ -21,7 +87,7 @@
    "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
   "active": true
  },
  {
@@ -46,7 +112,7 @@
    "zh": "同款商品价格中位数较首次观测为 115.6（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
   "active": true
  },
  {
@@ -288,51 +354,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-26T05:44:19.039Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (295 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 295 次）"
-  },
-  "detail": {
-   "en": "HTTP 0",
-   "zh": "HTTP 0"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-26T05:43:45.469Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (295 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 295 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
   "active": true
  },
  {
@@ -411,28 +433,6 @@
   "active": false
  },
  {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-26T01:22:54.253Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (4 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 4 次）"
-  },
-  "detail": {
-   "en": "HTTP 502",
-   "zh": "HTTP 502"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T05:13:22.023Z",
-  "active": false
- },
- {
   "id": "jump|amoxiclav|belarus|2026-11-25T11",
   "rule": "price_jump",
   "severity": "watch",
@@ -479,7 +479,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
   "active": true
  },
  {
@@ -527,7 +527,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-26T09:34:11.513Z",
+  "lastSeen": "2026-11-26T09:44:12.278Z",
   "active": true
  },
  {
