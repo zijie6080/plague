@@ -1,5 +1,55 @@
 [
  {
+  "id": "price|doxycycline|shelekhov",
+  "rule": "price_index",
+  "severity": "watch",
+  "t": "2026-11-26T12:25:55.753Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "shelekhov"
+  },
+  "value": 112.2,
+  "baseline": 100,
+  "title": {
+   "en": "Doxycycline price +12.2% in Shelekhov",
+   "zh": "舍列霍夫多西环素价格 +12.2%"
+  },
+  "detail": {
+   "en": "Median same-product price relative to first observation is 112.2 (100 = baseline). Thresholds: +10% watch, +25% alert.",
+   "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
+  "active": true
+ },
+ {
+  "id": "price|gentamicin|shelekhov",
+  "rule": "price_index",
+  "severity": "watch",
+  "t": "2026-11-26T12:25:55.753Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "shelekhov"
+  },
+  "value": 115.6,
+  "baseline": 100,
+  "title": {
+   "en": "Gentamicin price +15.6% in Shelekhov",
+   "zh": "舍列霍夫庆大霉素价格 +15.6%"
+  },
+  "detail": {
+   "en": "Median same-product price relative to first observation is 115.6 (100 = baseline). Thresholds: +10% watch, +25% alert.",
+   "zh": "同款商品价格中位数较首次观测为 115.6（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
+  "active": true
+ },
+ {
   "id": "page|rpn-38|de772ba10a",
   "rule": "page_change",
   "severity": "info",
@@ -20,7 +70,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 26.11.26"
   ],
   "firstSeen": "2026-11-26T11:54:12.327Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
   "active": true
  },
  {
@@ -42,7 +92,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
   "active": true
  },
  {
@@ -86,57 +136,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
-  "active": true
- },
- {
-  "id": "price|doxycycline|shelekhov",
-  "rule": "price_index",
-  "severity": "watch",
-  "t": "2026-11-26T09:15:53.414Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "shelekhov"
-  },
-  "value": 112.2,
-  "baseline": 100,
-  "title": {
-   "en": "Doxycycline price +12.2% in Shelekhov",
-   "zh": "舍列霍夫多西环素价格 +12.2%"
-  },
-  "detail": {
-   "en": "Median same-product price relative to first observation is 112.2 (100 = baseline). Thresholds: +10% watch, +25% alert.",
-   "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
-  },
-  "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
-  "active": true
- },
- {
-  "id": "price|gentamicin|shelekhov",
-  "rule": "price_index",
-  "severity": "watch",
-  "t": "2026-11-26T09:15:53.414Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "shelekhov"
-  },
-  "value": 115.6,
-  "baseline": 100,
-  "title": {
-   "en": "Gentamicin price +15.6% in Shelekhov",
-   "zh": "舍列霍夫庆大霉素价格 +15.6%"
-  },
-  "detail": {
-   "en": "Median same-product price relative to first observation is 115.6 (100 = baseline). Thresholds: +10% watch, +25% alert.",
-   "zh": "同款商品价格中位数较首次观测为 115.6（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
-  },
-  "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
   "active": true
  },
  {
@@ -378,7 +378,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
   "active": true
  },
  {
@@ -503,7 +503,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
   "active": true
  },
  {
@@ -551,7 +551,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-26T12:14:11.630Z",
+  "lastSeen": "2026-11-26T12:24:11.897Z",
   "active": true
  },
  {
