@@ -1,5 +1,271 @@
 [
  {
+  "id": "jump|azithromycin|belarus|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:59.524Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "belarus"
+  },
+  "value": 9,
+  "baseline": 7.2,
+  "title": {
+   "en": "1 Azithromycin product(s) jumped ≥15% in Belarus (national)",
+   "zh": "白俄罗斯全国有 1 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин Фармлэнд таблетки покрытые оболочкой 500мг N6 ₽7.2 → ₽9.",
+   "zh": "涨幅最大：Азитромицин Фармлэнд таблетки покрытые оболочкой 500мг N6，₽7.2 → ₽9。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "price|doxycycline|shelekhov",
+  "rule": "price_index",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "shelekhov"
+  },
+  "value": 112.2,
+  "baseline": 100,
+  "title": {
+   "en": "Doxycycline price +12.2% in Shelekhov",
+   "zh": "舍列霍夫多西环素价格 +12.2%"
+  },
+  "detail": {
+   "en": "Median same-product price relative to first observation is 112.2 (100 = baseline). Thresholds: +10% watch, +25% alert.",
+   "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "price|gentamicin|shelekhov",
+  "rule": "price_index",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "shelekhov"
+  },
+  "value": 115.6,
+  "baseline": 100,
+  "title": {
+   "en": "Gentamicin price +15.6% in Shelekhov",
+   "zh": "舍列霍夫庆大霉素价格 +15.6%"
+  },
+  "detail": {
+   "en": "Median same-product price relative to first observation is 115.6 (100 = baseline). Thresholds: +10% watch, +25% alert.",
+   "zh": "同款商品价格中位数较首次观测为 115.6（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|irkutsk|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 65,
+  "baseline": 56,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Ципролет 250мг 10 шт. таблетки покрытые пленочной оболочкой Dr. Reddy.s Laboratories Ltd. ₽56 → ₽65.",
+   "zh": "涨幅最大：Ципролет 250мг 10 шт. таблетки покрытые пленочной оболочкой Dr. Reddy.s Laboratories Ltd.，₽56 → ₽65。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|levofloxacin|irkutsk|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "irkutsk"
+  },
+  "value": 409,
+  "baseline": 327,
+  "title": {
+   "en": "1 Levofloxacin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款左氧氟沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Левофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Озон ₽327 → ₽409.",
+   "zh": "涨幅最大：Левофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Озон，₽327 → ₽409。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|azithromycin|irkutsk|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "irkutsk"
+  },
+  "value": 535,
+  "baseline": 443,
+  "title": {
+   "en": "3 Azithromycin product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 3 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин Экспресс 500мг 3 шт. таблетки диспергируемые ₽443 → ₽535.",
+   "zh": "涨幅最大：Азитромицин Экспресс 500мг 3 шт. таблетки диспергируемые，₽443 → ₽535。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|amoxiclav|irkutsk|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "irkutsk"
+  },
+  "value": 361,
+  "baseline": 266,
+  "title": {
+   "en": "1 Amoxicillin/clavulanate product(s) jumped ≥15% in Irkutsk",
+   "zh": "伊尔库茨克有 1 款阿莫西林克拉维酸商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Экоклав 250мг+125мг 15 шт. таблетки покрытые пленочной оболочкой Авва Рус ₽266 → ₽361.",
+   "zh": "涨幅最大：Экоклав 250мг+125мг 15 шт. таблетки покрытые пленочной оболочкой Авва Рус，₽266 → ₽361。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|ciprofloxacin|shelekhov|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 91,
+  "baseline": 78,
+  "title": {
+   "en": "1 Ciprofloxacin product(s) jumped ≥15% in Shelekhov",
+   "zh": "舍列霍夫有 1 款环丙沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Озон ₽78 → ₽91.",
+   "zh": "涨幅最大：Ципрофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Озон，₽78 → ₽91。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|levofloxacin|shelekhov|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "levofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 608,
+  "baseline": 327,
+  "title": {
+   "en": "2 Levofloxacin product(s) jumped ≥15% in Shelekhov",
+   "zh": "舍列霍夫有 2 款左氧氟沙星商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Левофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Озон ₽327 → ₽608.",
+   "zh": "涨幅最大：Левофлоксацин 500мг 10 шт. таблетки покрытые пленочной оболочкой Озон，₽327 → ₽608。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|azithromycin|shelekhov|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "azithromycin",
+   "city": "shelekhov"
+  },
+  "value": 311,
+  "baseline": 234,
+  "title": {
+   "en": "3 Azithromycin product(s) jumped ≥15% in Shelekhov",
+   "zh": "舍列霍夫有 3 款阿奇霉素商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Азитромицин 500мг 3 шт. таблетки покрытые пленочной оболочкой ₽234 → ₽311.",
+   "zh": "涨幅最大：Азитромицин 500мг 3 шт. таблетки покрытые пленочной оболочкой，₽234 → ₽311。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
+  "id": "jump|amoxiclav|shelekhov|2026-11-26T06",
+  "rule": "price_jump",
+  "severity": "watch",
+  "t": "2026-11-26T06:06:35.631Z",
+  "subject": {
+   "type": "drug",
+   "drug": "amoxiclav",
+   "city": "shelekhov"
+  },
+  "value": 550,
+  "baseline": 450,
+  "title": {
+   "en": "3 Amoxicillin/clavulanate product(s) jumped ≥15% in Shelekhov",
+   "zh": "舍列霍夫有 3 款阿莫西林克拉维酸商品单次涨幅 ≥15%"
+  },
+  "detail": {
+   "en": "Largest: Амоксициллин+Клавулановая Кислота Экспресс 875мг+125мг 14 шт. таблетки диспергируемые ₽450 → ₽550.",
+   "zh": "涨幅最大：Амоксициллин+Клавулановая Кислота Экспресс 875мг+125мг 14 шт. таблетки диспергируемые，₽450 → ₽550。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
+  "active": true
+ },
+ {
   "id": "page|rpn-38|ccfb6fa99c",
   "rule": "page_change",
   "severity": "info",
@@ -22,7 +288,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-26T05:53:22.314Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
   "active": true
  },
  {
@@ -44,7 +310,7 @@
    "zh": "HTTP 0"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T05:53:22.314Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
   "active": true
  },
  {
@@ -66,7 +332,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T05:53:22.314Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
   "active": true
  },
  {
@@ -92,7 +358,7 @@
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
   "lastSeen": "2026-11-26T05:53:22.314Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|levofloxacin|irkutsk",
@@ -117,7 +383,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-11-26T05:53:22.314Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|azithromycin|shelekhov",
@@ -142,7 +408,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-26T05:53:22.314Z",
-  "active": true
+  "active": false
  },
  {
   "id": "source_down|rpn-38",
@@ -213,7 +479,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-26T05:53:22.314Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
   "active": true
  },
  {
@@ -261,7 +527,7 @@
    "Disease Outbreak News"
   ],
   "firstSeen": "2026-11-24T16:17:28.733Z",
-  "lastSeen": "2026-11-26T05:53:22.314Z",
+  "lastSeen": "2026-11-26T06:03:22.028Z",
   "active": true
  },
  {
