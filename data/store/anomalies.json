@@ -1,5 +1,102 @@
 [
  {
+  "id": "price|doxycycline|shelekhov",
+  "rule": "price_index",
+  "severity": "watch",
+  "t": "2026-11-26T21:58:43.418Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "doxycycline",
+   "city": "shelekhov"
+  },
+  "value": 112.2,
+  "baseline": 100,
+  "title": {
+   "en": "Doxycycline price +12.2% in Shelekhov",
+   "zh": "舍列霍夫多西环素价格 +12.2%"
+  },
+  "detail": {
+   "en": "Median same-product price relative to first observation is 112.2 (100 = baseline). Thresholds: +10% watch, +25% alert.",
+   "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
+  },
+  "firstSeen": "2026-11-26T06:03:22.028Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
+  "active": true
+ },
+ {
+  "id": "stock|gentamicin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "alert",
+  "t": "2026-11-26T21:58:43.418Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "gentamicin",
+   "city": "shelekhov"
+  },
+  "value": 0,
+  "baseline": 1,
+  "title": {
+   "en": "Gentamicin: no in-stock listings in Shelekhov",
+   "zh": "舍列霍夫庆大霉素已无现货在售"
+  },
+  "detail": {
+   "en": "In-stock products 0 vs 72h peak 1; availability count 0 vs peak 267.",
+   "zh": "有现货商品 0 款（72 小时峰值 1 款）；可购量 0（峰值 267）。"
+  },
+  "firstSeen": "2026-10-08T02:25:39.889Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
+  "active": true
+ },
+ {
+  "id": "stock|ciprofloxacin|shelekhov",
+  "rule": "availability_drop",
+  "severity": "watch",
+  "t": "2026-11-26T21:58:43.418Z",
+  "persistent": true,
+  "subject": {
+   "type": "drug",
+   "drug": "ciprofloxacin",
+   "city": "shelekhov"
+  },
+  "value": 8,
+  "baseline": 11,
+  "title": {
+   "en": "Ciprofloxacin availability down 90% in Shelekhov",
+   "zh": "舍列霍夫环丙沙星可购量下降 90%"
+  },
+  "detail": {
+   "en": "In-stock products 8 vs 72h peak 11; availability count 328 vs peak 3168.",
+   "zh": "有现货商品 8 款（72 小时峰值 11 款）；可购量 328（峰值 3168）。"
+  },
+  "firstSeen": "2026-10-14T04:06:03.385Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
+  "active": true
+ },
+ {
+  "id": "source_down|rpn-site",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-26T21:56:58.401Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-site"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · press releases unreachable (299 attempts)",
+   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 299 次）"
+  },
+  "detail": {
+   "en": "UND_ERR_CONNECT_TIMEOUT",
+   "zh": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
+  "active": true
+ },
+ {
   "id": "source_down|irkobl",
   "rule": "source_down",
   "severity": "info",
@@ -18,32 +115,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
-  "active": true
- },
- {
-  "id": "price|doxycycline|shelekhov",
-  "rule": "price_index",
-  "severity": "watch",
-  "t": "2026-11-26T18:48:31.900Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "doxycycline",
-   "city": "shelekhov"
-  },
-  "value": 112.2,
-  "baseline": 100,
-  "title": {
-   "en": "Doxycycline price +12.2% in Shelekhov",
-   "zh": "舍列霍夫多西环素价格 +12.2%"
-  },
-  "detail": {
-   "en": "Median same-product price relative to first observation is 112.2 (100 = baseline). Thresholds: +10% watch, +25% alert.",
-   "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
-  },
-  "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
   "active": true
  },
  {
@@ -69,7 +141,7 @@
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
   "lastSeen": "2026-11-26T21:46:35.027Z",
-  "active": true
+  "active": false
  },
  {
   "id": "stock|azithromycin|shelekhov",
@@ -94,54 +166,7 @@
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
   "lastSeen": "2026-11-26T21:46:35.027Z",
-  "active": true
- },
- {
-  "id": "stock|gentamicin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "alert",
-  "t": "2026-11-26T18:48:31.900Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "gentamicin",
-   "city": "shelekhov"
-  },
-  "value": 0,
-  "baseline": 1,
-  "title": {
-   "en": "Gentamicin: no in-stock listings in Shelekhov",
-   "zh": "舍列霍夫庆大霉素已无现货在售"
-  },
-  "detail": {
-   "en": "In-stock products 0 vs 72h peak 1; availability count 0 vs peak 267.",
-   "zh": "有现货商品 0 款（72 小时峰值 1 款）；可购量 0（峰值 267）。"
-  },
-  "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
-  "active": true
- },
- {
-  "id": "source_down|rpn-site",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-26T17:55:25.624Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-site"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · press releases unreachable (298 attempts)",
-   "zh": "俄消费者权益保护局 · 新闻发布无法访问（连续 298 次）"
-  },
-  "detail": {
-   "en": "UND_ERR_CONNECT_TIMEOUT",
-   "zh": "UND_ERR_CONNECT_TIMEOUT"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
-  "active": true
+  "active": false
  },
  {
   "id": "price|gentamicin|shelekhov",
@@ -189,7 +214,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 26.11.26"
   ],
   "firstSeen": "2026-11-26T11:54:12.327Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
   "active": true
  },
  {
@@ -453,7 +478,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
   "active": true
  },
  {
@@ -528,7 +553,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-26T21:46:35.027Z",
+  "lastSeen": "2026-11-26T21:56:35.149Z",
   "active": true
  },
  {
@@ -1314,31 +1339,6 @@
   },
   "firstSeen": "2026-11-13T09:02:44.899Z",
   "lastSeen": "2026-11-16T05:50:09.568Z",
-  "active": false
- },
- {
-  "id": "stock|ciprofloxacin|shelekhov",
-  "rule": "availability_drop",
-  "severity": "watch",
-  "t": "2026-11-16T00:10:57.389Z",
-  "persistent": true,
-  "subject": {
-   "type": "drug",
-   "drug": "ciprofloxacin",
-   "city": "shelekhov"
-  },
-  "value": 11,
-  "baseline": 11,
-  "title": {
-   "en": "Ciprofloxacin availability down 67% in Shelekhov",
-   "zh": "舍列霍夫环丙沙星可购量下降 67%"
-  },
-  "detail": {
-   "en": "In-stock products 11 vs 72h peak 11; availability count 1257 vs peak 3837.",
-   "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 1257（峰值 3837）。"
-  },
-  "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-11-16T02:39:18.889Z",
   "active": false
  },
  {
