@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-26T17:46:07.385Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (298 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 298 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
+  "active": true
+ },
+ {
   "id": "price|doxycycline|shelekhov",
   "rule": "price_index",
   "severity": "watch",
@@ -21,7 +43,7 @@
    "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
   "active": true
  },
  {
@@ -46,29 +68,7 @@
    "zh": "同款商品价格中位数较首次观测为 115.6（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-26T13:45:28.893Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (297 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 297 次）"
-  },
-  "detail": {
-   "en": "HTTP 403",
-   "zh": "HTTP 403"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
   "active": true
  },
  {
@@ -90,7 +90,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
   "active": true
  },
  {
@@ -114,7 +114,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 26.11.26"
   ],
   "firstSeen": "2026-11-26T11:54:12.327Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
   "active": true
  },
  {
@@ -378,7 +378,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
   "active": true
  },
  {
@@ -503,7 +503,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-26T17:35:01.961Z",
+  "lastSeen": "2026-11-26T17:45:01.613Z",
   "active": true
  },
  {
