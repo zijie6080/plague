@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|rpn-38",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-27T08:29:07.096Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "rpn-38"
+  },
+  "title": {
+   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
+   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
+  },
+  "detail": {
+   "en": "AbortError",
+   "zh": "AbortError"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
+  "active": true
+ },
+ {
   "id": "jump|ciprofloxacin|belarus|2026-11-27T07",
   "rule": "price_jump",
   "severity": "watch",
@@ -20,7 +42,7 @@
    "zh": "涨幅最大：Ципронекс таблетки покрытые оболочкой 500мг N10，₽6.54 → ₽9。"
   },
   "firstSeen": "2026-11-27T07:18:04.390Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -45,7 +67,7 @@
    "zh": "同款商品价格中位数较首次观测为 112.2（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -70,7 +92,7 @@
    "zh": "同款商品价格中位数较首次观测为 115.6（基准 = 100）。阈值：上涨 10% 为关注，上涨 25% 为警报。"
   },
   "firstSeen": "2026-11-26T06:03:22.028Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -92,7 +114,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -114,7 +136,7 @@
    "zh": "HTTP 403"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -217,28 +239,6 @@
   "active": false
  },
  {
-  "id": "source_down|rpn-38",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-27T03:58:23.018Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "rpn-38"
-  },
-  "title": {
-   "en": "Rospotrebnadzor · Irkutsk Oblast office unreachable (3 attempts)",
-   "zh": "俄消费者权益保护局 · 伊尔库茨克州分局无法访问（连续 3 次）"
-  },
-  "detail": {
-   "en": "AbortError",
-   "zh": "AbortError"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-27T05:48:05.019Z",
-  "active": false
- },
- {
   "id": "page|rpn-38|ee1894a02d",
   "rule": "page_change",
   "severity": "info",
@@ -261,7 +261,7 @@
    "Правила безопасных онлайн-покупок в период распродаж 27.11.26"
   ],
   "firstSeen": "2026-11-27T01:47:21.337Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -385,7 +385,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 26.11.26"
   ],
   "firstSeen": "2026-11-26T11:54:12.327Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -627,7 +627,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
@@ -677,7 +677,7 @@
    "Чистый холодильник: наводим порядок и храним продукты правильно 25.11.26"
   ],
   "firstSeen": "2026-11-25T10:10:55.542Z",
-  "lastSeen": "2026-11-27T08:18:04.932Z",
+  "lastSeen": "2026-11-27T08:28:05.002Z",
   "active": true
  },
  {
