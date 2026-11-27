@@ -1,5 +1,27 @@
 [
  {
+  "id": "source_down|irkobl",
+  "rule": "source_down",
+  "severity": "info",
+  "t": "2026-11-27T17:50:51.020Z",
+  "persistent": true,
+  "subject": {
+   "type": "source",
+   "source": "irkobl"
+  },
+  "title": {
+   "en": "Irkutsk Oblast Ministry of Health unreachable (304 attempts)",
+   "zh": "伊尔库茨克州卫生部无法访问（连续 304 次）"
+  },
+  "detail": {
+   "en": "HTTP 403",
+   "zh": "HTTP 403"
+  },
+  "firstSeen": "2026-10-07T21:36:44.769Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
+  "active": true
+ },
+ {
   "id": "stock|levofloxacin|irkutsk",
   "rule": "availability_drop",
   "severity": "watch",
@@ -21,7 +43,7 @@
    "zh": "有现货商品 16 款（72 小时峰值 18 款）；可购量 24（峰值 1319）。"
   },
   "firstSeen": "2026-10-08T08:46:10.687Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -46,7 +68,7 @@
    "zh": "有现货商品 13 款（72 小时峰值 13 款）；可购量 48（峰值 204）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -71,7 +93,7 @@
    "zh": "有现货商品 6 款（72 小时峰值 6 款）；可购量 44（峰值 824）。"
   },
   "firstSeen": "2026-10-14T16:39:22.601Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -96,7 +118,7 @@
    "zh": "有现货商品 21 款（72 小时峰值 21 款）；可购量 465（峰值 2575）。"
   },
   "firstSeen": "2026-10-09T06:58:44.680Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -121,7 +143,7 @@
    "zh": "有现货商品 1 款（72 小时峰值 1 款）；可购量 1（峰值 267）。"
   },
   "firstSeen": "2026-10-08T02:25:39.889Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -146,7 +168,7 @@
    "zh": "有现货商品 11 款（72 小时峰值 11 款）；可购量 837（峰值 3168）。"
   },
   "firstSeen": "2026-10-14T04:06:03.385Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -168,29 +190,7 @@
    "zh": "UND_ERR_CONNECT_TIMEOUT"
   },
   "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
-  "active": true
- },
- {
-  "id": "source_down|irkobl",
-  "rule": "source_down",
-  "severity": "info",
-  "t": "2026-11-27T13:50:27.834Z",
-  "persistent": true,
-  "subject": {
-   "type": "source",
-   "source": "irkobl"
-  },
-  "title": {
-   "en": "Irkutsk Oblast Ministry of Health unreachable (303 attempts)",
-   "zh": "伊尔库茨克州卫生部无法访问（连续 303 次）"
-  },
-  "detail": {
-   "en": "HTTP 0",
-   "zh": "HTTP 0"
-  },
-  "firstSeen": "2026-10-07T21:36:44.769Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -360,7 +360,7 @@
    "Правила безопасных онлайн-покупок в период распродаж 27.11.26"
   ],
   "firstSeen": "2026-11-27T01:47:21.337Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -409,7 +409,7 @@
    "О результатах мониторинга атмосферного воздуха в г. Братске в рамках реализации федерального проекта «Чистый воздух» и социально-гигиенического мониторинга 26.11.26"
   ],
   "firstSeen": "2026-11-26T11:54:12.327Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
@@ -651,7 +651,7 @@
    "Правила эпидбезопасности в общественном транспорте 26.11.26"
   ],
   "firstSeen": "2026-11-26T05:53:22.314Z",
-  "lastSeen": "2026-11-27T17:40:45.170Z",
+  "lastSeen": "2026-11-27T17:50:45.231Z",
   "active": true
  },
  {
